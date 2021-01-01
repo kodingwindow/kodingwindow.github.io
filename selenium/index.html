@@ -1,0 +1,21 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:27 IST   
+title: Selenium WebDriver
+---
+
+<div class="board"><div class="boardtitle">Selenium Prerequisites</div>
+    <a class="card" href="https://selenium.dev/downloads/" target="_blank">Download Selenium Server Standalone</a>
+    <a class="card" href="https://chromedriver.chromium.org/" target="_blank">Download WebDriver for Chrome</a>
+    <a class="card" href="https://github.com/mozilla/geckodriver/releases" target="_blank">Download WebDriver for Firefox</a>
+    <a class="card" href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/" target="_blank">Download WebDriver for Microsoft Edge</a>
+    <a class="card" href="testapp/">Check Kodingwindow's TestApp is up and running</a>
+</div>
+
+{% for segment in site.data.selenium.segments %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs limit:4 %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+    {% assign count=segment.programs | size %}
+    {% if count>=5 %}<a class="card" href="{{ segment.url }}">Learn More &#187;</a>{% endif %}
+</div>
+{% endfor %}

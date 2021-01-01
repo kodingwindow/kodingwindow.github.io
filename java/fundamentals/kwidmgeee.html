@@ -1,0 +1,47 @@
+---
+layout: kw
+modified: 17 Oct 2020 09:34 IST    
+title: Java Hello World program
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+        System.out.println("Hello, World!");
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+Hello, World!
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>Java program without using main function (only compilation)</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+class KW
+{
+    static 
+    {
+        System.out.println("Hello World");
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+<error>Error: Main method not found in class KW, please define the main method as:
+   public static void main(String[] args)
+or a JavaFX application class must extend javafx.application.Application</error>
+kodingwindow@kw:~$  
+</pre></span>

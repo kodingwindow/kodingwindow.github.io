@@ -1,0 +1,167 @@
+---
+layout: kw
+modified: 16 Nov 2020 09:16 IST   
+title: Python Mathematical Functions and Operations
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="terminalwell">Python math module</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>python3</mark>
+Python 3.8.6 (default, Sep 25 2020, 09:36:53) 
+[GCC 10.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> <mark>import math</mark>
+>>> <mark>math.pi</mark>
+3.141592653589793
+
+>>> <mark>math.e</mark>
+2.718281828459045
+
+>>> <mark>math.inf</mark>
+inf
+
+>>> <mark>math.nan</mark>
+nan
+
+>>> <mark>math.ceil(9.87)</mark>
+10
+
+>>> <mark>math.floor(9.87)</mark>
+9
+<hr>>>> <mark>math.degrees(math.pi)</mark>
+180.0
+
+>>> <mark>math.radians(180)</mark>
+3.141592653589793
+ 
+>>> <mark>math.sin(0)</mark>
+0.0
+
+>>> <mark>math.sin(90)</mark>
+0.8939966636005579
+
+>>> <mark>math.sin(math.radians(90))</mark>
+1.0
+
+>>> <mark>math.sin(math.radians(30))</mark>
+0.49999999999999994
+
+>>> <mark>math.cos(0)</mark>
+1.0
+
+>>> <mark>math.tan(math.radians(45))</mark>
+0.9999999999999999
+<hr>>>> <mark>math.exp(0)</mark>
+1.0
+
+>>> <mark>math.exp(1)</mark>
+2.718281828459045
+<hr>>>> <mark>math.factorial(10)</mark>
+3628800
+
+>>> <mark>math.fmod(7,3)</mark>
+1.0
+
+>>> <mark>math.fmod(10.5,3.5)</mark>
+0.0
+
+>>> <mark>math.fsum([1,1.1,3.14])</mark>
+5.24
+
+>>> <mark>math.modf(10.5)</mark>
+(0.5, 10.0)
+
+>>> <mark>math.log10(2)</mark>
+0.3010299956639812
+
+>>> <mark>math.log(10,2)</mark>
+3.3219280948873626
+
+>>> <mark>math.sqrt(25)</mark>
+5.0
+
+>>> <mark>math.sqrt(20)</mark>
+4.47213595499958
+
+>>> <mark>math.pow(2,10)</mark>
+1024.0
+
+>>> <mark>math.gcd(10,20)</mark>
+10
+<hr>>>> <mark>math.fabs(-3.14)</mark>
+3.14
+
+>>> <mark>math.trunc(3.14)</mark>
+3
+
+>>> <mark>math.trunc(-3.14)</mark>
+-3
+<hr>>>> <mark>math.isinf(0)</mark>
+False
+
+>>> <mark>float('inf')</mark>
+inf
+
+>>> <mark>float('nan')</mark>
+nan
+
+>>> <mark>math.isinf(float('inf'))</mark>
+True
+
+>>> <mark>math.isnan(float('nan'))</mark>
+True
+</pre></span>
+
+<div class="terminalwell">Explicit type conversion using int() and float() functions</div>
+<span><pre>
+>>> <mark>int(7.99)</mark>
+7
+
+>>> <mark>float(7)</mark>
+7.0
+
+>>> <mark>a=int('10')</mark>
+>>> <mark>b=int('20')</mark>
+>>> <mark>c=a+b</mark>
+>>> <mark>c</mark>
+30
+</pre></span>
+
+<div class="terminalwell">Number conversion using int(), bin(), oct(), and hex() functions</div>
+<span><pre>
+>>> <mark>n=255</mark>
+>>> <mark>print("Binary",bin(n))</mark>
+Binary 0b11111111
+
+>>> <mark>print("Octal",oct(n))</mark>
+Octal 0o377
+
+>>> <mark>print("Hexadecimal",hex(n))</mark>
+Hexadecimal 0xff
+<hr>>>> <mark>n="11111111"</mark>
+>>> <mark>print("Decimal",int(n,2))</mark>
+Decimal 255
+
+>>> <mark>print("Octal",oct(int(n,2)))</mark>
+Octal 0o377
+
+>>> <mark>print("Hexadecimal",hex(int(n,2)))</mark>
+Hexadecimal 0xff
+<hr>>>> <mark>n=0o377</mark>
+>>> <mark>print("Decimal",int(n))</mark>
+Decimal 255
+
+>>> <mark>print("Hexadecimal",hex(n))</mark>
+Hexadecimal 0xff
+<hr>>>> <mark>n=0Xff</mark>
+>>> <mark>print("Decimal",int(n))</mark>
+Decimal 255
+
+>>> <mark>print("Octal",oct(n))</mark>
+Octal 0o377
+
+>>> <mark>print("Binary",bin(n))</mark>
+Binary 0b11111111
+</pre></span>

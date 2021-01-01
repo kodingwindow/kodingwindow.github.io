@@ -1,0 +1,87 @@
+---
+layout: container
+modified: 02 Oct 2020 21:22 IST   
+title: Shell script to print the current date and time
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.shfile }}</div>
+<pre>
+{% highlight shell %}
+echo "———————————————————————————————————————————"
+echo "Script to print the current date and time"
+echo "———————————————————————————————————————————"
+echo "Today's Date       | \c";date
+echo "Today's Day        | \c";date +"%a"
+echo "Today's Day        | \c";date +"%A"
+echo "Current Month      | \c";date +"%b"
+echo "Current Month      | \c";date +"%B"
+echo "Local Date & Time  | \c";date +"%c"
+echo "Date Of Month      | \c";date +"%d"
+echo "Date Of Month      | \c";date +"%e"
+echo "Today's Date       | \c";date +"%D"
+echo "Full Date(y-m-d)   | \c";date +"%F"
+echo "Last Digit Of Year | \c";date +"%g"
+echo "Year Of ISO Week No| \c";date +"%G"
+echo "Current Month      | \c";date +"%h"
+echo "Current Hour(00:23)| \c";date +"%H"
+echo "Current Hour(1:12) | \c";date +"%I"
+echo "Day Of Year(01-366)| \c";date +"%j"
+echo "Current Month      | \c";date +"%m"
+echo "Current Minute     | \c";date +"%M"
+echo "NanoSecond         | \c";date +"%N"
+echo "Now Time Is AM/PM  | \c";date +"%p"
+echo "Now Time Is am/pm  | \c";date +"%P"
+echo "12-Hour Clock Time | \c";date +"%r"
+echo "24-Hour Clock Time | \c";date +"%R"
+echo "Current Second     | \c";date +"%S"
+echo "Current Time       | \c";date +"%T"
+echo "Day Of Week(1-mon) | \c";date +"%u"
+echo "Local Date         | \c";date +"%x"
+echo "Local Time         | \c";date +"%X"
+echo "Last Digit Of Year | \c";date +"%y"
+echo "ISO Week Number    | \c";date +"%V"
+echo "Alphabet Time Zone | \c";date +"%Z"
+echo "———————————————————————————————————————————"
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runsh }}
+———————————————————————————————————————————
+Script to print the current date and time
+———————————————————————————————————————————
+Today's Date       | Thu May 23 17:36:22 IST 2019
+Today's Day        | Thu
+Today's Day        | Thursday
+Current Month      | May
+Current Month      | May
+Local Date & Time  | Thursday 23 May 2019 05:36:22 PM IST
+Date Of Month      | 23
+Date Of Month      | 23
+Today's Date       | 05/23/19
+Full Date(y-m-d)   | 2019-05-23
+Last Digit Of Year | 19
+Year Of ISO Week No| 2019
+Current Month      | May
+Current Hour(00:23)| 17
+Current Hour(1:12) | 05
+Day Of Year(01-366)| 143
+Current Month      | 05
+Current Minute     | 36
+NanoSecond         | 447268448
+Now Time Is AM/PM  | PM
+Now Time Is am/pm  | pm
+12-Hour Clock Time | 05:36:22 PM IST
+24-Hour Clock Time | 17:36
+Current Second     | 22
+Current Time       | 17:36:22
+Day Of Week(1-mon) | 4
+Local Date         | Thursday 23 May 2019
+Local Time         | 05:36:22  IST
+Last Digit Of Year | 19
+ISO Week Number    | 21
+Alphabet Time Zone | IST
+———————————————————————————————————————————
+kodingwindow@kw:~$ 
+</pre></span>

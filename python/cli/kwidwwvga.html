@@ -1,0 +1,174 @@
+---
+layout: kw
+modified: 16 Nov 2020 09:15 IST   
+title: Python Matrices
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="terminalwell">Matrix operations</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>python3</mark>
+Python 3.8.6 (default, Sep 25 2020, 09:36:53) 
+[GCC 10.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> <mark>from numpy import *</mark>
+>>> <mark>m = array([[1,2,3],[4,5,6],[7,8,9]])</mark>
+>>> <mark>n = array([[9,8,7],[6,5,4],[3,2,1]])</mark>
+
+>>> <mark>m</mark>
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+
+>>> <mark>n</mark>
+array([[9, 8, 7],
+       [6, 5, 4],
+       [3, 2, 1]])
+<hr>>>> <mark>m.max()</mark>
+9
+>>> <mark>m.min()</mark>
+1
+>>> <mark>m.flatten()</mark>
+array([1, 2, 3, 4, 5, 6, 7, 8, 9])
+>>> <mark>m.sum()</mark>
+45
+>>> <mark>m.mean()</mark>
+5.0
+<hr>>>> <mark>len(m)</mark>
+3
+>>> <mark>m.shape</mark>
+(3, 3)
+>>> <mark>m.ndim</mark>
+2
+>>> <mark>m.size</mark>
+9
+>>> <mark>m.dtype</mark>
+dtype('int64')
+</pre></span>
+
+<div class="terminalwell">Slicing</div>
+<span><pre>
+>>> <mark>m[0]</mark>
+array([1, 2, 3])
+
+>>> <mark>n[-1]</mark>
+array([3, 2, 1])
+
+>>> <mark>m[1:]</mark>
+array([[4, 5, 6],
+       [7, 8, 9]])
+
+>>> <mark>n[:1]</mark>
+array([[9, 8, 7]])
+</pre></span>
+
+<div class="terminalwell">Arithmetic operations on matrices</div>
+<span><pre>
+>>> <mark>m</mark>
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+
+>>> <mark>n</mark>
+array([[9, 8, 7],
+       [6, 5, 4],
+       [3, 2, 1]])
+
+>>> <mark>m+n</mark>
+array([[10, 10, 10],
+       [10, 10, 10],
+       [10, 10, 10]])
+
+>>> <mark>m-n</mark>
+array([[-8, -6, -4],
+       [-2,  0,  2],
+       [ 4,  6,  8]])
+
+>>> <mark>m*n</mark>
+<error>array([[ 9, 16, 21],
+       [24, 25, 24],
+       [21, 16,  9]])</error>
+
+>>> <mark>dot(m,n)</mark>
+array([[ 30,  24,  18],
+       [ 84,  69,  54],
+       [138, 114,  90]])
+</pre></span>
+
+<div class="terminalwell">transpose(), diagonal(), trace(), etc. methods</div>
+<span><pre>
+>>> <mark>m</mark>
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+
+>>> <mark>m.transpose()</mark>
+array([[1, 4, 7],
+       [2, 5, 8],
+       [3, 6, 9]])
+
+>>> <mark>m.diagonal()</mark>
+array([1, 5, 9])
+
+>>> <mark>trace(m)</mark>
+15
+
+>>> <mark>fliplr(m).diagonal()</mark>
+array([3, 5, 7])
+
+>>> <mark>flipud(m).diagonal()</mark>
+array([7, 5, 3])
+
+>>> <mark>n</mark>
+array([[9, 8, 7],
+       [6, 5, 4],
+       [3, 2, 1]])
+
+>>> <mark>n.sort()</mark>
+>>> <mark>n</mark>
+array([[7, 8, 9],
+       [4, 5, 6],
+       [1, 2, 3]])
+
+>>> <mark>n.sort(axis=0)</mark>
+>>> <mark>n</mark>
+array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+</pre></span>
+
+<div class="terminalwell">eye() and reshape() methods</div>
+<span><pre>
+>>> <mark>eye(3)</mark>
+array([[1., 0., 0.],
+       [0., 1., 0.],
+       [0., 0., 1.]])
+
+>>> <mark>eye(2,5)</mark>
+array([[1., 0., 0., 0., 0.],
+       [0., 1., 0., 0., 0.]])
+
+>>> <mark>eye(2,5).reshape(5,2)</mark>
+array([[1., 0.],
+       [0., 0.],
+       [0., 0.],
+       [1., 0.],
+       [0., 0.]])
+</pre></span>
+
+<div class="terminalwell">ones() and zeros() methods</div>
+<span><pre>
+>>> <mark>ones(3,float)</mark>
+array([1., 1., 1.])
+
+>>> <mark>ones((3,3), float)</mark>
+array([[1., 1., 1.],
+       [1., 1., 1.],
+       [1., 1., 1.]])
+
+>>> <mark>zeros((3,3), float)</mark>
+array([[0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]])
+</pre></span>

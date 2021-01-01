@@ -1,0 +1,46 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: C# program to perform the addition of two numbers
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int a, b, c;        
+            Console.WriteLine("———————————————————————————————————————————");
+            Console.WriteLine("Program to print the addition of two numbers");
+            Console.WriteLine("———————————————————————————————————————————");
+            Console.Write("\nEnter the 1st number ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.Write("\nEnter the 2nd number ");
+            b = Convert.ToInt32(Console.ReadLine());
+            c = a + b;
+            Console.WriteLine("\nAddition " + c);         
+            Console.WriteLine("———————————————————————————————————————————");
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+———————————————————————————————————————————
+Program to print the addition of two numbers
+———————————————————————————————————————————
+
+Enter the 1st number 50
+
+Enter the 2nd number -10
+
+Addition 40
+———————————————————————————————————————————
+</pre></span>

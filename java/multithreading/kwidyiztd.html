@@ -1,0 +1,33 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:07 IST    
+title: Java program to perform the single task by multiple threads
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+class KW extends Thread
+{  
+    public void run()
+    {  
+        System.out.println("Thread Running...");  
+    }  
+    public static void main(String args[])
+    {  
+        KW t1=new KW();
+        KW t2=new KW(); 
+        t1.start();
+        t2.start(); 
+    }  
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+Thread Running...
+Thread Running...
+kodingwindow@kw:~$ 
+</pre></span>

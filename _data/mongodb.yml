@@ -1,0 +1,31 @@
+segments: 
+  - topic: MongoDB mongo Shell
+    breadcrumb_child: Shell
+    url: mongodb/shell/
+    programs:
+      - title: MongoDB Getting started with the mongo Shell
+        url: mongodb/shell/kwidvivwa
+
+  - topic: MongoDB CRUD Operations
+    breadcrumb_child: CRUD
+    url: mongodb/crud/
+    programs:
+      - title: MongoDB Create a Database and Collection
+        url: mongodb/crud/kwidyxxwo
+      - title: MongoDB Insert the Documents into a Collection
+        url: mongodb/crud/kwideuazw
+      - title: MongoDB find() and find().pretty() methods
+        url: mongodb/crud/kwidhydqg
+      - title: MongoDB Logical Query Operators ($and $or $nor $not)
+        url: mongodb/crud/kwidhzgdy
+      - title: MongoDB Projection (limiting and sorting data)
+        url: mongodb/crud/kwidrmzzy
+      - title: MongoDB Update a Document
+        url: mongodb/crud/kwidwawvv
+
+  - topic: MongoDB Accessories
+    breadcrumb_child: Accessories
+    url: mongodb/accessories/
+    programs:
+      - title: How to setup, install, and start MongoDB on Ubuntu
+        url: mongodb/accessories/kwidvwpet

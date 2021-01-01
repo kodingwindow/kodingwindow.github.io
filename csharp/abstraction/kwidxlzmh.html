@@ -1,0 +1,68 @@
+---
+layout: kw
+modified: 28 Oct 2020 18:11 IST   
+title: C# program to demonstrate the use of an interface
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public interface Bank
+        {
+            void credit();
+            void withdraw();
+        }
+        public class Citi : Bank
+        {
+            public void credit()
+            {
+                Console.WriteLine("Your balance is credited in Citi bank account");
+            }
+            public void withdraw()
+            {
+                Console.WriteLine("\nCash withdrew from Citi bank account");
+            }
+        }
+        public class HDFC : Bank
+        {
+            public void credit()
+            {
+                Console.WriteLine("Your balance is credited in HDFC bank account");
+            }
+            public void withdraw()
+            {
+                Console.WriteLine("\nCash withdrew from HDFC bank account");
+            }
+        }
+        
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("———————————————————————————————————————————");
+            Console.WriteLine("Program to demonstrate the use of interface");
+            Console.WriteLine("———————————————————————————————————————————");
+            Citi c = new Citi();
+            HDFC h = new HDFC();
+            h.credit();
+            c.withdraw();
+            Console.WriteLine("———————————————————————————————————————————");
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+———————————————————————————————————————————
+Program to demonstrate the use of interface
+———————————————————————————————————————————
+Your balance is credited in HDFC bank account
+
+Cash withdrew from Citi bank account
+———————————————————————————————————————————
+</pre></span>

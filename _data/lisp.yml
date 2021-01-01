@@ -1,0 +1,36 @@
+segments: 
+  - topic: LISP (List Processing) Fundamentals
+    url: lisp/
+    programs:
+      - title: CLISP Command Line Interface (CLI)
+        url: lisp/kwidggdyw
+      - title: Maxima Command Line Interface (CLI)
+        url: lisp/kwidggadz
+      - title: LISP Hello World program
+        url: lisp/kwidydkmw
+      - title: LISP program to perform the arithmetic operations
+        url: lisp/kwidvwwue
+      - title: LISP program to perform the bitwise operations
+        url: lisp/kwidmalgp
+      - title: LISP program to demonstrate the use of trigonometric functions
+        url: lisp/kwidzedbg
+      - title: LISP program to demonstrate the use of numeric conversion functions
+        url: lisp/kwidvagvz
+      - title: LISP program to calculate the square and cube of numbers
+        url: lisp/kwidiewcv
+      - title: LISP program to find the area of a circle using a function
+        url: lisp/kwiduzcrz
+      - title: LISP program to find the min and max of two numbers
+        url: lisp/kwidddysa
+      - title: LISP program to swap the given numbers
+        url: lisp/kwidgoauk
+      - title: LISP program for the positive-negative test of a given number
+        url: lisp/kwidkdena
+      - title: LISP program to print the even and odd numbers
+        url: lisp/kwidzzzay
+      - title: LISP program for the arithmetic operations using the case statements
+        url: lisp/kwiduepzv
+      - title: LISP program to perform the string operations
+        url: lisp/kwidtrkke
+      - title: LISP program to check whether a given string is a palindrome
+        url: lisp/kwidzygzo

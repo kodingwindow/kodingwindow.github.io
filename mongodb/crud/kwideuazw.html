@@ -1,0 +1,129 @@
+---
+layout: kw
+modified: 17 Oct 2020 17:23 IST   
+title: MongoDB Insert the Documents into a Collection
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+
+<div class="terminalwell">Insert a single document</div>
+<span><pre>
+kodingwindow@kw:~/mongodb-4.4.0/bin$ <mark>./mongo</mark>
+MongoDB shell version v4.4.0
+connecting to: mongodb://127.0.0.1:27017/
+MongoDB server version: 4.4.0
+
+> <mark>show dbs</mark>
+DB      0.000GB
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+> <mark>db.getCollectionNames()</mark>
+[ "holders" ]
+
+> <mark>db.holders.insertOne(
+... {
+... account_no: 2562348989,
+... name: 'James Moore',
+... city: 'Phoenix',
+... DOB: new Date('1985-05-26'),
+... bank: 'Barclays',
+... amount: 5000,
+... loan: [{
+... Personal: 5660,
+... Home: 15000
+... }]
+... })</mark>
+{
+    "acknowledged" : true,
+    "insertedId" : ObjectId("5e737f263b6b959b1694156f")
+}
+</pre></span>
+
+<div class="terminalwell">Insert multiple documents</div>
+<span><pre>
+> <mark>db.holders.insertMany([
+... {
+... account_no: 2562348990,
+... name: 'Donald Taylor',
+... city: 'Irvine',
+... DOB: new Date('1990-08-20'),
+... bank: 'Citi',
+... amount: 7000,
+... loan: [{
+... Home: 10000,
+... Car: 20000
+... }]
+... },
+... {
+... account_no: 2562348991,
+... name: 'Edward Parkar',
+... city: 'Irvine',
+... DOB: new Date('1994-01-29'),
+... bank: 'ICICI',
+... amount: 95000,
+... loan: [{
+... Personal: 25000,
+... Home: 450000,
+... Car: 10000
+... }]
+... },
+... {
+... account_no: 2562348992,
+... name: 'Ryan Bakshi',
+... city: 'Mumbai',
+... DOB: new Date('1982-01-14'),
+... bank: 'Citi',
+... amount: 50000,
+... loan: [{
+... Personal: null,
+... Home: null,
+... Car: null
+... }]
+... }
+... ])</mark>
+{
+    "acknowledged" : true,
+    "insertedIds" : [
+        ObjectId("5e7384b53b6b959b16941570"),
+        ObjectId("5e7384b53b6b959b16941571"),
+        ObjectId("5e7384b53b6b959b16941572")
+    ]
+}
+</pre></span>
+
+<div class="terminalwell">Show databases and collection info</div>
+<span><pre>
+> <mark>show databases</mark>
+DB      0.000GB
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+> <mark>db.holders.count()</mark>
+4
+
+> <mark>db.getCollectionInfos()</mark>
+[
+    {
+        "name" : "holders",
+        "type" : "collection",
+        "options" : {
+            
+        },
+        "info" : {
+            "readOnly" : false,
+            "uuid" : UUID("d08e1290-6f9d-4a94-b6ae-f10f17a623a5")
+        },
+        "idIndex" : {
+            "v" : 2,
+            "key" : {
+                "_id" : 1
+            },
+            "name" : "_id_",
+            "ns" : "DB.holders"
+        }
+    }
+]
+</pre></span>

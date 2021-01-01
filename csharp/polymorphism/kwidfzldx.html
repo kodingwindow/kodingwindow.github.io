@@ -1,0 +1,81 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:12 IST   
+title: Implementation of C# method overloading
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }} (static polymorphism)</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    class Shape
+    {
+        public static int Rectangle(int a, int b)
+        {
+            return a * b;
+        }
+        public static double Rectangle(double a, double b)
+        {
+            return a * b;
+        }
+    }
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Area of Rectangle " + Shape.Rectangle(5, 10));
+            Console.WriteLine("Area of Rectangle {0}", Shape.Rectangle(3.14, 10));
+            Console.ReadKey();
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Area of Rectangle 50
+Area of Rectangle 31.400000000000002 
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>Example 2</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    class Shape
+    {
+        public double Square(int a)
+        {
+            return a * a;
+        }
+        public double Rectangle(double a, double b)
+        {
+            return a * b;
+        }
+    }
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Shape s = new Shape();
+            double area = s.Square(10);
+            Console.WriteLine("Area of Square " + area);
+
+            area = s.Rectangle(3.14, 10);
+            Console.WriteLine("Area of Rectangle {0}", area);
+            Console.ReadKey();
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Area of Square 100
+Area of Rectangle 31.400000000000002 
+</pre></span>

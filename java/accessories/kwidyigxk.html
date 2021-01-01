@@ -1,0 +1,71 @@
+---
+layout: kw
+modified: 30 Oct 2020 07:36 IST    
+title: Java program to get the Operating System details
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+class KW
+{
+    public static void main(String args[])
+    {
+        System.out.println("OS Name: "+System.getProperty("os.name"));
+        System.out.println("OS Version: "+System.getProperty("os.version"));
+        System.out.println("OS Architecture: "+System.getProperty("os.arch"));
+        
+        System.out.println("Java Version: "+System.getProperty("java.version"));
+        System.out.println("Java Vendor URL: "+System.getProperty("java.vendor.url")); 
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+OS Name: Linux
+OS Version: 5.8.0-25-generic
+OS Architecture: amd64
+Java Version: 13.0.2
+Java Vendor URL: https://java.oracle.com/
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="terminalwell">Equivalent Linux commands to get the Operating System details</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>uname</mark>
+Linux
+
+kodingwindow@kw:~$ <mark>uname -s</mark>
+Linux
+
+kodingwindow@kw:~$ <mark>uname -r</mark>
+5.4.0-33-generic
+
+kodingwindow@kw:~$ <mark>javac -version</mark>
+javac 13.0.2
+
+kodingwindow@kw:~$ <mark>java -version</mark>
+java version "13.0.2" 2020-01-14
+Java(TM) SE Runtime Environment (build 13.0.2+8)
+Java HotSpot(TM) 64-Bit Server VM (build 13.0.2+8, mixed mode, sharing)
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="terminalwell">Equivalent Windows commands to get the Operating System details</div>
+<span><pre>
+> <mark>systeminfo</mark>
+OS Name:                   Microsoft Windows 10 Pro
+OS Version:                10.0.19041 N/A Build 19041
+System Type:               x64-based PC
+
+> <mark>javac -version</mark>
+javac 11.0.8
+
+> <mark>java -version</mark>
+java version "11.0.8" 2020-07-14 LTS
+Java(TM) SE Runtime Environment 18.9 (build 11.0.8+10-LTS)
+Java HotSpot(TM) 64-Bit Server VM 18.9 (build 11.0.8+10-LTS, mixed mode)
+</pre></span>

@@ -1,0 +1,111 @@
+---
+layout: kw
+modified: 10 Oct 2020 10:59 IST   
+title: Selenium Java to launch the browser and navigate to a given URL
+---
+
+<div class="darkwell"><mark>Title: </mark>Selenium Java to launch the Chrome browser and navigate to a given URL</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();     
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.close();
+        System.exit(0);
+    }   	
+}
+{% endhighlight %}
+</pre>
+
+<div class="darkwell"><mark>Title: </mark>Selenium Java to launch the Firefox browser and navigate to a given URL</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+    	System.setProperty("webdriver.gecko.driver", "D://Selenium//Drivers//geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.close();
+        System.exit(0);
+    }   	
+}
+{% endhighlight %}
+</pre>
+
+<div class="darkwell"><mark>Title: </mark>Selenium Java to launch the IE browser and navigate to a given URL</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+
+public class KW
+{
+    public static void main(String[] args) 
+    {   
+        System.setProperty("webdriver.ie.driver","D:\\Selenium\\Drivers\\IEDriverServer.exe");
+        WebDriver driver = new InternetExplorerDriver();
+        driver.get("https://kodingwindow.com/testapp/");
+        driver.quit();
+    }
+}
+{% endhighlight %}
+</pre>
+
+<div class="darkwell"><mark>Title: </mark>Selenium Java to launch the Microsoft Edge browser and navigate to a given URL</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+        System.setProperty("webdriver.edge.driver", "D://Selenium//Drivers//msedgedriver.exe");
+        WebDriver driver = new EdgeDriver();     
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.close();
+    }       
+}
+{% endhighlight %}
+</pre>
+
+<div class="darkwell"><mark>Title: </mark>Selenium Java to launch the Chromium browser and navigate to a given URL</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        ChromeOptions co = new ChromeOptions();
+        co.setBinary("D:\\Selenium\\chrome-win\\chrome.exe");
+        WebDriver driver = new ChromeDriver(co);
+        driver.manage().window().maximize();
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.close();
+    }       
+}
+{% endhighlight %}
+</pre>

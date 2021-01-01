@@ -1,0 +1,43 @@
+---
+layout: kw
+modified: 02 Oct 2020 19:47 IST   
+title: C++ program to demonstrate the use of constructors and destructors
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.cppfile }}</div>
+<pre>
+{% highlight cpp %}
+#include<iostream>
+using namespace std;
+class kw
+{
+    public:
+    kw()
+    {
+        cout<<"\nConstructor is called";
+    }
+    ~kw()
+    {
+        cout<<"\nDestructor is called";
+    }
+};
+int main()
+{
+    kw k;
+    kw();
+    k.~kw();
+}
+{% endhighlight %}
+</pre>
+<div class="card">Output</div>
+<span><pre>
+{{ site.runcpp }}
+
+Constructor is called
+Constructor is called
+Destructor is called
+Destructor is called
+Destructor is called
+kodingwindow@kw:~$ 
+</pre></span>

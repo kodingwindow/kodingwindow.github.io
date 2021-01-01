@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 10 Oct 2020 12:45 IST   
+title: Selenium Page Object Model (POM)
+---
+
+{% for segment in site.data.selenium.segments %}{% if segment.url contains "/pom/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

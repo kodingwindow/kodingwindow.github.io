@@ -1,0 +1,21 @@
+{% assign i = 0 %}
+{% assign j = 0 %}
+{% if page.url contains "/c/" %}{% include pagination/c.html %}
+{% elsif page.url contains "/cpp/" %}{% include pagination/cpp.html %}
+{% elsif page.url contains "/java/" %}{% include pagination/java.html %}
+{% elsif page.url contains "/csharp/" %}{% include pagination/csharp.html %}
+{% elsif page.url contains "/python/" %}{% include pagination/python.html %}
+{% elsif page.url contains "/r/" %}{% include pagination/r.html %}
+{% elsif page.url contains "/datascience/" %}{% include pagination/datascience.html %}
+{% elsif page.url contains "/lisp/" %}{% include pagination/lisp.html %}
+{% elsif page.url contains "/dsa/" %}{% include pagination/dsa.html %}
+{% elsif page.url contains "/mysql/" %}{% include pagination/mysql.html %}
+{% elsif page.url contains "/mongodb/" %}{% include pagination/mongodb.html %}
+{% elsif page.url contains "/linux/" %}{% include pagination/linux.html %}
+{% elsif page.url contains "/bash/" %}{% include pagination/bash.html %}
+{% elsif page.url contains "/cg/" %}{% include pagination/cg.html %}
+{% elsif page.url contains "/asm/" %}{% include pagination/asm.html %}
+{% elsif page.url contains "/selenium/" %}{% include pagination/selenium.html %}
+{% elsif page.url contains "/vbscript/" %}{% include pagination/vbscript.html %}
+{% else %}
+{% endif %}

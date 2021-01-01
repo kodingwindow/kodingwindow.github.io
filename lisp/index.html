@@ -1,0 +1,11 @@
+---
+layout: container
+modified: 02 Oct 2020 21:21 IST   
+title: LISP Programming
+---
+
+{% for segment in site.data.lisp.segments %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endfor %}

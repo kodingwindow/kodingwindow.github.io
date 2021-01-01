@@ -1,0 +1,30 @@
+<h4 style="padding-bottom: 10px; color: #29293d;">Contact Form</h4>
+<form name="data-to-google-sheet">
+    <div class="form-row">
+        <div class="form-group col-sm-6">
+            <input pattern="[A-Za-z]{2,30}" class="form-control" id="fname" name="fname" placeholder="* Firstname" type="text" minlength="2" maxlength="30" autocomplete="off" title="Please enter the alphabets only" required>
+        </div>
+        <div class="form-group col-sm-6">
+            <input pattern="[A-Za-z]{2,30}" class="form-control" id="lname" name="lname" placeholder="* Lastname" type="text" minlength="2" maxlength="30" autocomplete="off" title="Please enter the alphabets only" required>
+        </div>
+    </div>
+    <div class="form-group">
+        <input onkeyup="this.value = this.value.toLowerCase();" class="form-control" id="email" name="email" placeholder="* Email" type="email" minlength="7" maxlength="30" autocomplete="off" title="Please enter the valid email address" required>
+    </div>
+    <textarea onkeypress="validate_comments(event)" class="form-control" id="comments" name="comments" placeholder="* Comments/Queries" rows="2" maxlength="250" autocomplete="off" spellcheck="true" required></textarea>
+    <div style="margin-top: 20px;"><center><button class="btn kwbtn" type="reset" style="margin-right: 10px;">Reset</button><button class="btn kwbtn" class="btn btn-light" type="submit">Submit</button></center></div>
+</form>
+
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyd6m8TnOZ6kRxcosvL7bYooD322egegsu8M9kYzu-gPGSg6DE/exec'
+const form = document.forms['data-to-google-sheet']
+form.addEventListener('submit', e => 
+{
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)}).then(response => 
+    {  
+        form.reset();
+        alert("Thank You.\nYour Information Received Successfully.\nDate - "+kwdate()+"\nTime - "+kwtime());
+    }).catch(error => console.error('Failed to Receive Your Information.', error.message))
+})
+</script>

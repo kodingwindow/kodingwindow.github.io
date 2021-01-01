@@ -1,0 +1,84 @@
+---
+layout: kw
+modified: 18 Nov 2020 21:22 IST   
+title: How to install pymysql, pymongo, and python-csv on Ubuntu
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+
+<div class="terminalwell">python3-pip Installation</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>su</mark>
+Password: 
+root@kw:/home/kodingwindow# <mark>apt-get install python3-pip</mark>
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3-pip is already the newest version (20.1.1-2).
+0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+root@kw:/home/kodingwindow# 
+</pre></span>
+
+<div class="terminalwell">pymysql Installation</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>pip3 install pymysql</mark>
+Collecting pymysql
+  Downloading PyMySQL-0.10.1-py2.py3-none-any.whl (47 kB)
+     |████████████████████████████████| 47 kB 922 kB/s 
+Installing collected packages: pymysql
+Successfully installed pymysql-0.10.1
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="terminalwell">pymongo Installation</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>pip3 install pymongo</mark>
+Collecting pymongo
+  Downloading pymongo-3.11.1-cp38-cp38-manylinux2014_x86_64.whl (531 kB)
+     |████████████████████████████████| 531 kB 4.9 MB/s 
+Installing collected packages: pymongo
+Successfully installed pymongo-3.11.1
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="terminalwell">mysql-connector Installation</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>pip3 install mysql-connector</mark>
+Collecting mysql-connector
+  Downloading mysql-connector-2.2.9.tar.gz (11.9 MB)
+     |████████████████████████████████| 11.9 MB 24 kB/s 
+Building wheels for collected packages: mysql-connector
+  Building wheel for mysql-connector (setup.py) ... done
+  Created wheel for mysql-connector: filename=mysql_connector-2.2.9-cp38-cp38-linux_x86_64.whl size=247948 
+  ...
+Successfully built mysql-connector
+Installing collected packages: mysql-connector
+Successfully installed mysql-connector-2.2.9
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="terminalwell">pymysql Installation</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>pip3 install python-csv</mark>
+Collecting python-csv
+  Downloading python-csv-0.0.13.tar.gz (26 kB)
+Collecting argparse
+  Downloading argparse-1.4.0-py2.py3-none-any.whl (23 kB)
+Collecting demjson
+  Downloading demjson-2.2.4.tar.gz (131 kB)
+     |████████████████████████████████| 131 kB 4.6 MB/s 
+Collecting jtutils
+  Downloading jtutils-0.0.8.tar.gz (7.3 kB)
+Collecting leven
+  Downloading leven-1.0.4.tar.gz (20 kB)
+Collecting matplotlib
+  Downloading matplotlib-3.3.3-cp38-cp38-manylinux1_x86_64.whl (11.6 MB)
+     |████████████████████████████████| 11.6 MB 18 kB/s 
+Requirement already satisfied: numpy in /usr/lib/python3/dist-packages (from python-csv) (1.18.4)
+Requirement already satisfied: pandas in /usr/local/lib/python3.8/dist-packages (from python-csv) (1.0.3)
+Collecting xlrd
+  Downloading xlrd-1.2.0-py2.py3-none-any.whl (103 kB)
+     |████████████████████████████████| 103 kB 4.9 MB/s 
+
+...
+</pre></span>

@@ -1,0 +1,37 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:26 IST   
+title: Selenium Java to select dropdown choice using selectByValue() method
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+public class KW
+{
+    public static void main(String[] args) 
+    {   
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.navigate().to("http://newtours.demoaut.com");
+        driver.findElement(By.name("userName")).sendKeys("mercury");
+        driver.findElement(By.name("password")).sendKeys("mercury");
+        driver.findElement(By.name("login")).click();
+
+        Select from_dropdown = new Select(driver.findElement(By.name("fromPort")));
+        from_dropdown.selectByValue("London");
+
+        Select to_dropdown = new Select(driver.findElement(By.name("toPort")));
+        to_dropdown.selectByValue("New York");
+
+        //driver.close();
+    }
+}
+{% endhighlight %}
+</pre>

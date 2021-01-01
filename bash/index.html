@@ -1,0 +1,11 @@
+---
+layout: container
+modified: 18 Oct 2020 06:09 IST   
+title: Shell Scripting
+---
+
+{% for segment in site.data.bash.segments %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endfor %}

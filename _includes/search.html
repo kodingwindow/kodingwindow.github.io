@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+{% assign pu=page.url | split: '/' %}
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+    $("#KSEInput").on("keyup", function() 
+    {
+        if($("#KSEInput").val().length > 0) 
+        {
+            document.getElementById("{{ pu[1] }}").style.display = "block";
+        } 
+        else 
+        {
+            document.getElementById("{{ pu[1] }}").style.display = "none";
+        }
+        var value = $(this).val().toLowerCase();
+        $("#{{ pu[1] }} *").filter(function() 
+        {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+function clearinput() 
+{
+    document.getElementById("KSEInput").value = "";
+    document.getElementById("{{ pu[1] }}").style.display = "none";
+    document.getElementById("kwdisplay").style.display = "none";
+}
+function kwdisplay() 
+{
+    if($("#KSEInput").val().length > 0) 
+    {
+        document.getElementById("kwdisplay").style.display = "inline-block";
+    }
+    else
+    {
+        document.getElementById("kwdisplay").style.display = "none";
+    }
+}
+</script>
+</head>
+
+<body>
+<center>
+    <div class="kwwidth" style="margin-bottom: 20px;">
+        <h1 style="margin-bottom: 20px;">Kodingwindow</h1>
+        <div class="input-group"><input id="KSEInput" class="form-control" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onfocus="this.style.borderBottomColor='#29293d', this.style.borderBottomWidth='2px'" onfocusout="this.style.borderBottomColor='#cccccc', this.style.borderBottomWidth='1px'" onkeypress="kwdisplay();" onkeyup="kwdisplay();" style="border-color: #cccccc;"></div>
+    </div>
+    <a id="kwdisplay" style="cursor: pointer; display: none;" onclick="clearinput();" class="btn kwbtn">Clear Input</a>
+</center>
+
+<center><div id="search" class="kwwidth" style="margin: 0px; text-align: left;">
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="c">
+        <a class="darkwell card" href="c/">C Programming</a>
+        {% for segment in site.data.c.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.c.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="cpp">
+        <a class="darkwell card" href="cpp/">C++ Programming</a>
+        {% for segment in site.data.cpp.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.cpp.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="java">
+        <a class="darkwell card" href="java/">Java Programming</a>
+        {% for segment in site.data.java.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.java.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="csharp">
+        <a class="darkwell card" href="csharp/">C# Programming</a>
+        {% for segment in site.data.csharp.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.csharp.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="python">
+        <a class="darkwell card" href="python/">Python Programming</a>
+        {% for segment in site.data.python.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.python.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="r">
+        <a class="darkwell card" href="r/">R Programming</a>
+        {% for segment in site.data.r.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.r.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="datascience">
+        <a class="darkwell card" href="datascience/">Data Science</a>
+        {% for segment in site.data.datascience.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="lisp">
+        <a class="darkwell card" href="lisp">LISP Programming</a>
+        {% for segment in site.data.lisp.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="dsa">
+        <a class="darkwell card" href="dsa/">Data Structures and Algorithms</a>
+        {% for segment in site.data.dsa.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.dsa.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="mysql">
+        <a class="darkwell card" href="mysql/">MySQL Database</a>
+        {% for segment in site.data.mysql.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.mysql.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="mongodb">
+        <a class="darkwell card" href="mongodb/">MongoDB (NoSQL Database)</a>
+        {% for segment in site.data.mongodb.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.mongodb.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="linux">
+        <a class="darkwell card" href="linux/">Linux Commands</a>
+        {% for segment in site.data.linux.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="bash">
+        <a class="darkwell card" href="bash/">Shell Scripting</a>
+        {% for segment in site.data.bash.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="cg">
+        <a class="darkwell card" href="cg/">Computer Graphics</a>
+        {% for segment in site.data.cg.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+    
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="asm">
+        <a class="darkwell card" href="asm">Assembly Programming</a>
+        {% for segment in site.data.asm.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="selenium">
+        <a class="darkwell card" href="selenium/">Selenium WebDriver</a>
+        {% for segment in site.data.selenium.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        <a class="darkwell card" href="https://selenium.dev/downloads/" target="_blank">Download Selenium Server Standalone</a>
+        <a class="darkwell card" href="https://chromedriver.chromium.org/" target="_blank">Download WebDriver for Chrome</a>
+        <a class="darkwell card" href="https://github.com/mozilla/geckodriver/releases" target="_blank">Download WebDriver for Firefox</a>
+        <a class="darkwell card" href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/" target="_blank">Download WebDriver for Microsoft Edge</a>
+        <a class="darkwell card" href="testapp/">Check Kodingwindow's TestApp is up and running</a>
+        {% for segment in site.data.selenium.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="vbscript">
+        <a class="darkwell card" href="vbscript/">VBScript</a>
+        {% for segment in site.data.vbscript.segments %}<a class="darkwell card" href="{{ segment.url }}">{{ segment.topic }}</a>{% endfor %}
+        {% for segment in site.data.vbscript.segments %}{% for program in segment.programs %}<a class="darkwell card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}{% endfor %}
+    </div>
+
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="mcqs">
+        <a class="darkwell card" href="mcqs/">Multiple Choice Questions (MCQs)</a>
+        {% for segment in site.data.mcqs.segments %}{% for mcq in segment.mcqs %}<a class="darkwell card" href="https://www.linkedin.com/feed/update/urn:li:activity:{{ mcq.id }}/" target="_blank">{{ mcq.title }}</a>{% endfor %}{% endfor %}
+    </div>
+</div></center>
+</body>
+</html>

@@ -1,0 +1,74 @@
+---
+layout: kw
+modified: 30 Nov 2020 07:05 IST    
+title: C# program to handle the TimeZoneNotFoundException
+---
+
+<div class="darkwell"><mark>Title: </mark>C# TimeZoneNotFoundException</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var tz = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, TimeZoneInfo.FindSystemTimeZoneById("IndiaIndia Standard Time"));
+            Console.WriteLine(tz);
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+<error>System.TimeZoneNotFoundException: The time zone ID 'IndiaIndia Standard Time' was not found on the local computer.
+   at System.TimeZoneInfo.FindSystemTimeZoneById(String id)
+   at Kodingwindow.Program.Main(String[] args)</error>
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            try
+            {
+                var ctz = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, TimeZoneInfo.FindSystemTimeZoneById("IndiaIndia Standard Time"));
+                Console.WriteLine(ctz);
+            }
+            catch(TimeZoneNotFoundException e)
+            {
+                Console.WriteLine(e.Message);
+                
+                Console.WriteLine("\nList of correct time zone IDs");
+                var tz = TimeZoneInfo.GetSystemTimeZones(); 
+                foreach(TimeZoneInfo tzi in tz)
+                {
+                    Console.WriteLine(tzi.Id);
+                }
+            }
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+The time zone ID 'IndiaIndia Standard Time' was not found on the local computer.
+
+List of correct time zone IDs
+Dateline Standard Time
+Hawaiian Standard Time
+Marquesas Standard Time
+Alaskan Standard Time
+...
+</pre></span>

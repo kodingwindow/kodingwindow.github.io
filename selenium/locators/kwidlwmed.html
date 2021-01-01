@@ -1,0 +1,33 @@
+---
+layout: kw
+modified: 08 Oct 2020 20:55 IST   
+title: Selenium Java to get the current date and time using sendKeys
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class KW
+{
+    public static void main(String[] args) 
+    {   
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        
+        driver.get("https://www.google.co.in/");
+        driver.findElement(By.id("lst-ib")).sendKeys("Current Time In India");
+        driver.findElement(By.id("lst-ib")).sendKeys(Keys.ENTER);
+        driver.close();
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+<img src="selenium/images/kwidawzee.png" loading="lazy">
+</pre></span>

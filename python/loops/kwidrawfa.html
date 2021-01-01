@@ -1,0 +1,67 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:15 IST   
+title: Python program to print the list of all leap years
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.pyfile }}</div>
+<pre>
+{% highlight python %}
+print("________________________________________")
+print("Program to print list of all leap years")
+print("________________________________________")
+y=int(input("How many years you want to print "))
+if(y<1):
+    print("Enter valid number of years")
+else:
+    lc=0
+    for i in range(y):
+        year=2018+i
+        if(year%4==0):
+            if(year%100==0):
+                if(year%400==0):
+                    print("{0} is leap year".format(year))
+                    lc=lc+1
+                else:
+                    print("{0} is not leap year".format(year))
+            else:
+                print("{0} is leap year".format(year))
+                lc=lc+1
+        else:
+            print("{0} is not leap year".format(year))
+    print("Total leap years between 2018 to {0} is".format(year),lc)
+print("________________________________________")
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runpy }}
+________________________________________
+Program to print list of all leap years
+________________________________________
+How many years you want to print 20
+2018 is not leap year
+2019 is not leap year
+2020 is leap year
+2021 is not leap year
+2022 is not leap year
+2023 is not leap year
+2024 is leap year
+2025 is not leap year
+2026 is not leap year
+2027 is not leap year
+2028 is leap year
+2029 is not leap year
+2030 is not leap year
+2031 is not leap year
+2032 is leap year
+2033 is not leap year
+2034 is not leap year
+2035 is not leap year
+2036 is leap year
+2037 is not leap year
+Total leap years between 2018 to 2037 is 5
+________________________________________
+
+</pre></span>

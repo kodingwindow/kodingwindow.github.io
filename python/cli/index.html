@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 16 Nov 2020 10:52 IST   
+title: Python Command Line Interface (CLI)
+---
+
+{% for segment in site.data.python.segments %}{% if segment.url contains "/cli/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

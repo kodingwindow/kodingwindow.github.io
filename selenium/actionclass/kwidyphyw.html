@@ -1,0 +1,62 @@
+---
+layout: kw
+modified: 08 Oct 2020 20:57 IST   
+title: Selenium Java to select an option from the Chrome context menu
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}/div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.awt.AWTException;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+
+public class KW
+{
+    public static void main(String[] args) throws AWTException
+    {
+        Robot robot = new Robot();
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("http://newtours.demoaut.com/");
+
+        WebElement userName = driver.findElement(By.name("userName"));
+
+        Actions builder = new Actions(driver);
+        Action multiactions = builder.moveToElement(userName).click().sendKeys(userName, "mercury").click(userName)
+            .doubleClick(userName).contextClick().build();
+
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        multiactions.perform();
+
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyRelease(KeyEvent.VK_DOWN);
+        robot.keyPress(KeyEvent.VK_ENTER);
+
+        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+        driver.findElement(By.name("password")).sendKeys(Keys.CONTROL, "v");
+        driver.findElement(By.name("login")).click();
+
+        driver.close();
+        System.exit(0);
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+<img src="selenium/images/kwidymztw.png" loading="lazy">
+</pre></span>

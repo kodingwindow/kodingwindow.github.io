@@ -1,0 +1,21 @@
+---
+layout: kw
+modified: 16 Nov 2020 10:15 IST   
+title: Data Science
+---
+
+{% for segment in site.data.python.segments %}{% if segment.url contains "/cli/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs limit:4 %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+    {% assign count=segment.programs | size %}
+    {% if count>=5 %}<a class="card" href="{{ segment.url }}">Learn More &#187;</a>{% endif %}
+</div>
+{% endif %}{% endfor %}
+
+{% for segment in site.data.datascience.segments %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs limit:4 %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+    {% assign count=segment.programs | size %}
+    {% if count>=5 %}<a class="card" href="{{ segment.url }}">Learn More &#187;</a>{% endif %}
+</div>
+{% endfor %}

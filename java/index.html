@@ -1,0 +1,13 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:08 IST    
+title: Java Programming
+---
+
+{% for segment in site.data.java.segments %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs limit:4 %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+    {% assign count=segment.programs | size %}
+    {% if count>=5 %}<a class="card" href="{{ segment.url }}">Learn More &#187;</a>{% endif %}
+</div>
+{% endfor %}

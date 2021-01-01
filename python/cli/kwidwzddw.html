@@ -1,0 +1,146 @@
+---
+layout: kw
+modified: 15 Nov 2020 11:20 IST   
+title: Python Arrays
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="terminalwell">{{ page.title }} using array module</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>python3</mark>
+Python 3.8.6 (default, Sep 25 2020, 09:36:53) 
+[GCC 10.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> <mark>from array import *</mark>
+>>> <mark>arr1 = array("s", ["", "", ""])</mark>
+<error>Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+ValueError: bad typecode (must be b, B, u, h, H, i, I, l, L, q, Q, f or d)</error>
+
+>>> <mark>arr1 = array("i", [40, 96, 24, 55, 78, -111])</mark>
+>>> <mark>arr1[0]</mark>
+40
+>>> <mark>len(arr1)</mark>
+6
+
+>>> <mark>max(arr1)</mark>
+96
+>>> <mark>min(arr1)</mark>
+-111
+>>> <mark>mean(arr1)</mark>
+30.333333333333332
+
+>>> <mark>arr1[:3]</mark>
+array('i', [40, 96, 24])
+>>> <mark>arr1[3:]</mark>
+array('i', [55, 78, -111])
+
+>>> <mark>for i in arr1:</mark>
+...     <mark>print(i)</mark>
+... 
+40
+96
+24
+55
+78
+-111
+
+>>> <mark>for i in range(len(arr1)):</mark>
+...     <mark>print(arr1[i])</mark>
+... 
+40
+96
+24
+55
+78
+-111
+</pre></span>
+
+<div class="terminalwell">Array methods</div>
+<span><pre>
+>>> <mark>arr1</mark>
+array('i', [40, 96, 24, 55, 78, -111])
+>>> <mark>arr1.count(40)</mark>
+1
+ 
+>>> <mark>arr1.append(40)</mark>
+>>> <mark>arr1</mark>
+array('i', [40, 96, 24, 55, 78, -111, 40])
+>>> <mark>arr1.count(40)</mark>
+2
+
+>>> <mark>arr2 = array("d", [3.14, 9.84])</mark>
+>>> <mark>arr1.extend(arr2)</mark>
+<error>Traceback (most recent call last):
+  File "&lt;stdin>", line 1, in &lt;module>
+TypeError: can only extend with array of same kind</error>
+
+>>> <mark>arr2 = array("i", [314, 984])</mark>
+>>> <mark>arr1.extend(arr2)</mark>
+>>> <mark>arr1</mark>
+array('i', [40, 96, 24, 55, 78, -111, 40, 314, 984])
+
+>>> <mark>arr2.insert(0, 169)</mark>
+>>> <mark>arr2</mark>
+array('i', [169, 314, 984])
+
+>>> <mark>arr2.reverse()</mark>
+>>> <mark>arr2</mark>
+array('i', [984, 314, 169])
+
+>>> <mark>arr2.pop()</mark>
+169
+
+>>> <mark>arr2.pop(0)</mark>
+984
+
+>>> <mark>arr1</mark>
+array('i', [40, 96, 24, 55, 78, -111, 40, 314, 984])
+
+>>> <mark>arr1.remove(-111)</mark>
+>>> <mark>arr1</mark>
+array('i', [40, 96, 24, 55, 78, 40, 314, 984])
+
+>>> <mark>arr1.tolist()</mark>
+[40, 96, 24, 55, 78, 40, 314, 984]
+</pre></span>
+
+<div class="terminalwell">{{ page.title }} using NumPy</div>
+<span><pre>
+>>> <mark>import numpy</mark>
+>>> <mark>arr1 = numpy.array(["Orange", "Pineapple", "Banana", "Blueberry", "Grapes", "Fig"])</mark>
+>>> <mark>arr1</mark>
+array(['Orange', 'Pineapple', 'Banana', 'Blueberry', 'Grapes', 'Fig'], dtype='&lt;U9')
+
+>>> <mark>arr1[0]</mark>
+'Orange'
+
+>>> <mark>len(arr1)</mark>
+6
+>>> <mark>arr1.size</mark>
+6
+
+>>> <mark>max(arr1)</mark>
+'Pineapple'
+>>> <mark>min(arr1)</mark>
+'Banana'
+
+>>> <mark>sort(arr1)</mark>
+array(['Banana', 'Blueberry', 'Fig', 'Grapes', 'Orange', 'Pineapple'], dtype='&lt;U9')
+
+>>> <mark>arr1.tolist()</mark>
+['Orange', 'Pineapple', 'Banana', 'Blueberry', 'Grapes', 'Fig']
+
+>>> <mark>arr1 = numpy.append(arr1, "Apple")</mark>
+>>> <mark>arr1</mark>
+array(['Orange', 'Pineapple', 'Banana', 'Blueberry', 'Grapes', 'Fig', 'Apple'], dtype='&lt;U9')
+
+>>> <mark>arr1 = numpy.delete(arr1, 0)</mark>
+>>> <mark>arr1</mark>
+array(['Pineapple', 'Banana', 'Blueberry', 'Grapes', 'Fig', 'Apple'], dtype='&lt;U9')
+
+>>> <mark>arr1 = numpy.insert(arr1, 0, "Cherry")</mark>
+>>> <mark>arr1</mark>
+array(['Cherry', 'Pineapple', 'Banana', 'Blueberry', 'Grapes', 'Fig', 'Apple'], dtype='&lt;U9')
+</pre></span>

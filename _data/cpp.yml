@@ -1,0 +1,109 @@
+segments: 
+  - topic: C++ Fundamentals
+    breadcrumb_child: Fundamentals
+    url: cpp/fundamentals/
+    programs:
+      - title: C++ Hello World program
+        url: cpp/fundamentals/kwiddvwxm
+      - title: C++ Hello World program without using a semicolon
+        url: cpp/fundamentals/kwiduzwdy
+      - title: C++ program to perform the arithmetic operations
+        url: cpp/fundamentals/kwiduagbm
+      - title: C++ program to perform the boolean operations
+        url: cpp/fundamentals/kwidzmzav
+      - title: C++ program to perform the relational operations
+        url: cpp/fundamentals/kwidoeeya
+      - title: C++ program to perform the assignment operations
+        url: cpp/fundamentals/kwidexgyv
+      - title: C++ program to perform the arithmetic operations by accepting the inputs
+        url: cpp/fundamentals/kwidzzhqg
+      - title: C++ program to calculate the area and circumference of a circle
+        url: cpp/fundamentals/kwidnyeie
+      - title: C++ program to find the size of data types
+        url: cpp/fundamentals/kwidbodwv
+      - title: C++ program to find the range of data types
+        url: cpp/fundamentals/kwidqvvzg
+
+  - topic: C++ Loops and Control Statements
+    breadcrumb_child: Loops
+    url: cpp/loops/
+    programs:
+      - title: C++ program to print the star pyramid patterns
+        url: cpp/loops/kwidbvode
+      - title: C++ program to print the ASCII values
+        url: cpp/loops/kwidvzpzf
+      - title: C++ program to print the natural numbers
+        url: cpp/loops/kwidvydev
+      - title: C++ program to print the addition of N numbers
+        url: cpp/loops/kwidwaaup
+      - title: C++ program to print the floating-point numbers
+        url: cpp/loops/kwidwangz
+      - title: C++ program to print the square of the numbers
+        url: cpp/loops/kwidvqyfg
+      - title: C++ program to find the factorial of a given number
+        url: cpp/loops/kwidvzgge
+
+  - topic: C++ Classes and Objects
+    breadcrumb_child: Classes
+    url: cpp/classes/
+    programs:
+      - title: C++ program to demonstrate the use of class and object
+        url: cpp/classes/kwidutzrm
+      - title: C++ program to demonstrate the use of constructors and destructors
+        url: cpp/classes/kwiddvyma
+      - title: C++ program to print the addition of numbers using constructor
+        url: cpp/classes/kwidtvfzm
+
+  - topic: C++ Strings
+    breadcrumb_child: Strings
+    url: cpp/strings/
+    programs:
+      - title: C++ program to swap the given strings
+        url: cpp/strings/kwidzdyvg
+      - title: C++ program to reverse a given string using loops
+        url: cpp/strings/kwidecfeo
+      - title: C++ program to reverse a given string using predefined methods
+        url: cpp/strings/kwidyyvwd
+      - title: C++ program to reverse a given string using recursion
+        url: cpp/strings/kwidarayv
+      - title: C++ program to reverse a given string using stack
+        url: cpp/strings/kwidywzwa
+      - title: C++ program to check whether a given string is a palindrome
+        url: cpp/strings/kwidyxqgg
+      - title: C++ program to perform the string operations
+        url: cpp/strings/kwidpzcle
+
+  - topic: C++ Functions
+    breadcrumb_child: Functions
+    url: cpp/functions/
+    programs:
+      - title: C++ program for addition of numbers using a function
+        url: cpp/functions/kwidtaync
+      - title: C++ program for call by value and call by reference
+        url: cpp/functions/kwidzddye
+      - title: C++ program to add the members of two different classes using friend function
+        url: cpp/functions/kwidmeaby
+      - title: C++ program to demonstrate the use of math library functions
+        url: cpp/functions/kwidxybzk
+
+  - topic: C++ Arrays
+    breadcrumb_child: Arrays
+    url: cpp/arrays/
+    programs:
+      - title: C++ program to print the given matrix
+        url: cpp/arrays/kwidaziwv
+      - title: C++ program to print the transpose of a given matrix
+        url: cpp/arrays/kwidaayzg
+      - title: C++ program for addition of two matrix using functions
+        url: cpp/arrays/kwidzwdez
+      - title: C++ program for addition and subtraction of two matrix
+        url: cpp/arrays/kwidauaoi
+
+  - topic: C++ Accessories
+    breadcrumb_child: Accessories
+    url: cpp/accessories/
+    programs:
+      - title: C++ program to print the current date and time
+        url: cpp/accessories/kwidvzzwn
+      - title: "Miscellaneous: find the output of C++ programs"
+        url: cpp/accessories/kwidfclfh

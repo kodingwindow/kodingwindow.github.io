@@ -1,0 +1,227 @@
+segments: 
+  - segment: /c/
+    navigations:
+      - title: C Programming
+        url: c/
+      - title: C Fundamentals
+        url: c/fundamentals/
+      - title: C Loops and Control Statements
+        url: c/loops/
+      - title: C Strings
+        url: c/strings/
+      - title: C Functions
+        url: c/functions/
+      - title: C Accessories
+        url: c/accessories/
+      - title: C Search
+        url: c/search/
+
+  - segment: /cpp/
+    navigations:
+      - title: C++ Programming
+        url: cpp/
+      - title: C++ Fundamentals
+        url: cpp/fundamentals/
+      - title: C++ Loops and Control Statements
+        url: cpp/loops/
+      - title: C++ Classes and Objects
+        url: cpp/classes/
+      - title: C++ Strings
+        url: cpp/strings/
+      - title: C++ Functions
+        url: cpp/functions/
+      - title: C++ Arrays
+        url: cpp/arrays/
+      - title: C++ Accessories
+        url: cpp/accessories/
+      - title: C++ Search
+        url: cpp/search/
+
+  - segment: /java/
+    navigations:
+      - title: Java Programming
+        url: java/
+      - title: Java Fundamentals
+        url: java/fundamentals/
+      - title: Java Loops and Control Statements
+        url: java/loops/
+      - title: Java Classes and Objects
+        url: java/classes/
+      - title: Java Strings
+        url: java/strings/
+      - title: Java Arrays
+        url: java/arrays/
+      - title: Java Polymorphism
+        url: java/polymorphism/
+      - title: Java Abstraction
+        url: java/abstraction/
+      - title: Java Regular Expressions
+        url: java/re/
+      - title: Java Exception Handling
+        url: java/exceptions/
+      - title: Java AWT and Swing Graphics
+        url: java/awt/
+      - title: Java Collections
+        url: java/collections/
+      - title: Java Multithreading
+        url: java/multithreading/
+      - title: Java Database Connectivity (JDBC)
+        url: java/jdbc/
+      - title: Java Accessories
+        url: java/accessories/
+      - title: Java Search
+        url: java/search/
+
+  - segment: /csharp/
+    navigations:
+      - title: C# Programming
+        url: csharp/
+      - title: C# Fundamentals
+        url: csharp/fundamentals/
+      - title: C# Loops and Control Statements
+        url: csharp/loops/
+      - title: C# Classes and Objects
+        url: csharp/classes/
+      - title: C# Strings
+        url: csharp/strings/
+      - title: C# Arrays
+        url: csharp/arrays/
+      - title: C# Polymorphism
+        url: csharp/polymorphism/
+      - title: C# Abstraction
+        url: csharp/abstraction/
+      - title: C# Namespaces
+        url: csharp/namespaces/
+      - title: C# Regular Expressions
+        url: csharp/re/
+      - title: C# Exception Handling
+        url: csharp/exceptions/
+      - title: C# File Handling
+        url: csharp/fileio/
+      - title: C# Collections
+        url: csharp/collections/
+      - title: C# Multithreading
+        url: csharp/multithreading/
+      - title: C# Reflection
+        url: csharp/reflection/
+      - title: C# Database Connectivity
+        url: csharp/dbc/
+      - title: C# Interview Questions and Answers
+        url: csharp/qna/
+      - title: C# Search
+        url: csharp/search/
+
+  - segment: /python/
+    navigations:
+      - title: Python Programming
+        url: python/
+      - title: Python Command Line Interface (CLI)
+        url: python/cli/
+      - title: Python Fundamentals
+        url: python/fundamentals/
+      - title: Python Date and Time
+        url: python/dt/
+      - title: Python Loops and Control Statements
+        url: python/loops/
+      - title: Python File Handling
+        url: python/fileio/
+      - title: Python Networking
+        url: python/networking/
+      - title: Python Database Connectivity
+        url: python/dbc/
+      - title: Python Accessories
+        url: python/accessories/
+      - title: Python Search
+        url: python/search/
+
+  - segment: /datascience/
+    navigations:
+      - title: Data Science
+        url: datascience/
+      - title: Data Analysis
+        url: datascience/da/
+      - title: Data Visualization
+        url: datascience/dv/
+      - title: Data Science Search
+        url: datascience/search/
+
+  - segment: /dsa/
+    navigations:
+      - title: Data Structures and Algorithms
+        url: dsa/
+      - title: Data Structures Fundamentals
+        url: dsa/fundamentals/
+      - title: Searching Algorithms
+        url: dsa/searching
+      - title: Sorting Algorithms
+        url: dsa/sorting/
+      - title: Shortest Path Algorithms
+        url: dsa/trees/
+      - title: Data Structures Search
+        url: dsa/search/
+
+  - segment: /mysql/
+    navigations:
+      - title: MySQL Database
+        url: mysql/
+      - title: MySQL Functions
+        url: mysql/functions/
+      - title: MySQL Data Definition
+        url: mysql/ddl/
+      - title: MySQL Data Manipulation
+        url: mysql/dml/
+      - title: MySQL Accessories
+        url: mysql/accessories/
+      - title: MySQL Search
+        url: mysql/search/
+
+  - segment: /mongodb/
+    navigations:
+      - title: MongoDB
+        url: mongodb/
+      - title: MongoDB mongo Shell
+        url: mongodb/shell/
+      - title: MongoDB CRUD Operations
+        url: mongodb/crud/
+      - title: MongoDB Accessories
+        url: mongodb/accessories/
+      - title: MongoDB Search
+        url: mongodb/search/
+
+  - segment: /selenium/
+    navigations:
+      - title: Selenium WebDriver
+        url: selenium/
+      - title: Selenium Fundamentals
+        url: selenium/fundamentals/
+      - title: Selenium Locators
+        url: selenium/locators/
+      - title: Selenium XPath
+        url: selenium/xpath/
+      - title: Selenium Select Class
+        url: selenium/selectclass/
+      - title: Selenium Accessories
+        url: selenium/accessories/
+      - title: Selenium Page Object Model
+        url: selenium/pom/
+      - title: Selenium Data Driven Framework
+        url: selenium/ddf/
+      - title: Selenium TestNG
+        url: selenium/testng/
+      - title: Selenium Search
+        url: selenium/search/
+
+  - segment: /vbscript/
+    navigations:
+      - title: VBScript
+        url: vbscript/
+      - title: VBScript Fundamentals
+        url: vbscript/fundamentals/
+      - title: VBScript Functions
+        url: vbscript/functions/
+      - title: VBScript Collections
+        url: vbscript/collections/
+      - title: VBScript File/Folder Handling
+        url: vbscript/fileio/
+      - title: VBScript Search
+        url: vbscript/search/

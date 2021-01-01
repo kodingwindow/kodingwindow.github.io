@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kodingwindow Page Not Found</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kodingwindow">
+    <meta name="author" content="Shubham Darda">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+    <meta http-equiv="refresh" content="8; url=https://kodingwindow.com/" />
+    <style type="text/css">
+    .card
+    {
+        background-color: rgba(0,0,0,0.7) !important;
+        box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+    }
+    html, body 
+    {
+        height: 100%;
+        overflow: hidden;
+    }
+    </style>
+</head>
+
+<body style="background-color: #cccccc;">
+<div class="row h-100">
+    <div class="col-sm-12 my-auto"><center>
+        <div class="container"><div class="rounded col-lg-5 col-md-7 col-sm-12 col-xs-12 card">
+            <div style="border-bottom: 1px solid #00b050;" class="card-header">
+                <center><h5 style="color: #ffffff; padding-top: 8px;">404 Error. Page not found</h5></center>
+            </div>
+            <div class="card-body">
+                <div style="color: #ffffff; font-weight: normal; text-align: center;">We apologise for inconvenience caused. You will be auto-redirect to the <span style="color: #00b050;">Kodingwindow</span></div>
+                <div style="color: #ffffff; font-size: 40px; font-weight: normal; text-align: center;"><span id="timer">7</span>s</div>
+                <script type="text/javascript">
+                window.onload=function()
+                {
+                    (function() 
+                    {
+                        var cnt=7;
+                        setInterval(function() 
+                        {
+                            cnt--;
+                            if(cnt>=0) 
+                            {
+                                span=document.getElementById("timer");
+                                span.innerHTML=cnt;
+                            }
+                            if(cnt===0) 
+                            {
+                                clearInterval(cnt);
+                            }
+                        },1000);
+                    })();
+                }
+                </script>
+            </div>
+        </div></div>
+    </div></center>
+</div>
+</body>
+</html>

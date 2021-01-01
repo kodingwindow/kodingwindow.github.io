@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 17 Oct 2020 16:09 IST   
+title: Python Loops and Control Statements
+---
+
+{% for segment in site.data.python.segments %}{% if segment.url contains "/loops/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

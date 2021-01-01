@@ -1,0 +1,38 @@
+---
+layout: kw
+modified: 10 Oct 2020 10:55 IST   
+title: Selenium Java to launch and execute the script on Chromium browser
+---
+
+<div class="board"><div class="boardtitle">Prerequisites</div>
+    <p>Firstly, you need to download the <a target="_blank" href="https://download-chromium.appspot.com/">Chromium browser</a>. Once downloaded, you can copy and paste the local path of <mark>chrome.exe</mark> in script file. It is highly recommended that before you start the execution, check the compatibility of chromedriver with the Chromium browser version. If not, then download the compatible version of the driver and browser accordingly.</p>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        ChromeOptions co = new ChromeOptions();
+        co.setBinary("D:\\Selenium\\chrome-win\\chrome.exe");
+        WebDriver driver = new ChromeDriver(co);
+        driver.manage().window().maximize();
+        
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.findElement(By.name("username")).sendKeys("kodingwindow");
+        driver.findElement(By.name("password")).sendKeys("kodingwindow");
+        driver.findElement(By.name("login")).click();
+        driver.close();
+    }   	
+}
+{% endhighlight %}
+</pre>

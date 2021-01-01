@@ -1,0 +1,47 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: Implementation of C# Queue class (System.Collections)
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+using System.Collections;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Queue q = new Queue();    
+            q.Enqueue("Cherry");
+            q.Enqueue(65655);
+            q.Enqueue(45588);
+            q.Enqueue("Apple");
+            
+            Console.Write("Queue elements: ");
+            foreach(var s in q)
+            {
+                Console.Write(s+" ");
+            }
+
+            Console.WriteLine("\nFront element: "+q.Peek());
+            Console.WriteLine("Dequeue: element: "+q.Dequeue());
+            Console.WriteLine("Front element: "+q.Peek());
+            Console.WriteLine("Number of elements: "+q.Count);
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Queue elements: Cherry 65655 45588 Apple 
+Front element: Cherry
+Dequeue: element: Cherry
+Front element: 65655
+Number of elements: 3
+</pre></span>

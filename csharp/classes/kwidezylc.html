@@ -1,0 +1,68 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: C# program to print the current date and time
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("———————————————————————————————————————————");
+            Console.WriteLine("Program to print the current date and time");
+            Console.WriteLine("———————————————————————————————————————————");
+            DateTime dt = DateTime.Now;
+            Console.WriteLine(dt.ToString("d"));
+            Console.WriteLine(dt.ToString("D"));
+            Console.WriteLine(dt.ToString("f"));
+            Console.WriteLine(dt.ToString("F"));
+            Console.WriteLine(dt.ToString("g"));
+            Console.WriteLine(dt.ToString("G"));
+            Console.WriteLine(dt.ToString("m"));
+            Console.WriteLine(dt.ToString("M"));
+            Console.WriteLine(dt.ToString("o"));
+            Console.WriteLine(dt.ToString("O"));
+            Console.WriteLine(dt.ToString("s"));
+            Console.WriteLine(dt.ToString("t"));
+            Console.WriteLine(dt.ToString("T"));
+            Console.WriteLine(dt.ToString("u"));
+            Console.WriteLine(dt.ToString("U"));
+            Console.WriteLine(dt.ToString("y"));
+            Console.WriteLine(dt.ToString("Y"));
+            Console.WriteLine("———————————————————————————————————————————");
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+———————————————————————————————————————————
+Program to print the current date and time
+———————————————————————————————————————————
+5/1/2019
+Wednesday, May 1, 2019
+Wednesday, May 1, 2019 8:06 AM
+Wednesday, May 1, 2019 8:06:53 AM
+5/1/2019 8:06 AM
+5/1/2019 8:06:53 AM
+May 1
+May 1
+2019-05-01T08:06:53.7632134+05:30
+2019-05-01T08:06:53.7632134+05:30
+2019-05-01T08:06:53
+8:06 AM
+8:06:53 AM
+2019-05-01 08:06:53Z
+Wednesday, May 1, 2019 8:06:53 AM
+May 2019
+May 2019
+———————————————————————————————————————————
+</pre></span>

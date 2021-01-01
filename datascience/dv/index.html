@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 18 Oct 2020 05:54 IST   
+title: Data Visualization
+---
+
+{% for segment in site.data.datascience.segments %}{% if segment.url contains "/dv/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

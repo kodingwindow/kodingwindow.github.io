@@ -1,0 +1,85 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: Implementation of C# HashSet class
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}: Add() method</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+using System.Collections.Generic;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            HashSet<string> hs=new HashSet<string>();
+            hs.Add("Cherry");
+            hs.Add("Apple");
+            hs.Add("Orange");
+            hs.Add("Mango");
+            hs.Add("Grapes");
+            hs.Add("Cherry");
+            hs.Add("Apple");
+            hs.Add("Pineapple");
+            hs.Add("Cherry");
+            
+            foreach(string s in hs)
+            {
+                Console.Write(s+" ");
+            }
+            Console.WriteLine("\nSize: "+hs.Count);
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Cherry Apple Orange Mango Grapes Pineapple 
+Size: 6
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}: Remove() and Clear() methods</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+using System.Collections.Generic;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            HashSet<string> hs=new HashSet<string>();
+            hs.Add("Cherry");
+            hs.Add("Apple");
+            hs.Add("Orange");
+            hs.Add("Mango");
+            hs.Add("Grapes");
+            hs.Add("Cherry");
+            hs.Add("Apple");
+            hs.Add("Pineapple");
+            hs.Add("Cherry");
+            
+            hs.Remove("Apple");
+            foreach(string s in hs)
+            {
+                Console.Write(s+" ");
+            }
+            hs.Clear();
+            Console.WriteLine("\nSize: "+hs.Count);
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Cherry Orange Mango Grapes Pineapple 
+Size: 0
+</pre></span>

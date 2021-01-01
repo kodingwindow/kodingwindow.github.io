@@ -1,0 +1,57 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: Implementation of C# ArrayList class
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+using System.Collections;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            ArrayList al = new ArrayList();
+            al.Add("Apple");
+            al.Add("Banana");
+            al.Add(50);
+            al.Add("Cherry");
+            al.Add("Durian");
+            al.Add("Apple");
+            Console.WriteLine(al[1]);
+            Console.WriteLine("Size: "+al.Count);
+            foreach(var fruits in al)
+            {
+                Console.WriteLine(fruits);
+            }
+            
+            al.RemoveAt(2); //removed 50
+            al.Sort();
+            Console.Write("\nSorted elements: ");
+            foreach(var fruits in al)
+            {
+                Console.Write(fruits+" ");
+            }
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Banana
+Size: 6
+Apple
+Banana
+50
+Cherry
+Durian
+Apple
+
+Sorted elements: Apple Apple Banana Cherry Durian 
+</pre></span>

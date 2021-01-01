@@ -1,0 +1,62 @@
+---
+layout: kw
+modified: 30 Nov 2020 06:42 IST    
+title: C# program to handle the ArgumentException
+---
+
+<div class="darkwell"><mark>Title: </mark>C# ArgumentException</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int i = 0;
+            string s = "Hello, World!";
+            Console.WriteLine(s.CompareTo(i));
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+<error>System.ArgumentException: Object must be of type String.
+   at System.String.CompareTo(Object value)
+   at Kodingwindow.Program.Main(String[] args)</error>
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            int i = 0;
+            string s = "Hello, World!";
+            try
+            {
+                Console.WriteLine(s.CompareTo(i));
+            }
+            catch(ArgumentException e)
+            {
+                Console.WriteLine("Something went wrong...");
+            }
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Something went wrong...
+</pre></span>

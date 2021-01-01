@@ -1,0 +1,127 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: Implementation of C# SortedDictionary class
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}: Add() method</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+using System.Collections.Generic;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            SortedDictionary<long, string> sd = new SortedDictionary<long, string>();
+            sd.Add(25622348991,"Edward Parkar");
+            sd.Add(25622348990,"Donald Taylor");
+            sd.Add(25622348992,"Ryan Bakshi");
+            sd.Add(25622348989,"James Moore");
+            
+            foreach(KeyValuePair<long, string> kv in sd)
+            {
+                Console.WriteLine("Account No: {0}, Name: {1}",kv.Key,kv.Value);
+            }
+            Console.WriteLine("Size: "+sd.Count);
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Account No: 25622348989, Name: James Moore
+Account No: 25622348990, Name: Donald Taylor
+Account No: 25622348991, Name: Edward Parkar
+Account No: 25622348992, Name: Ryan Bakshi
+Size: 4
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}: Keys and Values properties</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+using System.Collections.Generic;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            SortedDictionary<long, string> sd = new SortedDictionary<long, string>();
+            sd.Add(25622348991,"Edward Parkar");
+            sd.Add(25622348990,"Donald Taylor");
+            sd.Add(25622348992,"Ryan Bakshi");
+            sd.Add(25622348989,"James Moore");
+            
+            SortedDictionary<long, string>.KeyCollection kc1 = sd.Keys;
+            foreach(long accno in kc1) 
+            { 
+                Console.WriteLine("Account No: "+accno); 
+            }
+            
+            SortedDictionary<long, string>.ValueCollection kc2 = sd.Values;
+            foreach(string name in kc2) 
+            { 
+                Console.WriteLine("Name: "+name); 
+            }
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Account No: 25622348989
+Account No: 25622348990
+Account No: 25622348991
+Account No: 25622348992
+Name: James Moore
+Name: Donald Taylor
+Name: Edward Parkar
+Name: Ryan Bakshi
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}: Remove() and Clear() methods</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+using System.Collections.Generic;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            SortedDictionary<long, string> sd = new SortedDictionary<long, string>();
+            sd.Add(25622348991,"Edward Parkar");
+            sd.Add(25622348990,"Donald Taylor");
+            sd.Add(25622348992,"Ryan Bakshi");
+            sd.Add(25622348989,"James Moore");
+            
+            sd.Remove(25622348989);
+            foreach(KeyValuePair<long, string> kv in sd)
+            {
+                Console.WriteLine("Account No: {0}, Name: {1}",kv.Key,kv.Value);
+            }
+            
+            sd.Clear();
+            Console.WriteLine("Size: "+sd.Count);
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Account No: 25622348990, Name: Donald Taylor
+Account No: 25622348991, Name: Edward Parkar
+Account No: 25622348992, Name: Ryan Bakshi
+Size: 0
+</pre></span>

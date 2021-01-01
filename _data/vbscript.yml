@@ -1,0 +1,68 @@
+segments: 
+  - topic: VBScript Fundamentals
+    breadcrumb_child: Fundamentals
+    url: vbscript/fundamentals/
+    programs:
+      - title: VBScript to print Hello World
+        url: vbscript/fundamentals/kwidgyved
+      - title: VBScript to perform the arithmetic operations
+        url: vbscript/fundamentals/kwidbwssb
+      - title: VBScript to perform the string operations
+        url: vbscript/fundamentals/kwidyzuir
+      - title: VBScript to demonstrate the use of Array
+        url: vbscript/fundamentals/kwidzovgy
+      - title: VBScript to sort the Array elements using Bubble sort
+        url: vbscript/fundamentals/kwidauerk
+      - title: VBScript implementation of Fibonacci series
+        url: vbscript/fundamentals/kwidfvdhv
+      - title: VBScript to generate the random numbers
+        url: vbscript/fundamentals/kwidzdzhz
+
+  - topic: VBScript Functions
+    breadcrumb_child: Functions
+    url: vbscript/functions/
+    programs:
+      - title: VBScript to demonstrate the use of conversion functions
+        url: vbscript/functions/kwidnnyye
+      - title: VBScript to demonstrate the use of format functions
+        url: vbscript/functions/kwidkavew
+      - title: VBScript to demonstrate the use of math functions
+        url: vbscript/functions/kwideygvz
+      - title: VBScript to demonstrate the use of date and time functions
+        url: vbscript/functions/kwidkzzak
+
+  - topic: VBScript Collections
+    breadcrumb_child: Collections
+    url: vbscript/collections/
+    programs:
+      - title: VBScript to perform ArrayList operations
+        url: vbscript/collections/kwidweeat
+      - title: VBScript to perform SortedList operation
+        url: vbscript/collections/kwiddxmey
+      - title: VBScript to perform Stack operations
+        url: vbscript/collections/kwidgdpvd
+      - title: VBScript to perform Queue operations
+        url: vbscript/collections/kwidfaydi
+
+  - topic: VBScript File/Folder Handling
+    breadcrumb_child: FileIO
+    url: vbscript/fileio/
+    programs:
+      - title: VBScript to create an empty folder
+        url: vbscript/fileio/kwideauvd
+      - title: VBScript to create an empty text file
+        url: vbscript/fileio/kwidahmud
+      - title: VBScript to print the file properties
+        url: vbscript/fileio/kwideegki
+      - title: VBScript to count the total number of files in a folder
+        url: vbscript/fileio/kwidczhwa
+      - title: VBScript to count the total number of files in a folder of the same extension
+        url: vbscript/fileio/kwidzwzzd
+      - title: VBScript to read and write the data in a text file
+        url: vbscript/fileio/kwidltzze
+      - title: VBScript to format the text in a Word document
+        url: vbscript/fileio/kwidmvezv
+      - title: VBScript to create an Excel in one folder and paste in another folder
+        url: vbscript/fileio/kwidhywgz
+      - title: VBScript to read the data from an Excel sheet using ADODB object
+        url: vbscript/fileio/kwidyueyg

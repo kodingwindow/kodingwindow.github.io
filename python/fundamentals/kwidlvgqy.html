@@ -1,0 +1,139 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:15 IST   
+title: How to use Python help utility
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="terminalwell">Python help modules</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>python3</mark>
+Python 3.8.2 (default, Jul 16 2020, 14:00:26) 
+[GCC 9.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> <mark>help('modules')</mark>
+
+Please wait a moment while I gather a list of all available modules...
+
+AptUrl              atexit              importlib           requests
+CommandNotFound     attr                incremental         requests_oauthlib
+Crypto              audioop             inspect             requests_unixsocket
+DistUpgrade         automat             io                  resource
+HweSupportStatus    base64              ipaddr              retrying
+LanguageSelector    bcrypt              ipaddress           rlcompleter
+NvidiaDetector      bdb                 itemadapter         rsa
+OpenSSL             bin                 itertools           runpy
+PIL                 binascii            janitor             s3transfer
+Quirks              binhex              jinja2              scanext
+UbuntuDrivers       bisect              jmespath            sched
+UbuntuSystemService blinker             joblib              scipy
+UpdateManager       bokeh               json                scrapy
+__future__          boto                jwt                 seaborn
+_abc                boto3               keras               secrets
+_ast                botocore            keras_preprocessing secretstorage
+_asyncio            brlapi              keyring             select
+_bisect             bs4                 keyword             selectors
+...
+
+Enter any module name to get more help.  Or, type "modules spam" to search
+for modules whose name or summary contain the string "spam".
+</pre></span>
+
+<div class="terminalwell">Python help utility</div>
+<span><pre>
+>>> <mark>help()</mark>
+
+Welcome to Python 3.8's help utility!
+
+If this is your first time using Python, you should definitely check out
+the tutorial on the Internet at <a target="_blank" href="https://docs.python.org/3.8/tutorial/">https://docs.python.org/3.8/tutorial/.</a>
+
+Enter the name of any module, keyword, or topic to get help on writing
+Python programs and using Python modules.  To quit this help utility and
+return to the interpreter, just type "quit".
+
+To get a list of available modules, keywords, symbols, or topics, type
+"modules", "keywords", "symbols", or "topics".  Each module also comes
+with a one-line summary of what it does; to list the modules whose name
+or summary contain a given string such as "spam", type "modules spam".
+</pre></span>
+
+<div class="terminalwell">Python help on topics</div>
+<span><pre>
+help> <mark>topics</mark>
+
+Here is a list of available topics.  Enter any topic name to get more help.
+
+ASSERTION           DELETION            LOOPING             SHIFTING
+ASSIGNMENT          DICTIONARIES        MAPPINGMETHODS      SLICINGS
+ATTRIBUTEMETHODS    DICTIONARYLITERALS  MAPPINGS            SPECIALATTRIBUTES
+ATTRIBUTES          DYNAMICFEATURES     METHODS             SPECIALIDENTIFIERS
+AUGMENTEDASSIGNMENT ELLIPSIS            MODULES             SPECIALMETHODS
+BASICMETHODS        EXCEPTIONS          NAMESPACES          STRINGMETHODS
+BINARY              EXECUTION           NONE                STRINGS
+BITWISE             EXPRESSIONS         NUMBERMETHODS       SUBSCRIPTS
+BOOLEAN             FLOAT               NUMBERS             TRACEBACKS
+CALLABLEMETHODS     FORMATTING          OBJECTS             TRUTHVALUE
+CALLS               FRAMEOBJECTS        OPERATORS           TUPLELITERALS
+CLASSES             FRAMES              PACKAGES            TUPLES
+CODEOBJECTS         FUNCTIONS           POWER               TYPEOBJECTS
+COMPARISON          IDENTIFIERS         PRECEDENCE          TYPES
+COMPLEX             IMPORTING           PRIVATENAMES        UNARY
+CONDITIONAL         INTEGER             RETURNING           UNICODE
+CONTEXTMANAGERS     LISTLITERALS        SCOPING             
+CONVERSIONS         LISTS               SEQUENCEMETHODS     
+DEBUGGING           LITERALS            SEQUENCES           
+
+help> <mark>DEBUGGING</mark>
+
+help> 
+
+You are now leaving help and returning to the Python interpreter.
+If you want to ask for help on a particular object directly from the
+interpreter, you can type "help(object)".  Executing "help('string')"
+has the same effect as typing a particular string at the help> prompt.
+</pre></span>
+
+<div class="terminalwell">Python help on package</div>
+<span><pre>
+>>> <mark>help('pymongo')</mark>
+
+Help on package pymongo:
+
+NAME
+    pymongo - Python driver for MongoDB.
+
+PACKAGE CONTENTS
+    _cmessage
+    aggregation
+    auth
+    bulk
+    change_stream
+    client_options
+    client_session
+    collation
+    collection
+    command_cursor
+    common
+    compression_support
+    cursor
+    cursor_manager
+    daemon
+    database
+    driver_info
+    encryption
+    encryption_options
+    errors
+    helpers
+    ismaster
+    max_staleness_selectors
+    message
+    mongo_client
+    mongo_replica_set_client
+    monitor
+    monitoring
+    monotonic
+    network
+    operations
+</pre></span>

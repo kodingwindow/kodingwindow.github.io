@@ -1,0 +1,13 @@
+---
+layout: container
+title: Multiple Choice Questions
+modified: 02 Oct 2020 21:29 IST   
+---
+
+{% for segment in site.data.mcqs.segments %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for mcq in segment.mcqs limit:4 %}<a class="card" href="https://www.linkedin.com/feed/update/urn:li:activity:{{ mcq.id }}/" target="_blank">{{ mcq.title }}</a>{% endfor %}
+    {% assign count=segment.mcqs | size %}
+    {% if count>=5 %}<a class="card" href="{{ segment.url }}">Learn More &#187;</a>{% endif %}
+</div>
+{% endfor %}

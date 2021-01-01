@@ -1,0 +1,72 @@
+# Welcome to Kodingwindow
+title: Kodingwindow
+url: https://kodingwindow.com/
+founded: Since 2018
+email: contact@kodingwindow.com
+type: Open-source Programming Platform
+tagline: Let's learn and celebrate success together.
+author: Shubham Darda
+
+# KWHeader
+bootstrap_css: ../../assets/css/bootstrap.min.css
+bootstrap_js: ../../assets/js/bootstrap.min.js
+jquery: ../../assets/js/jquery.min.js
+kw_css: ../../assets/css/kw.css
+kw_js: ../../assets/js/kw.js
+icon: https://raw.githubusercontent.com/kodingwindow/kodingwindow.github.io/master/assets/images/icon.png
+logo: https://raw.githubusercontent.com/kodingwindow/kodingwindow.github.io/master/assets/images/kodingwindow.png
+advertise: https://raw.githubusercontent.com/kodingwindow/kodingwindow.github.io/master/assets/images/advertise.png
+analytics: https://www.googletagmanager.com/gtag/js?id=UA-186316851-1
+
+# KWFiles
+highlighter: rouge
+cfile: "File: kw.c"
+cppfile: "File: kw.cpp"
+javafile: "File: KW.java"
+csfile: "File: Program.cs"
+pyfile: "File: kw.py"
+rfile: "File: kw.r"
+lispfile: "File: kw.lisp"
+shfile: "File: kw.sh"
+asmfile: "File: kw.asm"
+vbsfile: "File: kw.vbs"
+csvfile: "File: kw.csv"
+jsonfile: "File: kw.json"
+excelfile: "File: kw.xlsx"
+
+# KWExecution
+runc: "kodingwindow@kw:~$ <mark>gcc kw.c</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
+runcpp: "kodingwindow@kw:~$ <mark>g++ kw.cpp</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
+runjava: "kodingwindow@kw:~$ <mark>javac KW.java</mark><br>kodingwindow@kw:~$ <mark>java KW</mark>"
+runpy: "kodingwindow@kw:~$ <mark>python3 kw.py</mark>"
+runlisp: "kodingwindow@kw:~$ <mark>clisp kw.lisp</mark>"
+runasm: "kodingwindow@kw:~$ <mark>nasm -felf64 kw.asm</mark><br>kodingwindow@kw:~$ <mark>ld kw.o && ./a.out</mark>"
+runcg: "kodingwindow@kw:~$ <mark>g++ kw.cpp -lgraph</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
+runsh: "kodingwindow@kw:~$ <mark>sh kw.sh</mark>"
+output: "Output:"
+
+# KWFooter
+linkedin: https://linkedin.com/company/kodingwindow/
+twitter: https://twitter.com/kodingwindow/
+github: https://github.com/kodingwindow/
+telegram: https://t.me/kodingwindow
+slack: https://kodingwindow.slack.com/
+azure: https://dev.azure.com/kodingwindow/kodingwindow.github.io
+instagram: https://instagram.com/kodingwindow/
+facebook: https://facebook.com/kodingwindow/
+group: https://www.linkedin.com/groups/10441563/
+medium: https://medium.com/kodingwindow
+
+# Exclude from processing.
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+   - .jekyll-cache
+   - _site
+   - LICENSE
+   - README.md

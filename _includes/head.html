@@ -1,0 +1,136 @@
+{% assign pu=page.url | split: '/' %}
+
+{% if page.url contains "/c/" %}
+{% assign segmentname = "C Programming" %}{% assign breadcrumb_parent=" / C / " %}
+{% for segment in site.data.c.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/cpp/" %}
+{% assign segmentname = "C++ Programming" %}{% assign breadcrumb_parent=" / C++ / " %}
+{% for segment in site.data.cpp.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/java/" %}
+{% assign segmentname = "Java Programming" %}{% assign breadcrumb_parent=" / Java / " %}
+{% for segment in site.data.java.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/csharp/" %}
+{% assign segmentname = "C# Programming" %}{% assign breadcrumb_parent=" / C# / " %}
+{% for segment in site.data.csharp.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/python/" %}
+{% assign segmentname = "Python Programming" %}{% assign breadcrumb_parent=" / Python / " %}
+{% for segment in site.data.python.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/r/" %}
+{% assign segmentname="R Programming" %}{% assign breadcrumb_parent=" / R / " %}
+{% for segment in site.data.r.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/datascience/" %}
+{% assign segmentname="Data Science" %}{% assign breadcrumb_parent=" / DS / " %}
+{% for segment in site.data.datascience.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/lisp/" %}
+{% assign segmentname="LISP Programming" %}{% assign breadcrumb_parent=" / LISP / " %}
+{% for segment in site.data.lisp.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/dsa/" %}
+{% assign segmentname="Data Structures and Algorithms" %}{% assign breadcrumb_parent=" / DSA / " %}
+{% for segment in site.data.dsa.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/mysql/" %}
+{% assign segmentname="MySQL Database" %}{% assign breadcrumb_parent=" / MySQL / " %}
+{% for segment in site.data.mysql.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/mongodb/" %}
+{% assign segmentname="MongoDB (NoSQL Database)" %}{% assign breadcrumb_parent=" / MongoDB / " %}
+{% for segment in site.data.mongodb.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/linux/" %}
+{% assign segmentname="Linux Commands" %}{% assign breadcrumb_parent=" / Linux / " %}
+{% for segment in site.data.linux.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/bash/" %}
+{% assign segmentname="Bash Shell Scripting" %}{% assign breadcrumb_parent=" / Bash Shell / " %}
+{% for segment in site.data.bash.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/cg/" %}
+{% assign segmentname="Computer Graphics" %}{% assign breadcrumb_parent=" / Computer Graphics / " %}
+{% for segment in site.data.cg.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/asm/" %}
+{% assign segmentname="Assembly Programming" %}{% assign breadcrumb_parent=" / Assembly / " %}
+{% for segment in site.data.asm.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/selenium/" %}
+{% assign segmentname="Selenium WebDriver" %}{% assign breadcrumb_parent=" / Selenium / " %}
+{% for segment in site.data.selenium.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/vbscript/" %}
+{% assign segmentname="Visual Basic Scripting" %}{% assign breadcrumb_parent=" / VBScript / " %}
+{% for segment in site.data.vbscript.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/mcqs/" %}
+{% assign segmentname="Multiple Choice Questions" %}{% assign breadcrumb_parent=" / MCQs / " %}
+{% for segment in site.data.mcqs.segments %}
+    {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
+{% endfor %}
+
+{% elsif page.url contains "/faqs/" %}{% assign segmentname="Frequently Asked Questions" %}{% assign breadcrumb_parent=" / FAQs / " %}
+
+{% elsif page.url contains "/search/" %}{% assign segmentname="Kodingwindow Search" %}{% assign breadcrumb_parent=" / Global Search / " %}
+
+{% elsif page.url contains "/testapp/" %}{% assign segmentname="Kodingwindow TestApp" %}{% assign breadcrumb_parent=" / TestApp / " %}
+
+{% else %}
+{% endif %}
+
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="{{ site.title }}, {{ segmentname }}">
+    <meta name="description" content="{{ site.title }}">
+    <meta name="author" content="{{ site.author }}">
+    <meta property="og:image" content="{{ site.logo }}">
+    <link rel="icon" href="{{ site.icon }}">
+    <link rel="stylesheet" type="text/css" href="{{ site.bootstrap_css }}">
+    <link rel="stylesheet" type="text/css" href="{{ site.kw_css }}">
+    <script src="{{ site.jquery }}"></script>
+    <script src="{{ site.bootstrap_js }}"></script>
+    <script src="{{ site.kw_js }}"></script>
+    <script async src="{{ site.analytics }}"></script>
+    <base href="{{ site.url }}">
+</head>

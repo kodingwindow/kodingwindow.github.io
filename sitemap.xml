@@ -1,0 +1,67 @@
+---
+modified: 18 Oct 2020 06:23 IST   
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>{{ site.url }}</loc><priority>1.0</priority></url>
+    {% for segment in site.data.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc>
+    <priority>0.9</priority></url>{% endfor %}
+    
+    <url><loc>{{ site.url }}search/</loc>
+    <priority>0.9</priority></url>
+    
+    <url><loc>{{ site.url }}testapp/</loc>
+    <priority>0.9</priority></url>
+    
+    {% for segment in site.data.c.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.cpp.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.java.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.csharp.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.python.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.r.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.datascience.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.lisp.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.dsa.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.mysql.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.mongodb.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.linux.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.bash.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.cg.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.asm.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.selenium.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    
+    {% for segment in site.data.vbscript.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
+    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+</urlset>

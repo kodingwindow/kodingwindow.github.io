@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="navbar-header">
+        <button class="navbar-toggler p-0" type="button" data-toggle="leftsidebar" data-target="#leftsidebar" style="border: none; margin-right: 8px;">
+            <span class="navbar-toggler-icon" style="font-size: 16px;"></span>
+        </button>
+        <div class="navbar-brand" style="color: #00b050; font-size: 16px;"><a href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/{{ pu[2] }}/">{{ breadcrumb_child }}</a>{% if pu[2] == "search" %}<a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/search/">Search</a>{% endif %}</div>
+    </div>
+    <button class="navbar-toggler p-0" type="button" data-toggle="rightsidebar" data-target="#rightsidebar" style="border: none;">
+        <span class="navbar-toggler-icon" style="font-size: 16px;"></span>
+    </button>
+    <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse">
+        <span class="ml-auto">{% include nav.html %}</span>
+    </div>
+    <div id="leftsidebar" class="sidebar leftsidebar-collapse col-md-2">
+    {% for item in site.data.sidenav.segments %}
+        {% if page.url contains item.segment %}
+            {% for subitem in item.navigations %}
+                {% assign class=nil %}
+                {% assign tu=subitem.url | split: '/' %}
+                {% if pu[2]==tu[1] %}
+                    {% assign class="activetab" %}
+                    <a class="nav-link {{ class }} {{ pu[1] }}" href="{{ subitem.url }}">{{ subitem.title }}</a>
+                {% else %}
+                    <a class="nav-link {{ pu[1] }}" href="{{ subitem.url }}">{{ subitem.title }}</a>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+    {% endfor %}
+    </div>
+</nav>
+
+<div data-toggle="collapseall">
+    <div class="kwdisplay col-md-10 ml-sm-auto col-lg-10 jumbotron text-center">
+        <h3>{{ site.title }}</h3>
+        <h6>{{ segmentname }}</h6>
+    </div>
+
+    <main class="col-md-10 ml-sm-auto pl-lg-5 pr-lg-5 col-lg-10" role="main">
+        <div class="pl-lg-5 pr-lg-5">
+            {{ content }}
+            {% include pagination.html %}
+        </div>
+    </main>
+
+    <footer class="kwdisplay col-md-10 ml-sm-auto col-lg-10" style="padding: 0px;">{% include footer.html %}
+        <div class="text-center" style="background-color: #29293d; color: #ffffff; font-size: 15px; padding: 10px;">This page updated on: {{ page.modified }}.</div>
+    </footer>
+</div>
+</body>
+</html>

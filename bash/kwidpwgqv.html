@@ -1,0 +1,37 @@
+---
+layout: container
+modified: 02 Oct 2020 21:22 IST   
+title: Shell script to calculate the area and circumference of a circle
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.shfile }}</div>
+<pre>
+{% highlight shell %}
+echo "———————————————————————————————————————————"
+echo "Script to calculate the area and circumference of a circle"
+echo "———————————————————————————————————————————"
+echo "Enter the radius of circle \c"
+read RADIUS
+PI=3.14159
+AREA=$(echo "$PI*($RADIUS^2)"|bc)
+CIRCUM=$(echo "(2*$PI*$RADIUS)"|bc)
+echo "\nArea of a circle is $AREA"
+echo "\nCircumference of a circle is $CIRCUM"
+echo "———————————————————————————————————————————"
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runsh }}
+———————————————————————————————————————————
+Script to calculate the area and circumference of a circle
+———————————————————————————————————————————
+Enter the radius of circle 10
+
+Area of a circle is 314.15900
+
+Circumference of a circle is 62.83180
+———————————————————————————————————————————
+kodingwindow@kw:~$ 
+</pre></span>

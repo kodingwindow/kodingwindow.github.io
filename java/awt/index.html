@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 09 Oct 2020 07:08 IST    
+title: Java AWT and Swing Graphics
+---
+
+{% for segment in site.data.java.segments %}{% if segment.url contains "/awt/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

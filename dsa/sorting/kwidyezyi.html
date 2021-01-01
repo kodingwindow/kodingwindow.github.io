@@ -1,0 +1,32 @@
+---
+layout: kw
+modified: 31 Dec 2020 11:07 IST   
+title: Python implementation of Bubble Sort
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.pyfile }}</div>
+<pre>
+{% highlight python %}
+def bubble_sort(nlist):
+    for length in range(len(nlist)):
+        for i in range(length):
+            if nlist[i]>nlist[i+1]:
+                # nlist[i],nlist[i+1]=nlist[i+1],nlist[i]
+                temp = nlist[i]
+                nlist[i] = nlist[i+1]
+                nlist[i+1] = temp
+                
+nlist=[12,1024,-2048,0,-1,95, 987]
+print("Before Sorting:",nlist)
+bubble_sort(nlist)
+print("After Sorting:",nlist)
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runpy }}
+Before Sorting: [12, 1024, -2048, 0, -1, 95, 987]
+After Sorting: [-2048, -1, 0, 12, 95, 987, 1024]
+kodingwindow@kw:~$ 
+</pre></span>

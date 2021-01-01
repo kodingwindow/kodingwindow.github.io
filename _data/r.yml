@@ -1,0 +1,21 @@
+segments: 
+  - topic: R Command Line Interface (CLI)
+    breadcrumb_child: CLI
+    url: r/cli/
+    programs:
+      - title: R Mathematical Operations and Functions
+        url: r/cli/kwidegdgz
+      - title: R Date and Time Functions
+        url: r/cli/kwidexdvy
+      - title: R Functions
+        url: r/cli/kwidadmvw
+      - title: R Strings
+        url: r/cli/kwidgebwv
+      - title: R Vectors
+        url: r/cli/kwiddlyle
+      - title: R Lists
+        url: r/cli/kwidarfve
+      - title: R Matrices
+        url: r/cli/kwidexavz
+      - title: R Data Frames
+        url: r/cli/kwidazeek

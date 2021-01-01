@@ -1,0 +1,232 @@
+---
+layout: kw
+modified: 17 Oct 2020 17:22 IST   
+title: MongoDB Getting started with the mongo Shell
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+
+<div class="terminalwell">Fundamental Operations</div>
+<span><pre>
+kodingwindow@kw:~/mongodb-4.4.0/bin$ <mark>./mongo</mark>
+MongoDB shell version v4.4.0
+connecting to: mongodb://127.0.0.1:27017/
+MongoDB server version: 4.4.0
+
+> <mark>db.version()</mark>
+4.4.0
+
+> <mark>version()</mark>
+4.4.0
+
+> <mark>ls()</mark>
+[ "./install_compass", "./mongo", "./mongos", "./mongod" ]
+<hr>> <mark>db.runCommand({whatsmyuri:1})</mark>
+{ "you" : "127.0.0.1:45626", "ok" : 1 }
+
+> <mark>db.getMongo()</mark>
+connection to 127.0.0.1:27017
+
+<hr>> <mark>pwd()</mark>
+/home/kodingwindow/mongodb-4.4.0/bin
+
+> <mark>getHostName()</mark>
+cw
+
+> <mark>hostname()</mark>
+cw
+
+> <mark>_isWindows()</mark>
+false
+
+> <mark>getMemInfo()</mark>
+{ "virtual" : 1131, "resident" : 46 }
+<hr>> <mark>"Hello World"</mark>
+Hello World
+
+> <mark>"Hello World".replace("World","Learners")</mark>
+Hello Learners
+</pre></span>
+
+<div class="terminalwell">Arithmetic Operations</div>
+<span><pre>
+> <mark>a=1000</mark>
+1000
+
+> <mark>b=30</mark>
+30
+
+> <mark>a+b</mark>
+1030
+
+> <mark>a*b</mark>
+30000
+
+> <mark>a-b</mark>
+970
+
+> <mark>b-a</mark>
+-970
+
+> <mark>(a+b)*a</mark>
+1030000
+
+> <mark>a/b</mark>
+33.333333333333336
+
+> <mark>a=1</mark>
+1
+> <mark>b=0</mark>
+0
+> <mark>a/b</mark>
+Infinity
+</pre></span>
+
+<div class="terminalwell">Trigonometric Functions</div>
+<span><pre>
+> <mark>Math.PI</mark>
+3.141592653589793
+
+> <mark>Math.sin(Math.PI)</mark>
+1.2246467991473532e-16
+
+> <mark>Math.sin(90)</mark>
+0.8939966636005579
+
+> <mark>Math.cos(90)</mark>
+-0.4480736161291701
+
+> <mark>Math.tan(90)</mark>
+-1.995200412208242
+</pre></span>
+
+<div class="terminalwell">Date and Time Functions</div>
+<span><pre>
+> <mark>Date()</mark>
+Fri Aug 28 2020 17:32:27 GMT+0530 (IST)
+
+> <mark>new Date()</mark>
+ISODate("2020-08-28T12:02:44.522Z")
+
+> <mark>new Date().getTime()</mark>
+1598616182788
+
+> <mark>new Date().getTimezoneOffset()</mark>
+-330
+</pre></span>
+
+<div class="terminalwell">db.hostInfo() Function</div>
+<span><pre>
+> <mark>db.hostInfo()</mark>
+{
+    "system" : {
+        "currentTime" : ISODate("2020-08-28T12:03:35.588Z"),
+        "hostname" : "cw",
+        "cpuAddrSize" : 64,
+        "memSizeMB" : NumberLong(7744),
+        "memLimitMB" : NumberLong(7744),
+        "numCores" : 4,
+        "cpuArch" : "x86_64",
+        "numaEnabled" : false
+    },
+    "os" : {
+        "type" : "Linux",
+        "name" : "Ubuntu",
+        "version" : "20.04"
+    },
+    ...
+}
+</pre></span>
+
+<div class="terminalwell">Running Hosts and Services</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>su</mark>
+Password: 
+root@kw:/home/kodingwindow# <mark>apt-get install nmap</mark>
+
+kodingwindow@kw:~$ <mark>nmap -p- localhost</mark>
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-08-28 17:36 IST
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0000030s latency).
+Not shown: 65531 closed ports
+PORT      STATE SERVICE
+631/tcp   open  ipp
+3306/tcp  open  mysql
+27017/tcp open  mongod
+33060/tcp open  mysqlx
+
+Nmap done: 1 IP address (1 host up) scanned in 0.70 seconds
+</pre></span>
+
+<div class="terminalwell">db.isMaster Function</div>
+<span><pre>
+isMaster returns a document that describes the role of the mongod instance.
+> <mark>db.isMaster()</mark>
+{
+    "ismaster" : true,
+    "topologyVersion" : {
+        "processId" : ObjectId("5f48f11a8e80e4168bdc8c80"),
+        "counter" : NumberLong(0)
+    },
+    "maxBsonObjectSize" : 16777216,
+    "maxMessageSizeBytes" : 48000000,
+    "maxWriteBatchSize" : 100000,
+    "localTime" : ISODate("2020-08-28T12:07:30.487Z"),
+    "logicalSessionTimeoutMinutes" : 30,
+    "connectionId" : 1,
+    "minWireVersion" : 0,
+    "maxWireVersion" : 9,
+    "readOnly" : false,
+    "ok" : 1
+}
+</pre></span>
+
+<div class="terminalwell">db.stats() Function</div>
+<span><pre>
+> <mark>db.stats()</mark>
+{
+    "db" : "DB",
+    "collections" : 1,
+    "views" : 0,
+    "objects" : 4,
+    "avgObjSize" : 177.75,
+    "dataSize" : 711,
+    "storageSize" : 36864,
+    "numExtents" : 0,
+    "indexes" : 1,
+    "indexSize" : 36864,
+    "scaleFactor" : 1,
+    "fsUsedSize" : 7331307520,
+    "fsTotalSize" : 95059320832,
+    "ok" : 1
+}
+</pre></span>
+
+<div class="terminalwell">User-defined Function</div>
+<span><pre>
+> <mark>function factorial(n){
+... if(n<=-1)
+... return 'Enter Positive Integer';
+... if(n<=1)
+... return 1;
+... return n*factorial(n-1);
+... }</mark>
+
+> <mark>factorial(0);</mark>
+1
+
+> <mark>factorial(10);</mark>
+3628800
+
+> <mark>factorial(-10);</mark>
+Enter Positive Integer
+
+> <mark>factorial(170);</mark>
+7.257415615307994e+306
+
+> <mark>factorial(171);</mark>
+Infinity
+
+> <mark>quit()</mark>
+kodingwindow@kw:~/mongodb-4.2.3/bin$
+</pre></span>

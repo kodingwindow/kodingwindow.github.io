@@ -1,0 +1,61 @@
+---
+layout: kw
+modified: 28 Oct 2020 18:13 IST   
+title: How to view the byte code instructions using the dis module
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.pyfile }}</div>
+<pre>
+{% highlight python %}
+print("Hello, World!")
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runpy }}
+Hello, World!
+<mark>python3 -m dis cw.py</mark>
+  1           0 LOAD_NAME                0 (print)
+              2 LOAD_CONST               0 ('Hello, World!')
+              4 CALL_FUNCTION            1
+              6 POP_TOP
+              8 LOAD_CONST               1 (None)
+             10 RETURN_VALUE
+
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.pyfile }}</div>
+<pre>
+{% highlight python %}
+a,b=10,20
+(a,b)=(b,a)
+print(a,b)
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runpy }}
+20 10
+<mark>python3 -m dis cw.py</mark>
+  1           0 LOAD_CONST               0 ((10, 20))
+              2 UNPACK_SEQUENCE          2
+              4 STORE_NAME               0 (a)
+              6 STORE_NAME               1 (b)
+
+  2           8 LOAD_NAME                1 (b)
+             10 LOAD_NAME                0 (a)
+             12 ROT_TWO
+             14 STORE_NAME               0 (a)
+             16 STORE_NAME               1 (b)
+
+  3          18 LOAD_NAME                2 (print)
+             20 LOAD_NAME                0 (a)
+             22 LOAD_NAME                1 (b)
+             24 CALL_FUNCTION            2
+             26 POP_TOP
+             28 LOAD_CONST               1 (None)
+             30 RETURN_VALUE
+
+</pre></span>

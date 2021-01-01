@@ -1,0 +1,56 @@
+- title: C Programming
+  url: c/
+
+- title: C++ Programming
+  url: cpp/
+
+- title: Java Programming
+  url: java/
+
+- title: C# Programming
+  url: csharp/
+
+- title: Python Programming
+  url: python/
+
+- title: R Programming
+  url: r/
+
+- title: Data Science
+  url: datascience/
+
+- title: LISP Programming
+  url: lisp/
+
+- title: Data Structures and Algorithms
+  url: dsa/
+
+- title: MySQL Database
+  url: mysql/
+  
+- title: MongoDB (NoSQL Database)
+  url: mongodb/
+
+- title: Linux Commands
+  url: linux/
+
+- title: Bash Shell Scripting
+  url: bash/
+
+- title: Computer Graphics
+  url: cg/
+
+- title: Assembly Programming
+  url: asm/
+
+- title: Selenium WebDriver
+  url: selenium/
+
+- title: Visual Basic Scripting
+  url: vbscript/
+
+- title: Multiple Choice Questions
+  url: mcqs/
+
+- title: Frequently Asked Questions
+  url: faqs/

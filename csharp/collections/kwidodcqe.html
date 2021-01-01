@@ -1,0 +1,51 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: Implementation of C# Stack class (System.Collections)
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+using System.Collections;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Stack st = new Stack();    
+            st.Push("Cherry");
+            st.Push(65655);
+            st.Push(45588);
+            st.Push("Apple");
+            
+            Console.WriteLine("Stack elements: ");
+            foreach(var s in st)
+            {
+                Console.WriteLine(s);
+            }
+            Console.WriteLine("\nPeek element: "+st.Peek());
+            Console.WriteLine("Pop: element: "+st.Pop());
+            Console.WriteLine("Peek element: "+st.Peek());
+            Console.WriteLine("Number of elements: "+st.Count);
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Stack elements: 
+Apple
+45588
+65655
+Cherry
+
+Peek element: Apple
+Pop: element: Apple
+Peek element: 45588
+Number of elements: 3
+</pre></span>

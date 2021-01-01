@@ -1,0 +1,23 @@
+---
+layout: kw
+modified: 09 Oct 2020 07:02 IST   
+title: VBScript to format the text in a Word document
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">File: cw.vbs</div>
+<pre class="inputwell">
+Set word = CreateObject("Word.Application")
+word.Application.Visible = true
+Set doc = word.Documents.Add()
+
+Set wordSelection = word.Selection
+wordSelection.Font.Name = "Arial"
+wordSelection.Font.Size = "12"
+wordSelection.TypeText "We Are Humans!"
+wordSelection.TypeText " " & Date()
+
+doc.SaveAs("D:\VBScript\Trial.docx")
+doc.Saved = true
+word.Quit
+</pre>

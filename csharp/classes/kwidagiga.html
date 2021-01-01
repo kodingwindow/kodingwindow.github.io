@@ -1,0 +1,76 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: C# implementation of accessors properties
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Fruit
+    {
+        private string fname;
+        private string fcolor;
+        public string FruitName
+        {
+            get
+            {
+                return fname;
+            }
+            set
+            {
+                fname = value;
+            }
+        }
+
+        public string FruitColor
+        {
+            get
+            {
+                return fcolor;
+            }
+            set
+            {
+                fcolor = value;
+            }
+        }
+
+        public override string ToString()
+        {
+            return "Fruit Name - " + FruitName + "\nFruit Color - " + FruitColor;
+        }
+    }
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Fruit f = new Fruit();
+            f.FruitName = "Apple";
+            f.FruitColor = "Red";
+            Console.WriteLine("———————————————————————————————————————————");
+            Console.WriteLine("Program to use the accessors properties");
+            Console.WriteLine("———————————————————————————————————————————");
+            Console.WriteLine("Fruit Name - " + f.FruitName);
+            Console.WriteLine("Fruit Color - " + f.FruitColor);
+            Console.WriteLine(f);
+            Console.WriteLine("———————————————————————————————————————————");
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+———————————————————————————————————————————
+Program to use the accessors properties
+———————————————————————————————————————————
+Fruit Name - Apple
+Fruit Color - Red
+Fruit Name - Apple
+Fruit Color - Red
+———————————————————————————————————————————
+</pre></span>

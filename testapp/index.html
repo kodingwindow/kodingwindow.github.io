@@ -1,0 +1,118 @@
+---
+title: TestApp Login Page
+---
+
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<head>
+    <style type="text/css">
+    html, body 
+    {
+        height: 100%;
+        overflow: hidden;
+        background-color: #cccccc;
+    }
+    .card-header
+    {
+        border-bottom: 1px solid #00b050;
+        color: white;
+    }
+    .card
+    {
+        margin-top: -50px;
+        background-color: rgba(0,0,0,0.7) !important;
+        box-shadow: 0 0 9px rgba(0, 0, 0, 0.4);
+    }
+    .card-body
+    {
+        padding: 20px 10px 10px 10px;
+        margin-bottom: 15px;
+    }
+    input[type=text], input[type=password]
+    {
+        border-color: #404040;
+    }
+    input[type=text]:focus, input[type=password]:focus
+    {
+        background-color: #000000;
+        border-bottom-width: 2px;
+        border-bottom-color: #00b050;
+        border-right-color: #000000;
+        border-left-color: #000000;
+        border-top-color: #000000;
+        color: #ffffff;
+    }
+    .kwbtn:hover, .kwbtn:focus
+    {
+        background-color: #000000;
+        color: #00b050;
+        border-color: #00b050;
+    }
+    </style>
+    <script type="text/javascript">
+    function validate() 
+    {
+        var username=document.kwlogin.username.value;  
+        var password=document.kwlogin.password.value;
+        if(username=="kodingwindow" && password=="kodingwindow")
+        {
+            return true;
+        }
+        else
+        {
+            alert("\nPlease use the following credentials to login\nUsername: kodingwindow\nPassword: kodingwindow");
+            return false;
+        }
+    }
+    function AutoLogin()
+    {
+        $('#username').val('kodingwindow');
+        $('#password').val('kodingwindow')
+    }
+    </script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="navbar-header">
+        <div class="navbar-brand" style="color: #00b050; font-size: 16px;"><a style="margin-right: 5px;" href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a></div>
+    </div>
+    <button class="navbar-toggler p-0" type="button" data-toggle="rightsidebar" data-target="#rightsidebar" style="border: none;">
+        <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
+    </button>
+    <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse">
+        <span class="ml-auto">{% include nav.html %}</span>
+    </div>
+</nav>
+
+<div class="row h-100">
+    <div class="col-sm-12 my-auto">
+        <div class="container"><center>
+            <div class="rounded col-lg-5 col-md-7 col-sm-12 col-xs-12 card">
+                <div class="card-header">
+                    <center><h5>Kodingwindow Login</h5></center>
+                </div>
+                <div class="card-body">
+                    <form name="kwlogin" action="testapp/profile" onsubmit="return validate()">
+                        <div class="input-group form-group">
+                            <input id="username" name="username" type="text" class="form-control" placeholder="Username" autocomplete="off" oninput="this.value=this.value.toLowerCase()" tabindex="1" maxlength="12" minlength="12">
+                        </div>
+                        <div class="input-group form-group">
+                            <input id="password" name="password" type="password" class="form-control" placeholder="Password" autocomplete="off" oninput="this.value=this.value.toLowerCase()" tabindex="2" maxlength="12" minlength="12">
+                        </div>
+                        <center>
+                            <button id="reset" name="reset" tabindex="5" class="kwbtn btn" type="reset" style="margin-right: 10px;">Reset</button>
+                            <button id="autologin" name="autologin" tabindex="4" class="kwbtn btn" style="margin-right: 10px;" onclick="AutoLogin();">AutoLogin</button>
+                            <button id="login" name="login" tabindex="3" class="kwbtn btn" type="submit">Login</button>
+                        </center>
+                    </form>
+                </div>
+            </div>
+        </center></div>
+    </div>
+</div>
+
+</body>
+</html>

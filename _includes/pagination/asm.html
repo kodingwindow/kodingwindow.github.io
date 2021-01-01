@@ -1,0 +1,25 @@
+{% for segment in site.data.asm.segments %}
+    {% for program in segment.programs %}
+    {% assign i = i | plus:1 %}
+        {% if page.url contains program.url %}
+            {% assign first = i | plus: 0 %}{% assign second = i | plus:1 %}{% assign third = i | plus:2 %}
+            {% if segment.programs[third].url != null %}
+            <div class="board"><div class="boardtitle">What Next?</div>
+                <a class="card" href="{{ segment.programs[first].url }}">{{ segment.programs[first].title }}</a>
+                <a class="card" href="{{ segment.programs[second].url }}">{{ segment.programs[second].title }}</a>
+                <a class="card" href="{{ segment.programs[third].url }}">{{ segment.programs[third].title }}</a>
+            </div>
+            {% elsif segment.programs[second].url != null %}
+            <div class="board"><div class="boardtitle">What Next?</div>
+                <a class="card" href="{{ segment.programs[first].url }}">{{ segment.programs[first].title }}</a>
+                <a class="card" href="{{ segment.programs[second].url }}">{{ segment.programs[second].title }}</a>
+            </div>
+            {% elsif segment.programs[first].url != null %}
+            <div class="board"><div class="boardtitle">What Next?</div>
+                <a class="card" href="{{ segment.programs[first].url }}">{{ segment.programs[first].title }}</a>
+            </div>
+            {% else %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endfor %}

@@ -1,0 +1,35 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:24 IST   
+title: Selenium Java to perform series of multiple actions using Action and Actions classes
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+public class KW
+{
+    public static void main(String[] args) 
+    {	
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.get("http://newtours.demoaut.com");
+
+        WebElement user_name = driver.findElement(By.name("userName"));
+        Actions builder = new Actions(driver);
+        Action multipleActions = builder.moveToElement(user_name).click()
+        .keyDown(user_name, Keys.SHIFT).sendKeys(user_name, "mercury").doubleClick().build();
+        multipleActions.perform();
+    }
+}
+{% endhighlight %}
+</pre>

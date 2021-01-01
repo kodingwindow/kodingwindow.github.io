@@ -1,0 +1,26 @@
+---
+layout: container
+modified: 28 Oct 2020 18:44 IST   
+title: Draw a circle using the arc function
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.cppfile }}</div>
+<pre>
+{% highlight cpp %}
+#include<graphics.h>
+int main()
+{
+    int gd=0,gm=9;
+    initgraph(&gd,&gm,NULL);
+    arc(100,100,0,360,50);
+    delay(2000);
+    return 0;
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runcg }}
+<img src="cg/images/kwidvefgz.png" loading="lazy">
+</pre></span>

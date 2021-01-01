@@ -1,0 +1,72 @@
+---
+layout: kw
+modified: 18 Oct 2020 07:26 IST   
+title: How to setup, install, and start MongoDB on Ubuntu
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+
+<div class="board"><div class="boardtitle">Steps to download MongoDB</div>
+    <p>1. Go to <a target="_blank" href="https://www.mongodb.com/download-center/community">MongoDB download center</a><br>
+    2. Click MongoDB Community Server tab<br>
+    3. Select OS as Ubuntu<br>
+    4. Select Package as .tzg<br>
+    5. Click download button<br></p>
+</div>
+
+<div class="terminalwell">Step-1: Extract .tgz into any directory (right click -> select option Extract Here)</div>
+<span><pre>
+<img src="mongodb/images/kwidzngwn.png" loading="lazy">
+</pre></span>
+
+<div class="terminalwell">Step-2: Create folders data/db in the extracted path</div>
+<span><pre>
+<img src="mongodb/images/kwidwpelu.png" loading="lazy">
+</pre></span>
+
+<div class="terminalwell">Step-3: Open a terminal and execute the following steps</div>
+<div class="textwell">Note: don’t close this instance of mongod terminal, until and unless you finish you tasks.</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>cd Documents/mongodb-4.4.0/bin/</mark>
+kodingwindow@kw:~/Documents/mongodb-4.4.0/bin$ <mark>./mongod --dbpath /home/kodingwindow/Documents/data/db/</mark>
+{"t":{"$date":"2020-08-28T17:20:45.704+05:30"},"s":"I",  "c":"CONTROL",  "id":23285,   
+"ctx":"main","msg":"Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'"}
+{"t":{"$date":"2020-08-28T17:20:45.708+05:30"},"s":"W",  "c":"ASIO",     "id":22601,   
+"ctx":"main","msg":"No TransportLayer configured during NetworkInterface startup"}
+
+kodingwindow@kw:~/Documents/mongodb-4.4.0/bin$ <mark>./mongo</mark>
+MongoDB shell version v4.4.0
+connecting to: mongodb://127.0.0.1:27017/
+MongoDB server version: 4.4.0
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+    <a target="_blank" href="https://docs.mongodb.com/">https://docs.mongodb.com/</a>
+Questions? Try the MongoDB Developer Community Forums
+    <a target="_blank" href="https://community.mongodb.com">https://community.mongodb.com</a>
+</pre></span>
+
+<div class="terminalwell">Step-4: Open a new instance of a terminal and start the MongoDB</div>
+<span><pre>
+kodingwindow@kw:~/Documents/mongodb-4.4.0/bin$ <mark>./mongo</mark>
+MongoDB shell version v4.4.0
+connecting to: mongodb://127.0.0.1:27017/
+MongoDB server version: 4.4.0
+Welcome to the MongoDB shell.
+For interactive help, type "help".
+For more comprehensive documentation, see
+    <a target="_blank" href="https://docs.mongodb.com/">https://docs.mongodb.com/</a>
+Questions? Try the MongoDB Developer Community Forums
+    <a target="_blank" href="https://community.mongodb.com">https://community.mongodb.com</a>
+
+> <mark>show dbs</mark>
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+</pre></span>
+
+<div class="board"><div class="boardtitle">Recommendations</div>
+    <a class="card" href="mongodb/crud/kwidyxxwo">MongoDB Create a Database and Collection</a>
+    <a class="card" href="java/jdbc/kwidvhaug">Java MongoDB to create database and collection</a>
+    <a class="card" href="python/dbc/kwidmyyzz">Python MongoDB to connect, create database, and collection</a>
+</div>

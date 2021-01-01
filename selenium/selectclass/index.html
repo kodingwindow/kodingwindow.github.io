@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:26 IST   
+title: Selenium Select Class
+---
+
+{% for segment in site.data.selenium.segments %}{% if segment.url contains "/selectclass/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

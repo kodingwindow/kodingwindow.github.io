@@ -1,0 +1,143 @@
+---
+modified: 30 Dec 2020 18:26 IST  
+title: "Kodingwindow: Open-source Programming Platform"
+---
+
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="navbar-header">
+        <div id="scroll" class="navbar-brand" style="color: #00b050; font-size: 16px; cursor: pointer;"><a><img class="rounded" src="{{ site.logo }}" style="margin-right: 10px;"></a>Kodingwindow</div>
+    </div>
+    <button class="navbar-toggler p-0" type="button" data-toggle="rightsidebar" data-target="#rightsidebar" style="border: none;">
+        <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
+    </button>
+    <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse">
+        <span class="ml-auto">
+        {% include nav.html %}
+        </span>
+    </div>
+</nav>
+
+<div data-toggle="collapseall">
+    <div id="kwcarousel" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#kwcarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#kwcarousel" data-slide-to="1"></li>
+            <li data-target="#kwcarousel" data-slide-to="2"></li>
+            <li data-target="#kwcarousel" data-slide-to="3"></li>
+            <li data-target="#kwcarousel" data-slide-to="4"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-caption">
+                    <h3>{{ site.title }}</h3>
+                    <h5>{{ site.type }}</h5>
+                    <h5>{{ site.tagline }}</h5><br>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h4>{{ site.title }} Global Search</h4>
+                    <h5>Input Minimum. Output Maximum.</h5>
+                    <p><a href="search/" class="btn kwbtn">Search Now</a></p>
+                </div>   
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h4>{{ site.title }} Experiments</h4>
+                    <h5>A professional LinkedIn group for learners</h5>
+                    <p><a href="{{ site.group }}" target="_blank" class="btn kwbtn">Connect Now</a></p>
+                </div>   
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h4>{{ site.title }} on Telegram</h4>
+                    <h5>A special channel for poll</h5>
+                    <p><a href="{{ site.telegram }}" target="_blank" class="btn kwbtn">Subscribe Now</a></p>
+                </div>   
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-caption">
+                    <h4>{{ site.title }} on Slack</h4>
+                    <h5>A channel for learners to communicate</h5>
+                    <p><a href="{{ site.slack }}" target="_blank" class="btn kwbtn">Join Workspace</a></p>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div style="padding-top: 40px; padding-bottom: 80px;">
+            <div class="row">
+                {% for segment in site.data.segments %}
+                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                    <a href="{{ segment.url }}"><div class="{{ segment.url | split: '/' }} kwcard">{{ segment.title }}</div></a>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div style="border-top: 10px solid #29293d; padding-top: 30px; padding-bottom: 30px;">
+            <div class="row pt-0">
+                <div class="col-md-7">
+                    <h4 style="color: #29293d; padding-bottom: 10px;">Mission Statement</h4>
+                    <div style="font-size: 17px; text-align: center;">&#10077; The mission of Kodingwindow is to inspire learners by providing a comprehensive and pragmatic approach to programming and make them realize their unfathomable potential. &#10078;</div>
+                    <div style="padding: 15px 0px 15px 0px; text-align: justify;">Kodingwindow is an online open-source programming platform where learners realize their potential and where mind-blowing practical solutions build. This platform has hundreds of problem statements, solutions, and approaches in various programming languages to boost the confidence of students, novices, job seekers, IT professionals, etc.</div>
+                    <div style="text-align: right; font-size: 14px; margin-bottom: 20px;"><a target="_blank" style="color: #3973ac;" href="https://www.linkedin.com/in/shubhamrdarda/">Shubham Darda</a><br>Founder and Architect<br>Founded on: February 19, 2018</div>
+                </div>
+                <div class="col-md-5">
+                    <h4 style="text-align: center; color: #29293d; padding-bottom: 10px;">Kodingwindow's Specialities</h4>
+                    <img src="{{ site.advertise }}" class="img-thumbnail" loading="lazy" style="border: none;">
+                </div>
+            </div>
+        </div>
+
+        <div style="border-top: 10px solid #29293d; padding: 30px 0px 30px 0px;">
+            <div class="row pt-0">
+                <div class="col-md-12" style="padding-bottom: 20px;">
+                    <h4 style="text-align: left; padding-bottom: 20px; color: #29293d;">Kodingwindow's Articles</h4>
+                    <div class="card-deck" style="margin-bottom: 30px;">{% for article in site.data.articles %}
+                        <div class="card">
+                            <a href="{{ article.url }}">
+                            <img class="card-img-top" src="{{ article.image }}" width="320" height="200" loading="lazy">
+                            <div class="card-body">
+                                <h5 class="card-title text-left">{{ article.title }}</h5>
+                            </div></a>
+                        </div>
+                    {% endfor %}</div>
+                    <center><a href="{{ site.medium }}" class="btn kwbtn" target="_blank">Show all the articles</a></center>
+                </div>
+            </div>
+        </div>
+
+        <div style="border-top: 10px solid #29293d; padding-top: 30px;">
+            <div class="row pt-0">
+                <div class="col-md-7" style="padding-bottom: 20px;">
+                    <h4 style="text-align: left; padding-bottom: 10px; color: #29293d;">Kodingwindow's Roadmap</h4>
+                    <p style="padding: 0px 0px 0px 10px; line-height: 25px; border-left: 4px solid #cccccc;"><b>2013:</b> Ideas initiated and studied web technologies<br>
+                    <b>2014:</b> Explored programming languages and algorithms<br>
+                    <b>2015:</b> Learned structured and unstructured databases<br>
+                    <b>2016:</b> Program files created, scrutinized, and clustered<br>
+                    <b>2017:</b> Designed and developed a website, and maintained with GitHub pages<br>
+                    <b>2018:</b> Created programming segments, organized content, established a group, etc.<br>
+                    <b>2019:</b> Improved UI, bug fixes, shortened URLs, etc.<br>
+                    <b>2020:</b> Enhanced website and code readability using Jekyll. Added a new Data Science segment</p>
+                </div>
+                <div class="col-md-5">
+                {% include form.html %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+    {% include footer.html %}
+        <div style="background-color: #000000; padding-bottom: 10px;"><center><iframe src="https://www.youtube.com/embed/KFdQFLX99is" class="img-thumbnail" style="padding: 10px 15px 10px 15px; border-radius: 0px; border: none; padding: 0 !important; margin: 0px; height: 200px; width: 700px; background-color: #000000;"></iframe></center></div>
+    </footer>
+    <div class="text-center" style="background-color: #29293d; color: #ffffff; font-size: 15px; padding: 10px;">This page updated on: {{ page.modified }}.</div>
+</div>
+</body>

@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 28 Oct 2020 18:28 IST   
+title: MySQL Data Definition
+---
+
+{% for segment in site.data.mysql.segments %}{% if segment.url contains "/ddl/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

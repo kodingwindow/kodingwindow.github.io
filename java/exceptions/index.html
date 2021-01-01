@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:06 IST    
+title: Java Exception Handling
+---
+
+{% for segment in site.data.java.segments %}{% if segment.url contains "/exceptions/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

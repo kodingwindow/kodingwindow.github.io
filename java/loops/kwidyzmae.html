@@ -1,0 +1,48 @@
+---
+layout: kw
+modified: 28 Oct 2020 17:57 IST    
+title: Java program for the even-odd test of a given number
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+import java.util.Scanner;
+class KW 
+{
+    public static void main(String args[])
+    {
+        int x;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("———————————————————————————————————————————");
+        System.out.println("Program for even-odd test of a given number");
+        System.out.println("———————————————————————————————————————————");
+        System.out.print("Enter the number ");
+        x=sc.nextInt();
+        //if((x>>1)<<1==x)
+        if(x%2==0)
+        {
+            System.out.println("\nEntered number is EVEN");
+        }
+        else
+        {
+            System.out.println("\nEntered number is ODD");
+        }
+        System.out.println("———————————————————————————————————————————");
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+———————————————————————————————————————————
+Program for even-odd test of a given number
+———————————————————————————————————————————
+Enter the number -5005
+
+Entered number is ODD
+———————————————————————————————————————————
+kodingwindow@kw:~$ 
+</pre></span>

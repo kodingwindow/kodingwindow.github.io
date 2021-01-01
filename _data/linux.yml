@@ -1,0 +1,28 @@
+segments: 
+  - topic: Linux Commands
+    url: linux/
+    programs:
+      - title: Linux commands to display the lists of files and directories
+        url: linux/kwidasgke
+      - title: Linux commands to create and remove a file
+        url: linux/kwidnvuaa
+      - title: Linux commands to create and remove the directories/sub-directories
+        url: linux/kwidaznye
+      - title: Linux commands to copy and move the files
+        url: linux/kwidwoddg
+      - title: Linux commands for date and time
+        url: linux/kwidzbgoi
+      - title: Linux commands to view the history and file content
+        url: linux/kwidrrasp
+      - title: Linux commands to change the text cases and number systems
+        url: linux/kwidspezu
+      - title: Linux commands to display the logged-in user and information
+        url: linux/kwidfyvze
+      - title: Linux commands to display the Operating Systems information
+        url: linux/kwidvmazz
+      - title: Linux commands to display the system hardware information
+        url: linux/kwidgzyzd
+      - title: Linux commands for sorting and searching information
+        url: linux/kwidyzygf
+      - title: Linux commands to display the system processes information
+        url: linux/kwidwzqca

@@ -1,0 +1,93 @@
+---
+layout: kw
+modified: 30 Nov 2020 06:43 IST    
+title: C# program to demonstrate the use of try and catch blocks
+---
+
+<div class="darkwell"><mark>Title: </mark>C# NullReferenceException</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            string s = null;
+            Console.WriteLine(s.Length);
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+<error>System.NullReferenceException: Object reference not set to an instance of an object.
+   at Kodingwindow.Program.Main(String[] args)</error> 
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            try
+            {
+                string s = null;
+                Console.WriteLine(s.Length);
+            }
+            catch(NullReferenceException e)
+            {
+                Console.WriteLine("String is null, hence, unable to find the length.");
+            }
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+String is null, hence, unable to find the length.
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>C# program to demonstrate the use of try with multiple catch blocks</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            try
+            {
+                string s = null;
+                Console.WriteLine(s.Length);
+            }
+            catch(InvalidOperationException e)
+            {
+                Console.WriteLine("Exception caught in the first catch block");
+            }
+            catch(NullReferenceException e)
+            {
+                Console.WriteLine("Exception caught in the second catch block");
+            }
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Exception caught in the second catch block
+</pre></span>

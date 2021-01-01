@@ -1,0 +1,82 @@
+---
+layout: kw
+modified: 30 Oct 2020 22:41 IST    
+title: Java program to handle the ArithmeticException (divide by zero)
+---
+
+<div class="darkwell"><mark>Title: </mark>ArithmeticException</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+class KW
+{
+    public static void main(String args[])
+    {
+        int n=515, d=0;
+        int result=n/d;
+        System.out.println("Division "+result);
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+<error>Exception in thread "main" java.lang.ArithmeticException: / by zero
+    at KW.main(KW.java:6)</error>
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+import java.io.*;
+public class KW
+{
+    public static void main(String args[]) 
+    {
+        System.out.println("———————————————————————————————————————————");
+        System.out.println("Program for exceptional handling");
+        System.out.println("———————————————————————————————————————————");
+        try
+        {
+            BufferedReader r=new BufferedReader(new InputStreamReader(System.in));
+            System.out.print("Enter numerator ");
+            int n=Integer.parseInt(r.readLine());
+            
+            System.out.print("Enter denominator ");
+            int d=Integer.parseInt(r.readLine());
+            
+            System.out.println("Division "+(n/d));
+        }
+        catch(Exception e)
+        {
+            System.out.println("Please enter valid input");
+        }
+        System.out.println("———————————————————————————————————————————");
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+———————————————————————————————————————————
+Program for exceptional handling
+———————————————————————————————————————————
+Enter numerator 515
+Enter denominator 0
+Please enter valid input
+———————————————————————————————————————————
+
+kodingwindow@kw:~$ <mark>java KW</mark>
+———————————————————————————————————————————
+Program for exceptional handling
+———————————————————————————————————————————
+Enter numerator 515
+Enter denominator 5
+Division 103
+———————————————————————————————————————————
+kodingwindow@kw:~$ 
+</pre></span>

@@ -1,0 +1,27 @@
+---
+layout: kw
+modified: 02 Oct 2020 19:48 IST   
+title: C program to print the current date and time
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+#include<time.h>
+int main()
+{
+    time_t t;
+    time(&t);
+    printf("Current Date & Time is %s",ctime(&t));
+    return 0;
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runc }}
+Current Date & Time is Thu May 31 07:44:51 2018
+kodingwindow@kw:~$ 
+</pre></span>

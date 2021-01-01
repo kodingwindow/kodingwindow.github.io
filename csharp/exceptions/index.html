@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 14 Nov 2020 10:30 IST    
+title: C# Exception Handling
+---
+
+{% for segment in site.data.csharp.segments %}{% if segment.url contains "/exceptions/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

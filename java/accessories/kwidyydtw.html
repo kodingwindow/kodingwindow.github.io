@@ -1,0 +1,137 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:05 IST    
+title: How to use Java 13 features with practical examples
+---
+
+<div class="darkwell"><mark>Title: </mark>How to create multiline strings using Java 13 text blocks</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+public class KW 
+{
+    @SuppressWarnings("preview")
+    public static void main(String[] args) 
+    {
+        String s1 = """
+                Welcome
+                to
+                Kodingwindow""";
+        String s2 = "Welcome\nto\nKodingwindow";
+        System.out.println(s1);     //text block string
+        System.out.println("———————————————————————");
+        System.out.println(s2);     //normal string
+        System.out.println("———————————————————————");
+        System.out.println(s1==s2);
+        System.out.println(s1.equals(s2));
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Welcome
+to
+Kodingwindow
+———————————————————————
+Welcome
+to
+Kodingwindow
+———————————————————————
+true
+true
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>How to format text blocks strings using Java 13 formatted() method</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+public class KW 
+{
+    @SuppressWarnings({ "preview", "removal" })
+    public static void main(String[] args) 
+    {
+        String s1 = """
+                account_no: %d
+                name: %s
+                city: %s
+                amount: %.2f
+                """.formatted(25622348989L,"James Moore","Phoenix",5000.002335);
+        System.out.println(s1);
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+account_no: 25622348989
+name: James Moore
+city: Phoenix
+amount: 5000.00
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>How to use multi-label case statements and yield in Java 13</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+//In Java 13, switch expressions use yield to return
+
+import java.util.Scanner;
+public class KW 
+{
+    @SuppressWarnings({ "resource", "preview" })
+    public static void main(String[] args) 
+    {
+        int choice;
+        System.out.println("———————————————————————————");
+        System.out.println("Book Movie Tickets");
+        System.out.println("———————————————————————————");
+        System.out.println("1. Age group [5-10]");
+        System.out.println("2. Age group [11-17]");
+        System.out.println("3. Age group [18-35]");
+        System.out.println("4. Age group [36-50]");
+        System.out.println("5. Age group [51-75]");
+        System.out.println("6. None of the above");
+        System.out.println("———————————————————————————");
+        System.out.print("Enter your appropriate age group ");
+        Scanner sc = new Scanner(System.in);
+        choice = sc.nextInt();
+        
+        String screen = switch(choice)
+        {
+        case 1, 2:
+            screen = "Allocated screen: A-3";
+            yield screen;
+        case 3:
+            screen = "Allocated screen: K-9";
+            yield screen;
+        case 4, 5:
+            screen = "Allocated screen: Z-2";
+            yield screen;
+        case 6:
+            screen = "No screen available at this time";
+            yield screen;
+        default:
+            screen = "Please enter correct age group";
+            yield screen;
+        };
+        System.out.println(screen);
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+———————————————————————————
+Book Movie Tickets
+———————————————————————————
+1. Age group [5-10]
+2. Age group [11-17]
+3. Age group [18-35]
+4. Age group [36-50]
+5. Age group [51-75]
+6. None of the above
+———————————————————————————
+Enter your appropriate age group 4
+Allocated screen: Z-2
+</pre></span>

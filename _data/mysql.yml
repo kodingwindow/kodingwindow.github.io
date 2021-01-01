@@ -1,0 +1,56 @@
+segments: 
+  - topic: MySQL Functions
+    breadcrumb_child: Functions
+    url: mysql/functions/
+    programs:
+      - title: MySQL Date and Time Functions
+        url: mysql/functions/kwidrgtrz
+      - title: MySQL String Functions
+        url: mysql/functions/kwidgpzwy
+
+  - topic: MySQL Data Definition
+    breadcrumb_child: DDL
+    url: mysql/ddl/
+    programs:
+      - title: MySQL CREATE a DATABASE and TABLE
+        url: mysql/ddl/kwiddwgvc
+      - title: MySQL FOREIGN KEY
+        url: mysql/ddl/kwiddvwtv
+      - title: MySQL NOT NULL Constraint
+        url: mysql/ddl/kwiddvvtd
+      - title: MySQL ALTER TABLE (ADD, DROP, MODIFY, CHANGE, RENAME TO)
+        url: mysql/ddl/kwiddwtwf
+      - title: MySQL DROP a TABLE and DATABASE
+        url: mysql/ddl/kwidedvew
+
+  - topic: MySQL Data Manipulation
+    breadcrumb_child: DML
+    url: mysql/dml/
+    programs:
+      - title: MySQL INSERT the VALUES into a TABLE
+        url: mysql/dml/kwidpdvnx
+      - title: MySQL SELECT and SELECT DISTINCT Statements
+        url: mysql/dml/kwiduidey
+      - title: MySQL WHERE Clause
+        url: mysql/dml/kwidbbevd
+      - title: MySQL UPDATE Clause
+        url: mysql/dml/kwidzzcev
+      - title: MySQL ORDER BY Clause
+        url: mysql/dml/kwidvzkzw
+      - title: MySQL AND OR NOT Operators
+        url: mysql/dml/kwidpzyig
+      - title: MySQL IN BETWEEN LIKE Operators
+        url: mysql/dml/kwidczgza
+      - title: MySQL LIMIT Clause
+        url: mysql/dml/kwidpwzaz
+      - title: MySQL JOINS (INNER, LEFT, RIGHT)
+        url: mysql/dml/kwidnhhen
+      - title: MySQL DELETE Statement
+        url: mysql/dml/kwidzsgwd
+
+  - topic: MySQL Accessories
+    breadcrumb_child: Accessories
+    url: mysql/accessories/
+    programs:
+      - title: How to setup, install, and start MySQL on Ubuntu
+        url: mysql/accessories/kwiddayxg

@@ -1,0 +1,273 @@
+---
+layout: kw
+modified: 02 Oct 2020 19:48 IST   
+title: "Miscellaneous: find the output of C programs"
+---
+
+<style type="text/css">
+div.card .show
+{
+    display: none;
+}
+div.card.collapsed .show
+{
+    display: block;
+}
+div.card .hide
+{
+    display: block;
+}
+div.card.collapsed .hide
+{
+    display: none;
+}
+</style>
+
+<div class="blackwell"><mark>Miscellaneous: </mark>find the output of following C programs</div>
+<div class="darkwell"><mark>Title: </mark>Program 1</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+int main()
+{ 
+    int _=5,__=10,___; 
+    ___=_+__; 
+    printf("%i\n",___); 
+    return 0; 
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p1"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p1" class="collapse"> 
+<span><pre>
+{{ site.runc }}
+15
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 2</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+int main() 
+{ 
+    int a=20; 
+    { 
+        int a=40;   
+        //variables can have same name in different scope
+    } 
+    printf("%d\n",a); 
+    return 0; 
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p2"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p2" class="collapse">
+<span><pre>
+{{ site.runc }}
+20
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 3</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+void main()
+{
+    int x;
+    x=10,20,30;
+    printf("%d\n",x);
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p3"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p3" class="collapse">
+<span><pre>
+{{ site.runc }}
+10
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 4</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+int main()
+{ 
+    int a=5; 
+    printf("%d\n",++a + ++a + ++a);
+    int b=5;
+    printf("%d %d %d\n",++b,++b,++b); 
+    return 0; 
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p4"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p4" class="collapse">
+<span><pre>
+{{ site.runc }}
+22
+8 8 8
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 5</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+int main()
+{ 
+    int x=5; 
+    if(x==5) 
+        printf("%d\n",!x); 
+    else 
+        printf("%d\n",x); 
+    return 0; 
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p5"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p5" class="collapse">
+<span><pre>
+{{ site.runc }}
+0
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 6</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+int main()
+{ 
+    int x=0; 
+    if(!x) 
+        printf("%d\n",!x); 
+    else 
+        printf("%d\n",x); 
+    return 0; 
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p6"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p6" class="collapse">
+<span><pre>
+{{ site.runc }}
+1
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 7</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+int main()
+{ 
+    int x=5; 
+    if(x) 
+        printf("%d\n",!x); 
+    else 
+        printf("%d\n",x); 
+    return 0; 
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p7"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p7" class="collapse">
+<span><pre>
+{{ site.runc }}
+0
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 8</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+int main()
+{ 
+    int a[]={1,2,3,4,5,6,7,8,9,10}; 
+    int i=0,num; 
+    num=a[++i+a[++i]]+a[++i];   
+    //a[2+a[2]]+a[3] = a[5]+a[3] = 6+4
+    //a[1]=2, a[2]=3, a[5]=6, a[3]=4, hence the output is 10
+    printf("%d\n",num); 
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p8"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p8" class="collapse">
+<span><pre>
+{{ site.runc }}
+10
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 9</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+int main() 
+{ 
+    int a,n=7,i,j; 
+    for(i=0;i<=n;i++) 
+    {
+        for(j=0;j<=(n-i);j++) 
+            printf(" "); 
+            for(j=0,a=65;j<=i;j++,a++) 
+                printf("%c",a); 
+                printf("\n"); 
+    } 
+    n++; 
+    for(i=n;i<=16;i++) 
+    { 
+        for(j=0;j<n-i;j++) 
+            printf(" "); 
+            for(j=0,a=65;j<=(2*n-i);j++,a++) 
+                printf("%c",a); 
+                printf("\n"); 
+    } 
+    return 0; 
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runc }}
+        A
+       AB
+      ABC
+     ABCD
+    ABCDE
+   ABCDEF
+  ABCDEFG
+ ABCDEFGH
+ABCDEFGHI
+ABCDEFGH
+ABCDEFG
+ABCDEF
+ABCDE
+ABCD
+ABC
+AB
+A
+kodingwindow@kw:~$ 
+</pre></span>

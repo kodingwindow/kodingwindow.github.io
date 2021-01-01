@@ -1,0 +1,126 @@
+segments: 
+  - topic: Python Command Line Interface (CLI)
+    breadcrumb_child: CLI
+    url: python/cli/
+    programs:
+      - title: Python Operators
+        url: python/cli/kwidawgvo
+      - title: Python Strings
+        url: python/cli/kwidkwdvv
+      - title: Python Lists
+        url: python/cli/kwidkzaae
+      - title: Python Tuples
+        url: python/cli/kwidcgaye
+      - title: Python Sets
+        url: python/cli/kwidvzzvi
+      - title: Python Dictionary
+        url: python/cli/kwidvwkzg
+      - title: Python Arrays
+        url: python/cli/kwidwzddw
+      - title: Python Matrices
+        url: python/cli/kwidwwvga
+      - title: Python Built-in Functions
+        url: python/cli/kwidgzwzz
+      - title: Python Mathematical Functions and Operations
+        url: python/cli/kwidtgvee
+
+  - topic: Python Fundamentals
+    breadcrumb_child: Fundamentals
+    url: python/fundamentals/
+    programs:
+      - title: How to use Python help utility
+        url: python/fundamentals/kwidlvgqy
+      - title: How to compile a Python program using the py_compile module
+        url: python/fundamentals/kwidgvzwx
+      - title: How to view the byte code instructions using the dis module
+        url: python/fundamentals/kwidbduad
+      - title: Python program to perform the arithmetic operations
+        url: python/fundamentals/kwidyosqg
+      - title: Python program to perform the relational operations
+        url: python/fundamentals/kwidetapa
+      - title: Python program to swap the given numbers
+        url: python/fundamentals/kwidylqva
+      - title: Python program to print the runtime arguments
+        url: python/fundamentals/kwidzidwc
+      - title: Python program for conversion of the number systems
+        url: python/fundamentals/kwidvaqvy
+
+  - topic: Python Date and Time
+    breadcrumb_child: DT
+    url: python/dt/
+    programs:
+      - title: Python program to print the current date and time
+        url: python/dt/kwidxdagf
+      - title: Python implementation of the calendar module
+        url: python/dt/kwidscgzf
+
+  - topic: Python Loops and Control Statements
+    breadcrumb_child: Loops
+    url: python/loops/
+    programs:
+      - title: Python program to check the equality of given numbers
+        url: python/loops/kwidgmsmv
+      - title: Python program for the even-odd test of a given number
+        url: python/loops/kwidgvewa
+      - title: Python program to check whether a given character is alphabet
+        url: python/loops/kwidwmaxe
+      - title: Python program to print the star pyramid patterns
+        url: python/loops/kwidvfyae
+      - title: Python program to print the ASCII values
+        url: python/loops/kwidwauzw
+      - title: Python program to print the prime numbers
+        url: python/loops/kwidwbtvh
+      - title: Python program to find the factorial of a given number
+        url: python/loops/kwidagzvl
+      - title: Python program to print the sum of all digits in a given number
+        url: python/loops/kwidalewy
+      - title: Python program to print the multiplication table of a given number
+        url: python/loops/kwidalmxy
+      - title: Python program to check whether a given number is a palindrome
+        url: python/loops/kwidggkza
+      - title: Python program to check whether a given year is a leap
+        url: python/loops/kwidrwkxe
+      - title: Python program to print the list of all leap years
+        url: python/loops/kwidrawfa
+
+  - topic: Python File Handling
+    breadcrumb_child: FileIO
+    url: python/fileio/
+    programs:
+      - title: Python program to count the lines, words, and characters from a given file
+        url: python/fileio/kwiddzeng
+      - title: Python program to count the frequency of words in a given file
+        url: python/fileio/kwidlyeay
+
+  - topic: Python Networking
+    breadcrumb_child: Networking
+    url: python/networking/
+    programs:
+      - title: Python networking using the netaddr module
+        url: python/networking/kwidyslwy
+      - title: Python implementation of socket programming
+        url: python/networking/kwidkyirx
+
+  - topic: Python Database Connectivity
+    breadcrumb_child: DBC
+    url: python/dbc/
+    programs:
+      - title: Python MySQL to connect, create a database, and table
+        url: python/dbc/kwidvdwzz
+      - title: Python MySQL to insert and retrieve the records from a table
+        url: python/dbc/kwidtyalw
+      - title: Python MySQL to update the table records
+        url: python/dbc/kwidswyzn
+      - title: Python MongoDB to connect, create database, and collection
+        url: python/dbc/kwidmyyzz
+      - title: Python MongoDB to insert and retrieve the documents from a collection
+        url: python/dbc/kwidgulma
+
+  - topic: Python Accessories
+    breadcrumb_child: Accessories
+    url: python/accessories/
+    programs:
+      - title: How to install pymysql, pymongo, and python-csv on Ubuntu
+        url: python/accessories/kwidwdnax
+      - title: How to install, setup, and create a Django project on Ubuntu
+        url: python/accessories/kwidqagyv

@@ -1,0 +1,419 @@
+---
+layout: kw
+modified: 16 Nov 2020 09:16 IST   
+title: Python Strings
+---
+
+<div class="blackwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="terminalwell">Print string</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>python3</mark>
+Python 3.8.6 (default, Sep 25 2020, 09:36:53) 
+[GCC 10.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+
+>>> <mark>"Hello, World!"</mark>
+'Hello, World!'
+
+>>> <mark>'Hello, World!'</mark>
+'Hello, World!'
+
+>>> <mark>print('Hello, World!')</mark>
+Hello, World!
+
+>>> <mark>print('\'Hello, World!\'')</mark>
+'Hello, World!'
+
+>>> <mark>print('Hello \nWorld')</mark>
+Hello 
+World
+
+>>> <mark>'Hello,'+' World!'</mark>
+'Hello, World!'
+<hr>>>> <mark>a='Hello, World!'</mark>
+>>> <mark>a</mark>
+'Hello, World!'
+
+>>> <mark>del a</mark>
+>>> <mark>a</mark>
+<error>Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+NameError: name 'a' is not defined</error>
+</pre></span>
+
+<div class="terminalwell">Concatenation and reverse the given strings</div>
+<span><pre>
+>>> <mark>s1="Hello, "</mark>
+>>> <mark>s2="World!"</mark>
+>>> <mark>s3=s1+s2</mark>
+>>> <mark>s3</mark>
+'Hello, World!'
+
+>>> <mark>s3[::-1]</mark>
+'!dlroW ,olleH'
+</pre></span>
+
+<div class="terminalwell">String length and slicing</div>
+<span><pre>
+>>> <mark>s3</mark>
+'Hello, World!'
+
+>>> <mark>len(s3)</mark>
+13
+
+>>> <mark>s3[0:13:1]</mark>
+'Hello, World!'
+>>> <mark>s3[0:13:2]</mark>
+'Hlo ol!'
+>>> <mark>s3[0:13:3]</mark>
+'Hl r!'
+
+>>> <mark>s3[::1]</mark>
+'Hello, World!'
+>>> <mark>s3[::2]</mark>
+'Hlo ol!'
+>>> <mark>s3[::3]</mark>
+'Hl r!'
+
+>>> <mark>s3[1::]</mark>
+'ello, World!'
+>>> <mark>s3[2::]</mark>
+'llo, World!'
+>>> <mark>s3[3::]</mark>
+'lo, World!'
+</pre></span>
+
+<div class="terminalwell">Strings are immutable</div>
+<span><pre>
+>>> <mark>s1="Hello, "</mark>
+>>> <mark>s2="World!"</mark>
+>>> <mark>id(s1)</mark>
+139807573190896
+ 
+>>> <mark>id(s2)</mark>
+139807564184624
+
+>>> <mark>s1=s2</mark>
+ 
+>>> <mark>id(s1)</mark>
+139807564184624
+ 
+>>> <mark>id(s2)</mark>
+139807564184624
+</pre></span>
+
+<div class="terminalwell">String strip(), rstrip(), and lstrip() methods</div>
+<span><pre>
+>>> <mark>s1="    Hello,    "</mark>
+>>> <mark>s2=" World          "</mark>
+>>> <mark>s3=s1+s2</mark>
+>>> <mark>s3</mark>
+'    Hello,     World          '
+
+>>> <mark>s3.rstrip()</mark>
+'    Hello,     World'
+
+>>> <mark>s3.lstrip()</mark>
+'Hello,     World          '
+
+>>> <mark>s1.strip()+s2.strip()</mark>
+'Hello,World'
+</pre></span>
+
+<div class="terminalwell">String upper() and lower() methods</div>
+<span><pre>
+>>> <mark>s3="Hello, World!"</mark>
+>>> <mark>s3.upper()</mark>
+'HELLO, WORLD!'
+
+>>> <mark>s3.lower()</mark>
+'hello, world!'
+
+>>> <mark>s3.swapcase()</mark>
+'hELLO, wORLD!'
+
+>>> <mark>s3.title()</mark>
+'Hello, World!'
+</pre></span>
+
+<div class="terminalwell">String casefold() and capitalize() methods</div>
+<span><pre>
+>>> <mark>s3="Hello, World!"</mark>
+>>> <mark>s3.casefold()</mark>
+'hello, world!'
+ 
+>>> <mark>s3="HELLO, WORLD!"</mark>
+>>> <mark>s3.casefold()</mark>
+'hello, world!'
+
+>>> <mark>s3="hello, world!"</mark>
+>>> <mark>s3.casefold()</mark>
+'hello, world!'
+
+>>> <mark>s3="hello, world!"</mark>
+>>> <mark>s3.capitalize()</mark>
+'Hello, world!'
+</pre></span>
+
+<div class="terminalwell">String find() and count() methods</div>
+<span><pre>
+>>> <mark>s1="Hello, "</mark>
+>>> <mark>s2="World!"</mark>
+>>> <mark>s3=s1+s2</mark>
+
+>>> <mark>s3.find("H",0,len(s3))</mark>
+0
+>>> <mark>s3.find("W",0,len(s3))</mark>
+7
+
+>>> <mark>s3.count('o',0,len(s3))</mark>
+2
+>>> <mark>s3.count('World',0,len(s3))</mark>
+1
+>>> <mark>s3.count('Codingwindow',0,len(s3))</mark>
+0
+</pre></span>
+
+<div class="terminalwell">String isalpha() method</div>
+<span><pre>
+>>> <mark>s3="Hello World!"</mark>
+>>> <mark>s3.isalpha()</mark>
+False
+
+>>> <mark>s3="Hello World"</mark>
+>>> <mark>s3.isalpha()</mark>
+False
+
+>>> <mark>s3="HelloWorld"</mark>
+>>> <mark>s3.isalpha()</mark>
+True
+</pre></span>
+
+<div class="terminalwell">String isalpha() method</div>
+<span><pre>
+>>> <mark>s3="Hello World!"</mark>
+>>> <mark>s3.isalnum()</mark>
+False
+
+>>> <mark>s3="Hello World"</mark>
+>>> <mark>s3.isalnum()</mark>
+False
+
+>>> <mark>s3="13HelloWorld13"</mark>
+>>> <mark>s3.isalnum()</mark>
+True
+</pre></span>
+
+<div class="terminalwell">String isdigit() method</div>
+<span><pre>
+>>> <mark>s3="13HelloWorld13"</mark>
+>>> <mark>s3.isdigit()</mark>
+False
+
+>>> <mark>s3="1313"</mark>
+>>> <mark>s3.isdigit()</mark>
+True
+
+>>> <mark>s3="13.13"</mark>
+>>> <mark>s3.isdigit()</mark>
+False
+
+>>> <mark>s3="\u00B2"</mark>
+>>> <mark>s3.isdigit()</mark>
+True
+</pre></span>
+
+<div class="terminalwell">String isdecimal() method</div>
+<span><pre>
+>>> <mark>s3="\u00B2"</mark> # to the power 2
+>>> <mark>s3.isdecimal()</mark>
+False
+
+>>> <mark>s3="0123456789"</mark>
+>>> <mark>s3.isdecimal()</mark>
+True
+
+>>> <mark>s3="\u00BD"</mark> # 1/2
+>>> <mark>s3.isdecimal()</mark>
+False
+</pre></span>
+
+<div class="terminalwell">String isnumeric() method</div>
+<span><pre>
+>>> <mark>s3="\u00B2"</mark>
+>>> <mark>s3.isnumeric()</mark>
+True
+
+>>> <mark>s3="0123456789"</mark>
+>>> <mark>s3.isnumeric()</mark>
+True
+
+>>> <mark>s3="1/2"</mark>
+>>> <mark>s3.isnumeric()</mark>
+False
+
+>>> <mark>s3="\u00BD"</mark> # 1/2
+>>> <mark>s3.isnumeric()</mark>
+True
+</pre></span>
+
+<div class="terminalwell">String isspace() method</div>
+<span><pre>
+>>> <mark>s3="Hello World!"</mark>
+>>> <mark>s3.isspace()</mark>
+False
+
+>>> <mark>s3="       "</mark>
+>>> <mark>s3.isspace()</mark>
+True
+</pre></span>
+
+<div class="terminalwell">String istitle() method</div>
+<span><pre>
+>>> <mark>s3="Hello World!"</mark>
+>>> <mark>s3.istitle()</mark>
+True
+
+>>> <mark>s3="hello world!"</mark>
+>>> <mark>s3.istitle()</mark>
+False
+</pre></span>
+
+<div class="terminalwell">String islower() and isupper() methods</div>
+<span><pre>
+>>> <mark>s3="hello world!"</mark>
+>>> <mark>s3.islower()</mark>
+True
+
+>>> <mark>s3="HELLO, WORLD!"</mark>
+>>> <mark>s3.isupper()</mark>
+True
+
+>>> <mark>s3="Hello, World!"</mark>
+>>> <mark>s3.islower()</mark>
+False
+
+>>> <mark>s3.isupper()</mark>
+False
+</pre></span>
+
+<div class="terminalwell">Strings sort() method</div>
+<span><pre>
+>>> <mark>s3=["Z","X","B","A"]</mark>
+>>> <mark>s3.sort()</mark>
+>>> <mark>s3</mark>
+['A', 'B', 'X', 'Z']
+
+>>> <mark>s3=("Z","X","B","A")</mark>
+>>> <mark>s3.sort()</mark>
+<error>Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+AttributeError: 'tuple' object has no attribute 'sort'</error>
+</pre></span>
+
+<div class="terminalwell">String zfill() method</div>
+<span><pre>
+>>> <mark>s3="Hello, World!"</mark>
+>>> <mark>len(s3)</mark>
+13
+
+>>> <mark>s3.zfill(13)</mark>
+'Hello, World!'
+
+>>> <mark>s3.zfill(14)</mark>
+'0Hello, World!'
+
+>>> <mark>s3.zfill(20)</mark>
+'0000000Hello, World!'
+
+>>> <mark>s3.zfill(0)</mark>
+'Hello, World!'
+</pre></span>
+
+<div class="terminalwell">String startswith() and endswith() methods</div>
+<span><pre>
+>>> <mark>s3="Hello, World!"</mark>
+>>> <mark>s3.startswith("H")</mark>
+True
+
+>>> <mark>s3.startswith("Hello")</mark>
+True
+
+>>> <mark>s3.startswith("Hello, World!")</mark>
+True
+
+>>> <mark>s3.startswith("W")</mark>
+False
+
+>>> <mark>s3.endswith("WORLD!")</mark>
+False
+
+>>> <mark>s3.endswith("World!")</mark>
+True
+
+>>> <mark>s3.endswith("!")</mark>
+True
+
+>>> <mark>s3.endswith("ld!")</mark>
+True
+</pre></span>
+
+<div class="terminalwell">String replace() method</div>
+<span><pre>
+>>> <mark>s3="Hello, World!"</mark>
+>>> <mark>s3.replace("l","###")</mark>
+'He######o, Wor###d!'
+
+>>> <mark>s3</mark>
+'Hello, World!'
+
+>>> <mark>s3.replace("l","###",1)</mark>
+'He###lo, World!'
+
+>>> <mark>s3.replace("l","###",2)</mark>
+'He######o, World!'
+
+>>> <mark>s3.replace("l","###",3)</mark>
+'He######o, Wor###d!'
+</pre></span>
+
+<div class="terminalwell">String functions and operations</div>
+<span><pre>
+>>> <mark>s1='Hello'</mark>
+>>> <mark>s1+s1</mark>
+'HelloHello'
+
+>>> <mark>5*s1</mark>
+'HelloHelloHelloHelloHello'
+
+>>> <mark>s2='World'</mark>
+>>> <mark>s1,s2</mark>
+('Hello', 'World')
+
+>>> <mark>s1[0]</mark>
+'H'
+
+>>> <mark>s1[-1]</mark>
+'o'
+
+>>> <mark>'Hello, World!'.split()</mark>
+['hello,', 'world!']
+
+>>> <mark>s1=("Hello, World!")</mark>
+>>> <mark>''.join(sorted(s1))</mark>
+' !,HWdellloor'
+
+>>> <mark>''.join(sorted(s1)).strip()</mark>
+'!,HWdellloor'
+
+>>> <mark>print(sorted(s1))</mark>
+[' ', '!', ',', 'H', 'W', 'd', 'e', 'l', 'l', 'l', 'o', 'o', 'r']
+
+>>> <mark>''.join(sorted(set(s1)))</mark>
+' !,HWdelor'
+
+>>> <mark>strings="Thomson Linus Donald Linus"</mark>
+>>> <mark>words=strings.split()</mark>
+>>> <mark>print(' '.join(sorted(set(words),key=words.index)))</mark>
+Thomson Linus Donald
+</pre></span>

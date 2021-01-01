@@ -1,0 +1,102 @@
+segments: 
+  - topic: Java Programming
+    url: mcqs/java/
+    mcqs:
+      - title: "MCQ1: Default and Parameterized Constructor"
+        id: 6713043569634000896
+
+  - topic: Python Programming
+    url: mcqs/py/
+    mcqs:
+      - title: "MCQ2: Pandas Data Structures"
+        id: 6545637145011372032
+
+  - topic: Data Structures and Algorithms
+    url: mcqs/dsa/
+    mcqs:
+      - title: "MCQ1: AVL Tree"
+        id: 6687684637520654336
+      - title: "MCQ2: Tree Traversals"
+        id: 6687934014600351744
+
+  - topic: Analysis of Algorithms
+    url: mcqs/algorithms/
+    mcqs:
+      - title: "MCQ1: Time Complexity of Bubble Sort"
+        id: 6723458389764046848
+      - title: "MCQ2: PageRank Algorithm"
+        id: 6545636340304801793
+
+  - topic: MySQL Database
+    url: mcqs/mysql/
+    mcqs:
+      - title: "MCQ2: Cardinality"
+        id: 6545636574082715648
+
+  - topic: MongoDB (NoSQL Database)
+    url: mcqs/mongodb/
+    mcqs:
+      - title: "MCQ1: ObjectId"
+        id: 6545635189597499392
+      - title: "MCQ2: _id Field"
+        id: 6545637988762730496
+
+  - topic: Cassandra Database
+    url: mcqs/cassandra/
+    mcqs:
+      - title: "MCQ1: Infrastructure Components"
+        id: 6545637580573073408
+
+  - topic: Data Warehousing
+    url: mcqs/dw/
+    mcqs:
+      - title: "MCQ1: Data Warehouse Modeling"
+        id: 6582464878290792448
+
+  - topic: GNU Octave
+    url: mcqs/octave/
+    mcqs:
+      - title: "MCQ1: Transpose of Matrix"
+        id: 6545635442623082496
+
+  - topic: Graph Theory
+    url: mcqs/gt/
+    mcqs:
+      - title: "MCQ1: Basics"
+        id: 6545628965032259584
+      - title: "MCQ2: Kruskal's algorithm"
+        id: 6545632587786842113
+      - title: "MCQ3: Degree of Vertex"
+        id: 6545637368811044864
+
+  - topic: Computer Networks
+    url: mcqs/cn/
+    mcqs:
+      - title: "MCQ1: Dynamic Routing Protocol"
+        id: 6545627326393176064
+      - title: "MCQ2: Stop-and-Wait Protocol"
+        id: 6545637774408634368
+
+  - topic: Computer Graphics
+    url: mcqs/cg/
+    mcqs:
+      - title: "MCQ1: Aspect ratio"
+        id: 6707119001379631105
+
+  - topic: Theory of Computation
+    url: mcqs/toc/
+    mcqs:
+      - title: "MCQ1: Regular Expression"
+        id: 6545627642740166656
+
+  - topic: Cryptography
+    url: mcqs/cryptography/
+    mcqs:
+      - title: "MCQ2: Cryptographic algorithms (Key and Block sizes)"
+        id: 6545638447388901376
+
+  - topic: Computer Organization and Architecture
+    url: mcqs/coa/
+    mcqs:
+      - title: "MCQ1: Booth's algorithm"
+        id: 6545626553450065920

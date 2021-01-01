@@ -1,0 +1,20 @@
+segments: 
+  - topic: Shell Scripting Fundamentals
+    url: bash/
+    programs:
+      - title: Shell script to print Hello World
+        url: bash/kwidgitdy
+      - title: Shell script to print the current date and time
+        url: bash/kwidtzyyp
+      - title: Shell script to perform the arithmetic and relational operations
+        url: bash/kwidldisa
+      - title: Shell script to calculate the area and circumference of a circle
+        url: bash/kwidpwgqv
+      - title: Shell script to check a given number is positive or negative
+        url: bash/kwidswlnb
+      - title: Shell script to swap the given numbers and strings
+        url: bash/kwidezzvl
+      - title: Shell script to check the equality of a given numbers and strings
+        url: bash/kwidxdkxb
+      - title: Shell script to convert Decimal to Hexadecimal and Octal
+        url: bash/kwidydril

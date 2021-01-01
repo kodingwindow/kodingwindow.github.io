@@ -1,0 +1,26 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:26 IST   
+title: Selenium Java to get the page source of a URL
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class KW
+{
+    public static void main(String[] args) 
+    {   
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.get("https://kodingwindow.com/testapp/");
+        System.out.println(driver.getPageSource());
+        driver.close();
+    }
+}
+{% endhighlight %}
+</pre>

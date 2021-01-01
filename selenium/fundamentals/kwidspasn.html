@@ -1,0 +1,76 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:26 IST   
+title: Selenium Java to set and get the browser details using DesiredCapabilities
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+import org.openqa.selenium.Capabilities;
+import org.openqa.selenium.Platform;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
+public class KW
+{
+    static WebDriver driver;
+    public static void NameVersionOS()
+    {
+        Capabilities c = ((RemoteWebDriver)driver).getCapabilities();
+        System.out.println("Browser Name: "+c.getBrowserName());
+        System.out.println("Browser Version: "+c.getVersion());
+        System.out.println("Platform: "+c.getPlatform());
+        System.out.println("———————————————————————————————————————————");
+        driver.close();
+    }
+    
+    @SuppressWarnings("deprecation")
+    public static void main(String[] args) 
+    {   
+        System.out.println("Operating System: "+System.getProperty("os.name"));
+        System.out.println("OS Version: "+System.getProperty("os.version"));
+        System.out.println("OS Architecture: "+System.getProperty("os.arch"));
+        System.out.println("———————————————————————————————————————————");
+        
+        DesiredCapabilities dc = new DesiredCapabilities();
+        dc.setPlatform(Platform.WINDOWS);
+        
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        driver = new ChromeDriver(dc);
+        NameVersionOS();
+        
+        System.setProperty("webdriver.gecko.driver", "D://Selenium//Drivers//geckodriver.exe");
+        driver = new FirefoxDriver(dc);
+        NameVersionOS();
+        
+        System.setProperty("webdriver.ie.driver", "D://Selenium//Drivers//IEDriverServer.exe");
+        driver = new InternetExplorerDriver(dc);
+        NameVersionOS();
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+Operating System: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+———————————————————————————————————————————
+Browser Name: chrome
+Browser Version: 85.0.4183.83
+Platform: WINDOWS
+———————————————————————————————————————————
+Browser Name: firefox
+Browser Version: 80.0.1
+Platform: WINDOWS
+———————————————————————————————————————————
+Browser Name: internet explorer
+Browser Version: 11
+Platform: WINDOWS
+———————————————————————————————————————————
+</pre></span>

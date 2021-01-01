@@ -1,0 +1,131 @@
+---
+layout: kw
+modified: 02 Oct 2020 19:48 IST   
+title: C program to demonstrate the use of storage classes
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+#include "HelloWorld.c"
+int main()
+{
+    printf("———————————————————————————————————————————");
+    printf("\nProgram to implement Storage Classes ");
+    printf("\n———————————————————————————————————————————");
+    extern int l;
+    l=l+1;
+    printf("\nNow length is %d",l);
+    length();
+    printf("\n———————————————————————————————————————————\n");
+    return 0;
+}
+{% endhighlight %}
+</pre>
+<div class="card">File: HelloWorld.c</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+#include<string.h>
+int l;
+void length()
+{
+    l=strlen("Hello, World!");
+    printf("\nString length is %d",l);
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runc }}
+———————————————————————————————————————————
+Program to implement Storage Classes
+———————————————————————————————————————————
+Now length is 1
+String length is 13
+———————————————————————————————————————————
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>C program to find the address of variables</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int a=10;
+    char *string="Hello World";
+    char s='H';
+    double d=23.98908;
+    long l=343247891370492;
+    //register b=10; 
+    //can't find the address of register variables
+    printf("———————————————————————————————————————————");
+    printf("\nProgram to find address of variables ");
+    printf("\n———————————————————————————————————————————");
+    printf("\nAddress of a      | %p",&a);
+    printf("\nAddress of string | %p",&string);
+    printf("\nAddress of s      | %p",&s);
+    printf("\nAddress of d      | %p",&d);
+    printf("\nAddress of l      | %p",&l);
+    printf("\nmain address      | %p",main);
+    printf("\nmain address      | %p",(void*)&main);
+    printf("\n———————————————————————————————————————————\n");
+    return 0;
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runc }}
+———————————————————————————————————————————
+Program to find address of variables 
+———————————————————————————————————————————
+Address of a      | 0x7fff701439cc
+Address of string | 0x7fff701439d0
+Address of s      | 0x7fff701439cb
+Address of d      | 0x7fff701439d8
+Address of l      | 0x7fff701439e0
+main address      | 0x56238cd336fa
+main address      | 0x56238cd336fa
+———————————————————————————————————————————
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="darkwell"><mark>Title: </mark>C program to demonstrate the static and local variables</div>
+<div class="card">{{ site.cfile }}</div>
+<pre>
+{% highlight c %}
+#include<stdio.h>
+void inc() 
+{  
+    for(int i=0;i<5;i++)
+    {
+        static int a=0;
+        int b=0;
+        a++;  
+        b++;  
+        printf("Static:a = %d | Local:b = %d\n",a,b);  
+    }
+}  
+int main() 
+{  
+    inc();
+    return 0;
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runc }}
+Static:a = 1 | Local:b = 1
+Static:a = 2 | Local:b = 1
+Static:a = 3 | Local:b = 1
+Static:a = 4 | Local:b = 1
+Static:a = 5 | Local:b = 1
+kodingwindow@kw:~$ 
+</pre></span>

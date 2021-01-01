@@ -1,0 +1,98 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:05 IST    
+title: "Miscellaneous: find the output of Java programs"
+---
+
+<style type="text/css">
+div.card .show
+{
+    display: none;
+}
+div.card.collapsed .show
+{
+    display: block;
+}
+div.card .hide
+{
+    display: block;
+}
+div.card.collapsed .hide
+{
+    display: none;
+}
+</style>
+
+<div class="blackwell"><mark>Miscellaneous:</mark> find the output of following Java programs</div>
+<div class="darkwell"><mark>Title: </mark>Program 1</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+class Shape
+{
+    public Shape()
+    {
+        System.out.println("1");
+        new Shape(10);
+        System.out.println("2");
+    }
+    public Shape(int side)
+    {
+        System.out.println("3");
+        new Shape(10,20);
+        System.out.println("4");
+    }
+    public Shape(int width, int breadth)
+    {
+        System.out.println("5");
+    }
+}
+class KW
+{
+    public static void main(String args[])
+    {
+        Shape s=new Shape();
+    }
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p1"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p1" class="collapse">
+<span><pre>
+{{ site.runjava }}
+1
+3
+5
+4
+2
+kodingwindow@kw:~$ 
+</pre></span>
+</div>
+
+<div class="darkwell"><mark>Title: </mark>Program 2</div>
+<div class="card">{{ site.javafile }}</div>
+<pre>
+{% highlight java %}
+class KW
+{
+    public static void main(String args[])
+    {
+        String s1="KODINGWINDOW";
+        int length=0;
+        for(String s2:s1.split(""))
+        {
+            length++;
+        }
+        System.out.println("Length of a string is: "+length);  
+    }
+}
+{% endhighlight %}
+</pre>
+<div style="cursor: pointer;" class="card collapsed" data-toggle="collapse" data-target="#p2"><span class="show">Show Output</span><span class="hide">Output</span></div>
+<div id="p2" class="collapse">
+<span><pre>
+{{ site.runjava }}
+Length of a string is: 12
+kodingwindow@kw:~$ 
+</pre></span>
+</div>

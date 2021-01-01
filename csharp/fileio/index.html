@@ -1,0 +1,11 @@
+---
+layout: kw
+modified: 17 Oct 2020 16:10 IST   
+title: C# File Handling
+---
+
+{% for segment in site.data.csharp.segments %}{% if segment.url contains "/fileio/" %}
+<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
+    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+</div>
+{% endif %}{% endfor %}

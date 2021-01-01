@@ -1,0 +1,62 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:26 IST   
+title: Selenium Java to select dynamically generated radio button
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class KW
+{
+    public static void main(String[] args) 
+    {   
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.navigate().to("http://newtours.demoaut.com");
+        driver.findElement(By.name("userName")).sendKeys("mercury");
+        driver.findElement(By.name("password")).sendKeys("mercury");
+        driver.findElement(By.name("login")).click();
+        
+        int count = driver.findElements(By.xpath("//input[@name='servClass']")).size();
+        for(int i=0; i<count; i++)
+        {
+            driver.findElements(By.xpath("//input[@name='servClass']")).get(1).click();
+        }
+        //driver.close();
+    }
+}
+{% endhighlight %}
+</pre>
+
+<div class="darkwell"><mark>Title: </mark>Selenium Java to select radio button using cssSelector</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="inputwell">
+{% highlight java %}
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+public class KW
+{
+    public static void main(String[] args) 
+    {   
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        driver.navigate().to("http://newtours.demoaut.com");
+        driver.findElement(By.name("userName")).sendKeys("mercury");
+        driver.findElement(By.name("password")).sendKeys("mercury");
+        driver.findElement(By.name("login")).click();
+        
+        driver.findElement(By.cssSelector("input[value='Business']")).click();
+        
+        //driver.close();
+    }
+}
+{% endhighlight %}
+</pre>

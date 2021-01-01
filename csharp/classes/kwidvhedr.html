@@ -1,0 +1,68 @@
+---
+layout: kw
+modified: 02 Oct 2020 21:11 IST   
+title: C# implementation of constructor and destructor
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.csfile }}</div>
+<pre>
+{% highlight csharp %}
+using System;
+namespace Kodingwindow
+{
+    public class Computer
+    {
+        public String mouseType;
+        public String mouseCmp;
+        public int mouseId;
+
+        public Computer()
+        {
+            Console.WriteLine("Constructor");
+        }
+        public Computer(String t, String c, int i)
+        {
+            mouseType = t;
+            mouseCmp = c;
+            mouseId = i;
+        }
+        ~Computer()
+        {
+            Console.WriteLine("Destructor");
+        }
+        public void display()
+        {
+            Console.WriteLine("Mouse Type: " + mouseType + "\nMouse Cmp:  " + mouseCmp + "\nMouse Id:   " + mouseId);
+        }
+    }
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("———————————————————————————————————————————");
+            Console.WriteLine("Program to use a constructor and destructor");
+            Console.WriteLine("———————————————————————————————————————————");
+            Computer c1 = new Computer();
+            Computer c2 = new Computer("Wireless", "Lenovo", 145221);
+            c2.display();
+            c1 = null;
+            GC.Collect();
+            Console.WriteLine("———————————————————————————————————————————");
+        }
+    }
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+———————————————————————————————————————————
+Program to use a constructor and destructor
+———————————————————————————————————————————
+Constructor
+Mouse Type: Wireless
+Mouse Cmp:  Lenovo
+Mouse Id:   145221
+———————————————————————————————————————————
+Destructor
+</pre></span>
