@@ -4,19 +4,19 @@
 
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <div class="navbar-header">
+    <div class="container-fluid">
         <div class="navbar-brand" style="color: #00b050; font-size: 16px;"><a href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a>{% if pu[2] contains ".html" %}{% assign pu[2]="" %}{% else %}{% assign pu[2]=pu[2] %}<a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/{{ pu[2] }}/">{{ breadcrumb_child }}</a>{% endif %}
+            </div>
+        <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
+            <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
+        </button>
+        <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
         </div>
-    </div>
-    <button class="navbar-toggler p-0" type="button" data-toggle="rightsidebar" data-target="#rightsidebar" style="border: none;">
-        <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
-    </button>
-    <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse">
-        <span class="ml-auto">{% include nav.html %}</span>
     </div>
 </nav>
 
-<div data-toggle="collapseall">
+<div data-bs-toggle="collapseall">
     <div class="kwdisplay jumbotron text-center">
         <h3>{{ site.title }}</h3>
     	<h6>{{ segmentname }}</h6>

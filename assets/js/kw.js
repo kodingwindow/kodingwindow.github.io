@@ -2,17 +2,17 @@ this.top.location !== this.location && (this.top.location = this.location);
 
 $(function()
 {
-    $('[data-toggle="leftsidebar"]').on('click', function() 
+    $('[data-bs-toggle="leftsidebar"]').on('click', function() 
     {
         $('.rightsidebar-collapse').removeClass('open')
         $('.leftsidebar-collapse').toggleClass('open')
     })
-    $('[data-toggle="rightsidebar"]').on('click', function() 
+    $('[data-bs-toggle="rightsidebar"]').on('click', function() 
     {
         $('.leftsidebar-collapse').removeClass('open')
         $('.rightsidebar-collapse').toggleClass('open')
     })
-    $('[data-toggle="collapseall"]').on('click', function() 
+    $('[data-bs-toggle="collapseall"]').on('click', function() 
     {
         $('.leftsidebar-collapse').removeClass('open')
         $('.rightsidebar-collapse').removeClass('open')

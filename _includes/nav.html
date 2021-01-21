@@ -1,18 +1,16 @@
-<ul class="navbar-nav">
-    <li class="nav-item dropdown kwmegamenu">
-        <a class="nav-link dropdown-toggle" data-toggle="dropdown" style="color: #cccccc; cursor: pointer;">Computer Science</a>
-        <div class="dropdown-menu kwmenu">
-            <div class="row">
-                {% for item in site.data.navmenu.csmenu %}<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
-                    <h6 class="submenutitle">{{ item.submenu }}</h6>
-                    {% for subitem in item.segments %}<ul class="list-unstyled">
-                        <li><a class="{{ subitem.url | split: '/' }} kwcard" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
-                    </ul>{% endfor %}
-                </div>{% endfor %}
-            </div>
+<li class="nav-item dropdown kwmegamenu">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #cccccc; cursor: pointer;">Computer Science</a>
+    <div class="dropdown-menu kwmenu">
+        <div class="row">
+            {% for item in site.data.navmenu.csmenu %}<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+                <h6 class="submenutitle">{{ item.submenu }}</h6>
+                {% for subitem in item.segments %}<ul class="list-unstyled">
+                    <li><a class="{{ subitem.url | split: '/' }} kwcard" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+                </ul>{% endfor %}
+            </div>{% endfor %}
         </div>
-    </li>
-    <li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="mcqs/">MCQs</a></li>
-    <li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="faqs/">FAQs</a></li>
-    <li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="search/">Global Search</a></li>
-</ul>
+    </div>
+</li>
+<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="mcqs/">MCQs</a></li>
+<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="faqs/">FAQs</a></li>
+<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="search/">Global Search</a></li>

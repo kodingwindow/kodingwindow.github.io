@@ -120,6 +120,10 @@
         height: 30px;
         border-radius: 3px;
     }
+    .leftmargin
+    {
+        margin-left: 35px;
+    }
 }
 body
 {
