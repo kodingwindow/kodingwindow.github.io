@@ -76,14 +76,14 @@ title: TestApp Login Page
 
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <div class="navbar-header">
+    <div class="container-fluid">
         <div class="navbar-brand" style="color: #00b050; font-size: 16px;"><a style="margin-right: 5px;" href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a></div>
-    </div>
-    <button class="navbar-toggler p-0" type="button" data-toggle="rightsidebar" data-target="#rightsidebar" style="border: none;">
-        <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
-    </button>
-    <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse">
-        <span class="ml-auto">{% include nav.html %}</span>
+        <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
+            <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
+        </button>
+        <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
+            <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
+        </div>
     </div>
 </nav>
 
@@ -96,10 +96,10 @@ title: TestApp Login Page
                 </div>
                 <div class="card-body">
                     <form name="kwlogin" action="testapp/profile" onsubmit="return validate()">
-                        <div class="input-group form-group">
+                        <div class="mb-3">
                             <input id="username" name="username" type="text" class="form-control" placeholder="Username" autocomplete="off" oninput="this.value=this.value.toLowerCase()" tabindex="1" maxlength="12" minlength="12">
                         </div>
-                        <div class="input-group form-group">
+                        <div class="mb-3">
                             <input id="password" name="password" type="password" class="form-control" placeholder="Password" autocomplete="off" oninput="this.value=this.value.toLowerCase()" tabindex="2" maxlength="12" minlength="12">
                         </div>
                         <center>

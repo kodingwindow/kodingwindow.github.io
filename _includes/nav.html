@@ -11,6 +11,8 @@
         </div>
     </div>
 </li>
-<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="mcqs/">MCQs</a></li>
-<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="faqs/">FAQs</a></li>
-<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="search/">Global Search</a></li>
+{% if pu[1] contains "search" %}{% else %}<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="search/">Global Search</a></li>{% endif %}
+{% if pu[1] contains "mcqs" %}{% else %}<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="mcqs/">MCQs</a></li>{% endif %}
+{% if pu[1] contains "faqs" %}{% else %}<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="faqs/">FAQs</a></li>{% endif %}
+{% if pu[1] contains "about" %}{% else %}<li class="nav-item"><a class="nav-link" style="color: #cccccc;" href="about/">About Us</a></li>{% endif %}
+<li class="nav-item"><a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" style="color: #cccccc; cursor: pointer;">Contact Us</a></li>

@@ -102,6 +102,8 @@
     {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
 {% endfor %}
 
+{% elsif page.url contains "/search/" %}{% assign segmentname="Kodingwindow Search" %}{% assign breadcrumb_parent=" / Global Search / " %}
+
 {% elsif page.url contains "/mcqs/" %}
 {% assign segmentname="Multiple Choice Questions" %}{% assign breadcrumb_parent=" / MCQs / " %}
 {% for segment in site.data.mcqs.segments %}
@@ -110,7 +112,7 @@
 
 {% elsif page.url contains "/faqs/" %}{% assign segmentname="Frequently Asked Questions" %}{% assign breadcrumb_parent=" / FAQs / " %}
 
-{% elsif page.url contains "/search/" %}{% assign segmentname="Kodingwindow Search" %}{% assign breadcrumb_parent=" / Global Search / " %}
+{% elsif page.url contains "about" %}{% assign breadcrumb_parent=" / About Us / " %}
 
 {% elsif page.url contains "/testapp/" %}{% assign segmentname="Kodingwindow TestApp" %}{% assign breadcrumb_parent=" / TestApp / " %}
 
@@ -131,5 +133,51 @@
     <script src="{{ site.jquery }}"></script>
     <script src="{{ site.bootstrap_js }}"></script>
     <script src="{{ site.kw_js }}"></script>
+    <script async src="{{ site.analytics }}"></script>
     <base href="{{ site.url }}">
 </head>
+
+<div class="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Kodingwindow Contact Form</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" style="box-shadow: none;"></button>
+            </div>
+            <div class="modal-body">
+                <form name="data-to-google-sheet">
+                    <div class="mb-3">
+                        <input pattern="[A-Za-z]{2,30}" class="form-control" id="fname" name="fname" placeholder="* Firstname" type="text" minlength="2" maxlength="30" autocomplete="off" title="Please enter the alphabets only" required>
+                    </div>
+                    <div>
+                        <input pattern="[A-Za-z]{2,30}" class="form-control" id="lname" name="lname" placeholder="* Lastname" type="text" minlength="2" maxlength="30" autocomplete="off" title="Please enter the alphabets only" required>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <input onkeyup="this.value = this.value.toLowerCase();" class="form-control" id="email" name="email" placeholder="* Email" type="email" minlength="7" maxlength="30" autocomplete="off" title="Please enter the valid email address" required>
+                    </div>
+                    <textarea onkeypress="validate_comments(event)" class="form-control" id="comments" name="comments" placeholder="* Comments/Queries" rows="2" maxlength="250" autocomplete="off" spellcheck="true" required></textarea>
+                    <div class="text-center" style="font-size: 14px;">You can write to us on <a style="color: #3973ac;" href="mailto:{{ site.yahoo }}" style="text-decoration: none;">{{ site.email }}</a></div>
+                    <div style="margin-top: 20px;"><center>
+                        <button class="btn kwbtn" type="reset" style="margin-right: 10px;">Reset</button>
+                        <button class="btn kwbtn" type="button" style="margin-right: 10px;" data-bs-dismiss="modal">Close</button>
+                        <button class="btn kwbtn" class="btn btn-light" type="submit">Submit</button></center>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbyd6m8TnOZ6kRxcosvL7bYooD322egegsu8M9kYzu-gPGSg6DE/exec'
+const form = document.forms['data-to-google-sheet']
+form.addEventListener('submit', e => 
+{
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)}).then(response => 
+    {  
+        form.reset();
+        alert("Thank You.\nYour Information Received Successfully.\nDate - "+kwdate()+"\nTime - "+kwtime());
+    }).catch(error => console.error('Failed to Receive Your Information.', error.message))
+})
+</script>

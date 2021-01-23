@@ -38,12 +38,12 @@
     }
     .navbar-brand > a > img
     {
-        margin: -2px 5px 0px 0px;
+        margin: 0px 5px 0px 0px;
     }
     .navbar-brand > img, .navbar-brand > a > img
     {
-        width: 35px;
-        height: 35px;
+        width: 45px;
+        height: 45px;
         border-radius: 3px;
     }
     .kwwidth
@@ -71,10 +71,6 @@
     {
         height: 18rem;
     }
-    .carousel-indicators
-    {
-        display: none;
-    }
     .kwwidth
     {
         width: 100%;
@@ -97,8 +93,9 @@
     }
     .rightsidebar-collapse.open
     {
-        padding-top: 10px;
-        padding-bottom: 30px;
+    	line-height: 23px;
+    	padding: 10px 10px 30px 25px;
+        border-left: 1px solid #404040;
         -webkit-transform: translateX(30%); transform: translateX(30%);
     }
     .leftsidebar-collapse
@@ -112,12 +109,12 @@
     }
     .navbar-brand > a > img
     {
-        margin: -1px 5px 0px 3px;
+        margin: -3px 5px 0px 3px;
     }
     .navbar-brand > img, .navbar-brand > a > img
     {
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         border-radius: 3px;
     }
     .leftmargin
@@ -133,6 +130,11 @@ nav
 {
     border-bottom: 1px solid #404040;
 }
+footer
+{
+    font-size: 14px;
+    margin-top: 100px;
+}
 div.row li
 {
     padding: 2px 0px 2px 0px;
@@ -145,11 +147,6 @@ div.row li > a.kwcard
 div.row li > a.kwcard:hover
 {
     color: #ffffff;
-}
-footer
-{
-    font-size: 14px;
-    margin-top: 100px;
 }
 h3, h4
 {
@@ -410,8 +407,8 @@ div.carousel-caption > h5
 .sidebar > a
 {
     font-size: 15px;
-    padding: 10px;
-    border-left: 4px solid transparent;
+    padding: 12px;
+    border-left: 5px solid transparent;
     border-bottom: 1px solid #f2f2f2;
 }
 .sidebar > a:last-child
@@ -452,29 +449,9 @@ div.carousel-caption > h5
     margin: 0px 0px 70px 0px;
     border-radius: 0px;
 }
-.card-deck > div.card
+.jumbotron-fluid
 {
-    background-color: transparent;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    padding: 0px;
-    box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);
-}
-.card-deck > div.card:hover, .card-deck > div.card:focus
-{
-    box-shadow: 0 0 9px rgba(0, 0, 0, 0.3);
-}
-.card-body
-{
-    padding: 10px 15px 0px 15px;
-}
-h5.card-title
-{
-    line-height: 30px;
-}
-.card-img-top
-{
-    border-bottom: 1px solid #f2f2f2;
+	padding: 100px 0px 40px 0px;
 }
 .kwbtn, a.kwbtn
 {
@@ -526,61 +503,61 @@ h5.card-title
 { color: #000000; font-weight: bold; }
 
 .c:hover, .c:focus, #c > a:hover, #c > a:focus, .kwcard.c, .nav-link.activetab.c
-{ border-left: 4px solid #0066ff; }
+{ border-left: 5px solid #0066ff; }
 
 .cpp:hover, .cpp:focus, #cpp > a:hover, #cpp > a:focus, .kwcard.cpp, .nav-link.activetab.cpp
-{ border-left: 4px solid #669900; }
+{ border-left: 5px solid #669900; }
 
 .java:hover, .java:focus, #java > a:hover, #java > a:focus, .kwcard.java, .nav-link.activetab.java
-{ border-left: 4px solid #ff6600; }
+{ border-left: 5px solid #ff6600; }
 
 .csharp:hover, .csharp:focus, #csharp > a:hover, #csharp > a:focus, .kwcard.csharp, .nav-link.activetab.csharp
-{ border-left: 4px solid #9933ff; }
+{ border-left: 5px solid #9933ff; }
 
 .python:hover, .python:focus, #python > a:hover, #python > a:focus, .kwcard.python, .nav-link.activetab.python
-{ border-left: 4px solid #ffff00; }
+{ border-left: 5px solid #ffff00; }
 
 .r:hover, .r:focus, #r > a:hover, #r > a:focus, .kwcard.r, .nav-link.activetab.r
-{ border-left: 4px solid #52527a; }
+{ border-left: 5px solid #52527a; }
 
 .datascience:hover, .datascience:focus, #datascience > a:hover, #datascience > a:focus, .kwcard.datascience, .nav-link.activetab.datascience
-{ border-left: 4px solid #e6b800; }
+{ border-left: 5px solid #e6b800; }
 
 .lisp:hover, .lisp:focus, #lisp > a:hover, #lisp > a:focus, .kwcard.lisp, .nav-link.activetab.lisp
-{ border-left: 4px solid #008fb3; }
+{ border-left: 5px solid #008fb3; }
 
 .dsa:hover, .dsa:focus, #dsa > a:hover, #dsa > a:focus, .kwcard.dsa, .nav-link.activetab.dsa
-{ border-left: 4px solid #00cc66; }
+{ border-left: 5px solid #00cc66; }
 
 .mysql:hover, .mysql:focus,  #mysql > a:hover, #mysql > a:focus, .kwcard.mysql, .nav-link.activetab.mysql
-{ border-left: 4px solid #006699; }
+{ border-left: 5px solid #006699; }
 
 .mongodb:hover, .mongodb:focus, #mongodb > a:hover, #mongodb > a:focus, .kwcard.mongodb, .nav-link.activetab.mongodb
-{ border-left: 4px solid #29a329; }
+{ border-left: 5px solid #29a329; }
 
 .linux:hover, .linux:focus, #linux > a:hover, #linux > a:focus, .kwcard.linux, .nav-link.activetab.linux
-{ border-left: 4px solid #888844; }
+{ border-left: 5px solid #888844; }
 
 .bash:hover, .bash:focus, #bash > a:hover, #bash > a:focus, .kwcard.bash, .nav-link.activetab.bash
-{ border-left: 4px solid #cc0000; }
+{ border-left: 5px solid #cc0000; }
 
 .cg:hover, .cg:focus, #cg > a:hover, #cg > a:focus, .kwcard.cg, .nav-link.activetab.cg
-{ border-left: 4px solid #cc0066; }
+{ border-left: 5px solid #cc0066; }
 
 .asm:hover, .asm:focus, #asm > a:hover, #asm > a:focus, .kwcard.asm, .nav-link.activetab.asm
-{ border-left: 4px solid #804000; }
+{ border-left: 5px solid #804000; }
 
 .selenium:hover, .selenium:focus, #selenium > a:hover, #selenium > a:focus, .kwcard.selenium, .nav-link.activetab.selenium
-{ border-left: 4px solid #00b300; }
+{ border-left: 5px solid #00b300; }
 
 .vbscript:hover, .vbscript:focus, #vbscript > a:hover, #vbscript > a:focus, .kwcard.vbscript, .nav-link.activetab.vbscript
-{ border-left: 4px solid #b300b3; }
+{ border-left: 5px solid #b300b3; }
 
 .mcqs:hover, .mcqs:focus, #mcqs > a:hover, #mcqs > a:focus, .kwcard.mcqs, .nav-link.activetab.mcqs
-{ border-left: 4px solid #80ff00; }
+{ border-left: 5px solid #80ff00; }
 
 .faqs:hover, .faqs:focus, #faqs > a:hover, #faqs > a:focus, .kwcard.faqs, .nav-link.activetab.faqs
-{ border-left: 4px solid #666633; }
+{ border-left: 5px solid #666633; }
 
 /* Syntax highlighting styles */
 .highlight { background: #fff; margin: 0px; padding: 0px; }
