@@ -1,5 +1,5 @@
 ---
-modified: 23 Jan 2021 14:38 IST  
+modified: 24 Jan 2021 06:06 IST  
 title: "Kodingwindow: Open-source Programming Platform"
 ---
 
@@ -8,81 +8,78 @@ title: "Kodingwindow: Open-source Programming Platform"
 {% include head.html %}
 
 <body style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <div class="container-fluid">
-        <div id="scroll" class="navbar-brand" style="color: #00b050; font-size: 16px; cursor: pointer;"><a><img class="rounded" src="{{ site.logo }}" style="margin-right: 10px;"></a>Kodingwindow</div>
-        <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
-            <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
-        </button>
-        <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-brand" style="color: #00b050; font-size: 16px;"><img class="rounded" src="{{ site.logo }}" style="margin-right: 10px;">Kodingwindow</div>
+            <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
+                <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
+            </button>
+            <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<div data-bs-toggle="collapseall">
-    <div id="kwcarousel" class="carousel slide" data-bs-ride="carousel">
-        <ul class="carousel-indicators">
-            <li data-bs-target="#kwcarousel" data-bs-slide-to="0" class="active"></li>
-            <li data-bs-target="#kwcarousel" data-bs-slide-to="1"></li>
-            <li data-bs-target="#kwcarousel" data-bs-slide-to="2"></li>
-            <li data-bs-target="#kwcarousel" data-bs-slide-to="3"></li>
-            <li data-bs-target="#kwcarousel" data-bs-slide-to="4"></li>
-        </ul>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="carousel-caption">
-                    <h3>{{ site.title }}</h3>
-                    <h5>{{ site.type }}</h5>
-                    <h5>{{ site.tagline }}</h5><br>
+    <div data-bs-toggle="collapseall">
+        <div id="kwcarousel" class="carousel slide" data-bs-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-bs-target="#kwcarousel" data-bs-slide-to="0" class="active"></li>
+                <li data-bs-target="#kwcarousel" data-bs-slide-to="1"></li>
+                <li data-bs-target="#kwcarousel" data-bs-slide-to="2"></li>
+                <li data-bs-target="#kwcarousel" data-bs-slide-to="3"></li>
+                <li data-bs-target="#kwcarousel" data-bs-slide-to="4"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption">
+                        <h3>{{ site.title }}</h3>
+                        <h5>{{ site.type }}</h5>
+                        <h5>{{ site.tagline }}</h5><br>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h4>{{ site.title }} Global Search</h4>
+                        <h5>Input Minimum. Output Maximum.</h5>
+                        <p><a href="search/" class="btn kwbtn">Search Now</a></p>
+                    </div>   
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h4>{{ site.title }} Experiments</h4>
+                        <h5>A professional LinkedIn group for learners</h5>
+                        <p><a href="{{ site.group }}" target="_blank" class="btn kwbtn">Connect Now</a></p>
+                    </div>   
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h4>{{ site.title }} on Telegram</h4>
+                        <h5>A special channel for poll</h5>
+                        <p><a href="{{ site.telegram }}" target="_blank" class="btn kwbtn">Subscribe Now</a></p>
+                    </div>   
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption">
+                        <h4>{{ site.title }} on Slack</h4>
+                        <h5>A channel for learners to communicate</h5>
+                        <p><a href="{{ site.slack }}" target="_blank" class="btn kwbtn">Join Workspace</a></p>
+                    </div>   
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h4>{{ site.title }} Global Search</h4>
-                    <h5>Input Minimum. Output Maximum.</h5>
-                    <p><a href="search/" class="btn kwbtn">Search Now</a></p>
-                </div>   
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h4>{{ site.title }} Experiments</h4>
-                    <h5>A professional LinkedIn group for learners</h5>
-                    <p><a href="{{ site.group }}" target="_blank" class="btn kwbtn">Connect Now</a></p>
-                </div>   
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h4>{{ site.title }} on Telegram</h4>
-                    <h5>A special channel for poll</h5>
-                    <p><a href="{{ site.telegram }}" target="_blank" class="btn kwbtn">Subscribe Now</a></p>
-                </div>   
-            </div>
-            <div class="carousel-item">
-                <div class="carousel-caption">
-                    <h4>{{ site.title }} on Slack</h4>
-                    <h5>A channel for learners to communicate</h5>
-                    <p><a href="{{ site.slack }}" target="_blank" class="btn kwbtn">Join Workspace</a></p>
-                </div>   
-            </div>
         </div>
-    </div>
 
-    <div class="container">
-        <div style="padding-top: 40px;">
-            <div class="row">
-                {% for segment in site.data.segments %}
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <a href="{{ segment.url }}"><div class="{{ segment.url | split: '/' }} kwcard">{{ segment.title }}</div></a>
+        <div class="container">
+            <div style="padding-top: 40px;">
+                <div class="row">
+                    {% for segment in site.data.segments %}
+                    <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
+                        <a href="{{ segment.url }}"><div class="{{ segment.url | split: '/' }} kwcard">{{ segment.title }}</div></a>
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
+        <footer>{% include footer.html %}</footer>
     </div>
-
-    <footer>{% include footer.html %}
-        <div style="background-color: #000000; padding-bottom: 10px;"><center><iframe src="https://www.youtube.com/embed/KFdQFLX99is" class="img-thumbnail" style="padding: 10px 15px 10px 15px; border-radius: 0px; border: none; padding: 0 !important; margin: 0px; height: 200px; width: 700px; background-color: #000000;"></iframe></center></div>
-    </footer>
-    <div class="text-center" style="background-color: #0d0d0d; color: #cccccc; border-top: 1px solid #1a1a1a; font-size: 15px; padding: 10px;">This page updated on: {{ page.modified }}.</div>
-</div>
 </body>
+</html>

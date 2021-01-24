@@ -1,0 +1,62 @@
+---
+modified: 23 Jan 2021 21:43 IST  
+title: "About Us"
+---
+
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body style="-webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;">
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-brand" style="color: #00b050; font-size: 16px;"><a style="margin-right: 5px;" href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a></div>
+            <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
+                <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
+            </button>
+            <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="jumbotron" data-bs-toggle="collapseall">
+        <h4 style="text-align: center;">Mission Statement</h4>
+        <div class="container" style="margin-top: 10px;">
+            <div style="font-size: 18px; text-align: center; padding: 10px; margin-top: 0px;">&#10077; The mission of Kodingwindow is to inspire learners by providing a comprehensive and pragmatic approach to programming and make them realize their unfathomable potential. &#10078;</div>
+            <div style="padding: 10px 10px 20px 10px; text-align: justify;">Kodingwindow is an online open-source programming platform where learners realize their potential and where mind-blowing practical solutions build. This platform has hundreds of problem statements, solutions, and approaches in various programming languages to boost the confidence of students, novices, job seekers, IT professionals, etc.</div>
+            <div style="text-align: right; font-size: 14px; padding-right: 10px;"><a target="_blank" style="color: #3973ac;" href="https://www.linkedin.com/in/shubhamrdarda/">Shubham Darda</a><br>Founder and Architect<br>Founded on: February 19, 2018</div>
+        </div>
+    </div>
+
+    <div class="container-fluid" data-bs-toggle="collapseall"><center>
+        <div class="col-md-7" style="padding: 15px; margin-bottom: 20px; border-radius: 3px; border: 1px solid #cccccc; box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);">
+            <h4 style="text-align: center; padding-bottom: 10px; border-bottom: 1px solid #cccccc;">Kodingwindow's Specialities</h4>
+            <img src="{{ site.advertise }}" class="img-thumbnail" style="border: none;">
+        </div>
+        <div class="col-md-7" style="margin-bottom: 20px; background-color: #f2f2f2; padding: 15px; border-radius: 3px; border: 1px solid #cccccc; box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);">
+            <h4 style="text-align: center; padding-top: 15px; padding-bottom: 15px;">Kodingwindow's Roadmap</h4>
+            <table class="table">
+                <thead><tr><th scope="col">Year</th><th scope="col">What we achieved</th></tr></thead>
+                <tbody>
+                    <tr><th scope="row">2013</th><td>Ideas initiated and studied web technologies</td></tr>
+                    <tr><th scope="row">2014</th><td>Explored programming languages and algorithms</td></tr>
+                    <tr><th scope="row">2015</th><td>Learned structured and unstructured databases</td></tr>
+                    <tr><th scope="row">2016</th><td>Program files created, scrutinized, and clustered</td></tr>
+                    <tr><th scope="row">2017</th><td>Designed and developed a website, and maintained with GitHub pages</td></tr>
+                    <tr><th scope="row">2018</th><td>Created programming segments, organized content, established a group, etc.</td></tr>
+                    <tr><th scope="row">2019</th><td>Improved UI, bug fixes, shortened URLs, etc.</td></tr>
+                    <tr><th scope="row">2020</th><td>Enhanced website and code readability using Jekyll</td></tr>
+                    <tr><th scope="row">2021</th><td>Elevating Data Science and Data Structures segments</td></tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-7" style="background-color: #000000; padding-bottom: 10px; border-radius: 3px; border: 1px solid #cccccc; box-shadow: 0 0 9px rgba(0, 0, 0, 0.1);">
+            <h5 style="text-align: center; color: #ffffff; padding-top: 15px; padding-bottom: 15px; border-bottom: 1px solid #404040;">First Anniversary Celebration</h5>
+            <center><iframe src="https://www.youtube.com/embed/KFdQFLX99is" class="img-thumbnail" style="padding: 10px 15px 10px 15px; border-radius: 3px; border: none; padding: 0 !important; margin: 0px; height: 250px; width: 700px; background-color: #000000;"></iframe>
+            </center>
+        </div>
+    </center></div>
+    <footer data-bs-toggle="collapseall">{% include footer.html %}</footer>
+</body>
+</html>

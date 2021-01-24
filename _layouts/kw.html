@@ -3,54 +3,50 @@
 {% include head.html %}
 
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <div class="container-fluid">
-        <button class="navbar-toggler p-0" type="button" data-bs-toggle="leftsidebar" data-bs-target="#leftsidebar" style="border: none; position: fixed;">
-            <span class="navbar-toggler-icon" style="font-size: 16px;"></span>
-        </button>
-        <div class="navbar-brand leftmargin" style="color: #00b050; font-size: 16px;"><a href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/{{ pu[2] }}/">{{ breadcrumb_child }}</a>{% if pu[2] == "search" %}<a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/search/">Search</a>{% endif %}</div>
-        <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
-            <span class="navbar-toggler-icon" style="font-size: 16px;"></span>
-        </button>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler p-0" type="button" data-bs-toggle="leftsidebar" data-bs-target="#leftsidebar" style="border: none; position: fixed;">
+                <span class="navbar-toggler-icon" style="font-size: 16px;"></span>
+            </button>
+            <div class="navbar-brand leftmargin" style="color: #00b050; font-size: 16px;"><a href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/{{ pu[2] }}/">{{ breadcrumb_child }}</a>{% if pu[2] == "search" %}<a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/search/">Search</a>{% endif %}</div>
+            <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
+                <span class="navbar-toggler-icon" style="font-size: 16px;"></span>
+            </button>
 
-        <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
+            <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
+            </div>
+            <div id="leftsidebar" class="sidebar leftsidebar-collapse col-md-2">
+            {% for item in site.data.sidenav.segments %}
+                {% if page.url contains item.segment %}
+                    {% for subitem in item.navigations %}
+                        {% assign class=nil %}
+                        {% assign tu=subitem.url | split: '/' %}
+                        {% if pu[2]==tu[1] %}
+                            {% assign class="activetab" %}
+                            <a class="nav-link {{ class }} {{ pu[1] }}" href="{{ subitem.url }}">{{ subitem.title }}</a>
+                        {% else %}
+                            <a class="nav-link {{ pu[1] }}" href="{{ subitem.url }}">{{ subitem.title }}</a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            </div>
         </div>
-        <div id="leftsidebar" class="sidebar leftsidebar-collapse col-md-2">
-        {% for item in site.data.sidenav.segments %}
-            {% if page.url contains item.segment %}
-                {% for subitem in item.navigations %}
-                    {% assign class=nil %}
-                    {% assign tu=subitem.url | split: '/' %}
-                    {% if pu[2]==tu[1] %}
-                        {% assign class="activetab" %}
-                        <a class="nav-link {{ class }} {{ pu[1] }}" href="{{ subitem.url }}">{{ subitem.title }}</a>
-                    {% else %}
-                        <a class="nav-link {{ pu[1] }}" href="{{ subitem.url }}">{{ subitem.title }}</a>
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-        {% endfor %}
+    </nav>
+
+    <div data-bs-toggle="collapseall">
+        <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 kwdisplay jumbotron text-center">
+            <h3>{{ site.title }}</h3>
+            <h6>{{ segmentname }}</h6>
         </div>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" role="main">
+            <div class="container">
+                {{ content }}
+                {% include pagination.html %}
+            </div>
+        </main>
+        <footer class="col-md-9 ms-sm-auto col-lg-10 kwdisplay" style="padding: 0px;">{% include footer.html %}</footer>
     </div>
-</nav>
-
-<div data-bs-toggle="collapseall">
-    <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4 kwdisplay jumbotron text-center">
-        <h3>{{ site.title }}</h3>
-        <h6>{{ segmentname }}</h6>
-    </div>
-
-    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4" role="main">
-        <div class="container">
-            {{ content }}
-            {% include pagination.html %}
-        </div>
-    </main>
-
-    <footer class="col-md-9 ms-sm-auto col-lg-10 kwdisplay" style="padding: 0px;">{% include footer.html %}
-        <div class="text-center" style="background-color: #0d0d0d; color: #cccccc; border-top: 1px solid #1a1a1a; font-size: 15px; padding: 10px;">This page updated on: {{ page.modified }}.</div>
-    </footer>
-</div>
 </body>
 </html>

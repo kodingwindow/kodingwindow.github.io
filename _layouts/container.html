@@ -3,33 +3,29 @@
 {% include head.html %}
 
 <body>
-<nav class="navbar navbar-expand-md navbar-dark fixed-top">
-    <div class="container-fluid">
-        <div class="navbar-brand" style="color: #00b050; font-size: 16px;"><a href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a>{% if pu[2] contains ".html" %}{% assign pu[2]="" %}{% else %}{% assign pu[2]=pu[2] %}<a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/{{ pu[2] }}/">{{ breadcrumb_child }}</a>{% endif %}
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-brand" style="color: #00b050; font-size: 16px;"><a href="/"><img src="{{ site.logo }}"></a><a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}">{{ breadcrumb_parent }}</a>{% if pu[2] contains ".html" %}{% assign pu[2]="" %}{% else %}{% assign pu[2]=pu[2] %}<a style="font-size: 16px; color: #00b050;" href="{{ pu[1] }}/{{ pu[2] }}/">{{ breadcrumb_child }}</a>{% endif %}
+                </div>
+            <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
+                <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
+            </button>
+            <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
             </div>
-        <button class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" style="border: none;">
-            <span style="font-size: 16px;" class="navbar-toggler-icon"></span>
-        </button>
-        <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
-            <ul class="navbar-nav mr-auto">{% include nav.html %}</ul>
         </div>
+    </nav>
+
+    <div data-bs-toggle="collapseall">
+        <div class="kwdisplay jumbotron text-center">
+            <h3>{{ site.title }}</h3>
+        	<h6>{{ segmentname }}</h6>
+        </div>
+        <main class="container">
+            {{ content }}
+            {% include pagination.html %}
+        </main>
+        <footer class="kwdisplay" style="padding: 0px;">{% include footer.html %}</footer>
     </div>
-</nav>
-
-<div data-bs-toggle="collapseall">
-    <div class="kwdisplay jumbotron text-center">
-        <h3>{{ site.title }}</h3>
-    	<h6>{{ segmentname }}</h6>
-    </div>
-
-    <main class="container">
-        {{ content }}
-        {% include pagination.html %}
-    </main>
-
-    <footer class="kwdisplay" style="padding: 0px;">{% include footer.html %}
-        <div class="text-center" style="background-color: #0d0d0d; color: #cccccc; border-top: 1px solid #1a1a1a; font-size: 15px; padding: 10px;">This page updated on: {{ page.modified }}.</div>
-    </footer>
-</div>
 </body>
 </html>

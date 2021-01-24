@@ -25,7 +25,7 @@
 - title: Data Structures and Algorithms
   url: dsa/
 
-- title: MySQL Database
+- title: MySQL (Relational Database)
   url: mysql/
   
 - title: MongoDB (NoSQL Database)

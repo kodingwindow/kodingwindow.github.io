@@ -25,6 +25,13 @@ $(document).keydown(function(event)
         return false;
     }
 });
+$(document).ready(function()
+{
+    $('#back-to-top').click(function() 
+    {
+        $('body,html').animate({scrollTop: 0}, 1500);
+    });
+});
 function kwdate()
 {
     const months = ["January", "February", "March","April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -46,27 +53,6 @@ function validate_comments(e)
         e.preventDefault();
 }
 
-$(document).ready(function()
-{
-    $('#back-to-top').click(function() 
-    {
-        $('body,html').animate({scrollTop: 0}, 1500);
-    });
-});
-$(document).ready(function()
-{
-    $('#scroll').click(function() 
-    {
-        if($(window).scrollTop()+$(window).height()>=$(document).height()/2) 
-        {
-            $('body,html').animate({scrollTop: 0}, 1500);
-        }
-        else
-        {
-            $('body,html').animate({scrollTop: $(document).height()-$(window).height()+50}, 1500);
-        }
-    });  
-});
 window.onscroll = function() 
 {
     scrollFunction()
