@@ -102,19 +102,19 @@
     {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
 {% endfor %}
 
-{% elsif page.url contains "/search/" %}{% assign segmentname="Kodingwindow Search" %}{% assign breadcrumb_parent=" / Global Search / " %}
+{% elsif page.url contains "/search/" %}{% assign segmentname="Kodingwindow Search" %}{% assign breadcrumb_parent=" / Global Search" %}
 
 {% elsif page.url contains "/mcqs/" %}
-{% assign segmentname="Multiple Choice Questions" %}{% assign breadcrumb_parent=" / MCQs / " %}
+{% assign segmentname="Multiple Choice Questions" %}{% assign breadcrumb_parent=" / MCQs" %}
 {% for segment in site.data.mcqs.segments %}
     {% if page.url contains segment.url %}{% assign breadcrumb_child = segment.breadcrumb_child %}{% endif %}
 {% endfor %}
 
-{% elsif page.url contains "/faqs/" %}{% assign segmentname="Frequently Asked Questions" %}{% assign breadcrumb_parent=" / FAQs / " %}
+{% elsif page.url contains "/faqs/" %}{% assign segmentname="Frequently Asked Questions" %}{% assign breadcrumb_parent=" / FAQs" %}
 
-{% elsif page.url contains "about" %}{% assign breadcrumb_parent=" / About Us / " %}
+{% elsif page.url contains "about" %}{% assign breadcrumb_parent=" / About Us" %}
 
-{% elsif page.url contains "/testapp/" %}{% assign segmentname="Kodingwindow TestApp" %}{% assign breadcrumb_parent=" / TestApp / " %}
+{% elsif page.url contains "/testapp/" %}{% assign segmentname="Kodingwindow TestApp" %}{% assign breadcrumb_parent=" / TestApp" %}
 
 {% else %}
 {% endif %}
@@ -141,7 +141,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Kodingwindow Contact Form</h5>
+                <h5 class="modal-title" id="exampleModalLabel"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16"><path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/><path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5v2z"/></svg> Kodingwindow's Contact Form</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" style="box-shadow: none;"></button>
             </div>
             <div class="modal-body">
@@ -156,7 +156,7 @@
                         <input onkeyup="this.value = this.value.toLowerCase();" class="form-control" id="email" name="email" placeholder="* Email" type="email" minlength="7" maxlength="30" autocomplete="off" title="Please enter the valid email address" required>
                     </div>
                     <textarea onkeypress="validate_comments(event)" class="form-control" id="comments" name="comments" placeholder="* Comments/Queries" rows="2" maxlength="250" autocomplete="off" spellcheck="true" required></textarea>
-                    <div class="text-center" style="font-size: 14px;">You can write to us on <a style="color: #3973ac;" href="mailto:{{ site.yahoo }}" style="text-decoration: none;">{{ site.email }}</a></div>
+                    <div class="text-center" style="font-size: 14px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z"/></svg> Write to us on <a style="color: #3973ac;" href="mailto:{{ site.yahoo }}" style="text-decoration: none;">{{ site.email }}</a></div>
                     <div style="margin-top: 20px;"><center>
                         <button class="btn kwbtn" type="reset" style="margin-right: 10px;">Reset</button>
                         <button class="btn kwbtn" type="button" style="margin-right: 10px;" data-bs-dismiss="modal">Close</button>

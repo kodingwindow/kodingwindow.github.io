@@ -1,5 +1,5 @@
 ---
-modified: 18 Oct 2020 06:23 IST   
+modified: 25 Jan 2021 06:29 IST   
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -11,6 +11,9 @@ modified: 18 Oct 2020 06:23 IST
     <url><loc>{{ site.url }}search/</loc>
     <priority>0.9</priority></url>
     
+    <url><loc>{{ site.url }}about/</loc>
+    <priority>0.9</priority></url>
+
     <url><loc>{{ site.url }}testapp/</loc>
     <priority>0.9</priority></url>
     

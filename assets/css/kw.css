@@ -38,12 +38,12 @@
     }
     .navbar-brand > a > img
     {
-        margin: 0px 5px 0px 0px;
+        margin: -2px 5px 0px 0px;
     }
     .navbar-brand > img, .navbar-brand > a > img
     {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
         border-radius: 3px;
     }
     .kwwidth
@@ -109,17 +109,13 @@
     }
     .navbar-brand > a > img
     {
-        margin: -3px 5px 0px 3px;
+        margin: -3px 5px 0px 45px;
     }
     .navbar-brand > img, .navbar-brand > a > img
     {
         width: 35px;
         height: 35px;
         border-radius: 3px;
-    }
-    .leftmargin
-    {
-        margin-left: 35px;
     }
 }
 body
@@ -245,7 +241,7 @@ a.card:hover, a.card:focus
 }
 a.card.darkwell
 {
-    border-left: 4px solid transparent;
+    border-left: 5px solid transparent;
 }
 div.card
 {
