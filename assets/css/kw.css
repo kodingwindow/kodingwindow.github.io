@@ -38,7 +38,7 @@
     }
     .navbar-brand > a > img
     {
-        margin: -2px 5px 0px 0px;
+        margin: -1px 5px 0px 0px;
     }
     .navbar-brand > img, .navbar-brand > a > img
     {
@@ -107,7 +107,7 @@
     {
         -webkit-transform: translateX(0%); transform: translateX(0%);
     }
-    .navbar-brand > a > img
+    .navbar-brand > a > img, .navbar-brand > img
     {
         margin: -3px 5px 0px 45px;
     }

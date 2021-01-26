@@ -21,7 +21,7 @@ The Kodingwindow website has several segments, and each one of them is construct
 - [Data Science][8]: Fundamentals and Data Visualization
 - [LISP Programming][9]: CLISP and Maxima Command Line Interface (CLI), and Fundamentals
 - [Data Structures and Algorithms][10]: Fundamentals, Searching and Sorting Algorithms, etc.
-- [MySQL Database][11]: Functions, Data Definition (DDL), and Data Manipulation Language (DML)
+- [MySQL (Relational Database][11]: Functions, Data Definition (DDL), and Data Manipulation Language (DML)
 - [MongoDB (NoSQL Database)][12]: mongo Shell, and CRUD Operations
 - [Linux][13]: Linux Commands
 - [Bash Shell Scripting][14]: Fundamentals
@@ -45,7 +45,8 @@ The Kodingwindow website has several segments, and each one of them is construct
 2017: Designed and developed a website, and maintained with GitHub pages
 2018: Created programming segments, organized content, established a group, etc.
 2019: Improved UI, bug fixes, shortened URLs, etc.
-2020: Enhanced website and code readability using Jekyll. Added a new Data Science segment
+2020: Enhanced website and code readability using Jekyll
+2021: Elevating Data Science and Data Structures segments
 ```
 
 ## Frequently Asked Questions
@@ -56,13 +57,13 @@ Kodingwindow is an online open-source programming platform where learners realiz
 
 **Q2. Why it is an open-source platform?**
 
-[Shubham Darda][32], the Founder and Architect of Kodingwindow, is inspired by the great [Dr. A. P. J. Abdul Kalam][25]. He doesn't want learners to be in a boundary because of money. Furthermore, the Kodingwindow would like to spark your ideas, energize your brain, encourage you to think uniquely and help you to identify your unfathomable potential.
+[Shubham Darda][32], the Founder and Architect of Kodingwindow, is inspired by the great [Dr. A. P. J. Abdul Kalam][25]. He doesn't want learners to be in any constraint or boundary. Furthermore, the Kodingwindow would like to spark your ideas, energize your brain, encourage you to think uniquely, and help you to identify your unfathomable potential.
 
 **Q3. Who can learn on this platform?**
 
 Anyone. Whoever has an alacrity to learn programming concepts, algorithms, and different approaches to solve the problems are welcome. It is an additional benefit for learners who are having a (Diploma, Engineering, Technology, etc.) background in Computer Science and Information Technology.
 
-[Show more questions][20]
+[Show more questions and answers][20]
 
 ## Design Frameworks
 The Kodingwindow website's versioning maintained on [GitHub][24], and it uses [Jekyll][21], [Bootstrap][22] and [jQuery][23] frameworks. 
