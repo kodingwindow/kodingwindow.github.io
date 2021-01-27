@@ -1,11 +1,11 @@
 ---
 layout: kw
-modified: 18 Nov 2020 21:26 IST   
+modified: 27 Jan 2021 07:20 IST   
 title: Python MySQL to connect, create a database, and table
 ---
 
 <div class="board"><div class="boardtitle">Objective and Prerequisites</div>
-    <p><b>Objective: </b>This segment introduces the two different implementations of how to create a database and table in MySQL using Python (one using mysql-connector and another using PyMySQL.<br><br>
+    <p><b>Objective: </b>This segment introduces the two different implementations of how to create a database and table in MySQL using Python (one using mysql-connector and another using PyMySQL).<br><br>
     <b>Prerequisites: </b>PyMySQL and CSV modules are installed, and MySQL Database is up and running in the background. If not, then refer to the <a href="python/dbc/">Python Database Connectivity</a> segment in sequence.</p>
 </div>
 
@@ -38,7 +38,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 </pre></span>
 
 <div class="darkwell"><mark>Title: </mark>{{ page.title }} using mysql-connector</div>
-<div class="textwell">In the following program, we are creating a database and table. If a database DB already exists in MySQL, then the DB database will get deleted, and the new database DB will get created.</div>
+<div class="textwell">In the following program, we are creating a database and table. If a database DB already exists in MySQL, then the existing DB database will get deleted, and the new database DB will get created.</div>
 <div class="card">{{ site.pyfile }}</div>
 <pre>
 {% highlight python %}
