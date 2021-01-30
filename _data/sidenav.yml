@@ -5,7 +5,9 @@ segments:
         url: c/
       - title: C Fundamentals
         url: c/fundamentals/
-      - title: C Loops and Control Statements
+      - title: C Control Statements
+        url: c/controls/
+      - title: C Loops
         url: c/loops/
       - title: C Strings
         url: c/strings/
@@ -22,7 +24,7 @@ segments:
         url: cpp/
       - title: C++ Fundamentals
         url: cpp/fundamentals/
-      - title: C++ Loops and Control Statements
+      - title: C++ Loops
         url: cpp/loops/
       - title: C++ Classes and Objects
         url: cpp/classes/
@@ -43,7 +45,9 @@ segments:
         url: java/
       - title: Java Fundamentals
         url: java/fundamentals/
-      - title: Java Loops and Control Statements
+      - title: Java Control Statements
+        url: java/controls/
+      - title: Java Loops
         url: java/loops/
       - title: Java Classes and Objects
         url: java/classes/
@@ -78,7 +82,9 @@ segments:
         url: csharp/
       - title: C# Fundamentals
         url: csharp/fundamentals/
-      - title: C# Loops and Control Statements
+      - title: C# Control Statements
+        url: csharp/controls/
+      - title: C# Loops
         url: csharp/loops/
       - title: C# Classes and Objects
         url: csharp/classes/
@@ -121,7 +127,9 @@ segments:
         url: python/fundamentals/
       - title: Python Date and Time
         url: python/dt/
-      - title: Python Loops and Control Statements
+      - title: Python Control Statements
+        url: python/controls/
+      - title: Python Loops
         url: python/loops/
       - title: Python File Handling
         url: python/fileio/

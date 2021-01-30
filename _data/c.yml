@@ -22,20 +22,25 @@ segments:
       - title: C program to find the range of data types
         url: c/fundamentals/kwidvgrag
 
-  - topic: C Loops and Control Statements
+  - topic: C Control Statements
+    breadcrumb_child: Controls
+    url: c/controls/
+    programs:
+      - title: C program to check the given number is even/odd
+        url: c/controls/kwidcheqs
+      - title: C program to check the equality of given numbers
+        url: c/controls/kwiddwdgs
+
+  - topic: C Loops
     breadcrumb_child: Loops
     url: c/loops/
     programs:
-      - title: C program for the even-odd test of a given number
-        url: c/loops/kwidcheqs
-      - title: C program to check the equality of given numbers
-        url: c/loops/kwiddwdgs
-      - title: C program to find the min and max of given numbers
-        url: c/loops/kwidruyaz
       - title: C program to print the even and odd numbers
         url: c/loops/kwidvmakr
       - title: C program to print the star pyramid patterns
         url: c/loops/kwidzxwzt
+      - title: C program to find the min and max of given numbers
+        url: c/loops/kwidruyaz
       - title: C program to print alphabets using the ASCII values
         url: c/loops/kwidcdepo
       - title: C program to reverse a given number

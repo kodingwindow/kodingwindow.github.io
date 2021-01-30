@@ -54,16 +54,23 @@ segments:
       - title: Python implementation of the calendar module
         url: python/dt/kwidscgzf
 
-  - topic: Python Loops and Control Statements
+  - topic: Python Control Statements
+    breadcrumb_child: Controls
+    url: python/controls/
+    programs:
+      - title: Python program to check the equality of given numbers
+        url: python/controls/kwidgmsmv
+      - title: Python program to check the given number is even/odd
+        url: python/controls/kwidgvewa
+      - title: Python program to check whether a given character is alphabet
+        url: python/controls/kwidwmaxe
+      - title: Python program to check whether a given year is a leap
+        url: python/controls/kwidrwkxe
+
+  - topic: Python Loops
     breadcrumb_child: Loops
     url: python/loops/
     programs:
-      - title: Python program to check the equality of given numbers
-        url: python/loops/kwidgmsmv
-      - title: Python program for the even-odd test of a given number
-        url: python/loops/kwidgvewa
-      - title: Python program to check whether a given character is alphabet
-        url: python/loops/kwidwmaxe
       - title: Python program to print the star pyramid patterns
         url: python/loops/kwidvfyae
       - title: Python program to print the ASCII values
@@ -78,8 +85,6 @@ segments:
         url: python/loops/kwidalmxy
       - title: Python program to check whether a given number is a palindrome
         url: python/loops/kwidggkza
-      - title: Python program to check whether a given year is a leap
-        url: python/loops/kwidrwkxe
       - title: Python program to print the list of all leap years
         url: python/loops/kwidrawfa
 

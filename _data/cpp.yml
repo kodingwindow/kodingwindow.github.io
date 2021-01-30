@@ -24,7 +24,7 @@ segments:
       - title: C++ program to find the range of data types
         url: cpp/fundamentals/kwidqvvzg
 
-  - topic: C++ Loops and Control Statements
+  - topic: C++ Loops
     breadcrumb_child: Loops
     url: cpp/loops/
     programs:

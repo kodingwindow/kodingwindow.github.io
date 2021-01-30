@@ -16,14 +16,19 @@ segments:
       - title: C# program to find the range of data types
         url: csharp/fundamentals/kwidmavwt
 
-  - topic: C# Loops and Control Statements
+  - topic: C# Control Statements
+    breadcrumb_child: Controls
+    url: csharp/controls/
+    programs:
+      - title: C# program to check the given number is positive/negative
+        url: csharp/controls/kwidxyezd
+
+  - topic: C# Loops
     breadcrumb_child: Loops
     url: csharp/loops/
     programs:
-      - title: C# program to use the control statements
+      - title: C# program to use the loops and control statements
         url: csharp/loops/kwidxagiz
-      - title: C# program for the positive-negative test of a given number
-        url: csharp/loops/kwidxyezd
       - title: C# program to print the even and odd numbers
         url: csharp/loops/kwidvyqsg
       - title: C# program to print the star pyramid patterns

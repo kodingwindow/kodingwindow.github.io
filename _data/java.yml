@@ -24,14 +24,19 @@ segments:
       - title: Java program to swap the given numbers
         url: java/fundamentals/kwidzvbyz
 
+  - topic: Java Control Statements
+    breadcrumb_child: Controls
+    url: java/controls/
+    programs:
+      - title: Java program to check the equality of given numbers
+        url: java/controls/kwidkvfsb
+      - title: Java program to check the given number is even/odd
+        url: java/controls/kwidyzmae
+
   - topic: Java Loops and Control Statements
     breadcrumb_child: Loops
     url: java/loops/
     programs:
-      - title: Java program to check the equality of given numbers
-        url: java/loops/kwidkvfsb
-      - title: Java program for the even-odd test of a given number
-        url: java/loops/kwidyzmae
       - title: Java program to print the even and odd numbers
         url: java/loops/kwidgvwnz
       - title: Java program to print the numbers using for loop
