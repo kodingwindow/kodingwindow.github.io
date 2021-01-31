@@ -2,10 +2,10 @@
     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #cccccc; cursor: pointer;">Computer Science</a>
     <div class="dropdown-menu kwmenu">
         <div class="row">
-            {% for item in site.data.navmenu.csmenu %}<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
-                <h6 class="submenutitle">{{ item.submenu }}</h6>
-                {% for subitem in item.segments %}<ul class="list-unstyled">
-                    <li><a class="{{ subitem.url | split: '/' }} kwcard" href="{{ subitem.url }}">{{ subitem.title }}</a></li>
+            {% for parent in site.data.navmenu.grandparent %}<div class="col-lg-2 col-md-4 col-sm-12 col-xs-12">
+                <h6 class="submenutitle">{{ parent.parent }}</h6>
+                {% for child in parent.children %}<ul class="list-unstyled">
+                    <li><a class="{{ child.url | split: '/' }} kwcard" href="{{ child.url }}">{{ child.title }}</a></li>
                 </ul>{% endfor %}
             </div>{% endfor %}
         </div>

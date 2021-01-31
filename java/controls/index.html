@@ -1,11 +1,11 @@
 ---
 layout: kw
-modified: 30 Jan 2021 11:54 IST    
+modified: 30 Jan 2021 19:36 IST    
 title: Java Control Statements
 ---
 
-{% for segment in site.data.java.segments %}{% if segment.url contains "/controls/" %}
-<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
-    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+{% for parent in site.data.java.grandparent %}{% if parent.url contains "/controls/" %}
+<div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+    {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
 </div>
 {% endif %}{% endfor %}

@@ -1,8 +1,8 @@
-segments: 
-  - topic: VBScript Fundamentals
-    breadcrumb_child: Fundamentals
+grandparent: 
+  - parent: VBScript Fundamentals
+    subtree: Fundamentals
     url: vbscript/fundamentals/
-    programs:
+    children: 
       - title: VBScript to print Hello World
         url: vbscript/fundamentals/kwidgyved
       - title: VBScript to perform the arithmetic operations
@@ -18,10 +18,10 @@ segments:
       - title: VBScript to generate the random numbers
         url: vbscript/fundamentals/kwidzdzhz
 
-  - topic: VBScript Functions
-    breadcrumb_child: Functions
+  - parent: VBScript Functions
+    subtree: Functions
     url: vbscript/functions/
-    programs:
+    children: 
       - title: VBScript to demonstrate the use of conversion functions
         url: vbscript/functions/kwidnnyye
       - title: VBScript to demonstrate the use of format functions
@@ -31,10 +31,10 @@ segments:
       - title: VBScript to demonstrate the use of date and time functions
         url: vbscript/functions/kwidkzzak
 
-  - topic: VBScript Collections
-    breadcrumb_child: Collections
+  - parent: VBScript Collections
+    subtree: Collections
     url: vbscript/collections/
-    programs:
+    children: 
       - title: VBScript to perform ArrayList operations
         url: vbscript/collections/kwidweeat
       - title: VBScript to perform SortedList operation
@@ -44,10 +44,10 @@ segments:
       - title: VBScript to perform Queue operations
         url: vbscript/collections/kwidfaydi
 
-  - topic: VBScript File/Folder Handling
-    breadcrumb_child: FileIO
+  - parent: VBScript File/Folder Handling
+    subtree: FileIO
     url: vbscript/fileio/
-    programs:
+    children: 
       - title: VBScript to create an empty folder
         url: vbscript/fileio/kwideauvd
       - title: VBScript to create an empty text file

@@ -1,7 +1,7 @@
-segments: 
-  - topic: Pixel and Line Drawing Programs
+grandparent: 
+  - parent: Pixel and Line Drawing Programs
     url: cg/
-    programs:
+    children: 
       - title: Draw a Pixel with given coordinates
         url: cg/kwidfdmuv
       - title: Draw a Pixel by accepting coordinates from the user
@@ -25,9 +25,9 @@ segments:
       - title: Menu-driven program to draw the thick, thin, and dotted line
         url: cg/kwidhvyyk
 
-  - topic: Geometric Shapes
+  - parent: Geometric Shapes
     url: cg/
-    programs:
+    children: 
       - title: Draw a circle using the circle function
         url: cg/kwidzepyi
       - title: Draw circles using for loop
@@ -73,9 +73,9 @@ segments:
       - title: Draw a concave polygon
         url: cg/kwidlggly
 
-  - topic: Computer Graphics Algorithms
+  - parent: Computer Graphics Algorithms
     url: cg/
-    programs:
+    children: 
       - title: Draw a line using the DDA line drawing algorithm
         url: cg/kwidllgea
       - title: Draw a line using the Bresenham line drawing algorithm

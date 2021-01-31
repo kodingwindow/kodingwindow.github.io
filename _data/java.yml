@@ -1,8 +1,8 @@
-segments: 
-  - topic: Java Fundamentals
-    breadcrumb_child: Fundamentals
+grandparent: 
+  - parent: Java Fundamentals
+    subtree: Fundamentals
     url: java/fundamentals/
-    programs:
+    children:
       - title: Java Hello World program
         url: java/fundamentals/kwidmgeee
       - title: Java Hello World program without using a semicolon
@@ -24,19 +24,19 @@ segments:
       - title: Java program to swap the given numbers
         url: java/fundamentals/kwidzvbyz
 
-  - topic: Java Control Statements
-    breadcrumb_child: Controls
+  - parent: Java Control Statements
+    subtree: Controls
     url: java/controls/
-    programs:
+    children: 
       - title: Java program to check the equality of given numbers
         url: java/controls/kwidkvfsb
       - title: Java program to check the given number is even/odd
         url: java/controls/kwidyzmae
 
-  - topic: Java Loops and Control Statements
-    breadcrumb_child: Loops
+  - parent: Java Loops
+    subtree: Loops
     url: java/loops/
-    programs:
+    children: 
       - title: Java program to print the even and odd numbers
         url: java/loops/kwidgvwnz
       - title: Java program to print the numbers using for loop
@@ -46,10 +46,10 @@ segments:
       - title: Java program to find the factorial of a given number
         url: java/loops/kwidaabyy
 
-  - topic: Java Classes and Objects
-    breadcrumb_child: Classes
+  - parent: Java Classes and Objects
+    subtree: Classes
     url: java/classes/
-    programs:
+    children: 
       - title: Java implementation of Math class methods
         url: java/classes/kwidruzgv
       - title: Java implementation of the constructor
@@ -67,10 +67,10 @@ segments:
       - title: Java implementation of Calendar class
         url: java/classes/kwidgefay
 
-  - topic: Java Strings
-    breadcrumb_child: Strings
+  - parent: Java Strings
+    subtree: Strings
     url: java/strings/
-    programs:
+    children: 
       - title: Java program to concatenate the given strings
         url: java/strings/kwidwazdq
       - title: Java implementation of the indexOf method
@@ -106,10 +106,10 @@ segments:
       - title: Java program to find the unique characters from a given string
         url: java/strings/kwidrmyed
         
-  - topic: Java Arrays
-    breadcrumb_child: Arrays
+  - parent: Java Arrays
+    subtree: Arrays
     url: java/arrays/
-    programs:
+    children: 
       - title: Java program to print the sum of all numbers in a given array
         url: java/arrays/kwidtgkdg
       - title: Java program to find the min and max number from a given array
@@ -119,10 +119,10 @@ segments:
       - title: Java program to print the transpose of a given matrix
         url: java/arrays/kwidzapdy
 
-  - topic: Java Polymorphism
-    breadcrumb_child: Polymorphism
+  - parent: Java Polymorphism
+    subtree: Polymorphism
     url: java/polymorphism/
-    programs:
+    children: 
       - title: Implementation of Java method overloading
         url: java/polymorphism/kwideeacv
       - title: How to overload the main() method in Java
@@ -130,10 +130,10 @@ segments:
       - title: Implementation of Java method overriding
         url: java/polymorphism/kwidazeyz
 
-  - topic: Java Abstraction
-    breadcrumb_child: Abstraction
+  - parent: Java Abstraction
+    subtree: Abstraction
     url: java/abstraction/
-    programs:
+    children: 
       - title: Java program for Abstract class
         url: java/abstraction/kwidaalaw
       - title: Java program for Interface
@@ -143,19 +143,19 @@ segments:
       - title: How to achieve multiple inheritance in Java using interfaces and default methods
         url: java/abstraction/kwidaedbv
 
-  - topic: Java Regular Expressions
-    breadcrumb_child: RE
+  - parent: Java Regular Expressions
+    subtree: RE
     url: java/re/
-    programs:
+    children: 
       - title: Implementation of Java Regular Expressions
         url: java/re/kwidwdgez
       - title: Java program to accept a valid blood group using regex
         url: java/re/kwidbcega
 
-  - topic: Java Exception Handling
-    breadcrumb_child: Exceptions
+  - parent: Java Exception Handling
+    subtree: Exceptions
     url: java/exceptions/
-    programs:
+    children: 
       - title: Java program to demonstrate the use of try and catch blocks
         url: java/exceptions/kwidvolqb
       - title: Java program to demonstrate the use of finally blocks
@@ -175,10 +175,10 @@ segments:
       - title: Java program to handle the OutOfMemoryError exception
         url: java/exceptions/kwidxyawz
 
-  - topic: Java AWT and Swing Graphics
-    breadcrumb_child: AWT
+  - parent: Java AWT and Swing Graphics
+    subtree: AWT
     url: java/awt/
-    programs:
+    children: 
       - title: Java program to draw a Line using Graphics2D class
         url: java/awt/kwidyvqli
       - title: Java program to draw a Curve using Graphics2D class
@@ -194,10 +194,10 @@ segments:
       - title: Java program to create an input field on a frame
         url: java/awt/kwidqoivp
 
-  - topic: Java Collections
-    breadcrumb_child: Collections
+  - parent: Java Collections
+    subtree: Collections
     url: java/collections/
-    programs:
+    children: 
       - title: Implementation of Java ArrayList class
         url: java/collections/kwidsadac
       - title: Implementation of Java LinkedList class
@@ -221,10 +221,10 @@ segments:
       - title: Java program to perform the Set operations
         url: java/collections/kwidtzdyt
 
-  - topic: Java Multithreading
-    breadcrumb_child: Multithreading
+  - parent: Java Multithreading
+    subtree: Multithreading
     url: java/multithreading/
-    programs:
+    children: 
       - title: Java program to extends the Thread class
         url: java/multithreading/kwidgaasz
       - title: Java program for Runnable interface
@@ -242,10 +242,10 @@ segments:
       - title: Java program to perform the multiple tasks by multiple threads
         url: java/multithreading/kwidaedsw
 
-  - topic: Java Database Connectivity
-    breadcrumb_child: JDBC
+  - parent: Java Database Connectivity (JDBC)
+    subtree: JDBC
     url: java/jdbc/
-    programs:
+    children: 
       - title: Java MySQL to connect, create database, and table
         url: java/jdbc/kwidpuuhg
       - title: Java MySQL to insert and retrieve the records from a table
@@ -261,10 +261,10 @@ segments:
       - title: Java MongoDB to insert the JSON file documents into a collection
         url: java/jdbc/kwidnegld
 
-  - topic: Java Accessories
-    breadcrumb_child: Accessories
+  - parent: Java Accessories
+    subtree: Accessories
     url: java/accessories/
-    programs:
+    children: 
       - title: "Miscellaneous: find the output of Java programs"
         url: java/accessories/kwidmoeff
       - title: Java program to get the Operating System details

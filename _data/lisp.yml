@@ -1,7 +1,7 @@
-segments: 
-  - topic: LISP (List Processing) Fundamentals
+grandparent: 
+  - parent: LISP (List Processing) Fundamentals
     url: lisp/
-    programs:
+    children: 
       - title: CLISP Command Line Interface (CLI)
         url: lisp/kwidggdyw
       - title: Maxima Command Line Interface (CLI)

@@ -1,6 +1,6 @@
-segments: 
-  - segment: /c/
-    navigations:
+grandparent: 
+  - parent: /c/
+    children: 
       - title: C Programming
         url: c/
       - title: C Fundamentals
@@ -18,8 +18,8 @@ segments:
       - title: C Search
         url: c/search/
 
-  - segment: /cpp/
-    navigations:
+  - parent: /cpp/
+    children: 
       - title: C++ Programming
         url: cpp/
       - title: C++ Fundamentals
@@ -39,8 +39,8 @@ segments:
       - title: C++ Search
         url: cpp/search/
 
-  - segment: /java/
-    navigations:
+  - parent: /java/
+    children: 
       - title: Java Programming
         url: java/
       - title: Java Fundamentals
@@ -76,8 +76,8 @@ segments:
       - title: Java Search
         url: java/search/
 
-  - segment: /csharp/
-    navigations:
+  - parent: /csharp/
+    children: 
       - title: C# Programming
         url: csharp/
       - title: C# Fundamentals
@@ -117,8 +117,8 @@ segments:
       - title: C# Search
         url: csharp/search/
 
-  - segment: /python/
-    navigations:
+  - parent: /python/
+    children: 
       - title: Python Programming
         url: python/
       - title: Python Command Line Interface (CLI)
@@ -142,8 +142,8 @@ segments:
       - title: Python Search
         url: python/search/
 
-  - segment: /datascience/
-    navigations:
+  - parent: /datascience/
+    children: 
       - title: Data Science
         url: datascience/
       - title: Data Analysis
@@ -153,8 +153,8 @@ segments:
       - title: Data Science Search
         url: datascience/search/
 
-  - segment: /dsa/
-    navigations:
+  - parent: /dsa/
+    children: 
       - title: Data Structures and Algorithms
         url: dsa/
       - title: Data Structures Fundamentals
@@ -168,8 +168,8 @@ segments:
       - title: Data Structures Search
         url: dsa/search/
 
-  - segment: /mysql/
-    navigations:
+  - parent: /mysql/
+    children: 
       - title: MySQL Database
         url: mysql/
       - title: MySQL Functions
@@ -183,8 +183,8 @@ segments:
       - title: MySQL Search
         url: mysql/search/
 
-  - segment: /mongodb/
-    navigations:
+  - parent: /mongodb/
+    children: 
       - title: MongoDB
         url: mongodb/
       - title: MongoDB mongo Shell
@@ -196,8 +196,8 @@ segments:
       - title: MongoDB Search
         url: mongodb/search/
 
-  - segment: /selenium/
-    navigations:
+  - parent: /selenium/
+    children: 
       - title: Selenium WebDriver
         url: selenium/
       - title: Selenium Fundamentals
@@ -208,6 +208,8 @@ segments:
         url: selenium/xpath/
       - title: Selenium Select Class
         url: selenium/selectclass/
+      - title: Selenium Action Class
+        url: selenium/actionclass/
       - title: Selenium Accessories
         url: selenium/accessories/
       - title: Selenium Page Object Model
@@ -219,8 +221,8 @@ segments:
       - title: Selenium Search
         url: selenium/search/
 
-  - segment: /vbscript/
-    navigations:
+  - parent: /vbscript/
+    children: 
       - title: VBScript
         url: vbscript/
       - title: VBScript Fundamentals

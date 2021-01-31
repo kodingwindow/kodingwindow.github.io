@@ -1,6 +1,6 @@
-csmenu: 
-  - submenu: Programming Languages
-    segments:
+grandparent: 
+  - parent: Programming Languages
+    children:
       - title: C Programming
         url: c/
       - title: C++ Programming
@@ -12,8 +12,8 @@ csmenu:
       - title: Python Programming
         url: python/
 
-  - submenu: Artificial Intelligence
-    segments:
+  - parent: Artificial Intelligence
+    children:
       - title: R Programming
         url: r/
       - title: Data Science
@@ -21,8 +21,8 @@ csmenu:
       - title: LISP Programming
         url: lisp/
 
-  - submenu: Core Subjects
-    segments:
+  - parent: Core Subjects
+    children:
       - title: Data Structures
         url: dsa/
       - title: Computer Graphics
@@ -30,22 +30,22 @@ csmenu:
       - title: Assembly Programming
         url: asm/
 
-  - submenu: Databases 
-    segments:        
+  - parent: Databases 
+    children:        
       - title: MySQL Database
         url: mysql/
       - title: MongoDB
         url: mongodb/
         
-  - submenu: Linux Tutorials
-    segments:
+  - parent: Linux Tutorials
+    children:
       - title: Linux Commands
         url: linux/
       - title: Bash Shell Scripting
         url: bash/
 
-  - submenu: Software Testing
-    segments:
+  - parent: Software Testing
+    children:
       - title: Selenium WebDriver
         url: selenium/
       - title: Visual Basic Scripting

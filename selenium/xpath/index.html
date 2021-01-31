@@ -1,11 +1,11 @@
 ---
 layout: kw
-modified: 02 Oct 2020 21:27 IST   
+modified: 30 Jan 2021 19:36 IST   
 title: Selenium XPath
 ---
 
-{% for segment in site.data.selenium.segments %}{% if segment.url contains "/xpath/" %}
-<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
-    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+{% for parent in site.data.selenium.grandparent %}{% if parent.url contains "/xpath/" %}
+<div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+    {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
 </div>
 {% endif %}{% endfor %}

@@ -1,7 +1,7 @@
-segments: 
-  - topic: Linux Commands
+grandparent: 
+  - parent: Linux Commands
     url: linux/
-    programs:
+    children: 
       - title: Linux commands to display the lists of files and directories
         url: linux/kwidasgke
       - title: Linux commands to create and remove a file

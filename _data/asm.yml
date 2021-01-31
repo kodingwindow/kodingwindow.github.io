@@ -1,7 +1,7 @@
-segments: 
-  - topic: Assembly Language Programs (32 bit)
+grandparent: 
+  - parent: Assembly Language Programs (32 bit)
     url: asm/
-    programs:
+    children: 
       - title: ALP to print Hello World
         url: asm/kwidvxqaz
       - title: ALP to print Hello World using times directive
@@ -21,9 +21,9 @@ segments:
       - title: ALP to print the values of GDTR, LDTR, IDTR, TR, and MSW registers in protected mode
         url: asm/kwiddmaee
 
-  - topic: Assembly Language Programs (64 bit)
+  - parent: Assembly Language Programs (64 bit)
     url: asm/
-    programs:
+    children: 
       - title: ALP to print Hello World without using macro
         url: asm/kwidatnak
       - title: ALP to print Hello World using macro

@@ -1,30 +1,30 @@
-{% for segment in site.data.mongodb.segments %}
+{% for parent in site.data.mongodb.grandparent %}
 {% assign j = j | plus:1 %}
-    {% if page.url contains segment.url %}
-    {% for program in segment.programs %}
+    {% if page.url contains parent.url %}
+    {% for child in parent..children %}
     {% assign i = i | plus:1 %}
-        {% if page.url contains program.url %}
+        {% if page.url contains child.url %}
             {% assign first = i | plus: 0 %}{% assign second = i | plus:1 %}{% assign third = i | plus:2 %}
-            {% if segment.programs[third].url != null %}
+            {% if parent..children[third].url != null %}
             <div class="board"><div class="boardtitle">What Next?</div>
-                <a class="card" href="{{ segment.programs[first].url }}">{{ segment.programs[first].title }}</a>
-                <a class="card" href="{{ segment.programs[second].url }}">{{ segment.programs[second].title }}</a>
-                <a class="card" href="{{ segment.programs[third].url }}">{{ segment.programs[third].title }}</a>
+                <a class="card" href="{{ parent..children[first].url }}">{{ parent..children[first].title }}</a>
+                <a class="card" href="{{ parent..children[second].url }}">{{ parent..children[second].title }}</a>
+                <a class="card" href="{{ parent..children[third].url }}">{{ parent..children[third].title }}</a>
             </div>
-            {% elsif segment.programs[second].url != null %}
+            {% elsif parent..children[second].url != null %}
             <div class="board"><div class="boardtitle">What Next?</div>
-                <a class="card" href="{{ segment.programs[first].url }}">{{ segment.programs[first].title }}</a>
-                <a class="card" href="{{ segment.programs[second].url }}">{{ segment.programs[second].title }}</a>
-                {% if site.data.mongodb.segments[j].url != null %}<a class="card" href="{{ site.data.mongodb.segments[j].url }}">{{ site.data.mongodb.segments[j].topic }}</a>{% endif %}
+                <a class="card" href="{{ parent..children[first].url }}">{{ parent..children[first].title }}</a>
+                <a class="card" href="{{ parent..children[second].url }}">{{ parent..children[second].title }}</a>
+                {% if site.data.mongodb.grandparent[j].url != null %}<a class="card" href="{{ site.data.mongodb.grandparent[j].url }}">{{ site.data.mongodb.grandparent[j].parent }}</a>{% endif %}
             </div>
-            {% elsif segment.programs[first].url != null %}
+            {% elsif parent..children[first].url != null %}
             <div class="board"><div class="boardtitle">What Next?</div>
-                <a class="card" href="{{ segment.programs[first].url }}">{{ segment.programs[first].title }}</a>
-                {% if site.data.mongodb.segments[j].url != null %}<a class="card" href="{{ site.data.mongodb.segments[j].url }}">{{ site.data.mongodb.segments[j].topic }}</a>{% endif %}
+                <a class="card" href="{{ parent..children[first].url }}">{{ parent..children[first].title }}</a>
+                {% if site.data.mongodb.grandparent[j].url != null %}<a class="card" href="{{ site.data.mongodb.grandparent[j].url }}">{{ site.data.mongodb.grandparent[j].parent }}</a>{% endif %}
             </div>
-            {% elsif site.data.mongodb.segments[j].url != null %}
+            {% elsif site.data.mongodb.grandparent[j].url != null %}
             <div class="board"><div class="boardtitle">What Next?</div>
-                <a class="card" href="{{ site.data.mongodb.segments[j].url }}">{{ site.data.mongodb.segments[j].topic }}</a>
+                <a class="card" href="{{ site.data.mongodb.grandparent[j].url }}">{{ site.data.mongodb.grandparent[j].parent }}</a>
             </div>
             {% else %}
             {% endif %}

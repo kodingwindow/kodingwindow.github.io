@@ -1,8 +1,8 @@
-segments: 
-  - topic: Selenium Fundamentals
-    breadcrumb_child: Fundamentals
+grandparent: 
+  - parent: Selenium Fundamentals
+    subtree: Fundamentals
     url: selenium/fundamentals/
-    programs:
+    children: 
       - title: Selenium Java to launch the browser and navigate to a given URL
         url: selenium/fundamentals/kwidrvyfv
       - title: Selenium Python to launch the browser and navigate to a given URL
@@ -24,10 +24,10 @@ segments:
       - title: Selenium Java to set and get the browser details using DesiredCapabilities
         url: selenium/fundamentals/kwidspasn
 
-  - topic: Selenium Locators
-    breadcrumb_child: Locators
+  - parent: Selenium Locators
+    subtree: Locators
     url: selenium/locators/
-    programs:
+    children: 
       - title: Selenium Java to get the tag name
         url: selenium/locators/kwidavegp
       - title: Selenium Java to get the title of a given webpage using the getAttribute() method
@@ -39,10 +39,10 @@ segments:
       - title: Selenium Java to copy and paste the text in an input field
         url: selenium/locators/kwidgvvpw
 
-  - topic: Selenium XPath
-    breadcrumb_child: XPath
+  - parent: Selenium XPath
+    subtree: XPath
     url: selenium/xpath/
-    programs:
+    children: 
       - title: Selenium Java to get the attribute name using relative XPath
         url: selenium/xpath/kwidydnod
       - title: Selenium Java to locate a web element using the contains() and starts-with() methods
@@ -54,10 +54,10 @@ segments:
       - title: Selenium Java to locate a web element using the following and preceding XPath axes
         url: selenium/xpath/kwidyxewe
 
-  - topic: Selenium Select Class
-    breadcrumb_child: Select Class
+  - parent: Selenium Select Class
+    subtree: Select Class
     url: selenium/selectclass/
-    programs:
+    children: 
       - title: Selenium Java to select dropdown choice using selectByVisibleText() method
         url: selenium/selectclass/kwidaiwex
       - title: Selenium Java to select dropdown choice using selectByIndex() method
@@ -67,10 +67,21 @@ segments:
       - title: Selenium Java to select dynamically generated radio button
         url: selenium/selectclass/kwidzctqk
 
-  - topic: Selenium Accessories
-    breadcrumb_child: Accessories
+  - parent: Selenium Action Class
+    subtree: Action Class
+    url: selenium/actionclass/
+    children: 
+      - title: Selenium Java for mouse events using the Action class
+        url: selenium/actionclass/kwidzvzvy
+      - title: Selenium Java to perform series of multiple actions using Action and Actions classes
+        url: selenium/actionclass/kwidgezvd
+      - title: Selenium script to select an option from the Chrome context menu
+        url: selenium/actionclass/kwidyphyw
+
+  - parent: Selenium Accessories
+    subtree: Accessories
     url: selenium/accessories/
-    programs:
+    children: 
       - title: Selenium Java to launch and execute the script on Chromium browser 
         url: selenium/accessories/kwidzzegt
       - title: Implementation of JavascriptExecutor in Selenium
@@ -80,10 +91,10 @@ segments:
       - title: Selenium Java to capture screenshots using Robot class
         url: selenium/accessories/kwidwvybn
 
-  - topic: Selenium Page Object Model (POM)
-    breadcrumb_child: POM
+  - parent: Selenium Page Object Model (POM)
+    subtree: POM
     url: selenium/pom/
-    programs:
+    children: 
       - title: Selenium Java Page Object Model with Page Factory
         url: selenium/pom/kwidgvdks
       - title: Selenium Java Page Object Model Example 1
@@ -91,19 +102,19 @@ segments:
       - title: Selenium Java Page Object Model Example 2
         url: selenium/pom/kwiddyzek
 
-  - topic: Selenium Data Driven Framework
-    breadcrumb_child: DDF
+  - parent: Selenium Data Driven Framework
+    subtree: DDF
     url: selenium/ddf/
-    programs:
+    children: 
       - title: How to read Excel file using Apache POI
         url: selenium/ddf/kwidhvzcz
       - title: How to compare two Excel sheets using Apache POI
         url: selenium/ddf/kwidlevgg
 
-  - topic: Selenium TestNG
-    breadcrumb_child: TestNG
+  - parent: Selenium TestNG
+    subtree: TestNG
     url: selenium/testng/
-    programs:
+    children: 
       - title: How to use TestNG Annotations in Selenium
         url: selenium/testng/kwidvrrkz
       - title: How to use priority and dependencies in TestNG

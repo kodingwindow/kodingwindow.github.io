@@ -1,6 +1,6 @@
 ---
 layout: kw
-modified: 24 Jan 2021 11:52 IST   
+modified: 30 Jan 2021 19:46 IST   
 title: Selenium WebDriver
 ---
 
@@ -12,10 +12,10 @@ title: Selenium WebDriver
     <a class="card" href="testapp/">Check Kodingwindow's TestApp is up and running</a>
 </div>
 
-{% for segment in site.data.selenium.segments %}
-<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
-    {% for program in segment.programs limit:4 %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
-    {% assign count=segment.programs | size %}
-    {% if count>=5 %}<a class="card" href="{{ segment.url }}">Learn More &#187;</a>{% endif %}
+{% for parent in site.data.selenium.grandparent %}
+<div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+    {% for child in parent.children limit:4 %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
+    {% assign count=parent.children | size %}
+    {% if count>=5 %}<a class="card" href="{{ parent.url }}">Learn More &#187;</a>{% endif %}
 </div>
 {% endfor %}

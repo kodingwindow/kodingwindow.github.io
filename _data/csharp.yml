@@ -1,8 +1,8 @@
-segments: 
-  - topic: C# Fundamentals
-    breadcrumb_child: Fundamentals
+grandparent: 
+  - parent: C# Fundamentals
+    subtree: Fundamentals
     url: csharp/fundamentals/
-    programs:
+    children: 
       - title: C# Hello World program
         url: csharp/fundamentals/kwidpdvhg
       - title: C# program to perform the arithmetic operations
@@ -16,17 +16,17 @@ segments:
       - title: C# program to find the range of data types
         url: csharp/fundamentals/kwidmavwt
 
-  - topic: C# Control Statements
-    breadcrumb_child: Controls
+  - parent: C# Control Statements
+    subtree: Controls
     url: csharp/controls/
-    programs:
+    children: 
       - title: C# program to check the given number is positive/negative
         url: csharp/controls/kwidxyezd
 
-  - topic: C# Loops
-    breadcrumb_child: Loops
+  - parent: C# Loops
+    subtree: Loops
     url: csharp/loops/
-    programs:
+    children: 
       - title: C# program to use the loops and control statements
         url: csharp/loops/kwidxagiz
       - title: C# program to print the even and odd numbers
@@ -46,10 +46,10 @@ segments:
       - title: C# implementation of Armstrong numbers
         url: csharp/loops/kwiddhyzb
 
-  - topic: C# Classes and Objects
-    breadcrumb_child: Classes
+  - parent: C# Classes and Objects
+    subtree: Classes
     url: csharp/classes/
-    programs:
+    children: 
       - title: C# program to print the current date and time
         url: csharp/classes/kwidezylc
       - title: C# implementation of structure
@@ -63,10 +63,10 @@ segments:
       - title: C# program to change the index of enum
         url: csharp/classes/kwidbgvwn
 
-  - topic: C# Strings
-    breadcrumb_child: Strings
+  - parent: C# Strings
+    subtree: Strings
     url: csharp/strings/
-    programs:
+    children: 
       - title: C# program to find the length of a given string
         url: csharp/strings/kwiddoika
       - title: C# program to convert lowercase to an uppercase string
@@ -82,19 +82,19 @@ segments:
       - title: C# program to perform the string operations
         url: csharp/strings/kwidyyfzg
 
-  - topic: C# Arrays
-    breadcrumb_child: Arrays
+  - parent: C# Arrays
+    subtree: Arrays
     url: csharp/arrays/
-    programs:
+    children: 
       - title: C# program to sort the given numbers in an array
         url: csharp/arrays/kwidywhzb
       - title: C# implementation of a jagged array
         url: csharp/arrays/kwidztbal
 
-  - topic: C# Polymorphism
-    breadcrumb_child: Polymorphism
+  - parent: C# Polymorphism
+    subtree: Polymorphism
     url: csharp/polymorphism/
-    programs:
+    children: 
       - title: Implementation of C# method overloading
         url: csharp/polymorphism/kwidfzldx
       - title: How to overload the Main() method in C#
@@ -102,31 +102,31 @@ segments:
       - title: Implementation of C# method overriding
         url: csharp/polymorphism/kwidrswzv
 
-  - topic: C# Abstraction
-    breadcrumb_child: Abstraction
+  - parent: C# Abstraction
+    subtree: Abstraction
     url: csharp/abstraction/
-    programs:
+    children: 
       - title: C# program to demonstrate the use of an interface
         url: csharp/abstraction/kwidxlzmh
 
-  - topic: C# Namespaces
-    breadcrumb_child: Namespaces
+  - parent: C# Namespaces
+    subtree: Namespaces
     url: csharp/namespaces/
-    programs:
+    children: 
       - title: C# program to demonstrate the use of namespace
         url: csharp/namespaces/kwidgzuze
 
-  - topic: C# Regular Expressions
-    breadcrumb_child: RE
+  - parent: C# Regular Expressions
+    subtree: RE
     url: csharp/re/
-    programs:
+    children: 
       - title: C# program to demonstrate the use of regular expressions
         url: csharp/re/kwidvpoef
 
-  - topic: C# Exception Handling
-    breadcrumb_child: Exceptions
+  - parent: C# Exception Handling
+    subtree: Exceptions
     url: csharp/exceptions/
-    programs:
+    children: 
       - title: C# program to demonstrate the use of try and catch blocks
         url: csharp/exceptions/kwidgzwzz
       - title: C# program to catch all the exceptions using Exception class
@@ -146,17 +146,17 @@ segments:
       - title: C# program to handle the TimeZoneNotFoundException
         url: csharp/exceptions/kwidwxaed
 
-  - topic: C# File Handling
-    breadcrumb_child: FileIO
+  - parent: C# File Handling
+    subtree: FileIO
     url: csharp/fileio/
-    programs:
+    children: 
       - title: C# program to perform the operations on a file
         url: csharp/fileio/kwidzekyz
 
-  - topic: C# Collections
-    breadcrumb_child: Collections
+  - parent: C# Collections
+    subtree: Collections
     url: csharp/collections/
-    programs:
+    children: 
       - title: Implementation of C# ArrayList class
         url: csharp/collections/kwiddfpxw
       - title: Implementation of C# Hashtable class
@@ -166,10 +166,10 @@ segments:
       - title: Implementation of C# Queue class (System.Collections)
         url: csharp/collections/kwidtzzzx
 
-  - topic: C# Generic Collections
-    breadcrumb_child: Collections
+  - parent: C# Generic Collections
+    subtree: Collections
     url: csharp/collections/
-    programs:
+    children: 
       - title: Implementation of C# List class
         url: csharp/collections/kwidrlbiw
       - title: Implementation of C# LinkedList class
@@ -189,10 +189,10 @@ segments:
       - title: C# implementation of complex numbers operations
         url: csharp/collections/kwidcaygv
 
-  - topic: C# Multithreading
-    breadcrumb_child: Multithreading
+  - parent: C# Multithreading
+    subtree: Multithreading
     url: csharp/multithreading/
-    programs:
+    children: 
       - title: C# program to implement Thread class and its properties
         url: csharp/multithreading/kwidvkyzy
       - title: C# implementation of Multithreading
@@ -206,17 +206,17 @@ segments:
       - title: C# program to achieve thread synchronization using the lock keyword
         url: csharp/multithreading/kwidvyzkd
 
-  - topic: C# Reflection
-    breadcrumb_child: Reflection
+  - parent: C# Reflection
+    subtree: Reflection
     url: csharp/reflection/
-    programs:
+    children: 
       - title: C# program to demonstrate the use of reflection objects
         url: csharp/reflection/kwidcdgkn
 
-  - topic: C# Database Connectivity
-    breadcrumb_child: DBC
+  - parent: C# Database Connectivity
+    subtree: DBC
     url: csharp/dbc/
-    programs:
+    children: 
       - title: C# MySQL to connect, create database, and table
         url: csharp/dbc/kwidfravc
       - title: C# MySQL to insert and retrieve the records from a table

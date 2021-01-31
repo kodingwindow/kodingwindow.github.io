@@ -1,13 +1,13 @@
 ---
 layout: kw
-modified: 17 Oct 2020 17:53 IST   
+modified: 30 Jan 2021 19:25 IST   
 title: C# Programming
 ---
 
-{% for segment in site.data.csharp.segments %}
-<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
-    {% for program in segment.programs limit:4 %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
-    {% assign count=segment.programs | size %}
-    {% if count>=5 %}<a class="card" href="{{ segment.url }}">Learn More &#187;</a>{% endif %}
+{% for parent in site.data.csharp.grandparent %}
+<div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+    {% for child in parent.children limit:4 %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
+    {% assign count=parent.children | size %}
+    {% if count>=5 %}<a class="card" href="{{ parent.url }}">Learn More &#187;</a>{% endif %}
 </div>
 {% endfor %}

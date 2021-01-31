@@ -1,17 +1,17 @@
-segments: 
-  - topic: MySQL Functions
-    breadcrumb_child: Functions
+grandparent: 
+  - parent: MySQL Functions
+    subtree: Functions
     url: mysql/functions/
-    programs:
+    children: 
       - title: MySQL Date and Time Functions
         url: mysql/functions/kwidrgtrz
       - title: MySQL String Functions
         url: mysql/functions/kwidgpzwy
 
-  - topic: MySQL Data Definition
-    breadcrumb_child: DDL
+  - parent: MySQL Data Definition
+    subtree: DDL
     url: mysql/ddl/
-    programs:
+    children: 
       - title: MySQL CREATE a DATABASE and TABLE
         url: mysql/ddl/kwiddwgvc
       - title: MySQL FOREIGN KEY
@@ -23,10 +23,10 @@ segments:
       - title: MySQL DROP a TABLE and DATABASE
         url: mysql/ddl/kwidedvew
 
-  - topic: MySQL Data Manipulation
-    breadcrumb_child: DML
+  - parent: MySQL Data Manipulation
+    subtree: DML
     url: mysql/dml/
-    programs:
+    children: 
       - title: MySQL INSERT the VALUES into a TABLE
         url: mysql/dml/kwidpdvnx
       - title: MySQL SELECT and SELECT DISTINCT Statements
@@ -48,9 +48,9 @@ segments:
       - title: MySQL DELETE Statement
         url: mysql/dml/kwidzsgwd
 
-  - topic: MySQL Accessories
-    breadcrumb_child: Accessories
+  - parent: MySQL Accessories
+    subtree: Accessories
     url: mysql/accessories/
-    programs:
+    children: 
       - title: How to setup, install, and start MySQL on Ubuntu
         url: mysql/accessories/kwiddayxg

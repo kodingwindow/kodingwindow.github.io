@@ -1,11 +1,11 @@
 ---
 layout: kw
-modified: 03 Oct 2020 09:21 IST   
+modified: 30 Jan 2021 19:38 IST   
 title: MongoDB CRUD Operations
 ---
 
-{% for segment in site.data.mongodb.segments %}{% if segment.url contains "/crud/" %}
-<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
-    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+{% for parent in site.data.mongodb.grandparent %}{% if parent.url contains "/crud/" %}
+<div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+    {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
 </div>
 {% endif %}{% endfor %}

@@ -1,8 +1,8 @@
-segments: 
-  - topic: Python Command Line Interface (CLI)
-    breadcrumb_child: CLI
+grandparent: 
+  - parent: Python Command Line Interface (CLI)
+    subtree: CLI
     url: python/cli/
-    programs:
+    children: 
       - title: Python Operators
         url: python/cli/kwidawgvo
       - title: Python Strings
@@ -24,10 +24,10 @@ segments:
       - title: Python Mathematical Functions and Operations
         url: python/cli/kwidtgvee
 
-  - topic: Python Fundamentals
-    breadcrumb_child: Fundamentals
+  - parent: Python Fundamentals
+    subtree: Fundamentals
     url: python/fundamentals/
-    programs:
+    children: 
       - title: How to use Python help utility
         url: python/fundamentals/kwidlvgqy
       - title: How to compile a Python program using the py_compile module
@@ -45,19 +45,19 @@ segments:
       - title: Python program for conversion of the number systems
         url: python/fundamentals/kwidvaqvy
 
-  - topic: Python Date and Time
-    breadcrumb_child: DT
+  - parent: Python Date and Time
+    subtree: DT
     url: python/dt/
-    programs:
+    children: 
       - title: Python program to print the current date and time
         url: python/dt/kwidxdagf
       - title: Python implementation of the calendar module
         url: python/dt/kwidscgzf
 
-  - topic: Python Control Statements
-    breadcrumb_child: Controls
+  - parent: Python Control Statements
+    subtree: Controls
     url: python/controls/
-    programs:
+    children: 
       - title: Python program to check the equality of given numbers
         url: python/controls/kwidgmsmv
       - title: Python program to check the given number is even/odd
@@ -67,10 +67,10 @@ segments:
       - title: Python program to check whether a given year is a leap
         url: python/controls/kwidrwkxe
 
-  - topic: Python Loops
-    breadcrumb_child: Loops
+  - parent: Python Loops
+    subtree: Loops
     url: python/loops/
-    programs:
+    children: 
       - title: Python program to print the star pyramid patterns
         url: python/loops/kwidvfyae
       - title: Python program to print the ASCII values
@@ -88,28 +88,28 @@ segments:
       - title: Python program to print the list of all leap years
         url: python/loops/kwidrawfa
 
-  - topic: Python File Handling
-    breadcrumb_child: FileIO
+  - parent: Python File Handling
+    subtree: FileIO
     url: python/fileio/
-    programs:
+    children: 
       - title: Python program to count the lines, words, and characters from a given file
         url: python/fileio/kwiddzeng
       - title: Python program to count the frequency of words in a given file
         url: python/fileio/kwidlyeay
 
-  - topic: Python Networking
-    breadcrumb_child: Networking
+  - parent: Python Networking
+    subtree: Networking
     url: python/networking/
-    programs:
+    children: 
       - title: Python networking using the netaddr module
         url: python/networking/kwidyslwy
       - title: Python implementation of socket programming
         url: python/networking/kwidkyirx
 
-  - topic: Python Database Connectivity
-    breadcrumb_child: DBC
+  - parent: Python Database Connectivity
+    subtree: DBC
     url: python/dbc/
-    programs:
+    children: 
       - title: Python MySQL to connect, create a database, and table
         url: python/dbc/kwidvdwzz
       - title: Python MySQL to insert and retrieve the records from a table
@@ -121,10 +121,10 @@ segments:
       - title: Python MongoDB to insert and retrieve the documents from a collection
         url: python/dbc/kwidgulma
 
-  - topic: Python Accessories
-    breadcrumb_child: Accessories
+  - parent: Python Accessories
+    subtree: Accessories
     url: python/accessories/
-    programs:
+    children: 
       - title: How to install pymysql, pymongo, and python-csv on Ubuntu
         url: python/accessories/kwidwdnax
       - title: How to install, setup, and create a Django project on Ubuntu

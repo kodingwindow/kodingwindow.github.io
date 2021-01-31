@@ -1,8 +1,8 @@
-segments: 
-  - topic: C Fundamentals
-    breadcrumb_child: Fundamentals
+grandparent: 
+  - parent: C Fundamentals
+    subtree: Fundamentals
     url: c/fundamentals/
-    programs:
+    children: 
       - title: C Hello World program
         url: c/fundamentals/kwiduvqaa
       - title: C Hello World program without using a semicolon
@@ -22,19 +22,19 @@ segments:
       - title: C program to find the range of data types
         url: c/fundamentals/kwidvgrag
 
-  - topic: C Control Statements
-    breadcrumb_child: Controls
+  - parent: C Control Statements
+    subtree: Controls
     url: c/controls/
-    programs:
+    children: 
       - title: C program to check the given number is even/odd
         url: c/controls/kwidcheqs
       - title: C program to check the equality of given numbers
         url: c/controls/kwiddwdgs
 
-  - topic: C Loops
-    breadcrumb_child: Loops
+  - parent: C Loops
+    subtree: Loops
     url: c/loops/
-    programs:
+    children: 
       - title: C program to print the even and odd numbers
         url: c/loops/kwidvmakr
       - title: C program to print the star pyramid patterns
@@ -50,10 +50,10 @@ segments:
       - title: C program to convert a binary number to an equivalent decimal number
         url: c/loops/kwidmwzzz
 
-  - topic: C Strings
-    breadcrumb_child: Strings
+  - parent: C Strings
+    subtree: Strings
     url: c/strings/
-    programs:
+    children: 
       - title: C program to find the length of a given string
         url: c/strings/kwidpnkez
       - title: C program to concatenate the given strings
@@ -67,10 +67,10 @@ segments:
       - title: C program to convert uppercase to a lowercase string
         url: c/strings/kwidopzze
 
-  - topic: C Functions
-    breadcrumb_child: Functions
+  - parent: C Functions
+    subtree: Functions
     url: c/functions/
-    programs:
+    children: 
       - title: C program to demonstrate the use of functions
         url: c/functions/kwidhxgee
       - title: C menu-driven program for the arithmetic operations
@@ -84,10 +84,10 @@ segments:
       - title: C program to find the factorial of a given number using recursion
         url: c/functions/kwidhfycr
 
-  - topic: C Accessories
-    breadcrumb_child: Accessories
+  - parent: C Accessories
+    subtree: Accessories
     url: c/accessories/
-    programs:
+    children: 
       - title: C program to print the current date and time
         url: c/accessories/kwidvzlki
       - title: C program to demonstrate the use of storage classes

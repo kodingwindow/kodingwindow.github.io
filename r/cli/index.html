@@ -1,6 +1,6 @@
 ---
 layout: container
-modified: 16 Nov 2020 10:51 IST   
+modified: 30 Jan 2021 19:37 IST   
 title: R Command Line Interface (CLI)
 ---
 
@@ -26,8 +26,8 @@ Type 'demo()' for some demos, 'help()' for on-line help, or
 Type 'q()' to quit R.
 </pre></span>
 
-{% for segment in site.data.r.segments %}{% if segment.url contains "/cli/" %}
-<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
-    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+{% for parent in site.data.r.grandparent %}{% if parent.url contains "/cli/" %}
+<div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+    {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
 </div>
 {% endif %}{% endfor %}

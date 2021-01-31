@@ -1,24 +1,24 @@
-segments: 
-  - topic: Data Structures Fundamentals
-    breadcrumb_child: Fundamentals
+grandparent: 
+  - parent: Data Structures Fundamentals
+    subtree: Fundamentals
     url: dsa/fundamentals/
-    programs:
+    children: 
       - title: C++ implementation of the stack and its operations
         url: dsa/fundamentals/kwiduqyab
 
-  - topic: Searching Algorithms
-    breadcrumb_child: Searching
+  - parent: Searching Algorithms
+    subtree: Searching
     url: dsa/searching/
-    programs:
+    children: 
       - title: C++ implementation of Binary Search
         url: dsa/searching/kwidecgzp
       - title: Python implementation of Binary Search
         url: dsa/searching/kwidwzavz
 
-  - topic: Sorting Algorithms
-    breadcrumb_child: Sorting
+  - parent: Sorting Algorithms
+    subtree: Sorting
     url: dsa/sorting/
-    programs:
+    children: 
       - title: C++ implementation of Bubble Sort
         url: dsa/sorting/kwidwzsgz
       - title: C++ optimized implementation of Bubble Sort
@@ -30,9 +30,9 @@ segments:
       - title: Python implementation of Insertion Sort
         url: dsa/sorting/kwidaekky
 
-  - topic: Shortest Path Algorithms
-    breadcrumb_child: Trees
+  - parent: Shortest Path Algorithms
+    subtree: Trees
     url: dsa/trees/
-    programs:
+    children: 
       - title: C++ implementation of Prim's spanning tree algorithm
         url: dsa/trees/kwidbuzge

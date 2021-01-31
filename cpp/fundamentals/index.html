@@ -1,11 +1,11 @@
 ---
 layout: kw
-modified: 02 Oct 2020 19:47 IST   
+modified: 30 Jan 2021 19:45 IST   
 title: C++ Fundamentals
 ---
 
-{% for segment in site.data.cpp.segments %}{% if segment.url contains "/fundamentals/" %}
-<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
-    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+{% for parent in site.data.cpp.grandparent %}{% if parent.url contains "/fundamentals/" %}
+<div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+    {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
 </div>
 {% endif %}{% endfor %}

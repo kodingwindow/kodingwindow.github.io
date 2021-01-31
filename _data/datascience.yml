@@ -1,8 +1,8 @@
-segments: 
-  - topic: Data Analysis
-    breadcrumb_child: Data Analysis
+grandparent: 
+  - parent: Data Analysis
+    subtree: Data Analysis
     url: datascience/da/
-    programs:
+    children: 
       - title: Python Pandas to create a DataFrame from CSV file, Dictionary, etc.
         url: datascience/da/kwidkzmpr
       - title: Python Pandas to extract rows and columns from a DataFrame
@@ -12,9 +12,9 @@ segments:
       - title: Python Pandas to fill and drop missing data in a DataFrame
         url: datascience/da/kwidwvkyk
 
-  - topic: Data Visualization
-    breadcrumb_child: Data Visualization
+  - parent: Data Visualization
+    subtree: Data Visualization
     url: datascience/dv/
-    programs:
+    children: 
       - title: Python Pandas to create a bar graph using the matplotlib module
         url: datascience/dv/kwidleovy

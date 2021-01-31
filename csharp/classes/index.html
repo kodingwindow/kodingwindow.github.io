@@ -1,11 +1,11 @@
 ---
 layout: kw
-modified: 17 Oct 2020 16:10 IST   
+modified: 30 Jan 2021 19:45 IST   
 title: C# Classes and Objects
 ---
 
-{% for segment in site.data.csharp.segments %}{% if segment.url contains "/classes/" %}
-<div class="board"><div class="boardtitle">{{ segment.topic }}</div>
-    {% for program in segment.programs %}<a class="card" href="{{ program.url }}">{{ program.title }}</a>{% endfor %}
+{% for parent in site.data.csharp.grandparent %}{% if parent.url contains "/classes/" %}
+<div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+    {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
 </div>
 {% endif %}{% endfor %}

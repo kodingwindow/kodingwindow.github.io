@@ -1,15 +1,15 @@
-segments: 
-  - topic: MongoDB mongo Shell
-    breadcrumb_child: Shell
+grandparent: 
+  - parent: MongoDB mongo Shell
+    subtree: Shell
     url: mongodb/shell/
-    programs:
+    children: 
       - title: MongoDB Getting started with the mongo Shell
         url: mongodb/shell/kwidvivwa
 
-  - topic: MongoDB CRUD Operations
-    breadcrumb_child: CRUD
+  - parent: MongoDB CRUD Operations
+    subtree: CRUD
     url: mongodb/crud/
-    programs:
+    children: 
       - title: MongoDB Create a Database and Collection
         url: mongodb/crud/kwidyxxwo
       - title: MongoDB Insert the Documents into a Collection
@@ -23,9 +23,9 @@ segments:
       - title: MongoDB Update a Document
         url: mongodb/crud/kwidwawvv
 
-  - topic: MongoDB Accessories
-    breadcrumb_child: Accessories
+  - parent: MongoDB Accessories
+    subtree: Accessories
     url: mongodb/accessories/
-    programs:
+    children: 
       - title: How to setup, install, and start MongoDB on Ubuntu
         url: mongodb/accessories/kwidvwpet

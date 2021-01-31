@@ -1,8 +1,8 @@
-segments: 
-  - topic: R Command Line Interface (CLI)
-    breadcrumb_child: CLI
+grandparent: 
+  - parent: R Command Line Interface (CLI)
+    subtree: CLI
     url: r/cli/
-    programs:
+    children: 
       - title: R Mathematical Operations and Functions
         url: r/cli/kwidegdgz
       - title: R Date and Time Functions

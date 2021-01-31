@@ -1,5 +1,5 @@
 ---
-modified: 25 Jan 2021 06:29 IST   
+modified: 31 Jan 2021 06:13 IST   
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
@@ -17,54 +17,36 @@ modified: 25 Jan 2021 06:29 IST
     <url><loc>{{ site.url }}testapp/</loc>
     <priority>0.9</priority></url>
     
-    {% for segment in site.data.c.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.8</priority></url>{% endfor %}{% endfor %}
     
-    {% for segment in site.data.cpp.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.c.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.cpp.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.java.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.csharp.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.python.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
     
-    {% for segment in site.data.java.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.r.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
+    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
     
-    {% for segment in site.data.csharp.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.datascience.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
     
-    {% for segment in site.data.python.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.lisp.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
+    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
     
-    {% for segment in site.data.r.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.dsa.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
     
-    {% for segment in site.data.datascience.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.mysql.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.mongodb.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
     
-    {% for segment in site.data.lisp.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.linux.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
+    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.bash.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
+    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.cg.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
+    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.asm.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
+    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
     
-    {% for segment in site.data.dsa.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for segment in site.data.mysql.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for segment in site.data.mongodb.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for segment in site.data.linux.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for segment in site.data.bash.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for segment in site.data.cg.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for segment in site.data.asm.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for segment in site.data.selenium.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for segment in site.data.vbscript.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc><priority>0.8</priority></url>
-    {% for program in segment.programs %}<url><loc>{{ site.url }}{{ program.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.selenium.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% for parent in site.data.vbscript.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
 </urlset>

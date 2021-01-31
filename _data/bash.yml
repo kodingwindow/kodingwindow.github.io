@@ -1,7 +1,7 @@
-segments: 
-  - topic: Shell Scripting Fundamentals
+grandparent: 
+  - parent: Shell Scripting Fundamentals
     url: bash/
-    programs:
+    children: 
       - title: Shell script to print Hello World
         url: bash/kwidgitdy
       - title: Shell script to print the current date and time
