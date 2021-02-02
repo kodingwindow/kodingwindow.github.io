@@ -498,61 +498,61 @@ div.carousel-caption > h5
 .nav-link.activetab
 { color: #000000; font-weight: bold; }
 
-.c:hover, .c:focus, #c > a:hover, #c > a:focus, .kwcard.c, .nav-link.activetab.c
+a.c:hover, a.c:focus, #c > a:hover, #c > a:focus, .kwcard.c, .nav-link.activetab.c
 { border-left: 5px solid #0066ff; }
 
-.cpp:hover, .cpp:focus, #cpp > a:hover, #cpp > a:focus, .kwcard.cpp, .nav-link.activetab.cpp
+a.cpp:hover, a.cpp:focus, #cpp > a:hover, #cpp > a:focus, .kwcard.cpp, .nav-link.activetab.cpp
 { border-left: 5px solid #669900; }
 
-.java:hover, .java:focus, #java > a:hover, #java > a:focus, .kwcard.java, .nav-link.activetab.java
+a.java:hover, a.java:focus, #java > a:hover, #java > a:focus, .kwcard.java, .nav-link.activetab.java
 { border-left: 5px solid #ff6600; }
 
-.csharp:hover, .csharp:focus, #csharp > a:hover, #csharp > a:focus, .kwcard.csharp, .nav-link.activetab.csharp
+a.csharp:hover, a.csharp:focus, #csharp > a:hover, #csharp > a:focus, .kwcard.csharp, .nav-link.activetab.csharp
 { border-left: 5px solid #9933ff; }
 
-.python:hover, .python:focus, #python > a:hover, #python > a:focus, .kwcard.python, .nav-link.activetab.python
+a.python:hover, a.python:focus, #python > a:hover, #python > a:focus, .kwcard.python, .nav-link.activetab.python
 { border-left: 5px solid #ffff00; }
 
-.r:hover, .r:focus, #r > a:hover, #r > a:focus, .kwcard.r, .nav-link.activetab.r
+a.r:hover, a.r:focus, #r > a:hover, #r > a:focus, .kwcard.r, .nav-link.activetab.r
 { border-left: 5px solid #52527a; }
 
-.datascience:hover, .datascience:focus, #datascience > a:hover, #datascience > a:focus, .kwcard.datascience, .nav-link.activetab.datascience
+a.datascience:hover, a.datascience:focus, #datascience > a:hover, #datascience > a:focus, .kwcard.datascience, .nav-link.activetab.datascience
 { border-left: 5px solid #e6b800; }
 
-.lisp:hover, .lisp:focus, #lisp > a:hover, #lisp > a:focus, .kwcard.lisp, .nav-link.activetab.lisp
+a.lisp:hover, a.lisp:focus, #lisp > a:hover, #lisp > a:focus, .kwcard.lisp, .nav-link.activetab.lisp
 { border-left: 5px solid #008fb3; }
 
-.dsa:hover, .dsa:focus, #dsa > a:hover, #dsa > a:focus, .kwcard.dsa, .nav-link.activetab.dsa
+a.dsa:hover, a.dsa:focus, #dsa > a:hover, #dsa > a:focus, .kwcard.dsa, .nav-link.activetab.dsa
 { border-left: 5px solid #00cc66; }
 
-.mysql:hover, .mysql:focus,  #mysql > a:hover, #mysql > a:focus, .kwcard.mysql, .nav-link.activetab.mysql
+a.mysql:hover, a.mysql:focus,  #mysql > a:hover, #mysql > a:focus, .kwcard.mysql, .nav-link.activetab.mysql
 { border-left: 5px solid #006699; }
 
-.mongodb:hover, .mongodb:focus, #mongodb > a:hover, #mongodb > a:focus, .kwcard.mongodb, .nav-link.activetab.mongodb
+a.mongodb:hover, a.mongodb:focus, #mongodb > a:hover, #mongodb > a:focus, .kwcard.mongodb, .nav-link.activetab.mongodb
 { border-left: 5px solid #29a329; }
 
-.linux:hover, .linux:focus, #linux > a:hover, #linux > a:focus, .kwcard.linux, .nav-link.activetab.linux
+a.linux:hover, a.linux:focus, #linux > a:hover, #linux > a:focus, .kwcard.linux, .nav-link.activetab.linux
 { border-left: 5px solid #888844; }
 
-.bash:hover, .bash:focus, #bash > a:hover, #bash > a:focus, .kwcard.bash, .nav-link.activetab.bash
+a.bash:hover, a.bash:focus, #bash > a:hover, #bash > a:focus, .kwcard.bash, .nav-link.activetab.bash
 { border-left: 5px solid #cc0000; }
 
-.cg:hover, .cg:focus, #cg > a:hover, #cg > a:focus, .kwcard.cg, .nav-link.activetab.cg
+a.cg:hover, a.cg:focus, #cg > a:hover, #cg > a:focus, .kwcard.cg, .nav-link.activetab.cg
 { border-left: 5px solid #cc0066; }
 
-.asm:hover, .asm:focus, #asm > a:hover, #asm > a:focus, .kwcard.asm, .nav-link.activetab.asm
+a.asm:hover, a.asm:focus, #asm > a:hover, #asm > a:focus, .kwcard.asm, .nav-link.activetab.asm
 { border-left: 5px solid #804000; }
 
-.selenium:hover, .selenium:focus, #selenium > a:hover, #selenium > a:focus, .kwcard.selenium, .nav-link.activetab.selenium
+a.selenium:hover, a.selenium:focus, #selenium > a:hover, #selenium > a:focus, .kwcard.selenium, .nav-link.activetab.selenium
 { border-left: 5px solid #00b300; }
 
-.vbscript:hover, .vbscript:focus, #vbscript > a:hover, #vbscript > a:focus, .kwcard.vbscript, .nav-link.activetab.vbscript
+a.vbscript:hover, a.vbscript:focus, #vbscript > a:hover, #vbscript > a:focus, .kwcard.vbscript, .nav-link.activetab.vbscript
 { border-left: 5px solid #b300b3; }
 
-.mcqs:hover, .mcqs:focus, #mcqs > a:hover, #mcqs > a:focus, .kwcard.mcqs, .nav-link.activetab.mcqs
+a.mcqs:hover, a.mcqs:focus, #mcqs > a:hover, #mcqs > a:focus, .kwcard.mcqs, .nav-link.activetab.mcqs
 { border-left: 5px solid #80ff00; }
 
-.faqs:hover, .faqs:focus, #faqs > a:hover, #faqs > a:focus, .kwcard.faqs, .nav-link.activetab.faqs
+a.faqs:hover, a.faqs:focus, #faqs > a:hover, #faqs > a:focus, .kwcard.faqs, .nav-link.activetab.faqs
 { border-left: 5px solid #666633; }
 
 /* Syntax highlighting styles */

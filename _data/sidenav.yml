@@ -142,6 +142,11 @@ grandparent:
       - title: Python Search
         url: python/search/
 
+  - parent: /r/
+    children: 
+      - title: R Programming
+        url: r/
+
   - parent: /datascience/
     children: 
       - title: Data Science
@@ -152,6 +157,11 @@ grandparent:
         url: datascience/dv/
       - title: Data Science Search
         url: datascience/search/
+
+  - parent: /lisp/
+    children: 
+      - title: LISP Programming
+        url: lisp/
 
   - parent: /dsa/
     children: 
@@ -195,6 +205,26 @@ grandparent:
         url: mongodb/accessories/
       - title: MongoDB Search
         url: mongodb/search/
+
+  - parent: /linux/
+    children: 
+      - title: Linux Commands
+        url: linux/
+
+  - parent: /bash/
+    children: 
+      - title: Bash Shell Scripting
+        url: bash/
+
+  - parent: /cg/
+    children: 
+      - title: Computer Graphics
+        url: cg/
+
+  - parent: /asm/
+    children: 
+      - title: Assembly Programming
+        url: asm/
 
   - parent: /selenium/
     children: 

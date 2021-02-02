@@ -67,100 +67,32 @@ $(document).keydown(function(event)
 </center>
 
 <center><div id="search" class="kwwidth" style="margin: 0px; text-align: left;">
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="c">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/c/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.c.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="cpp">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/cpp/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.cpp.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="java">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/java/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.java.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="csharp">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/csharp/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.csharp.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="python">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/python/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.python.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="r">
-        <a class="darkwell card" href="r/">R Programming</a>
-        {% for parent in site.data.r.grandparent %}<a class="darkwell card" href="{{ parent.url }}">{{ parent.topic }}</a>{% endfor %}
-        {% for parent in site.data.r.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="datascience">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/datascience/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.datascience.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="lisp">
-        <a class="darkwell card" href="lisp">LISP Programming</a>
-        {% for parent in site.data.lisp.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="dsa">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/dsa/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.dsa.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="mysql">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/mysql/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.mysql.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="mongodb">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/mongodb/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.mongodb.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="linux">
-        <a class="darkwell card" href="linux/">Linux Commands</a>
-        {% for parent in site.data.linux.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="bash">
-        <a class="darkwell card" href="bash/">Shell Scripting</a>
-        {% for parent in site.data.bash.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="cg">
-        <a class="darkwell card" href="cg/">Computer Graphics</a>
-        {% for parent in site.data.cg.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-    
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="asm">
-        <a class="darkwell card" href="asm">Assembly Programming</a>
-        {% for parent in site.data.asm.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="selenium">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/selenium/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        <a class="darkwell card" href="https://selenium.dev/downloads/" target="_blank">Download Selenium Server Standalone</a>
-        <a class="darkwell card" href="https://chromedriver.chromium.org/" target="_blank">Download WebDriver for Chrome</a>
-        <a class="darkwell card" href="https://github.com/mozilla/geckodriver/releases" target="_blank">Download WebDriver for Firefox</a>
-        <a class="darkwell card" href="https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/" target="_blank">Download WebDriver for Microsoft Edge</a>
-        <a class="darkwell card" href="testapp/">Check Kodingwindow's TestApp is up and running</a>
-        {% for parent in site.data.selenium.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
-    <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="vbscript">
-        {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% if parent.parent == "/vbscript/" %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endif %}{% endfor %}{% endfor %}
-        {% for parent in site.data.vbscript.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
-    </div>
-
+    <div style="margin-bottom: 20px; margin-top: 20px; display: none;">{% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}<a class="darkwell card {{ parent.parent | split: '/' }}" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}</div>
+    {% for segment in site.data.segments %}
+        {% if segment.url == "c/" %}{% assign search = site.data.c %}
+        {% elsif segment.url == "cpp/" %}{% assign search = site.data.cpp %}
+        {% elsif segment.url == "java/" %}{% assign search = site.data.java %}
+        {% elsif segment.url == "csharp/" %}{% assign search = site.data.csharp %}
+        {% elsif segment.url == "python/" %}{% assign search = site.data.python %}
+        {% elsif segment.url == "r/" %}{% assign search = site.data.r %}
+        {% elsif segment.url == "datascience/" %}{% assign search = site.data.datascience %}
+        {% elsif segment.url == "lisp/" %}{% assign search = site.data.lisp %}
+        {% elsif segment.url == "dsa/" %}{% assign search = site.data.dsa %}
+        {% elsif segment.url == "mysql/" %}{% assign search = site.data.mysql %}
+        {% elsif segment.url == "mongodb/" %}{% assign search = site.data.mongodb %}
+        {% elsif segment.url == "linux/" %}{% assign search = site.data.linux %}
+        {% elsif segment.url == "bash/" %}{% assign search = site.data.bash %}
+        {% elsif segment.url == "cg/" %}{% assign search = site.data.cg %}
+        {% elsif segment.url == "asm/" %}{% assign search = site.data.asm %}
+        {% elsif segment.url == "selenium/" %}{% assign search = site.data.selenium %}
+        {% elsif segment.url == "vbscript/" %}{% assign search = site.data.vbscript %}{% else %}{% endif %}
+        <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="{{ segment.url | split: '/' }}">
+        {% for parent in search.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}{% endfor %}
+        </div>
+    {% endfor %}
     <div style="margin-bottom: 20px; margin-top: 20px; display: none;" id="mcqs">
         <a class="darkwell card" href="mcqs/">Multiple Choice Questions (MCQs)</a>
-        {% for parent in site.data.mcqs.grandparent %}{% for mcq in parent.mcqs %}<a class="darkwell card" href="https://www.linkedin.com/feed/update/urn:li:activity:{{ mcq.id }}/" target="_blank">{{ mcq.title }}</a>{% endfor %}{% endfor %}
+        {% for parent in site.data.mcqs.grandparent %}{% for child in parent.children %}<a class="darkwell card" href="https://www.linkedin.com/feed/update/urn:li:activity:{{ child.id }}/" target="_blank">{{ child.title }}</a>{% endfor %}{% endfor %}
     </div>
 </div></center>
 </body>
