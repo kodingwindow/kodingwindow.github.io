@@ -1,52 +1,42 @@
 ---
-modified: 31 Jan 2021 06:13 IST   
+modified: 02 Feb 2021 20:43 IST   
 ---
 
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>{{ site.url }}</loc><priority>1.0</priority></url>
-    {% for segment in site.data.segments %}<url><loc>{{ site.url }}{{ segment.url }}</loc>
-    <priority>0.9</priority></url>{% endfor %}
-    
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/">
+    <url><loc>{{ site.url }}</loc><priority>1.0</priority></url>    
+    {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}{% assign pu = child.url | split: '/' %}
+    {% if pu[1] == null %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.9</priority></url>{% else %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.8</priority></url>{% endif %}{% endfor %}{% endfor %}
+
     <url><loc>{{ site.url }}search/</loc>
     <priority>0.9</priority></url>
-    
+    <url><loc>{{ site.url }}mcqs/</loc>
+    <priority>0.9</priority></url>
+    <url><loc>{{ site.url }}faqs/</loc>
+    <priority>0.9</priority></url>
     <url><loc>{{ site.url }}about/</loc>
     <priority>0.9</priority></url>
-
     <url><loc>{{ site.url }}testapp/</loc>
     <priority>0.9</priority></url>
-    
-    {% for parent in site.data.sidenav.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.8</priority></url>{% endfor %}{% endfor %}
-    
-    {% for parent in site.data.c.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.cpp.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.java.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.csharp.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.python.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for parent in site.data.r.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
-    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for parent in site.data.datascience.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for parent in site.data.lisp.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
-    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for parent in site.data.dsa.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for parent in site.data.mysql.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.mongodb.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for parent in site.data.linux.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
-    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.bash.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
-    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.cg.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
-    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.asm.grandparent %}<url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
-    {% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    
-    {% for parent in site.data.selenium.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
-    {% for parent in site.data.vbscript.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+
+    {% for segment in site.data.segments %}
+        {% if segment.url == "c/" %}{% assign sitemap = site.data.c %}
+        {% elsif segment.url == "cpp/" %}{% assign sitemap = site.data.cpp %}
+        {% elsif segment.url == "java/" %}{% assign sitemap = site.data.java %}
+        {% elsif segment.url == "csharp/" %}{% assign sitemap = site.data.csharp %}
+        {% elsif segment.url == "python/" %}{% assign sitemap = site.data.python %}
+        {% elsif segment.url == "r/" %}{% assign sitemap = site.data.r %}
+        {% elsif segment.url == "datascience/" %}{% assign sitemap = site.data.datascience %}
+        {% elsif segment.url == "lisp/" %}{% assign sitemap = site.data.lisp %}
+        {% elsif segment.url == "dsa/" %}{% assign sitemap = site.data.dsa %}
+        {% elsif segment.url == "mysql/" %}{% assign sitemap = site.data.mysql %}
+        {% elsif segment.url == "mongodb/" %}{% assign sitemap = site.data.mongodb %}
+        {% elsif segment.url == "linux/" %}{% assign sitemap = site.data.linux %}
+        {% elsif segment.url == "bash/" %}{% assign sitemap = site.data.bash %}
+        {% elsif segment.url == "cg/" %}{% assign sitemap = site.data.cg %}
+        {% elsif segment.url == "asm/" %}{% assign sitemap = site.data.asm %}
+        {% elsif segment.url == "selenium/" %}{% assign sitemap = site.data.selenium %}
+        {% elsif segment.url == "vbscript/" %}{% assign sitemap = site.data.vbscript %}{% else %}{% endif %}
+        {% for parent in sitemap.grandparent %}{% for child in parent.children %}<url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>{% endfor %}{% endfor %}
+    {% endfor %}
 </urlset>

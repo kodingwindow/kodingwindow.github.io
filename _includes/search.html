@@ -60,7 +60,8 @@ $(document).keydown(function(event)
 <body>
 <center>
     <div class="kwwidth" style="margin-bottom: 20px;">
-        <h1 style="margin-bottom: 20px;">Kodingwindow</h1>
+        <h1>Kodingwindow Search</h1>
+        <h6 style="margin-bottom: 20px;">Making programmers life prettier!</h6>
         <div class="input-group"><input id="KSEInput" class="form-control" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onfocus="this.style.borderBottomColor='#29293d', this.style.borderBottomWidth='2px'" onfocusout="this.style.borderBottomColor='#cccccc', this.style.borderBottomWidth='1px'" onkeypress="kwdisplay();" onkeyup="kwdisplay();" style="border-color: #cccccc;"></div>
     </div>
     <a id="kwdisplay" style="cursor: pointer; display: none;" onclick="clearinput();" class="btn kwbtn">Clear Input</a>

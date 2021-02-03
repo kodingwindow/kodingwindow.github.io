@@ -21,7 +21,7 @@ The Kodingwindow website has several segments, and each one of them is construct
 - [Data Science][8]: Fundamentals and Data Visualization
 - [LISP Programming][9]: CLISP and Maxima Command Line Interface (CLI), and Fundamentals
 - [Data Structures and Algorithms][10]: Fundamentals, Searching and Sorting Algorithms, etc.
-- [MySQL (Relational Database][11]: Functions, Data Definition (DDL), and Data Manipulation Language (DML)
+- [MySQL (Relational Database)][11]: Functions, Data Definition (DDL), and Data Manipulation Language (DML)
 - [MongoDB (NoSQL Database)][12]: mongo Shell, and CRUD Operations
 - [Linux][13]: Linux Commands
 - [Bash Shell Scripting][14]: Fundamentals

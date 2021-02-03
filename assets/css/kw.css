@@ -494,6 +494,10 @@ div.carousel-caption > h5
 {
     font-size: 14px;
 }
+::-ms-clear 
+{
+    display: none;
+}
 
 .nav-link.activetab
 { color: #000000; font-weight: bold; }
