@@ -30,6 +30,11 @@ grandparent:
         url: c/controls/kwidcheqs
       - title: C program to check the equality of given numbers
         url: c/controls/kwiddwdgs
+      - title: C program to demonstrate the use of goto statement
+        url: c/controls/kwidwagwy
+      - title: C program to demonstrate the use of break and continue statements
+        url: c/controls/kwidecgzz
+
 
   - parent: C Loops
     subtree: Loops

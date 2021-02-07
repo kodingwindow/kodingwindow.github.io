@@ -24,6 +24,8 @@ grandparent:
         url: cpp/
       - title: C++ Fundamentals
         url: cpp/fundamentals/
+      - title: C++ Control Statements
+        url: cpp/controls/
       - title: C++ Loops
         url: cpp/loops/
       - title: C++ Classes and Objects

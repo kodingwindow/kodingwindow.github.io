@@ -24,6 +24,19 @@ grandparent:
       - title: C++ program to find the range of data types
         url: cpp/fundamentals/kwidqvvzg
 
+  - parent: C++ Control Statements
+    subtree: Controls
+    url: cpp/controls/
+    children: 
+      - title: C++ program to check the given number is positive/negative
+        url: cpp/controls/kwidgwhse
+      - title: C++ program to check the equality of given numbers
+        url: cpp/controls/kwidkgzza
+      - title: C++ program to demonstrate the use of goto statement
+        url: cpp/controls/kwidinkrg
+      - title: C++ program to demonstrate the use of break and continue statements
+        url: cpp/controls/kwididhad
+
   - parent: C++ Loops
     subtree: Loops
     url: cpp/loops/
