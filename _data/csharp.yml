@@ -20,8 +20,14 @@ grandparent:
     subtree: Controls
     url: csharp/controls/
     children: 
+      - title: C# program to check the given number is even/odd
+        url: csharp/controls/kwidvevfk
       - title: C# program to check the given number is positive/negative
         url: csharp/controls/kwidxyezd
+      - title: C# program to demonstrate the use of goto statement
+        url: csharp/controls/kwidwaztq
+      - title: C# program to demonstrate the use of break and continue statements
+        url: csharp/controls/kwidwgfpv
 
   - parent: C# Loops
     subtree: Loops
