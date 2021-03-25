@@ -27,9 +27,20 @@ $(document).keydown(function(event)
 });
 $(document).ready(function()
 {
+    $(window).scroll(function()
+    {
+        if ($(this).scrollTop()>70) 
+        {
+            $('#back-to-top').fadeIn();
+        } 
+        else 
+        {
+            $('#back-to-top').fadeOut();
+        }
+    });
     $('#back-to-top').click(function() 
     {
-        $('body,html').animate({scrollTop: 0}, 1500);
+        $('html,body').animate({scrollTop: 0}, 0);
     });
 });
 function kwdate()
@@ -53,21 +64,7 @@ function validate_comments(e)
         e.preventDefault();
 }
 
-window.onscroll = function() 
-{
-    scrollFunction()
-};
-function scrollFunction() 
-{
-    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) 
-    {
-        document.getElementById("back-to-top").style.display = "block";
-    } 
-    else 
-    {
-        document.getElementById("back-to-top").style.display = "none";
-    }
-}
+
 
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
