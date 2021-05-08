@@ -1,90 +1,98 @@
 grandparent: 
   - parent: Pixel and Line Drawing Programs
-    url: cg/
+    subtree: Line Drawing
+    url: cg/line/
     children: 
       - title: Draw a Pixel with given coordinates
-        url: cg/kwidfdmuv
+        url: cg/line/kwidfdmuv
       - title: Draw a Pixel by accepting coordinates from the user
-        url: cg/kwidgwavy
+        url: cg/line/kwidgwavy
       - title: Draw Pixels using for loop
-        url: cg/kwiddwydv
+        url: cg/line/kwiddwydv
       - title: Draw a line with given coordinates
-        url: cg/kwidyvzde
+        url: cg/line/kwidyvzde
       - title: Draw a line by accepting coordinates from the user
-        url: cg/kwiddzqyg
+        url: cg/line/kwiddzqyg
       - title: Draw a thick line using the setline function
-        url: cg/kwidtgnze
+        url: cg/line/kwidtgnze
       - title: Draw a dotted line using the setline function
-        url: cg/kwidsagfh
+        url: cg/line/kwidsagfh
       - title: Draw a dotted thick line using the setline function
-        url: cg/kwidwbyau
+        url: cg/line/kwidwbyau
       - title: Draw a dashed line using the setline function
-        url: cg/kwidawzwd
+        url: cg/line/kwidawzwd
       - title: Draw the Modern Periodic Table of Elements
-        url: cg/kwidcwzea
+        url: cg/line/kwidcwzea
       - title: Menu-driven program to draw the thick, thin, and dotted line
-        url: cg/kwidhvyyk
+        url: cg/line/kwidhvyyk
 
-  - parent: Geometric Shapes
-    url: cg/
+  - parent: Circle Drawing Programs
+    subtree: Circle Drawing
+    url: cg/circle/
     children: 
       - title: Draw a circle using the circle function
-        url: cg/kwidzepyi
+        url: cg/shapes/kwidzepyi
       - title: Draw circles using for loop
-        url: cg/kwidmqler
+        url: cg/shapes/kwidmqler
       - title: Draw concentric circles using for loop
-        url: cg/kwidmgezv
+        url: cg/shapes/kwidmgezv
       - title: Draw concentric circles from a fixed point
-        url: cg/kwidekhai
+        url: cg/shapes/kwidekhai
       - title: Draw concentric color-filled circles
-        url: cg/kwidegbed
+        url: cg/shapes/kwidegbed
       - title: Draw concentric color-filled circles from a fixed point
-        url: cg/kwidgzswf
+        url: cg/shapes/kwidgzswf
       - title: Draw a quarter color-filled circle using the pieslice function
-        url: cg/kwidqogsw
+        url: cg/shapes/kwidqogsw
       - title: Draw a color-filled circle using the pieslice function
-        url: cg/kwidgwpqd
+        url: cg/shapes/kwidgwpqd
       - title: Draw a circle using the arc function
-        url: cg/kwidzzzvy
+        url: cg/shapes/kwidzzzvy
+
+  - parent: Geometric Shapes
+    subtree: Geometric Shapes
+    url: cg/shapes/
+    children: 
       - title: Draw 'S' character using the arc function
-        url: cg/kwidzewpm
+        url: cg/shapes/kwidzewpm
       - title: Draw a clockwise spiral using the arc function
-        url: cg/kwiddqonb
+        url: cg/shapes/kwiddqonb
       - title: Draw a counter-clockwise spiral using the arc function
-        url: cg/kwiddkwaa
+        url: cg/shapes/kwiddkwaa
       - title: Draw a wheel using the arc, pieslice, and setcolor function
-        url: cg/kwidseage
+        url: cg/shapes/kwidseage
       - title: Draw a square using the line function
-        url: cg/kwidsxlqq
+        url: cg/shapes/kwidsxlqq
       - title: Draw a square using the rectangle function
-        url: cg/kwidgyigw
+        url: cg/shapes/kwidgyigw
       - title: Draw a 3D square using the bar3d function
-        url: cg/kwidwwsfw
+        url: cg/shapes/kwidwwsfw
       - title: Draw a color-filled square using the bar function
-        url: cg/kwidqeuyt
+        url: cg/shapes/kwidqeuyt
       - title: Draw a left half ellipse using the ellipse function
-        url: cg/kwidvayid
+        url: cg/shapes/kwidvayid
       - title: Draw a color-filled ellipse using the fillellipse and sector function
-        url: cg/kwidazarg
+        url: cg/shapes/kwidazarg
       - title: Menu-driven program to draw the convex polygons
-        url: cg/kwidacrad
+        url: cg/shapes/kwidacrad
       - title: Draw a convex polygon with programmable edges
-        url: cg/kwidmgeyz
+        url: cg/shapes/kwidmgeyz
       - title: Draw a concave polygon
-        url: cg/kwidlggly
+        url: cg/shapes/kwidlggly
 
   - parent: Computer Graphics Algorithms
-    url: cg/
+    subtree: Algorithms
+    url: cg/algorithms/
     children: 
       - title: Draw a line using the DDA line drawing algorithm
-        url: cg/kwidllgea
+        url: cg/algorithms/kwidllgea
       - title: Draw a line using the Bresenham line drawing algorithm
-        url: cg/kwidevpys
+        url: cg/algorithms/kwidevpys
       - title: Draw a circle using the DDA circle drawing algorithm
-        url: cg/kwidfcwdy
+        url: cg/algorithms/kwidfcwdy
       - title: Draw a circle using the Bresenham circle drawing algorithm
-        url: cg/kwidzzahy
+        url: cg/algorithms/kwidzzahy
       - title: Draw a circle using the Midpoint circle drawing algorithm
-        url: cg/kwiddgwwm
+        url: cg/algorithms/kwiddgwwm
       - title: Program to fill a polygon using the Scan Line Algorithm (SLA)
-        url: cg/kwideqwaz
+        url: cg/algorithms/kwideqwaz

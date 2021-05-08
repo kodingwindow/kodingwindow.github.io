@@ -1,0 +1,28 @@
+---
+layout: kw
+modified: 08 May 2021 09:34 IST   
+title: Draw a left half ellipse using the ellipse function
+---
+
+<div class="darkwell"><mark>Title: </mark>{{ page.title }}</div>
+<div class="card">{{ site.cppfile }}</div>
+<pre>
+{% highlight cpp %}
+#include<graphics.h>
+int main()
+{
+    int gd=0,gm=9;
+    initgraph(&gd,&gm,NULL);
+    setcolor(15);
+    ellipse(320,240,90,270,150,100);
+    delay(5000);
+    return 0;
+}
+{% endhighlight %}
+</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runcg }}
+
+<img src="cg/images/kwidesrwd.png" loading="lazy"><br>
+</pre></span>

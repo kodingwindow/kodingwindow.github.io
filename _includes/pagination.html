@@ -3,16 +3,16 @@
 {% elsif page.url contains "/java/" %}{% assign kw = site.data.java %}
 {% elsif page.url contains "/csharp/" %}{% assign kw = site.data.csharp %}
 {% elsif page.url contains "/python/" %}{% assign kw = site.data.python %}
-{% elsif page.url contains "/r/" %}{% assign container = site.data.r %}
+{% elsif page.url contains "/r/" %}{% assign kw = site.data.r %}
 {% elsif page.url contains "/datascience/" %}{% assign kw = site.data.datascience %}
-{% elsif page.url contains "/lisp/" %}{% assign container = site.data.lisp %}
+{% elsif page.url contains "/lisp/" %}{% assign kw = site.data.lisp %}
 {% elsif page.url contains "/dsa/" %}{% assign kw = site.data.dsa %}
 {% elsif page.url contains "/mysql/" %}{% assign kw = site.data.mysql %}
 {% elsif page.url contains "/mongodb/" %}{% assign kw = site.data.mongodb %}
-{% elsif page.url contains "/linux/" %}{% assign container = site.data.linux %}
-{% elsif page.url contains "/bash/" %}{% assign container = site.data.bash %}
-{% elsif page.url contains "/cg/" %}{% assign container = site.data.cg %}
-{% elsif page.url contains "/asm/" %}{% assign container = site.data.asm %}
+{% elsif page.url contains "/linux/" %}{% assign kw = site.data.linux %}
+{% elsif page.url contains "/bash/" %}{% assign kw = site.data.bash %}
+{% elsif page.url contains "/cg/" %}{% assign kw = site.data.cg %}
+{% elsif page.url contains "/asm/" %}{% assign kw = site.data.asm %}
 {% elsif page.url contains "/selenium/" %}{% assign kw = site.data.selenium %}
 {% elsif page.url contains "/vbscript/" %}{% assign kw = site.data.vbscript %}
 {% else %}
@@ -54,30 +54,4 @@
         {% endif %}
     {% endfor %}
     {% endif %}
-{% endfor %}
-
-{% for parent in container.grandparent %}
-    {% for child in parent.children %}
-    {% assign i = i | plus:1 %}
-        {% if page.url contains child.url %}
-            {% assign first = i | plus: 0 %}{% assign second = i | plus:1 %}{% assign third = i | plus:2 %}
-            {% if parent.children[third].url != null %}
-            <div class="board"><div class="boardtitle">What Next?</div>
-                <a class="card" href="{{ parent.children[first].url }}">{{ parent.children[first].title }}</a>
-                <a class="card" href="{{ parent.children[second].url }}">{{ parent.children[second].title }}</a>
-                <a class="card" href="{{ parent.children[third].url }}">{{ parent.children[third].title }}</a>
-            </div>
-            {% elsif parent.children[second].url != null %}
-            <div class="board"><div class="boardtitle">What Next?</div>
-                <a class="card" href="{{ parent.children[first].url }}">{{ parent.children[first].title }}</a>
-                <a class="card" href="{{ parent.children[second].url }}">{{ parent.children[second].title }}</a>
-            </div>
-            {% elsif parent.children[first].url != null %}
-            <div class="board"><div class="boardtitle">What Next?</div>
-                <a class="card" href="{{ parent.children[first].url }}">{{ parent.children[first].title }}</a>
-            </div>
-            {% else %}
-            {% endif %}
-        {% endif %}
-    {% endfor %}
 {% endfor %}

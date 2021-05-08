@@ -1,11 +1,11 @@
 ---
 layout: kw
-modified: 08 May 2021 09:36 IST   
-title: Computer Graphics
+modified: 08 May 2021 11:21 IST   
+title: Line Drawing Programs
 ---
 
-{% for parent in site.data.cg.grandparent %}
+{% for parent in site.data.cg.grandparent %}{% if parent.url contains "/line/" %}
 <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
     {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
 </div>
-{% endfor %}
+{% endif %}{% endfor %}
