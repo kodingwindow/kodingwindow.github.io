@@ -1,46 +1,42 @@
 grandparent: 
-  - parent: Assembly Language Programs (32 bit)
+  - parent: Assembly Language Programs
     url: asm/
     children: 
-      - title: ALP to print Hello World
+      - title: ALP to print Hello World (32 bit)
         url: asm/kwidvxqaz
-      - title: ALP to print Hello World using times directive
+      - title: ALP to print Hello World without using macro (64 bit)
+        url: asm/kwidatnak
+      - title: ALP to print Hello World using macro (64 bit)
+        url: asm/kwidsgpyl
+      - title: ALP to print Hello World using times directive (32 bit)
         url: asm/kwidbhdky
-      - title: ALP to print the stars using macro
+      - title: ALP to print the stars using macro (32 bit)
         url: asm/kwidaeavq
-      - title: ALP to print the stars using times directive
+      - title: ALP to print the stars using times directive (32 bit)
         url: asm/kwidbqeza
-      - title: ALP to print the ASCII hex to hexadecimal number
+      - title: ALP to print the ASCII hex to hexadecimal number (32 bit)
         url: asm/kwidzkizy
-      - title: ALP to print the given alphanumeric characters
+      - title: ALP to print the given alphanumeric characters (32 bit)
         url: asm/kwidqnwvz
-      - title: ALP to print the length of a given string
+      - title: ALP to print the given string using macro (64 bit)
+        url: asm/kwidwagtz
+      - title: ALP to print the length of a given string (32 bit)
         url: asm/kwidvvdud
+      - title: ALP to print the length of a given string (64 bit)
+        url: asm/kwidcgame
+      - title: ALP to reverse a given string (64 bit)
+        url: asm/kwidwdwaz
+      - title: ALP to check whether a given string is palindrome (64 bit)
+        url: asm/kwidwzqyk
+      - title: ALP menu-driven program to perform the string operations (64 bit)
+        url: asm/kwidvyzpn
+      - title: ALP to convert the hexadecimal to BCD number (64 bit)
+        url: asm/kwidvnyvi
+      - title: ALP to convert the Binary Coded Decimal (BCD) to hexadecimal number (64 bit)
+        url: asm/kwidvthab
+      - title: ALP to print the addition of N hexadecimal number (64 bit)
+        url: asm/kwidgywzg
       - title: ALP to identify the Central Processing Unit (CPU) type
         url: asm/kwidvakeg
       - title: ALP to print the values of GDTR, LDTR, IDTR, TR, and MSW registers in protected mode
         url: asm/kwiddmaee
-
-  - parent: Assembly Language Programs (64 bit)
-    url: asm/
-    children: 
-      - title: ALP to print Hello World without using macro
-        url: asm/kwidatnak
-      - title: ALP to print Hello World using macro
-        url: asm/kwidsgpyl
-      - title: ALP to print the given string using macro
-        url: asm/kwidwagtz
-      - title: ALP to print the length of a given string
-        url: asm/kwidcgame
-      - title: ALP to reverse a given string
-        url: asm/kwidwdwaz
-      - title: ALP to check whether a given string is palindrome
-        url: asm/kwidwzqyk
-      - title: ALP menu-driven program to perform the string operations
-        url: asm/kwidvyzpn
-      - title: ALP to convert the hexadecimal to BCD number
-        url: asm/kwidvnyvi
-      - title: ALP to convert the Binary Coded Decimal (BCD) to hexadecimal number
-        url: asm/kwidvthab
-      - title: ALP to print the addition of N hexadecimal number
-        url: asm/kwidgywzg

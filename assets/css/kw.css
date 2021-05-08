@@ -149,7 +149,7 @@ h3, h4
     color: #000000;
     text-align: center;
 }
-a, a:hover
+a, a:hover, a.nav-link, a.nav-link:hover
 {
     color: #3973ac;
     font-size: 15px;

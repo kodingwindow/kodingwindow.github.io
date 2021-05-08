@@ -1,11 +1,13 @@
 ---
 layout: kw
-modified: 08 May 2021 09:36 IST   
+modified: 08 May 2021 15:31 IST   
 title: Computer Graphics
 ---
 
 {% for parent in site.data.cg.grandparent %}
 <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
-    {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
+    {% for child in parent.children limit:4 %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
+    {% assign count=parent.children | size %}
+    {% if count>=5 %}<a class="card" href="{{ parent.url }}">Learn More &#187;</a>{% endif %}
 </div>
 {% endfor %}

@@ -31,23 +31,23 @@ grandparent:
     url: cg/circle/
     children: 
       - title: Draw a circle using the circle function
-        url: cg/shapes/kwidzepyi
+        url: cg/circle/kwidzepyi
       - title: Draw circles using for loop
-        url: cg/shapes/kwidmqler
+        url: cg/circle/kwidmqler
       - title: Draw concentric circles using for loop
-        url: cg/shapes/kwidmgezv
+        url: cg/circle/kwidmgezv
       - title: Draw concentric circles from a fixed point
-        url: cg/shapes/kwidekhai
+        url: cg/circle/kwidekhai
       - title: Draw concentric color-filled circles
-        url: cg/shapes/kwidegbed
+        url: cg/circle/kwidegbed
       - title: Draw concentric color-filled circles from a fixed point
-        url: cg/shapes/kwidgzswf
+        url: cg/circle/kwidgzswf
       - title: Draw a quarter color-filled circle using the pieslice function
-        url: cg/shapes/kwidqogsw
+        url: cg/circle/kwidqogsw
       - title: Draw a color-filled circle using the pieslice function
-        url: cg/shapes/kwidgwpqd
+        url: cg/circle/kwidgwpqd
       - title: Draw a circle using the arc function
-        url: cg/shapes/kwidzzzvy
+        url: cg/circle/kwidzzzvy
 
   - parent: Geometric Shapes
     subtree: Geometric Shapes
