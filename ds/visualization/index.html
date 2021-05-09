@@ -1,10 +1,10 @@
 ---
 layout: kw
-modified: 30 Jan 2021 19:45 IST   
-title: Data Analysis
+modified: 09 May 2021 08:57 IST   
+title: Data Visualization
 ---
 
-{% for parent in site.data.datascience.grandparent %}{% if parent.url contains "/da/" %}
+{% for parent in site.data.ds.grandparent %}{% if parent.url contains "/visualization/" %}
 <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
     {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
 </div>

@@ -1,20 +1,20 @@
 grandparent: 
   - parent: Data Analysis
     subtree: Data Analysis
-    url: datascience/da/
+    url: ds/analysis/
     children: 
       - title: Python Pandas to create a DataFrame from CSV file, Dictionary, etc.
-        url: datascience/da/kwidkzmpr
+        url: ds/analysis/kwidkzmpr
       - title: Python Pandas to extract rows and columns from a DataFrame
-        url: datascience/da/kwidvoktc
+        url: ds/analysis/kwidvoktc
       - title: Python Pandas to index and sort a DataFrame
-        url: datascience/da/kwidwdghw
+        url: ds/analysis/kwidwdghw
       - title: Python Pandas to fill and drop missing data in a DataFrame
-        url: datascience/da/kwidwvkyk
+        url: ds/analysis/kwidwvkyk
 
   - parent: Data Visualization
     subtree: Data Visualization
-    url: datascience/dv/
+    url: ds/visualization/
     children: 
       - title: Python Pandas to create a bar graph using the matplotlib module
-        url: datascience/dv/kwidleovy
+        url: ds/visualization/kwidleovy

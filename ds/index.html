@@ -1,6 +1,6 @@
 ---
 layout: kw
-modified: 08 May 2021 15:08 IST   
+modified: 09 May 2021 08:57 IST   
 title: Data Science
 ---
 
@@ -12,7 +12,7 @@ title: Data Science
 </div>
 {% endif %}{% endfor %}
 
-{% for parent in site.data.datascience.grandparent %}
+{% for parent in site.data.ds.grandparent %}
 <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
     {% for child in parent.children limit:4 %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
     {% assign count=parent.children | size %}

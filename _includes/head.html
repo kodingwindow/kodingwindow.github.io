@@ -7,7 +7,7 @@
 {% endfor %}
 
 {% elsif page.url contains "/cpp/" %}
-{% assign segment = "C++ Programming" %}{% assign parent=" / C++ / " %}
+{% assign segment = "C++ Programming" %}{% assign parent=" / CPP / " %}
 {% for item in site.data.cpp.grandparent %}
     {% if page.url contains item.url %}{% assign child = item.subtree %}{% endif %}
 {% endfor %}
@@ -19,7 +19,7 @@
 {% endfor %}
 
 {% elsif page.url contains "/csharp/" %}
-{% assign segment = "C# Programming" %}{% assign parent=" / C# / " %}
+{% assign segment = "C# Programming" %}{% assign parent=" / CSharp / " %}
 {% for item in site.data.csharp.grandparent %}
     {% if page.url contains item.url %}{% assign child = item.subtree %}{% endif %}
 {% endfor %}
@@ -36,7 +36,7 @@
     {% if page.url contains item.url %}{% assign child = item.subtree %}{% endif %}
 {% endfor %}
 
-{% elsif page.url contains "/datascience/" %}
+{% elsif page.url contains "/ds/" %}
 {% assign segment="Data Science" %}{% assign parent=" / DS / " %}
 {% for item in site.data.datascience.grandparent %}
     {% if page.url contains item.url %}{% assign child = item.subtree %}{% endif %}
@@ -73,7 +73,7 @@
 {% endfor %}
 
 {% elsif page.url contains "/bash/" %}
-{% assign segment="Bash Shell Scripting" %}{% assign parent=" / Bash Shell / " %}
+{% assign segment="Bash Shell Scripting" %}{% assign parent=" / Bash / " %}
 {% for item in site.data.bash.grandparent %}
     {% if page.url contains item.url %}{% assign child = item.subtree %}{% endif %}
 {% endfor %}
@@ -85,7 +85,7 @@
 {% endfor %}
 
 {% elsif page.url contains "/asm/" %}
-{% assign segment="Assembly Programming" %}{% assign parent=" / Assembly / " %}
+{% assign segment="Assembly Programming" %}{% assign parent=" / ASM / " %}
 {% for item in site.data.asm.grandparent %}
     {% if page.url contains item.url %}{% assign child = item.subtree %}{% endif %}
 {% endfor %}
@@ -133,6 +133,7 @@
     <script src="{{ site.jquery }}"></script>
     <script src="{{ site.bootstrap_js }}"></script>
     <script src="{{ site.kw_js }}"></script>
+    <script async src="{{ site.analytics }}"></script>
     <base href="{{ site.url }}">
 </head>
 

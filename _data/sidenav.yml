@@ -149,16 +149,16 @@ grandparent:
       - title: R Programming
         url: r/
 
-  - parent: /datascience/
+  - parent: /ds/
     children: 
       - title: Data Science
-        url: datascience/
+        url: ds/
       - title: Data Analysis
-        url: datascience/da/
+        url: ds/analysis/
       - title: Data Visualization
-        url: datascience/dv/
+        url: ds/visualization/
       - title: Data Science Search
-        url: datascience/search/
+        url: ds/search/
 
   - parent: /lisp/
     children: 
@@ -197,7 +197,7 @@ grandparent:
 
   - parent: /mongodb/
     children: 
-      - title: MongoDB
+      - title: MongoDB (NoSQL Database)
         url: mongodb/
       - title: MongoDB mongo Shell
         url: mongodb/shell/
@@ -265,7 +265,7 @@ grandparent:
 
   - parent: /vbscript/
     children: 
-      - title: VBScript
+      - title: Visual Basic Scripting
         url: vbscript/
       - title: VBScript Fundamentals
         url: vbscript/fundamentals/

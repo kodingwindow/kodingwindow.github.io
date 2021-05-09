@@ -524,7 +524,7 @@ a.python:hover, a.python:focus, #python > a:hover, #python > a:focus, .kwcard.py
 a.r:hover, a.r:focus, #r > a:hover, #r > a:focus, .kwcard.r, .nav-link.activetab.r
 { border-left: 5px solid #52527a; }
 
-a.datascience:hover, a.datascience:focus, #datascience > a:hover, #datascience > a:focus, .kwcard.datascience, .nav-link.activetab.datascience
+a.ds:hover, a.ds:focus, #ds > a:hover, #ds > a:focus, .kwcard.ds, .nav-link.activetab.ds
 { border-left: 5px solid #e6b800; }
 
 a.lisp:hover, a.lisp:focus, #lisp > a:hover, #lisp > a:focus, .kwcard.lisp, .nav-link.activetab.lisp
