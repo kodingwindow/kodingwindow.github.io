@@ -1,0 +1,16 @@
+grandparent: 
+  - parent: F# Fundamentals
+    subtree: Fundamentals
+    url: fsharp/fundamentals/
+    children: 
+      - title: F# Hello World program
+        url: fsharp/fundamentals/kwidegsem
+
+sidenav: 
+  - parent: F# Programming
+    url: fsharp/
+    children: 
+      - title: F# Fundamentals
+        url: fsharp/fundamentals/
+      - title: F# Search
+        url: fsharp/search/

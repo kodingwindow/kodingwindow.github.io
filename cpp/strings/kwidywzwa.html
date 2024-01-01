@@ -1,0 +1,72 @@
+---
+layout: modern
+title: C++ program to reverse a given string using stack
+---
+
+<div class="codecard">{{ page.title }}</div>
+<div class="card">{{ site.cppfile }}</div>
+<pre>{% highlight cpp %}
+#include<iostream>
+#include<cstring>
+#define SIZE 50
+using namespace std;
+
+int i,top=-1;
+char stack[SIZE];
+
+char push(char element)
+{
+    if(top==(SIZE-1))
+    {
+        cout<<"\nStack overflow";
+    }
+    else
+    {
+        stack[++top]=element;
+    }
+}
+
+char pop()
+{
+    if(top==-1)
+    {
+        cout<<"\nStack underflow";
+    }
+    else
+    {
+        return stack[top--];
+    }
+}  
+  
+int main()
+{
+    cout<<"———————————————————————————————————————————";
+    cout<<"\nProgram to reverse a given string";
+    cout<<"\n———————————————————————————————————————————";
+    char s[50];
+    cout<<"\nEnter the string ";
+    cin>>s;
+    for(i=0;i&lt;strlen(s);i++)
+    {
+        push(s[i]);   
+    }
+    for(i=0;i&lt;strlen(s);i++)
+    {
+        s[i]=pop();
+    }
+    cout<<"\nThe reverse string is "<<s;
+    cout<<"\n———————————————————————————————————————————\n";
+}
+{% endhighlight %}</pre>
+<div class="card">Output</div>
+<span><pre>
+{{ site.runcpp }}
+———————————————————————————————————————————
+Program to reverse a given string
+———————————————————————————————————————————
+Enter the string FEDORA
+
+The reverse string is ARODEF
+———————————————————————————————————————————
+kodingwindow@kw:~$ 
+</pre></span>

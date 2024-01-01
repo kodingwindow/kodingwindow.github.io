@@ -1,0 +1,47 @@
+---
+title: 404 Page Not Found
+---
+
+<!DOCTYPE html>
+<html>
+<meta http-equiv="refresh" content="9; url={{ site.url }}">
+{% include head.html %}
+
+<body>
+<div class="container d-flex flex-column min-vh-100 min-vw-100">
+    <div class="d-flex flex-grow-1 justify-content-center align-items-center">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
+            <div class="box card-header">
+                <center><h5 style="color: #b30000;"><i class="bi bi-emoji-frown"></i> 404 Page Not Found</h5></center>
+            </div>
+            <div class="box card-footer">
+                <div style="color: var(--textcolor); font-weight: normal; text-align: center;">The page you are looking for doesn't exist. We apologise for inconvenience caused. You will be auto-redirected to the Kodingwindow.</div>
+                <div style="color: var(--textcolor); font-size: 40px; font-weight: normal; text-align: center;"><span id="timer">9</span>s</div>
+                <script type="text/javascript">
+                window.onload=function()
+                {
+                    (function() 
+                    {
+                        var cnt=9;
+                        setInterval(function() 
+                        {
+                            cnt--;
+                            if(cnt>=0) 
+                            {
+                                span=document.getElementById("timer");
+                                span.innerHTML=cnt;
+                            }
+                            if(cnt===0) 
+                            {
+                                clearInterval(cnt);
+                            }
+                        },1000);
+                    })();
+                }
+                </script>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

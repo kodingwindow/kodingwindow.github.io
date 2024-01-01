@@ -1,0 +1,46 @@
+---
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+    <url><loc>{{ site.url }}</loc><priority>1.0</priority></url>
+    <url><loc>{{ site.url }}search/</loc><priority>0.9</priority></url>
+    <url><loc>{{ site.url }}dashboard/</loc><priority>0.8</priority></url>
+
+    {% for segment in site.data.kw.segments %}
+        {% if segment.url == "c/" %}{% assign sitemap = site.data.c %}
+        {% elsif segment.url == "cpp/" %}{% assign sitemap = site.data.cpp %}
+        {% elsif segment.url == "java/" %}{% assign sitemap = site.data.java %}
+        {% elsif segment.url == "csharp/" %}{% assign sitemap = site.data.csharp %}
+        {% elsif segment.url == "python/" %}{% assign sitemap = site.data.python %}
+        {% elsif segment.url == "r/" %}{% assign sitemap = site.data.r %}
+        {% elsif segment.url == "julia/" %}{% assign sitemap = site.data.julia %}
+        {% elsif segment.url == "fsharp/" %}{% assign sitemap = site.data.fsharp %}
+        {% elsif segment.url == "ds/" %}{% assign sitemap = site.data.ds %}
+        {% elsif segment.url == "octave/" %}{% assign sitemap = site.data.octave %}
+        {% elsif segment.url == "lisp/" %}{% assign sitemap = site.data.lisp %}
+        {% elsif segment.url == "linux/" %}{% assign sitemap = site.data.linux %}
+        {% elsif segment.url == "dsa/" %}{% assign sitemap = site.data.dsa %}
+        {% elsif segment.url == "mysql/" %}{% assign sitemap = site.data.mysql %}
+        {% elsif segment.url == "mongodb/" %}{% assign sitemap = site.data.mongodb %}
+        {% elsif segment.url == "cg/" %}{% assign sitemap = site.data.cg %}
+        {% elsif segment.url == "selenium/" %}{% assign sitemap = site.data.selenium %}
+        {% elsif segment.url == "rust/" %}{% assign sitemap = site.data.rust %}
+        {% elsif segment.url == "asm/" %}{% assign sitemap = site.data.asm %}
+        {% elsif segment.url == "cluster/" %}{% assign sitemap = site.data.cluster %}
+        {% elsif segment.url == "about/" %}{% assign sitemap = site.data.about %}
+        {% else %}
+        {% endif %}
+        {% for parent in sitemap.sidenav %}
+            <url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.9</priority></url>
+        {% endfor %}
+        {% for parent in sitemap.grandparent %}
+            <url><loc>{{ site.url }}{{ parent.url }}</loc><priority>0.8</priority></url>
+            {% for child in parent.children %}
+                <url><loc>{{ site.url }}{{ child.url }}</loc><priority>0.7</priority></url>
+            {% endfor %}
+        {% endfor %}
+    {% endfor %}
+    <url><loc>{{ site.url }}shubhamrdarda/</loc><priority>0.8</priority></url>
+    <url><loc>{{ site.url }}testapp/</loc><priority>0.8</priority></url>
+</urlset>

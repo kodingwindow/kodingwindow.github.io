@@ -1,0 +1,60 @@
+---
+layout: modern
+title: Selenium Java to launch the browser and navigate to a given URL
+---
+
+<div class="codecard">Selenium Java to launch the Chrome browser and navigate to a given URL</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="editorcard">{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        WebDriver driver = new ChromeDriver();     
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.close();
+        System.exit(0);
+    }   	
+}
+{% endhighlight %}</pre>
+
+<div class="codecard">Selenium Java to launch the Firefox browser and navigate to a given URL</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="editorcard">{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+    	System.setProperty("webdriver.gecko.driver", "D://Selenium//Drivers//geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.close();
+        System.exit(0);
+    }   	
+}
+{% endhighlight %}</pre>
+
+<div class="codecard">Selenium Java to launch the Microsoft Edge browser and navigate to a given URL</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="editorcard">{% highlight java %}
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+public class KW 
+{
+    public static void main(String[] args) 
+    {
+        System.setProperty("webdriver.edge.driver", "D://Selenium//Drivers//msedgedriver.exe");
+        WebDriver driver = new EdgeDriver();     
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.close();
+    }       
+}
+{% endhighlight %}</pre>

@@ -1,0 +1,69 @@
+#Welcome to Kodingwindow
+title: Kodingwindow
+url: https://kodingwindow.com/
+email: kodingwindow@outlook.com
+tagline: Let's learn and celebrate success together
+founder: Shubham Darda
+
+#Header
+kw_css: ../../assets/css/kw.css
+color_css: ../../assets/css/color.css
+kw_js: ../../assets/js/kw.js
+bootstrap_css: https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css
+bootstrap_js: https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js
+bootstrap_icons: https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css
+jquery: https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+og: https://raw.githubusercontent.com/kodingwindow/kodingwindow.github.io/master/assets/images/kodingwindow.png
+icon: ../../assets/images/icon.png
+logo: ../../assets/images/kodingwindow.png
+advertise: ../../assets/images/advertise.png
+analytics: https://www.googletagmanager.com/gtag/js?id=G-4TDKQLW7N7
+android_app: https://bit.ly/kwindow
+
+#Filename
+highlighter: rouge
+cfile: "File: kw.c"
+cppfile: "File: kw.cpp"
+javafile: "File: KW.java"
+csfile: "File: Program.cs"
+pyfile: "File: kw.py"
+rfile: "File: kw.r"
+juliafile: "File: kw.jl"
+fsfile: "File: Program.fs"
+lispfile: "File: kw.lisp"
+shfile: "File: kw.sh"
+rustfile: "File: kw.rs"
+asmfile: "File: kw.asm"
+vbsfile: "File: kw.vbs"
+csvfile: "File: kw.csv"
+jsonfile: "File: kw.json"
+excelfile: "File: kw.xlsx"
+
+#Execution
+runc: "kodingwindow@kw:~$ <mark>gcc kw.c</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
+runcpp: "kodingwindow@kw:~$ <mark>g++ kw.cpp</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
+runjava: "kodingwindow@kw:~$ <mark>javac KW.java</mark><br>kodingwindow@kw:~$ <mark>java KW</mark>"
+runcs: "kodingwindow@kw:~/csharp$ <mark>dotnet run</mark>"
+runpy: "kodingwindow@kw:~$ <mark>python3 kw.py</mark>"
+runjulia: "kodingwindow@kw:~$ <mark>julia kw.jl</mark>"
+runfs: "kodingwindow@kw:~/fsharp$ <mark>dotnet run</mark>"
+runlisp: "kodingwindow@kw:~$ <mark>clisp kw.lisp</mark>"
+runsh: "kodingwindow@kw:~$ <mark>bash kw.sh</mark>"
+runcg: "kodingwindow@kw:~$ <mark>g++ kw.cpp -lgraph</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
+runrust: "kodingwindow@kw:~$ <mark>rustc kw.rs</mark><br>kodingwindow@kw:~$ <mark>./kw</mark>"
+runasm: "kodingwindow@kw:~$ <mark>nasm -felf64 kw.asm</mark><br>kodingwindow@kw:~$ <mark>ld kw.o && ./a.out</mark>"
+output: "Output:"
+
+#Exclude from processing
+exclude:
+   - Gemfile
+   - Gemfile.lock
+   - node_modules
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+   - .jekyll-cache
+   - _site
+   - LICENSE
+   - README.md

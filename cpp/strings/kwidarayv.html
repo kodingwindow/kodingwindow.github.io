@@ -1,0 +1,44 @@
+---
+layout: modern
+title: C++ program to reverse a given string using recursion
+---
+
+<div class="codecard">{{ page.title }}</div>
+<div class="card">{{ site.cppfile }}</div>
+<pre>{% highlight cpp %}
+#include<iostream>
+using namespace std;
+void reverse(string &s,int l,int h)
+{
+    if(l&lt;h)
+    {
+        swap(s[l],s[h]);
+        reverse(s,l+1,h-1);
+    }
+}
+
+int main()
+{
+    cout<<"———————————————————————————————————————————";
+    cout<<"\nProgram to reverse a given string";
+    cout<<"\n———————————————————————————————————————————";
+    string s;
+    cout<<"\nEnter the string ";
+    cin>>s;
+    reverse(s,0,s.length()-1);
+    cout<<"\nThe reverse string is "<<s;
+    cout<<"\n———————————————————————————————————————————\n";
+}
+{% endhighlight %}</pre>
+<div class="card">Output</div>
+<span><pre>
+{{ site.runcpp }}
+———————————————————————————————————————————
+Program to reverse a given string
+———————————————————————————————————————————
+Enter the string UBUNTU
+
+The reverse string is UTNUBU
+———————————————————————————————————————————
+kodingwindow@kw:~$ 
+</pre></span>

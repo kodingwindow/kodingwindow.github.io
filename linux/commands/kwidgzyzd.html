@@ -1,0 +1,214 @@
+---
+layout: modern
+title: Linux commands to display the system hardware information
+---
+
+<div class="titlecard">{{ page.title }}</div>
+<div class="terminalcard">lscpu command</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>lscpu</mark>
+Architecture:                    x86_64
+CPU op-mode(s):                  32-bit, 64-bit
+Byte Order:                      Little Endian
+Address sizes:                   39 bits physical, 48 bits virtual
+CPU(s):                          4
+On-line CPU(s) list:             0-3
+Thread(s) per core:              2
+Core(s) per socket:              2
+Socket(s):                       1
+NUMA node(s):                    1
+Vendor ID:                       GenuineIntel
+CPU family:                      6
+Model:                           142
+Model name:                      Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+Stepping:                        9
+CPU MHz:                         600.161
+CPU max MHz:                     3100.0000
+CPU min MHz:                     400.0000
+BogoMIPS:                        5399.81
+Virtualization:                  VT-x
+L1d cache:                       64 KiB
+L1i cache:                       64 KiB
+L2 cache:                        512 KiB
+L3 cache:                        3 MiB
+NUMA node0 CPU(s):               0-3
+Vulnerability Itlb multihit:     KVM: Vulnerable
+Vulnerability L1tf:              Mitigation; PTE Inversion
+Vulnerability Mds:               Mitigation; Clear CPU buffers; SMT vulnerable
+Vulnerability Meltdown:          Mitigation; PTI
+Vulnerability Spec store bypass: Mitigation; Speculative Store Bypass disabled v
+                                 ia prctl and seccomp
+Vulnerability Spectre v1:        Mitigation; usercopy/swapgs barriers and __user
+                                  pointer sanitization
+Vulnerability Spectre v2:        Mitigation; Full generic retpoline, IBPB condit
+                                 ional, IBRS_FW, STIBP conditional, RSB filling
+Vulnerability Tsx async abort:   Not affected
+Flags:                           fpu vme de pse tsc msr pae mce cx8 apic sep mtr
+                                 r pge mca cmov pat pse36 clflush dts acpi mmx f
+                                 xsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rd
+                                 tscp lm constant_tsc art arch_perfmon pebs bts 
+                                 rep_good nopl xtopology nonstop_tsc cpuid aperf
+                                 mperf pni pclmulqdq dtes64 monitor ds_cpl vmx e
+                                 st tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_
+                                 1 sse4_2 x2apic movbe popcnt tsc_deadline_timer
+                                  aes xsave avx f16c rdrand lahf_lm abm 3dnowpre
+                                 fetch cpuid_fault invpcid_single pti ssbd ibrs 
+                                 ibpb stibp tpr_shadow vnmi flexpriority ept vpi
+                                 d ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi
+                                 2 erms invpcid mpx rdseed adx smap clflushopt i
+                                 ntel_pt xsaveopt xsavec xgetbv1 xsaves dtherm i
+                                 da arat pln pts hwp hwp_notify hwp_act_window h
+                                 wp_epp md_clear flush_l1d
+</pre></span>
+
+<div class="terminalcard">lshw command</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>lshw</mark>
+WARNING: you should run this program as super-user.
+kw                          
+    description: Computer
+    width: 64 bits
+    capabilities: smp vsyscall32
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-memory
+          description: System memory
+          physical id: 0
+          size: 8064MiB
+     *-cpu
+          product: Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+          vendor: Intel Corp.
+          physical id: 1
+          bus info: cpu@0
+          size: 798MHz
+          capacity: 3100MHz
+          width: 64 bits
+...
+</pre></span>
+
+<div class="terminalcard">lspci command</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>lspci</mark>
+00:00.0 Host bridge: Intel Corporation Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers (rev 02)
+00:02.0 VGA compatible controller: Intel Corporation HD Graphics 620 (rev 02)
+00:14.0 USB controller: Intel Corporation Sunrise Point-LP USB 3.0 xHCI Controller (rev 21)
+00:14.2 Signal processing controller: Intel Corporation Sunrise Point-LP Thermal subsystem (rev 21)
+00:15.0 Signal processing controller: Intel Corporation Sunrise Point-LP Serial IO I2C Controller #0 (rev 21)
+00:16.0 Communication controller: Intel Corporation Sunrise Point-LP CSME HECI #1 (rev 21)
+00:17.0 SATA controller: Intel Corporation Sunrise Point-LP SATA Controller [AHCI mode] (rev 21)
+00:1c.0 PCI bridge: Intel Corporation Sunrise Point-LP PCI Express Root Port #1 (rev f1)
+00:1c.4 PCI bridge: Intel Corporation Sunrise Point-LP PCI Express Root Port #5 (rev f1)
+00:1c.5 PCI bridge: Intel Corporation Sunrise Point-LP PCI Express Root Port #6 (rev f1)
+00:1f.0 ISA bridge: Intel Corporation Sunrise Point LPC Controller/eSPI Controller (rev 21)
+00:1f.2 Memory controller: Intel Corporation Sunrise Point-LP PMC (rev 21)
+00:1f.3 Audio device: Intel Corporation Sunrise Point-LP HD Audio (rev 21)
+00:1f.4 SMBus: Intel Corporation Sunrise Point-LP SMBus (rev 21)
+01:00.0 3D controller: NVIDIA Corporation GM108M [GeForce 940MX] (rev a2)
+02:00.0 Ethernet controller: Realtek Semiconductor Co., Ltd. RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller (rev 10)
+03:00.0 Network controller: Qualcomm Atheros QCA9377 802.11ac Wireless Network Adapter (rev 31)
+</pre></span>
+
+<div class="terminalcard">Hardware information using cat command</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>cat /proc/interrupts | head -10</mark>
+            CPU0       CPU1       CPU2       CPU3       
+   0:          9          0          0          0  IR-IO-APIC    2-edge      timer
+   1:          0          0          0       2005  IR-IO-APIC    1-edge      i8042
+   8:          0          1          0          0  IR-IO-APIC    8-edge      rtc0
+   9:          0         53          0          0  IR-IO-APIC    9-fasteoi   acpi
+  14:          0          0          0          0  IR-IO-APIC   14-fasteoi   INT344B:00
+  16:    1337921          0          0          0  IR-IO-APIC   16-fasteoi   idma64.0, i2c_designware.0, i801_smbus
+  87:          0      39618          0          0  IR-IO-APIC   87-fasteoi   ELAN0608:00
+ 120:          0          0          0          0  DMAR-MSI    0-edge      dmar0
+ 121:          0          0          0          0  DMAR-MSI    1-edge      dmar1
+<hr>kodingwindow@kw:~$ <mark>cat /proc/cpuinfo | head -10</mark>
+processor   : 0
+vendor_id   : GenuineIntel
+cpu family  : 6
+model       : 142
+model name  : Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz
+stepping    : 9
+microcode   : 0xca
+cpu MHz     : 700.023
+cache size  : 3072 KB
+physical id : 0
+<hr>kodingwindow@kw:~$ <mark>cat /proc/meminfo | head -10</mark>
+MemTotal:        7930648 kB
+MemFree:         3696824 kB
+MemAvailable:    5611016 kB
+Buffers:           57580 kB
+Cached:          2152028 kB
+SwapCached:            0 kB
+Active:          2433184 kB
+Inactive:        1181580 kB
+Active(anon):    1544980 kB
+Inactive(anon):    50340 kB
+<hr>kodingwindow@kw:~$ <mark>cat /proc/zoneinfo | head -10</mark>
+Node 0, zone      DMA
+  per-node stats
+      nr_inactive_anon 12586
+      nr_active_anon 386423
+      nr_inactive_file 282810
+      nr_active_file 222057
+      nr_unevictable 35928
+      nr_slab_reclaimable 51241
+      nr_slab_unreclaimable 34136
+      nr_isolated_anon 0
+</pre></span>
+
+<div class="terminalcard">Commands to display memory information</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>free</mark>
+              total        used        free      shared  buff/cache   available
+Mem:        7930648     1818848     3695444      197068     2416356     5609800
+Swap:       3906556           0     3906556
+
+kodingwindow@kw:~$ <mark>vmstat</mark>
+procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----
+ r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st
+ 0  0      0 3695688  57760 2358732    0    0   242   206  428  670  5  3 81 10  0
+
+kodingwindow@kw:~$ <mark>df</mark>
+Filesystem     1K-blocks     Used Available Use% Mounted on
+udev             3937196        0   3937196   0% /dev
+tmpfs             793068     1948    791120   1% /run
+/dev/sda9       85986408 25256256  56319224  31% /
+tmpfs            3965324    37068   3928256   1% /dev/shm
+tmpfs               5120        4      5116   1% /run/lock
+tmpfs            3965324        0   3965324   0% /sys/fs/cgroup
+/dev/loop0        230656   230656         0 100% /snap/atom/252
+/dev/loop2         96256    96256         0 100% /snap/core/9066
+/dev/loop1        235776   235776         0 100% /snap/atom/250
+/dev/loop3         91264    91264         0 100% /snap/core/7713
+/dev/loop4         55808    55808         0 100% /snap/core18/1144
+/dev/loop6        144128   144128         0 100% /snap/gnome-3-26-1604/100
+/dev/loop5         56320    56320         0 100% /snap/core18/1754
+/dev/loop7        144128   144128         0 100% /snap/gnome-3-26-1604/98
+/dev/loop8        164096   164096         0 100% /snap/gnome-3-28-1804/116
+/dev/loop9        153600   153600         0 100% /snap/gnome-3-28-1804/71
+/dev/loop10       261760   261760         0 100% /snap/gnome-3-34-1804/33
+/dev/loop12         2304     2304         0 100% /snap/gnome-system-monitor/145
+/dev/loop11         3840     3840         0 100% /snap/gnome-system-monitor/100
+/dev/loop13        43904    43904         0 100% /snap/gtk-common-themes/1313
+/dev/loop14        63616    63616         0 100% /snap/gtk-common-themes/1506
+/dev/loop15       282112   282112         0 100% /snap/octave/29
+/dev/loop16       285184   285184         0 100% /snap/octave/30
+/dev/loop17       348032   348032         0 100% /snap/pycharm-community/194
+/dev/loop18       304256   304256         0 100% /snap/pycharm-community/132
+/dev/loop19        69248    69248         0 100% /snap/sublime-text/85
+/dev/loop21        51072    51072         0 100% /snap/snap-store/454
+/dev/loop20       178432   178432         0 100% /snap/skype/128
+/dev/sda2          98304    42510     55794  44% /boot/efi
+/dev/sda11      92831368   293476  87779264   1% /home
+tmpfs             793064       48    793016   1% /run/user/1000
+/dev/sda6      210739196  7004048 203735148   4% /media/kodingwindow/Kodingwindow
+<hr>kodingwindow@kw:~$ <mark>lsusb</mark>
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 003: ID 0bda:58ea Realtek Semiconductor Corp. EasyCamera
+Bus 001 Device 002: ID 0cf3:e500 Qualcomm Atheros Communications 
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+<hr>kodingwindow@kw:~$ <mark>id</mark>
+uid=1000(kodingwindow) gid=1000(kodingwindow) groups=1000(kodingwindow),
+4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),116(lpadmin),126(sambashare)
+</pre></span>

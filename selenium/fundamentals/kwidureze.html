@@ -1,0 +1,39 @@
+---
+layout: modern
+title: Selenium Python to launch the browser and navigate to a given URL
+---
+
+<div class="codecard">Selenium Python to launch the Firefox browser and navigate to a given URL</div>
+<div class="card">{{ site.pyfile }}</div>
+<pre class="editorcard">
+{% highlight python %}
+from selenium import webdriver
+
+driver = webdriver.Firefox(executable_path='D:\Selenium\Drivers\geckodriver.exe')
+driver.maximize_window()
+driver.get("https://kodingwindow.com/testapp/")
+{% endhighlight %}</pre>
+
+<div class="codecard">Selenium Python to launch the Chrome browser and navigate to a given URL</div>
+<div class="card">{{ site.pyfile }}</div>
+<pre class="editorcard">
+{% highlight python %}
+from selenium import webdriver
+
+driver = webdriver.Chrome(executable_path='D:\Selenium\Drivers\chromedriver.exe')
+driver.maximize_window()
+driver.get("https://kodingwindow.com/testapp/")
+driver.close()
+{% endhighlight %}</pre>
+
+<div class="codecard">Selenium Python to launch the IE browser and navigate to a given URL</div>
+<div class="card">{{ site.pyfile }}</div>
+<pre class="editorcard">
+{% highlight python %}
+from selenium import webdriver
+
+driver = webdriver.Ie(executable_path='D:\Selenium\Drivers\IEDriverServer.exe')
+driver.maximize_window()
+driver.get("https://kodingwindow.com/testapp/")
+driver.close()
+{% endhighlight %}</pre>

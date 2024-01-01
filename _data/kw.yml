@@ -1,0 +1,63 @@
+segments:
+  - title: C Programming
+    url: c/
+
+  - title: C++ Programming
+    url: cpp/
+
+  - title: Java Programming
+    url: java/
+
+  - title: C# Programming
+    url: csharp/
+
+  - title: Python Programming
+    url: python/
+
+  - title: R Programming
+    url: r/
+
+  - title: Julia Programming
+    url: julia/
+
+  - title: F# Programming
+    url: fsharp/
+
+  - title: Data Science
+    url: ds/
+
+  - title: GNU Octave
+    url: octave/
+
+  - title: LISP Programming
+    url: lisp/
+
+  - title: Linux Commands and Scripting
+    url: linux/
+
+  - title: Data Structures and Algorithms
+    url: dsa/
+
+  - title: MySQL (Relational Database)
+    url: mysql/
+    
+  - title: MongoDB (NoSQL Database)
+    url: mongodb/
+
+  - title: Computer Graphics
+    url: cg/
+
+  - title: Selenium WebDriver
+    url: selenium/
+
+  - title: Rust Programming
+    url: rust/
+    
+  - title: Assembly Programming
+    url: asm/
+
+  - title: Cluster
+    url: cluster/
+
+  - title: About Us
+    url: about/
