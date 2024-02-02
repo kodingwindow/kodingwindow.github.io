@@ -8,7 +8,7 @@ function touchstart(evt) { const firstTouch = (evt.touches || evt.originalEvent.
 function touchmove(evt) { if (!xDown || !yDown) return; xUp = evt.touches[0].clientX; yUp = evt.touches[0].clientY; }
 function touchend() {
     var xDiff = xUp - xDown, yDiff = yUp - yDown;
-    if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 0.45 * document.body.clientWidth)) {
+    if ((Math.abs(xDiff) > Math.abs(yDiff)) && (Math.abs(xDiff) > 0.5 * document.body.clientWidth)) {
         if (xDiff > 0) {
             $('.leftsidebar-collapse').toggleClass('open')
         }

@@ -24,9 +24,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         webview = findViewById(R.id.webView)
+        webview.settings.safeBrowsingEnabled = true
         webview.settings.useWideViewPort = false
         webview.settings.displayZoomControls = false
         webview.settings.builtInZoomControls = false
+        webview.settings.allowFileAccess = false
+        webview.settings.allowContentAccess = false
         webview.settings.setSupportZoom(false)
         webview.settings.textZoom = 100
         webview.settings.cacheMode = WebSettings.LOAD_DEFAULT
