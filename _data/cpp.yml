@@ -23,6 +23,8 @@ grandparent:
         url: cpp/fundamentals/kwidbodwv
       - title: C++ program to find the range of data types
         url: cpp/fundamentals/kwidqvvzg
+      - title: Find the output of C++ programs
+        url: cpp/fundamentals/kwidfclfh
 
   - parent: C++ Control Statements
     subtree: Controls

@@ -6,16 +6,17 @@ title: C++ program to demonstrate the use of break and continue statements
 <div class="codecard">C++ program to demonstrate the use of break statement</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
+#include <iostream>
 using namespace std;
 int main()
 {
-    for(int i=0;i<10;i++)
+    for (int i = 0; i < 10; i++)
     {
-        if(i==5)
+        if (i == 5)
         {
             break;
         }
-        cout<<i<<endl;    
+        cout<<i<<endl;
     }
     return 0;
 }
@@ -34,17 +35,17 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to demonstrate the use of continue statement</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    for(int i=0;i<10;i++)
+    for (int i = 0; i < 10; i++)
     {
-        if(i==5)
+        if (i == 5)
         {
             continue;
         }
-        cout<<i<<endl;    
+        cout<<i<<endl;
     }
     return 0;
 }

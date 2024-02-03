@@ -21,21 +21,21 @@ Step 9: End
 
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
+#include <stdio.h>
 #define PI 3.14
 int main()
 {
-    float R,A,C;
+    float R, A, C;
     printf("———————————————————————————————————————————");
     printf("\nProgram to calculate the area and circumference of a circle");
     printf("\n———————————————————————————————————————————");
     printf("\nEnter the radius of a circle ");
-    scanf("%f",&R);
-    A=PI*R*R;
-    printf("\nThe area of a circle is %f ",A);
-    
-    C=2*PI*R;
-    printf("\n\nThe circumference of a circle is %f ",C);
+    scanf("%f", &R);
+    A = PI * R * R;
+    printf("\nThe area of a circle is %f ", A);
+
+    C = 2 * PI * R;
+    printf("\n\nThe circumference of a circle is %f ", C);
     printf("\n———————————————————————————————————————————\n");
     return 0;
 }

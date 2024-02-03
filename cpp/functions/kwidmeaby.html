@@ -6,30 +6,32 @@ title: C++ program to add the members of two different classes using the friend 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 class WhiteBank;
 class BlackBank
 {
-    private:
-        int total_money_bb;
-    public:
-        BlackBank():total_money_bb(200) { }
-        friend int total_amount(WhiteBank, BlackBank);
+private:
+    int total_money_bb;
+
+public:
+    BlackBank() : total_money_bb(200) {}
+    friend int total_amount(WhiteBank, BlackBank);
 };
 
 class WhiteBank
 {
-    private:
-        int total_money_wb;
-    public:
-        WhiteBank():total_money_wb(200) { }
-        friend int total_amount(WhiteBank, BlackBank);
+private:
+    int total_money_wb;
+
+public:
+    WhiteBank() : total_money_wb(200) {}
+    friend int total_amount(WhiteBank, BlackBank);
 };
 
 int total_amount(WhiteBank wb, BlackBank bb)
 {
-    return(wb.total_money_wb + bb.total_money_bb);
+    return (wb.total_money_wb + bb.total_money_bb);
 }
 
 int main()

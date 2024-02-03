@@ -6,20 +6,21 @@ title: C++ program to print the addition of numbers using constructor
 <div class="codecard">C++ program to print the addition of numbers using default constructor</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 class kw
 {
-    int a,b;
-    public:
+    int a, b;
+
+public:
     void add()
     {
-        cout<<"The addition of "<<a<<"+"<<b<<"="<<(a+b)<<"\n";
+        cout<<"The addition of "<<a<<"+"<<b<<"="<<(a + b)<<"\n";
     }
     kw()
     {
-        a=10;
-        b=10;
+        a = 10;
+        b = 10;
     }
 };
 int main()
@@ -39,29 +40,30 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the addition of numbers using parameterized constructor</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 class kw
 {
-    float a,b;
-    public:
+    float a, b;
+
+public:
     void add()
     {
-        cout<<"The addition of "<<a<<"+"<<b<<"="<<(a+b)<<"\n";
+        cout<<"The addition of "<<a<<"+"<<b<<"="<<(a + b)<<"\n";
     }
     kw()
     {
-        a=10,b=10;
+        a = 10, b = 10;
     }
-    kw(int x,float y)
+    kw(int x, float y)
     {
-        a=x;
-        b=y;
+        a = x;
+        b = y;
     }
 };
 int main()
 {
-    kw k,d(10,10.02351);
+    kw k, d(10, 10.02351);
     k.add();
     d.add();
     return 0;

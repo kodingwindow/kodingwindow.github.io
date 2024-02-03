@@ -6,14 +6,14 @@ title: C++ program to reverse a given string using recursion
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
-void reverse(string &s,int l,int h)
+void reverse(string &s, int l, int h)
 {
-    if(l&lt;h)
+    if (l < h)
     {
-        swap(s[l],s[h]);
-        reverse(s,l+1,h-1);
+        swap(s[l], s[h]);
+        reverse(s, l + 1, h - 1);
     }
 }
 
@@ -25,7 +25,7 @@ int main()
     string s;
     cout<<"\nEnter the string ";
     cin>>s;
-    reverse(s,0,s.length()-1);
+    reverse(s, 0, s.length() - 1);
     cout<<"\nThe reverse string is "<<s;
     cout<<"\n———————————————————————————————————————————\n";
 }
@@ -36,9 +36,9 @@ int main()
 ———————————————————————————————————————————
 Program to reverse a given string
 ———————————————————————————————————————————
-Enter the string UBUNTU
+Enter the string Kodingwindow
 
-The reverse string is UTNUBU
+The reverse string is wodniwgnidoK
 ———————————————————————————————————————————
 kodingwindow@kw:~$ 
 </pre></span>

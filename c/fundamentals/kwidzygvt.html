@@ -22,29 +22,29 @@ Step 6: End
 
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    float a,b,c;
+    float a, b, c;
     printf("———————————————————————————————————————————");
     printf("\nProgram to perform arithmetic operations");
     printf("\n———————————————————————————————————————————");
     printf("\nEnter the 1st number ");
-    scanf("%f",&a);
+    scanf("%f", &a);
     printf("\nEnter the 2nd number ");
-    scanf("%f",&b);
+    scanf("%f", &b);
     printf("———————————————————————————");
-    c=a+b;
-    printf("\n      Addition | %f",c);
-    c=a-b;
-    printf("\n   Subtraction | %f",c);
-    c=a*b;
-    printf("\nMultiplication | %f",c);
-    c=a/b;
-    printf("\n      Division | %f",c);
+    c = a + b;
+    printf("\n      Addition | %f", c);
+    c = a - b;
+    printf("\n   Subtraction | %f", c);
+    c = a * b;
+    printf("\nMultiplication | %f", c);
+    c = a / b;
+    printf("\n      Division | %f", c);
     printf("\n———————————————————————————\n");
-    c=(a+b)/2;
-    printf("\nAverage of two numbers is %f",c);
+    c = (a + b) / 2;
+    printf("\nAverage of two numbers is %f", c);
     printf("\n———————————————————————————————————————————\n");
     return 0;
 }

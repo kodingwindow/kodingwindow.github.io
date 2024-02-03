@@ -6,19 +6,19 @@ title: C++ program to print the addition of N numbers
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int n,sum;
+    int n, sum;
     cout<<"———————————————————————————————————————————";
     cout<<"\nProgram to print the addition of N numbers";
     cout<<"\n———————————————————————————————————————————";
     cout<<"\nEnter the number ";
     cin>>n;
-    if(n>=0)
+    if (n >= 0)
     {
-        sum=(n*(n+1)/2);
+        sum = (n * (n + 1) / 2);
         cout<<"\nThe sum of first "<<n<<" natural numbers is = "<<sum;
     }
     else

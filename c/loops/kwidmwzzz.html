@@ -6,24 +6,24 @@ title: C program to convert a binary number to an equivalent decimal number
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
     long n;
-    int r,dn=0,i=1;
+    int r, dn = 0, i = 1;
     printf("———————————————————————————————————————————");
     printf("\nProgram to convert a binary number to decimal");
     printf("\n———————————————————————————————————————————");
     printf("\nEnter the binary number ");
-    scanf("%ld",&n);
-    while(n!=0)
+    scanf("%ld", &n);
+    while (n != 0)
     {
-        r=n%10;
-        dn=dn+r*i;
-        i=i*2;
-        n=n/10;
+        r = n % 10;
+        dn = dn + r * i;
+        i = i * 2;
+        n = n / 10;
     }
-    printf("\nEquivalent decimal number is %d",dn);
+    printf("\nEquivalent decimal number is %d", dn);
     printf("\n———————————————————————————————————————————\n");
     return 0;
 }

@@ -6,20 +6,20 @@ title: C program to concatenate the given strings
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 int main()
 {
-    char a[20],b[20];
+    char a[20], b[20];
     printf("———————————————————————————————————————————");
     printf("\nProgram to concatenate the two strings");
     printf("\n———————————————————————————————————————————");
     printf("\nEnter the 1st string ");
-    scanf("%s",a);
+    scanf("%s", a);
     printf("\nEnter the 2nd string ");
-    scanf("%s",b);
-    strcat(a,b);
-    printf("\nThe concatenated string is %s",a);
+    scanf("%s", b);
+    strcat(a, b);
+    printf("\nThe concatenated string is %s", a);
     printf("\n———————————————————————————————————————————\n");
     return 0;
 }

@@ -1,33 +1,35 @@
 ---
 layout: modern
-title: C program to check the equality of given numbers
+title: C program to check whether a given string is a palindrome
 ---
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
 #include <stdio.h>
+#include <string.h>
 int main()
 {
-    float a, b;
+    char s[50], reverse[50], temp;
     printf("———————————————————————————————————————————");
-    printf("\nProgram to check the equality of given numbers");
+    printf("\nProgram to check if a string is palindrome");
     printf("\n———————————————————————————————————————————");
-    printf("\nEnter the 1st number ");
-    scanf("%f", &a);
-    printf("\nEnter the 2nd number ");
-    scanf("%f", &b);
-    if (a < b)
+    printf("\nEnter the string ");
+    scanf("%s", s);
+    strcpy(reverse, s);
+    for (int i = 0, j = strlen(s) - 1; i < j; i++, j--)
     {
-        printf("\n%f is less than %f", a, b);
+        temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
     }
-    else if (a == b)
+    if (strcmp(s, reverse) == 0)
     {
-        printf("\n%f is equal to %f", a, b);
+        printf("String is palindrome");
     }
     else
     {
-        printf("\n%f is greater than %f", a, b);
+        printf("String is not palindrome");
     }
     printf("\n———————————————————————————————————————————\n");
     return 0;
@@ -37,24 +39,10 @@ int main()
 <span><pre>
 {{ site.runc }}
 ———————————————————————————————————————————
-Program to check the equality of given numbers
+Program to check if a string is palindrome
 ———————————————————————————————————————————
-Enter the 1st number -10
-
-Enter the 2nd number -50
-
--10.000000 is greater than -50.000000
-———————————————————————————————————————————
-
-kodingwindow@kw:~$ <mark>./a.out</mark>
-———————————————————————————————————————————
-Program to check the equality of given numbers
-———————————————————————————————————————————
-Enter the 1st number 10
-
-Enter the 2nd number 50
-
-10.000000 is less than 50.000000
+Enter the string MOM
+String is palindrome
 ———————————————————————————————————————————
 kodingwindow@kw:~$ 
 </pre></span>

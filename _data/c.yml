@@ -80,6 +80,10 @@ grandparent:
         url: c/strings/kwidvfzwd
       - title: C program to convert uppercase to a lowercase string
         url: c/strings/kwidopzze
+      - title: C program to reverse a given string
+        url: c/strings/kwidnsdqd
+      - title: C program to check whether a given string is a palindrome
+        url: c/strings/kwidnrzbz
 
   - parent: C Arrays
     subtree: Arrays

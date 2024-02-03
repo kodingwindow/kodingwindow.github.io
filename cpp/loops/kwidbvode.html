@@ -6,14 +6,14 @@ title: C++ program to print the star pyramid patterns
 <div class="codecard">C++ program to print the star right half pyramid pattern</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j;
-    for(i=1;i<=10;i++)
+    int i, j;
+    for (i = 1; i <= 10; i++)
     {
-        for(j=1;j<=i;j++)
+        for (j = 1; j <= i; j++)
         {
             cout<<"*";
         }
@@ -41,20 +41,20 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the star left half pyramid pattern</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j;
-    for(i=1;i<=10;i++)
+    int i, j;
+    for (i = 1; i <= 10; i++)
     {
-        for(j=1;j<=10-i;j++)
+        for (j = 1; j <= 10 - i; j++)
             cout<<" ";
-            for(j=1;j<=i;j++)
-            {
-                cout<<"*";
-            }
-            cout<<"\n";
+        for (j = 1; j <= i; j++)
+        {
+            cout<<"*";
+        }
+        cout<<"\n";
     }
     return 0;
 }
@@ -78,14 +78,14 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the star inverted right half pyramid pattern</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j;
-    for(i=10;i>=1;i--)
+    int i, j;
+    for (i = 10; i >= 1; i--)
     {
-        for(j=1;j<=i;j++)
+        for (j = 1; j <= i; j++)
         {
             cout<<"*";
         }
@@ -113,16 +113,16 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the star inverted left half pyramid pattern</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j;
-    for(i=10;i>=1;i--)
+    int i, j;
+    for (i = 10; i >= 1; i--)
     {
-    for(j=1;j<=10-i;j++)
-        cout<<" ";
-        for(j=1;j<=i;j++)
+        for (j = 1; j <= 10 - i; j++)
+            cout<<" ";
+        for (j = 1; j <= i; j++)
         {
             cout<<"*";
         }
@@ -150,21 +150,21 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the star half pyramid pattern</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j;
-    for(i=1;i<=10;i++)
+    int i, j;
+    for (i = 1; i <= 10; i++)
     {
-        for(j=1;j<=10-i;j++)
-        cout<<" ";
-        for(j=1;j<=i;j++)
+        for (j = 1; j <= 10 - i; j++)
+            cout<<" ";
+        for (j = 1; j <= i; j++)
         {
             cout<<"*"<<" ";
         }
         cout<<"\n";
-    }   
+    }
     return 0;
 }
 {% endhighlight %}</pre>
@@ -187,30 +187,30 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the star diamond pattern</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j;
-    for(i=1;i<=7;i++)
+    int i, j;
+    for (i = 1; i <= 7; i++)
     {
-        for(j=1;j<=7-i;j++)
+        for (j = 1; j <= 7 - i; j++)
             cout<<" ";
-            for(j=1;j<=i;j++)
-            {
-                cout<<"*"<<" "; 
-            }
-            cout<<"\n";
+        for (j = 1; j <= i; j++)
+        {
+            cout<<"*"<<" ";
+        }
+        cout<<"\n";
     }
-    for(i=6;i>=1;i--)
+    for (i = 6; i >= 1; i--)
     {
-        for(j=1;j<=6-i;j++)
+        for (j = 1; j <= 6 - i; j++)
             cout<<" ";
-            for(j=1;j<=i;j++)
-            {
-                cout<<" "<<"*"; 
-            }
-            cout<<"\n";
+        for (j = 1; j <= i; j++)
+        {
+            cout<<" "<<"*";
+        }
+        cout<<"\n";
     }
     return 0;
 }
@@ -237,14 +237,14 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the star pyramid pattern using alphabets</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j,k=65;
-    for(i=65;i<=70;i++)
+    int i, j, k = 65;
+    for (i = 65; i <= 70; i++)
     {
-        for(j=65;j<=i;j++,k++)
+        for (j = 65; j <= i; j++, k++)
         {
             cout<<char(k);
         }
@@ -268,14 +268,14 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the star pyramid pattern using natural numbers</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j,k=1;
-    for(i=1;i<=10;i++)
+    int i, j, k = 1;
+    for (i = 1; i <= 10; i++)
     {
-        for(j=1;j<=i;j++,k++)
+        for (j = 1; j <= i; j++, k++)
         {
             cout<<k<<" ";
         }
@@ -303,22 +303,22 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to print the star pyramid pattern using binary numbers</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
-    int i,j,k=1;
-    for(i=1;i<=10;i++)
+    int i, j, k = 1;
+    for (i = 1; i <= 10; i++)
     {
-        for(j=1;j<=i;j++,k++)
+        for (j = 1; j <= i; j++, k++)
         {
-            if(k%2==0)
+            if (k % 2 == 0)
             {
-                k=0;
+                k = 0;
             }
             else
             {
-                k=1;
+                k = 1;
             }
             cout<<k<<" ";
         }

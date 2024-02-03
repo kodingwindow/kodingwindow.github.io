@@ -6,13 +6,13 @@ title: C program to print the star pyramid patterns
 <div class="codecard">C program to print the right half star pyramid pattern</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int i,j;
-    for(i=1;i<=10;i++)
+    int i, j;
+    for (i = 1; i <= 10; i++)
     {
-        for(j=1;j<=i;j++)
+        for (j = 1; j <= i; j++)
         {
             printf("*");
         }
@@ -39,19 +39,19 @@ kodingwindow@kw:~$
 <div class="codecard">C program to print the left half star pyramid pattern</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int i,j;
-    for(i=1;i<=10;i++)
+    int i, j;
+    for (i = 1; i <= 10; i++)
     {
-        for(j=1;j<=10-i;j++)
+        for (j = 1; j <= 10 - i; j++)
             printf(" ");
-            for(j=1;j<=i;j++)
-            {
-                printf("*");
-            }
-            printf("\n");
+        for (j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
     }
     return 0;
 }
@@ -75,13 +75,13 @@ kodingwindow@kw:~$
 <div class="codecard">C program to print the inverted right half star pyramid pattern</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int i,j;
-    for(i=10;i>=1;i--)
+    int i, j;
+    for (i = 10; i >= 1; i--)
     {
-        for(j=1;j<=i;j++)
+        for (j = 1; j <= i; j++)
         {
             printf("*");
         }
@@ -109,19 +109,19 @@ kodingwindow@kw:~$
 <div class="codecard">C program to print the inverted left half star pyramid pattern</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int i,j;
-    for(i=10;i>=1;i--)
+    int i, j;
+    for (i = 10; i >= 1; i--)
     {
-        for(j=1;j<=10-i;j++)
+        for (j = 1; j <= 10 - i; j++)
             printf(" ");
-            for(j=1;j<=i;j++)
-            {
-                printf("*");
-            }
-            printf("\n");
+        for (j = 1; j <= i; j++)
+        {
+            printf("*");
+        }
+        printf("\n");
     }
     return 0;
 }

@@ -6,29 +6,29 @@ title: C++ program to reverse a given string using stack
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 #define SIZE 50
 using namespace std;
 
-int i,top=-1;
+int i, top = -1;
 char stack[SIZE];
 
 char push(char element)
 {
-    if(top==(SIZE-1))
+    if (top == (SIZE - 1))
     {
         cout<<"\nStack overflow";
     }
     else
     {
-        stack[++top]=element;
+        stack[++top] = element;
     }
 }
 
 char pop()
 {
-    if(top==-1)
+    if (top == -1)
     {
         cout<<"\nStack underflow";
     }
@@ -36,8 +36,8 @@ char pop()
     {
         return stack[top--];
     }
-}  
-  
+}
+
 int main()
 {
     cout<<"———————————————————————————————————————————";
@@ -46,13 +46,13 @@ int main()
     char s[50];
     cout<<"\nEnter the string ";
     cin>>s;
-    for(i=0;i&lt;strlen(s);i++)
+    for (i = 0; i < strlen(s); i++)
     {
-        push(s[i]);   
+        push(s[i]);
     }
-    for(i=0;i&lt;strlen(s);i++)
+    for (i = 0; i < strlen(s); i++)
     {
-        s[i]=pop();
+        s[i] = pop();
     }
     cout<<"\nThe reverse string is "<<s;
     cout<<"\n———————————————————————————————————————————\n";

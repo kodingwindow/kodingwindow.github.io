@@ -6,20 +6,20 @@ title: C++ program to reverse a given string using loops
 <div class="codecard">C++ program to reverse a given string using using length() function</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 using namespace std;
 int main()
 {
     cout<<"———————————————————————————————————————————";
     cout<<"\nProgram to reverse a given string";
     cout<<"\n———————————————————————————————————————————";
-    string s,r="";
+    string s, r = "";
     cout<<"\nEnter the string ";
-    getline(cin,s);
-    for(int i=s.length()-1;i>=0;i--)
+    getline(cin, s);
+    for (int i = s.length() - 1; i >= 0; i--)
     {
-        r=r+s[i];
+        r = r + s[i];
     }
     cout<<"\nThe reverse string is "<<r;
     cout<<"\n———————————————————————————————————————————\n";
@@ -41,26 +41,26 @@ kodingwindow@kw:~$
 <div class="codecard">C++ program to reverse a given string by swapping characters</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 using namespace std;
 int main()
 {
     cout<<"———————————————————————————————————————————";
     cout<<"\nProgram to reverse a given string";
     cout<<"\n———————————————————————————————————————————";
-    char s[50],temp;
+    char s[50], temp;
     cout<<"\nEnter the string ";
     cin>>s;
-    int i=0,j=strlen(s)-1;
-    for(i=0;i&lt;j;i++,j--)
+    int i = 0, j = strlen(s) - 1;
+    for (i = 0; i < j; i++, j--)
     {
-        temp=s[i];
-        s[i]=s[j];
-        s[j]=temp;
+        temp = s[i];
+        s[i] = s[j];
+        s[j] = temp;
     }
     /* Another way, you can replace for loop with while loop
-    while(i&lt;j)
+    while(i<j)
     {
         temp=s[i];
         s[i]=s[j];

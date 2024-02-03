@@ -6,14 +6,14 @@ title: C++ program to find the range of data types
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
-#include<stdlib.h>
-#include<climits>
-#include<cmath>
-#include<stdio.h>
-#include<float.h>
+#include <iostream>
+#include <stdlib.h>
+#include <climits>
+#include <cmath>
+#include <stdio.h>
+#include <float.h>
 using namespace std;
-int main() 
+int main()
 {
     cout<<"———————————————————————————————————————————";
     cout<<"\nProgram to print the range of data types";
@@ -30,16 +30,16 @@ int main()
     cout<<"        double  | "<<DBL_MIN<<" To "<<DBL_MAX<<"\n";
     cout<<"———————————————————————————————————————————\n";
 
-    cout<<"   Signed char  | "<<pow(-2,(1*CHAR_BIT)-1)<<" To "<<pow(+2,(1*CHAR_BIT)-1)-1<<"\n";
-    cout<<" Unsigned char  |  0"<<" To "<<pow(+2,(1*CHAR_BIT))-1<<"\n";
-    cout<<"  Signed short  | "<<pow(-2,(2*CHAR_BIT)-1)<<" To "<<pow(+2,(2*CHAR_BIT)-1)-1<<"\n";
-    cout<<"Unsigned short  |  0"<<" To "<<pow(+2,(2*CHAR_BIT))-1<<"\n";
-    cout<<"   Signed  int  | "<<pow(-2,(4*CHAR_BIT)-1)<<" To "<<pow(+2,(4*CHAR_BIT)-1)-1<<"\n";
-    cout<<" Unsigned  int  |  0"<<" To "<<pow(+2,(4*CHAR_BIT))-1<<"\n";
-    cout<<"   Signed long  | "<<pow(-2,(8*CHAR_BIT)-1)<<" To "<<pow(+2,(8*CHAR_BIT)-1)-1<<"\n";
-    cout<<" Unsigned long  |  0"<<" To "<<pow(+2,(8*CHAR_BIT))-1<<"\n";
+    cout<<"   Signed char  | "<<pow(-2, (1 * CHAR_BIT) - 1)<<" To "<<pow(+2, (1 * CHAR_BIT) - 1) - 1<<"\n";
+    cout<<" Unsigned char  |  0"<<" To "<<pow(+2, (1 * CHAR_BIT)) - 1<<"\n";
+    cout<<"  Signed short  | "<<pow(-2, (2 * CHAR_BIT) - 1)<<" To "<<pow(+2, (2 * CHAR_BIT) - 1) - 1<<"\n";
+    cout<<"Unsigned short  |  0"<<" To "<<pow(+2, (2 * CHAR_BIT)) - 1<<"\n";
+    cout<<"   Signed  int  | "<<pow(-2, (4 * CHAR_BIT) - 1)<<" To "<<pow(+2, (4 * CHAR_BIT) - 1) - 1<<"\n";
+    cout<<" Unsigned  int  |  0"<<" To "<<pow(+2, (4 * CHAR_BIT)) - 1<<"\n";
+    cout<<"   Signed long  | "<<pow(-2, (8 * CHAR_BIT) - 1)<<" To "<<pow(+2, (8 * CHAR_BIT) - 1) - 1<<"\n";
+    cout<<" Unsigned long  |  0"<<" To "<<pow(+2, (8 * CHAR_BIT)) - 1<<"\n";
     cout<<"———————————————————————————————————————————\n";
-    return(EXIT_SUCCESS);
+    return (EXIT_SUCCESS);
 }
 {% endhighlight %}</pre>
 <div class="card">Output</div>

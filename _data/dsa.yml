@@ -19,6 +19,8 @@ grandparent:
     subtree: Sorting
     url: dsa/sorting/
     children: 
+      - title: C progarm for Bubble Sort
+        url: dsa/sorting/kwidzxlqf
       - title: C++ progarm for Bubble Sort
         url: dsa/sorting/kwidwzsgz
       - title: C++ progarm for optimized Bubble Sort

@@ -6,19 +6,19 @@ title: C program for the addition of N natural numbers
 <div class="codecard">{{ page.title }} using if else statements</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
+#include <stdio.h>
 int main()
 {
-    int n,sum;
+    int n, sum;
     printf("———————————————————————————————————————————");
     printf("\nProgram for the addition of N numbers");
     printf("\n———————————————————————————————————————————");
     printf("\nEnter the number ");
-    scanf("%d",&n);
-    if(n>0)
+    scanf("%d", &n);
+    if (n > 0)
     {
-        sum=(n*(n+1)/2);
-        printf("\nSum of %d natural numbers = %d",n,sum);
+        sum = (n * (n + 1) / 2);
+        printf("\nSum of %d natural numbers = %d", n, sum);
     }
     else
     {
@@ -53,20 +53,20 @@ kodingwindow@kw:~$
 <div class="codecard">{{ page.title }} using while loop</div>
 <div class="card">{{ site.cfile }}</div>
 <pre>{% highlight c %}
-#include<stdio.h>
-int main() 
+#include <stdio.h>
+int main()
 {
-    float sum=0,n=1;
+    float sum = 0, n = 1;
     printf("———————————————————————————————————————————");
     printf("\nProgram for the addition of N numbers");
-    printf("\n———————————————————————————————————————————"); 
+    printf("\n———————————————————————————————————————————");
     printf("\nEnter the numbers\n");
-    while(n!=0) 
+    while (n != 0)
     {
-        sum+=n;
-        scanf("%f",&n);
+        sum += n;
+        scanf("%f", &n);
     }
-    printf ("Sum = %f",sum-1);
+    printf("Sum = %f", sum - 1);
     printf("\n———————————————————————————————————————————\n");
     return 0;
 }
