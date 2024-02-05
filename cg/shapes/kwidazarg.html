@@ -6,13 +6,13 @@ title: C++ program to draw a color-filled ellipse using the fillellipse and sect
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<graphics.h>
+#include <graphics.h>
 int main()
 {
-    int gd=0,gm=9;
-    initgraph(&gd,&gm,NULL);
+    int gd = 0, gm = 9;
+    initgraph(&gd, &gm, NULL);
     setcolor(15);
-    fillellipse(150,100,100,50);
+    fillellipse(150, 100, 100, 50);
     delay(5000);
     return 0;
 }

@@ -6,29 +6,29 @@ title: C++ program to draw a sine wave
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<iostream>
-#include<stdlib.h>
-#include<graphics.h>
+#include <iostream>
+#include <stdlib.h>
+#include <graphics.h>
 using namespace std;
 int main()
 {
-    int gd=DETECT,gm;
-    float x=0,y,a;
-    LOOP:
+    int gd = DETECT, gm;
+    float x = 0, y, a;
+LOOP:
     cout<<"\nEnter the Amplitude value ";
     cin>>a;
-    if(a>=30&&a<=200)
+    if (a >= 30 && a <= 200)
     {
-        initgraph(&gd,&gm,NULL);
-        line(0,230,620,230);
-        for(x=0;x<=600;x++)
+        initgraph(&gd, &gm, NULL);
+        line(0, 230, 620, 230);
+        for (x = 0; x <= 600; x++)
         {
-            y=230+(120*sin(2*3.14*x/200));
-            x=x+3;
-            putpixel(x,y,14);
-            outtextxy(x,y,"o");
+            y = 230 + (120 * sin(2 * 3.14 * x / 200));
+            x = x + 3;
+            putpixel(x, y, 14);
+            outtextxy(x, y, "o");
             setcolor(2);
-            line(x,y,x,230);
+            line(x, y, x, 230);
             delay(50);
         }
         delay(3000);

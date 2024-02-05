@@ -6,12 +6,12 @@ title: C++ program to draw a quarter color-filled circle using the pieslice func
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<graphics.h>
+#include <graphics.h>
 int main()
 {
-    int gd=0,gm=9;
-    initgraph(&gd,&gm,NULL);
-    pieslice(60,60,0,90,50);
+    int gd = 0, gm = 9;
+    initgraph(&gd, &gm, NULL);
+    pieslice(60, 60, 0, 90, 50);
     delay(2000);
     return 0;
 }

@@ -6,12 +6,12 @@ title: C++ program to draw a Pixel with given coordinates
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<graphics.h>
+#include <graphics.h>
 int main()
 {
-    int gd=0,gm=9;
-    initgraph(&gd,&gm,NULL);
-    putpixel(50,50,15);
+    int gd = 0, gm = 9;
+    initgraph(&gd, &gm, NULL);
+    putpixel(50, 50, 15);
     delay(2000);
     return 0;
 }

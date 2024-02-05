@@ -6,13 +6,13 @@ title: C++ program to draw a square using the rectangle function
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<graphics.h>
+#include <graphics.h>
 int main()
 {
-    int gd=0,gm=9;
-    initgraph(&gd,&gm,NULL);
+    int gd = 0, gm = 9;
+    initgraph(&gd, &gm, NULL);
     setcolor(15);
-    rectangle(50,50,200,200);
+    rectangle(50, 50, 200, 200);
     delay(5000);
     return 0;
 }

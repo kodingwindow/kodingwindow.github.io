@@ -6,17 +6,18 @@ title: C++ program to draw a line using the DDA line drawing algorithm
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<graphics.h>
-#include<iostream>
+#include <graphics.h>
+#include <iostream>
 using namespace std;
 class dda
 {
-    private:
-        int x1,y1,x2,y2,x,y,k;
-        float xinc,yinc,step,dx,dy;
-    public:
-        void getdata();
-        void calc();
+private:
+    int x1, y1, x2, y2, x, y, k;
+    float xinc, yinc, step, dx, dy;
+
+public:
+    void getdata();
+    void calc();
 };
 
 void dda::getdata()
@@ -33,36 +34,36 @@ void dda::getdata()
 
 void dda::calc()
 {
-    dx=x2-x1;
-    dy=y2-y1;
-    if(dx>dy)        
+    dx = x2 - x1;
+    dy = y2 - y1;
+    if (dx > dy)
     {
-        step=dx;
+        step = dx;
     }
-    else            
+    else
     {
-        step=dy;
+        step = dy;
     }
-    xinc=dx/step;
-    yinc=dy/step;
-    x=x1;
-    y=y1;
-    putpixel(x,y,15);
-    for(k=0;k<step;k++)
+    xinc = dx / step;
+    yinc = dy / step;
+    x = x1;
+    y = y1;
+    putpixel(x, y, 15);
+    for (k = 0; k < step; k++)
     {
-        x=x+xinc;
-        y=y+yinc;
-        int gm,gd=DETECT;
-        putpixel(x,y,15);
+        x = x + xinc;
+        y = y + yinc;
+        int gm, gd = DETECT;
+        putpixel(x, y, 15);
     }
 }
 
 int main()
 {
-    int gm=VGAMAX,gd=DETECT;
+    int gm = VGAMAX, gd = DETECT;
     dda d;
     d.getdata();
-    initgraph(&gm,&gd,NULL);
+    initgraph(&gm, &gd, NULL);
     d.calc();
     delay(10000);
     return 0;

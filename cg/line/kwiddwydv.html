@@ -6,17 +6,17 @@ title: C++ program to draw Pixels using for loop
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
 <pre>{% highlight cpp %}
-#include<graphics.h>
+#include <graphics.h>
 int main()
 {
     int i;
-    int n=50,x=50,y=50;
-    int gm=VGAMAX,gd=DETECT;
-    initgraph(&gd,&gm,NULL);
-    for(i=0;i<n;i++)
+    int n = 50, x = 50, y = 50;
+    int gm = VGAMAX, gd = DETECT;
+    initgraph(&gd, &gm, NULL);
+    for (i = 0; i < n; i++)
     {
-        x=x+5;
-        putpixel(x,y,WHITE);
+        x = x + 5;
+        putpixel(x, y, WHITE);
     }
     delay(7000);
     return 0;
