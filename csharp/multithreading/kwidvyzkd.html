@@ -23,9 +23,9 @@ class ParallelThread
 {
     public void thread()
     {
-        lock(this)
+        lock (this)
         {
-            for(int i = 100; i <= 105; i++)
+            for (int i = 100; i <= 105; i++)
             {
                 Console.Write(i + " ");
                 Thread.Sleep(1500);

@@ -8,23 +8,23 @@ title: C# program for Abstract class
 <pre>{% highlight csharp %}
 abstract class Arithmetic
 {
-    public int add(int a,int b)
+    public int add(int a, int b)
     {
-        int c=a+b;
+        int c = a + b;
         return c;
     }
     public void display(int c)
     {
-        Console.Write("Addition "+c);
+        Console.Write("Addition " + c);
     }
 }
 
 class Program : Arithmetic
 {
-    public static void Main(String[] args) 
+    public static void Main(String[] args)
     {
-        Program p=new Program();
-        int addition=p.add(10,10);
+        Program p = new Program();
+        int addition = p.add(10, 10);
         p.display(addition);
     }
 }
@@ -39,8 +39,8 @@ kodingwindow@kw:~/csharp$
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
 <pre>{% highlight csharp %}
-WhiteBank wb=new WhiteBank();
-GreenBank gb=new GreenBank();
+WhiteBank wb = new WhiteBank();
+GreenBank gb = new GreenBank();
 wb.Bonus();
 gb.Bonus();
 

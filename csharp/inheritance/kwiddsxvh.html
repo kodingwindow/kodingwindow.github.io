@@ -6,11 +6,11 @@ title: C# program for Hybrid Inheritance (Multilevel and Hierarchical)
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
 <pre>{% highlight csharp %}
-GreenBank gb=new GreenBank();
+GreenBank gb = new GreenBank();
 gb.GreenBankBonus();
 gb.WhiteBankBonus();
 
-PinkBank pb=new PinkBank();
+PinkBank pb = new PinkBank();
 pb.PinkBankBonus();
 pb.WhiteBankBonus();
 
@@ -18,8 +18,8 @@ class Bank
 {
     public void Bonus()
     {
-       Console.Write("Festival Bonus: ");
-    }  
+        Console.Write("Festival Bonus: ");
+    }
 }
 class WhiteBank : Bank
 {

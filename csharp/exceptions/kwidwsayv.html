@@ -6,8 +6,8 @@ title: C# program to handle the DivideByZeroException
 <div class="codecard">C# DivideByZeroException</div>
 <div class="card">{{ site.csfile }}</div>
 <pre>{% highlight csharp %}
-int n=515, d=0, result=0;
-Console.WriteLine(result=n/d);
+int n = 515, d = 0, result = 0;
+Console.WriteLine(result = n / d);
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
@@ -20,12 +20,12 @@ kodingwindow@kw:~/csharp$
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
 <pre>{% highlight csharp %}
-int n=515, d=0, result=0;
+int n = 515, d = 0, result = 0;
 try
 {
-    Console.WriteLine(result=n/d);
+    Console.WriteLine(result = n / d);
 }
-catch(DivideByZeroException e)
+catch (DivideByZeroException e)
 {
     Console.WriteLine(e.Message);
 }

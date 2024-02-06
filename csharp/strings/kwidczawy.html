@@ -11,10 +11,10 @@ Console.WriteLine("Program to check string is palindrome | not");
 Console.WriteLine("———————————————————————————————————————————");
 Console.Write("Enter the string ");
 string s = Console.ReadLine()!;
-Console.WriteLine("\nLength of a string is "+s.Length);
+Console.WriteLine("\nLength of a string is " + s.Length);
 string r = new string(s.ToCharArray().Reverse().ToArray()!);
 Console.WriteLine("\nReverse string is " + r);
-if(s == r)
+if (s == r)
 {
     Console.WriteLine("\nString is palindrome");
 }

@@ -12,8 +12,8 @@ Console.WriteLine("————————————————————�
 Console.WriteLine("C# program for the regular expressions");
 Console.WriteLine("———————————————————————————————————————————");
 string s = "ABC DEF 123 456 789";
-Match m = Regex.Match(s, @"\d+"); 
-if(m.Success)
+Match m = Regex.Match(s, @"\d+");
+if (m.Success)
 {
     Console.WriteLine(m.Value);
     Console.WriteLine("Value " + m.Value);
@@ -25,7 +25,7 @@ else
     Console.WriteLine("Not Matched");
 }
 
-if(Regex.IsMatch(s, "abc..", RegexOptions.IgnoreCase))
+if (Regex.IsMatch(s, "abc..", RegexOptions.IgnoreCase))
 {
     Console.WriteLine("Matched");
 }
@@ -36,7 +36,7 @@ else
 Console.WriteLine(IsValid("Hello 123456789"));
 Console.WriteLine(IsValid(":)"));
 Console.WriteLine("———————————————————————————————————————————");
-    
+
 static bool IsValid(string s)
 {
     return Regex.IsMatch(s, @"^[a-zA-Z0-9 ]*$");

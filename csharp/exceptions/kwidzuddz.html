@@ -13,10 +13,10 @@ namespace Kodingwindow
     {
         public static void Main(string[] args)
         {
-            string[] s={"Mango","Pineaple","Grapes","Banana","Apple","Strawberry"};
-            Console.WriteLine("Array Length: "+s.Length);
-            Console.WriteLine("First Element: "+s[0]);
-            Console.WriteLine("Last Element: "+s[5]);        
+            string[] s = { "Mango", "Pineaple", "Grapes", "Banana", "Apple", "Strawberry" };
+            Console.WriteLine("Array Length: " + s.Length);
+            Console.WriteLine("First Element: " + s[0]);
+            Console.WriteLine("Last Element: " + s[5]);
             Console.WriteLine(s[6]);
         }
     }
@@ -36,15 +36,15 @@ kodingwindow@kw:~/csharp$
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
 <pre>{% highlight csharp %}
-string[] s={"Mango","Pineaple","Grapes","Banana","Apple","Strawberry"};
-Console.WriteLine("Array Length: "+s.Length);
-Console.WriteLine("First Element: "+s[0]);
-Console.WriteLine("Last Element: "+s[5]);        
+string[] s = { "Mango", "Pineaple", "Grapes", "Banana", "Apple", "Strawberry" };
+Console.WriteLine("Array Length: " + s.Length);
+Console.WriteLine("First Element: " + s[0]);
+Console.WriteLine("Last Element: " + s[5]);
 try
 {
     Console.WriteLine(s[6]);
 }
-catch(IndexOutOfRangeException)
+catch (IndexOutOfRangeException)
 {
     Console.WriteLine("Requested element not found");
 }

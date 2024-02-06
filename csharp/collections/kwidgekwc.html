@@ -9,16 +9,16 @@ title: Implementation of C# Dictionary class
 using System.Collections.Generic;
 
 Dictionary<long, string> dict = new Dictionary<long, string>();
-dict.Add(25622348989,"James Moore");
-dict.Add(25622348990,"Donald Taylor");
-dict.Add(25622348991,"Edward Parkar");
-dict.Add(25622348992,"Ryan Bakshi");
+dict.Add(25622348989, "James Moore");
+dict.Add(25622348990, "Donald Taylor");
+dict.Add(25622348991, "Edward Parkar");
+dict.Add(25622348992, "Ryan Bakshi");
 
-foreach(KeyValuePair<long, string> kv in dict)
+foreach (KeyValuePair<long, string> kv in dict)
 {
-    Console.WriteLine("Account No: {0}, Name: {1}",kv.Key,kv.Value);
+    Console.WriteLine("Account No: {0}, Name: {1}", kv.Key, kv.Value);
 }
-Console.WriteLine("Size: "+dict.Count);
+Console.WriteLine("Size: " + dict.Count);
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
@@ -37,10 +37,10 @@ kodingwindow@kw:~/csharp$
 using System.Collections.Generic;
 
 Dictionary<long, string> dict = new Dictionary<long, string>();
-dict.Add(25622348989,"James Moore");
-dict.Add(25622348990,"Donald Taylor");
-dict.Add(25622348991,"Edward Parkar");
-dict.Add(25622348992,"Ryan Bakshi");
+dict.Add(25622348989, "James Moore");
+dict.Add(25622348990, "Donald Taylor");
+dict.Add(25622348991, "Edward Parkar");
+dict.Add(25622348992, "Ryan Bakshi");
 
 Console.WriteLine(dict.ContainsKey(25622348991));
 Console.WriteLine(dict.ContainsValue("Edward Taylor"));
@@ -59,19 +59,19 @@ kodingwindow@kw:~/csharp$
 using System.Collections.Generic;
 
 Dictionary<long, string> dict = new Dictionary<long, string>();
-dict.Add(25622348989,"James Moore");
-dict.Add(25622348990,"Donald Taylor");
-dict.Add(25622348991,"Edward Parkar");
-dict.Add(25622348992,"Ryan Bakshi");
+dict.Add(25622348989, "James Moore");
+dict.Add(25622348990, "Donald Taylor");
+dict.Add(25622348991, "Edward Parkar");
+dict.Add(25622348992, "Ryan Bakshi");
 
 dict.Remove(25622348991);
-foreach(KeyValuePair<long, string> kv in dict)
+foreach (KeyValuePair<long, string> kv in dict)
 {
-    Console.WriteLine("Account No: {0}, Name: {1}",kv.Key,kv.Value);
+    Console.WriteLine("Account No: {0}, Name: {1}", kv.Key, kv.Value);
 }
 
 dict.Clear();
-if(dict.Count==0)
+if (dict.Count == 0)
 {
     Console.WriteLine("Dictionary is empty now");
 }

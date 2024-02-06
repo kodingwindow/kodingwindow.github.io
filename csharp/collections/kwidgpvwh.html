@@ -8,7 +8,7 @@ title: Implementation of C# LinkedList class
 <pre>{% highlight csharp %}
 using System.Collections.Generic;
 
-LinkedList<string> ll=new LinkedList<string>();
+LinkedList<string> ll = new LinkedList<string>();
 ll.AddLast("Apple");
 ll.AddLast("Orange");
 ll.AddLast("Mango");
@@ -16,11 +16,11 @@ ll.AddLast("Grapes");
 ll.AddLast("Cherry");
 ll.AddLast("Apple");
 ll.AddFirst("Pineapple");
-foreach(string s in ll)
+foreach (string s in ll)
 {
-    Console.Write(s+" ");
+    Console.Write(s + " ");
 }
-Console.WriteLine("\nSize: "+ll.Count);
+Console.WriteLine("\nSize: " + ll.Count);
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
@@ -35,7 +35,7 @@ kodingwindow@kw:~/csharp$
 <pre>{% highlight csharp %}
 using System.Collections.Generic;
 
-LinkedList<string> ll=new LinkedList<string>();
+LinkedList<string> ll = new LinkedList<string>();
 ll.AddLast("Apple");
 ll.AddLast("Orange");
 ll.AddLast("Mango");
@@ -43,13 +43,13 @@ ll.AddLast("Grapes");
 ll.AddLast("Cherry");
 ll.AddLast("Apple");
 
-ll.AddAfter(ll.Find("Apple")!,"Blueberry");
-ll.AddBefore(ll.Find("Orange")!,"Pineapple");
-foreach(string s in ll)
+ll.AddAfter(ll.Find("Apple")!, "Blueberry");
+ll.AddBefore(ll.Find("Orange")!, "Pineapple");
+foreach (string s in ll)
 {
-    Console.Write(s+" ");
+    Console.Write(s + " ");
 }
-Console.WriteLine("\n"+ll.Contains("Pineapple"));
+Console.WriteLine("\n" + ll.Contains("Pineapple"));
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
@@ -64,7 +64,7 @@ kodingwindow@kw:~/csharp$
 <pre>{% highlight csharp %}
 using System.Collections.Generic;
 
-LinkedList<string> ll=new LinkedList<string>();
+LinkedList<string> ll = new LinkedList<string>();
 ll.AddLast("Apple");
 ll.AddLast("Orange");
 ll.AddLast("Mango");
@@ -76,12 +76,12 @@ ll.AddLast("Apple");
 ll.RemoveFirst();
 ll.Remove("Orange");
 ll.RemoveLast();
-foreach(string s in ll)
+foreach (string s in ll)
 {
-    Console.Write(s+" ");
+    Console.Write(s + " ");
 }
 ll.Clear();
-Console.WriteLine("\nSize: "+ll.Count);
+Console.WriteLine("\nSize: " + ll.Count);
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>

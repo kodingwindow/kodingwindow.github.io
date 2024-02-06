@@ -9,16 +9,16 @@ title: Implementation of C# SortedDictionary class
 using System.Collections.Generic;
 
 SortedDictionary<long, string> sd = new SortedDictionary<long, string>();
-sd.Add(25622348991,"Edward Parkar");
-sd.Add(25622348990,"Donald Taylor");
-sd.Add(25622348992,"Ryan Bakshi");
-sd.Add(25622348989,"James Moore");
+sd.Add(25622348991, "Edward Parkar");
+sd.Add(25622348990, "Donald Taylor");
+sd.Add(25622348992, "Ryan Bakshi");
+sd.Add(25622348989, "James Moore");
 
-foreach(KeyValuePair<long, string> kv in sd)
+foreach (KeyValuePair<long, string> kv in sd)
 {
-    Console.WriteLine("Account No: {0}, Name: {1}",kv.Key,kv.Value);
+    Console.WriteLine("Account No: {0}, Name: {1}", kv.Key, kv.Value);
 }
-Console.WriteLine("Size: "+sd.Count);
+Console.WriteLine("Size: " + sd.Count);
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
@@ -37,21 +37,21 @@ kodingwindow@kw:~/csharp$
 using System.Collections.Generic;
 
 SortedDictionary<long, string> sd = new SortedDictionary<long, string>();
-sd.Add(25622348991,"Edward Parkar");
-sd.Add(25622348990,"Donald Taylor");
-sd.Add(25622348992,"Ryan Bakshi");
-sd.Add(25622348989,"James Moore");
+sd.Add(25622348991, "Edward Parkar");
+sd.Add(25622348990, "Donald Taylor");
+sd.Add(25622348992, "Ryan Bakshi");
+sd.Add(25622348989, "James Moore");
 
 SortedDictionary<long, string>.KeyCollection kc1 = sd.Keys;
-foreach(long accno in kc1) 
-{ 
-    Console.WriteLine("Account No: "+accno); 
+foreach (long accno in kc1)
+{
+    Console.WriteLine("Account No: " + accno);
 }
 
 SortedDictionary<long, string>.ValueCollection kc2 = sd.Values;
-foreach(string name in kc2) 
-{ 
-    Console.WriteLine("Name: "+name); 
+foreach (string name in kc2)
+{
+    Console.WriteLine("Name: " + name);
 }
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
@@ -74,19 +74,19 @@ kodingwindow@kw:~/csharp$
 using System.Collections.Generic;
 
 SortedDictionary<long, string> sd = new SortedDictionary<long, string>();
-sd.Add(25622348991,"Edward Parkar");
-sd.Add(25622348990,"Donald Taylor");
-sd.Add(25622348992,"Ryan Bakshi");
-sd.Add(25622348989,"James Moore");
+sd.Add(25622348991, "Edward Parkar");
+sd.Add(25622348990, "Donald Taylor");
+sd.Add(25622348992, "Ryan Bakshi");
+sd.Add(25622348989, "James Moore");
 
 sd.Remove(25622348989);
-foreach(KeyValuePair<long, string> kv in sd)
+foreach (KeyValuePair<long, string> kv in sd)
 {
-    Console.WriteLine("Account No: {0}, Name: {1}",kv.Key,kv.Value);
+    Console.WriteLine("Account No: {0}, Name: {1}", kv.Key, kv.Value);
 }
 
 sd.Clear();
-Console.WriteLine("Size: "+sd.Count);
+Console.WriteLine("Size: " + sd.Count);
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>

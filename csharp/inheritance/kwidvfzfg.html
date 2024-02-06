@@ -6,8 +6,8 @@ title: C# program for Hierarchical Inheritance
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
 <pre>{% highlight csharp %}
-WhiteBank wb=new WhiteBank();
-GreenBank gb=new GreenBank();
+WhiteBank wb = new WhiteBank();
+GreenBank gb = new GreenBank();
 
 wb.Bonus();
 wb.WhiteBankBonus();
@@ -19,8 +19,8 @@ class Bank
 {
     public void Bonus()
     {
-       Console.Write("Festival Bonus: ");
-    }  
+        Console.Write("Festival Bonus: ");
+    }
 }
 class WhiteBank : Bank
 {
