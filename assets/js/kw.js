@@ -115,6 +115,8 @@ window.matchMedia('(prefers-color-scheme: dark)').addListener(({ matches }) => {
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 gtag('js', new Date());
-gtag('config', 'G-4TDKQLW7N7');
+gtag('config', 'G-4TDKQLW7N7', {
+    ignore_referrer: 'true'
+});
 
 /* --------------------------------------------------------------------------------------------- */
