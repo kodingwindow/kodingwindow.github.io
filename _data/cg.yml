@@ -99,6 +99,13 @@ grandparent:
       - title: C++ program to fill a polygon using the Scan Line Algorithm (SLA)
         url: cg/algorithms/kwideqwaz
 
+  - parent: OpenGL
+    subtree: OpenGL
+    url: cg/opengl/
+    children: 
+      - title: C++ program for DDA line drawing algorithm using OpenGL
+        url: cg/opengl/kwidyulza
+
 sidenav:
   - parent: Computer Graphics
     url: cg/
@@ -111,5 +118,7 @@ sidenav:
         url: cg/shapes/
       - title: Computer Graphics Algorithms
         url: cg/algorithms/
+      - title: OpenGL
+        url: cg/opengl/
       - title: Computer Graphics Search
         url: cg/search/

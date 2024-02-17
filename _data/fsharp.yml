@@ -5,6 +5,12 @@ grandparent:
     children: 
       - title: F# Hello World program
         url: fsharp/fundamentals/kwidegsem
+      - title: F# program to perform the arithmetic operations
+        url: fsharp/fundamentals/kwidwpkzv
+      - title: F# program to perform the boolean operations
+        url: fsharp/fundamentals/kwidewzhw
+      - title: F# program to calculate the area and circumference of a circle
+        url: fsharp/fundamentals/kwidxmvyy
 
 sidenav: 
   - parent: F# Programming
