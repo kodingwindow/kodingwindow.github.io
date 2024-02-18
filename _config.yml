@@ -22,22 +22,22 @@ android_app: https://bit.ly/kwindow
 
 #Filename
 highlighter: rouge
-cfile: "File: kw.c"
-cppfile: "File: kw.cpp"
-javafile: "File: KW.java"
-csfile: "File: Program.cs"
-pyfile: "File: kw.py"
-rfile: "File: kw.r"
-juliafile: "File: kw.jl"
-fsfile: "File: Program.fs"
-lispfile: "File: kw.lisp"
-shfile: "File: kw.sh"
-rustfile: "File: kw.rs"
-asmfile: "File: kw.asm"
-vbsfile: "File: kw.vbs"
-csvfile: "File: kw.csv"
-jsonfile: "File: kw.json"
-excelfile: "File: kw.xlsx"
+cfile: "<span class='bi bi-file-code'> kw.c</span>"
+cppfile: "<span class='bi bi-file-code'> kw.cpp</span>"
+javafile: "<span class='bi bi-filetype-java'> KW.java</span>"
+csfile: "<span class='bi bi-filetype-cs'> Program.cs</span>"
+pyfile: "<span class='bi bi-filetype-py'> kw.py</span>"
+rfile: "<span class='bi bi-file-code'> kw.r</span>"
+juliafile: "<span class='bi bi-file-code'> kw.jl</span>"
+fsfile: "<span class='bi bi-file-code'> Program.fs</span>"
+lispfile: "<span class='bi bi-file-code'> kw.lisp</span>"
+shfile: "<span class='bi bi-filetype-sh'> kw.sh</span>"
+rustfile: "<span class='bi bi-file-code'> kw.rs</span>"
+asmfile: "<span class='bi bi-file-code'> kw.asm</span>"
+vbsfile: "<span class='bi bi-file-code'> kw.vbs</span>"
+csvfile: "<span class='bi bi-filetype-csv'> kw.csv</span>"
+jsonfile: "<span class='bi bi-filetype-json'> kw.json</span>"
+excelfile: "<span class='bi bi-filetype-xlsx'> kw.xlsx</span>"
 
 #Execution
 runc: "kodingwindow@kw:~$ <mark>gcc kw.c</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
@@ -53,7 +53,7 @@ runcg: "kodingwindow@kw:~$ <mark>g++ kw.cpp -lgraph</mark><br>kodingwindow@kw:~$
 runopengl: "kodingwindow@kw:~$ <mark>g++ kw.cpp -lGL -lGLU -lglut</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
 runrust: "kodingwindow@kw:~$ <mark>rustc kw.rs</mark><br>kodingwindow@kw:~$ <mark>./kw</mark>"
 runasm: "kodingwindow@kw:~$ <mark>nasm -felf64 kw.asm</mark><br>kodingwindow@kw:~$ <mark>ld kw.o && ./a.out</mark>"
-output: "Output:"
+output: "<span class='bi bi-terminal'> Output</span>"
 
 #Exclude from processing
 exclude:
