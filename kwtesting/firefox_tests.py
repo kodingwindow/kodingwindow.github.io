@@ -2,7 +2,6 @@ from utilities import *
 from selenium import webdriver
 
 options = webdriver.FirefoxOptions()
-options.add_experimental_option("excludeSwitches", ["enable-automation"])
 driver = webdriver.Firefox(options = options, service = firefox_driver)
 
 start = time.time()

@@ -24,14 +24,14 @@ public:
 
 void t_thin_d::getdata()
 {
-    cout<<"Enter the x1 coordinate ";
-    cin>>x1;
-    cout<<"Enter the y1 coordinate ";
-    cin>>y1;
-    cout<<"Enter the x2 coordinate  ";
-    cin>>x2;
-    cout<<"Enter the y2 coordinate  ";
-    cin>>y2;
+    cout << "Enter the x1 coordinate ";
+    cin >> x1;
+    cout << "Enter the y1 coordinate ";
+    cin >> y1;
+    cout << "Enter the x2 coordinate  ";
+    cin >> x2;
+    cout << "Enter the y2 coordinate  ";
+    cin >> y2;
 }
 
 void t_thin_d::calc()
@@ -104,16 +104,16 @@ int main()
     t_thin_d T;
     do
     {
-        cout<<"———————————————————————————————————————————";
-        cout<<"\nC++ program for the thick, thin, dotted line";
-        cout<<"\n———————————————————————————————————————————";
-        cout<<"\n1.Thin Line";
-        cout<<"\n2.Dotted Line";
-        cout<<"\n3.Thick Line";
-        cout<<"\n4.Exit";
-        cout<<"\n———————————————————————————————————————————";
-        cout<<"\nEnter your choice ";
-        cin>>ch;
+        cout << "———————————————————————————————————————————";
+        cout << "\nC++ program for the thick, thin, dotted line";
+        cout << "\n———————————————————————————————————————————";
+        cout << "\n1.Thin Line";
+        cout << "\n2.Dotted Line";
+        cout << "\n3.Thick Line";
+        cout << "\n4.Exit";
+        cout << "\n———————————————————————————————————————————";
+        cout << "\nEnter your choice ";
+        cin >> ch;
         switch (ch)
         {
         case 1:
@@ -143,7 +143,7 @@ int main()
         case 4:
             exit(0);
         default:
-            cout<<"\nWrong Choice Entered...Please Try Again\n";
+            cout << "\nWrong Choice Entered...Please Try Again\n";
         }
     } while (ch != 4);
     return 0;

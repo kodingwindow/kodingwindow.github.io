@@ -39,16 +39,16 @@ void DrawPolygon::lines(int x0, int y0, int xEnd, int yEnd)
 
 void Polygon::setedge()
 {
-    cout<<endl<<"Enter the number of edges of polygon ";
-    cin>>edges;
+    cout << "\nEnter the number of edges of polygon ";
+    cin >> edges;
 }
 
 void Polygon::setpo(int index)
 {
-    cout<<endl<<"Enter the coordinate x"<<index + 1<<" ";
-    cin>>po[0][index];
-    cout<<endl<<"Enter the coordinate y"<<index + 1<<" ";
-    cin>>po[1][index];
+    cout << "Enter the coordinate x" << index + 1 << " ";
+    cin >> po[0][index];
+    cout << "Enter the coordinate y" << index + 1 << " ";
+    cin >> po[1][index];
 }
 
 int Polygon::getedata()

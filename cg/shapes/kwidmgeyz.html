@@ -53,10 +53,10 @@ public:
         int j, k;
         for (j = 0; j < i; j++)
         {
-            cout<<"Enter the coordinate x"<<j<<" ";
-            cin>>a[j][0];
-            cout<<"Enter the coordinate y"<<j<<" ";
-            cin>>a[j][1];
+            cout << "Enter the coordinate x" << j << " ";
+            cin >> a[j][0];
+            cout << "Enter the coordinate y" << j << " ";
+            cin >> a[j][1];
         }
     }
     void drawpoly(int i)
@@ -86,8 +86,8 @@ public:
 int main()
 {
     int n, gd = DETECT, gm;
-    cout<<"Enter the number of sides of polygon ";
-    cin>>n;
+    cout << "Enter the number of sides of polygon ";
+    cin >> n;
     polygon P;
     P.setpts(n);
     initgraph(&gd, &gm, NULL);

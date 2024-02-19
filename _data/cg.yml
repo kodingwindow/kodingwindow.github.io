@@ -86,15 +86,15 @@ grandparent:
     subtree: Algorithms
     url: cg/algorithms/
     children: 
-      - title: C++ program to draw a line using the DDA line drawing algorithm
+      - title: C++ program for DDA line drawing algorithm
         url: cg/algorithms/kwidllgea
-      - title: C++ program to draw a line using the Bresenham line drawing algorithm
+      - title: C++ program for Bresenham's line drawing algorithm
         url: cg/algorithms/kwidevpys
-      - title: C++ program to draw a circle using the DDA circle drawing algorithm
+      - title: C++ program for DDA circle drawing algorithm
         url: cg/algorithms/kwidfcwdy
-      - title: C++ program to draw a circle using the Bresenham circle drawing algorithm
+      - title: C++ program for Bresenham's circle drawing algorithm
         url: cg/algorithms/kwidzzahy
-      - title: C++ program to draw a circle using the Midpoint circle drawing algorithm
+      - title: C++ program for Midpoint circle drawing algorithm
         url: cg/algorithms/kwiddgwwm
       - title: C++ program to fill a polygon using the Scan Line Algorithm (SLA)
         url: cg/algorithms/kwideqwaz
@@ -105,6 +105,12 @@ grandparent:
     children: 
       - title: C++ program for DDA line drawing algorithm using OpenGL
         url: cg/opengl/kwidyulza
+      - title: C++ program for Bresenham's line drawing algorithm using OpenGL
+        url: cg/opengl/kwidhdyuk
+      - title: C++ program for DDA circle drawing algorithm using OpenGL
+        url: cg/opengl/kwidwgeyh
+      - title: C++ program for Bresenham's circle drawing algorithm using OpenGL
+        url: cg/opengl/kwiddadyi
 
 sidenav:
   - parent: Computer Graphics
