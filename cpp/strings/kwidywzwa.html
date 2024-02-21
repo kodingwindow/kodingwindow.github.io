@@ -5,7 +5,7 @@ title: C++ program to reverse a given string using stack
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
-<pre>{% highlight cpp %}
+<pre class="code">{% highlight cpp %}
 #include <iostream>
 #include <cstring>
 #define SIZE 50
@@ -14,15 +14,17 @@ using namespace std;
 int i, top = -1;
 char stack[SIZE];
 
-char push(char element)
+bool push(char element)
 {
     if (top == (SIZE - 1))
     {
         cout<<"\nStack overflow";
+        return false;
     }
     else
     {
         stack[++top] = element;
+        return true;
     }
 }
 
@@ -31,6 +33,7 @@ char pop()
     if (top == -1)
     {
         cout<<"\nStack underflow";
+        return 0;
     }
     else
     {
@@ -56,6 +59,7 @@ int main()
     }
     cout<<"\nThe reverse string is "<<s;
     cout<<"\n———————————————————————————————————————————\n";
+    return 0;
 }
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
@@ -64,9 +68,9 @@ int main()
 ———————————————————————————————————————————
 Program to reverse a given string
 ———————————————————————————————————————————
-Enter the string FEDORA
+Enter the string KODINGWINDOW
 
-The reverse string is ARODEF
+The reverse string is WODNIWGNIDOK
 ———————————————————————————————————————————
 kodingwindow@kw:~$ 
 </pre></span>

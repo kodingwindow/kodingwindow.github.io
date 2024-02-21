@@ -42,7 +42,7 @@ switched to db DB
 { "account_no" : 2562348992, "name" : "Ryan Bakshi", "city" : "Mumbai", "DOB" : ISODate("1982-01-14T00:00:00Z"), "bank" : "Citi", "amount" : 50000, "loan" : [ { "Personal" : null, "Home" : null, "Car" : null } ] }
 {% endhighlight %}</pre>
 <div class="card">{{ site.javafile }}</div>
-<pre>{% highlight java %}
+<pre class="code">{% highlight java %}
 import java.io.BufferedReader;
 import java.io.FileReader;
 
@@ -53,7 +53,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
-public class KW
+class KW
 {
     @SuppressWarnings("resource")
     public static void main(String[] args)
@@ -61,7 +61,7 @@ public class KW
         try
         {
             MongoClient mc = new MongoClient("localhost", 27017);
-            MongoDatabase md = mk.getDatabase("DB");
+            MongoDatabase md = mc.getDatabase("DB");
             MongoCollection<Document> collection = md.getCollection("holders");
             
             BufferedReader br = new BufferedReader(new FileReader("kw.json"));
@@ -78,7 +78,7 @@ public class KW
             {
                 System.out.println(cursor.next());
             }
-            mk.close();
+            mc.close();
         }
         catch(Exception e)
         {

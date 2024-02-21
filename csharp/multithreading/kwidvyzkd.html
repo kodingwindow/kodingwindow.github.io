@@ -11,7 +11,7 @@ The synchronization in C# achieved using the <mark>lock</mark> keyword. The lock
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre>{% highlight csharp %}
+<pre class="code">{% highlight csharp %}
 ParallelThread pt = new ParallelThread();
 Thread t1 = new Thread(new ThreadStart(pt.thread));
 Thread t2 = new Thread(new ThreadStart(pt.thread));

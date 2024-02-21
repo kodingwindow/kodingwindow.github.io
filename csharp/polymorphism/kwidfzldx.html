@@ -5,7 +5,7 @@ title: Implementation of C# method overloading
 
 <div class="codecard">Example 1: {{ page.title }} (static polymorphism)</div>
 <div class="card">{{ site.csfile }}</div>
-<pre>{% highlight csharp %}
+<pre class="code">{% highlight csharp %}
 Console.WriteLine("Area of Rectangle " + Shape.Rectangle(5, 10));
 Console.WriteLine("Area of Rectangle {0}", Shape.Rectangle(3.14, 10));
 
@@ -31,7 +31,7 @@ kodingwindow@kw:~/csharp$
 
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre>{% highlight csharp %}
+<pre class="code">{% highlight csharp %}
 Shape s = new Shape();
 double area = s.Square(10);
 Console.WriteLine("Area of Square " + area);

@@ -29,7 +29,7 @@ switched to db admin
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre>{% highlight java %}
+<pre class="code">{% highlight java %}
 import java.util.List;
 import java.util.Set;
 
@@ -38,7 +38,7 @@ import com.mongodb.DBCollection;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoDatabase;
 
-public class KW
+class KW
 {
     @SuppressWarnings("deprecation")
     public static void main(String[] args)
@@ -48,22 +48,22 @@ public class KW
             MongoClient mc = new MongoClient("localhost", 27017);
             System.out.println("Connection Established Successfully");
             
-            List<String> dbs = mk.getDatabaseNames();
+            List<String> dbs = mc.getDatabaseNames();
             System.out.println("Databases "+dbs);
             
-            DB db = mk.getDB(dbs.get(0));
+            DB db = mc.getDB(dbs.get(0));
             Set<String> collections = db.getCollectionNames();
             System.out.println("Collections "+collections);
             
-            MongoDatabase md = mk.getDatabase("DB");
+            MongoDatabase md = mc.getDatabase("DB");
             md.createCollection("holders");
             System.out.println("\nCollection Created");
 
-            db = mk.getDB("DB");
+            db = mc.getDB("DB");
             DBCollection collection = db.getCollection("holders");
             System.out.println(collection.toString());
 
-            mk.close();
+            mc.close();
             System.out.println("Connection Released Successfully");
         }
         catch(Exception e)

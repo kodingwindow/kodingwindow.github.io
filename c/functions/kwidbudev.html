@@ -5,7 +5,7 @@ title: C program to find the factorial of a given number
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cfile }}</div>
-<pre>{% highlight c %}
+<pre class="code">{% highlight c %}
 #include <stdio.h>
 int facto(int);
 int main()
@@ -32,7 +32,7 @@ int main()
     printf("\n———————————————————————————————————————————\n");
     return 0;
 }
-facto(int n)
+int facto(int n)
 {
     int i, factorial = 1;
     for (i = 1; i <= n; i++)

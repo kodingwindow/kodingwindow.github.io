@@ -17,7 +17,7 @@ account_no,name,city,dob,bank,amount
 25622348995,James Moore,,1978-06-26,Citi,97800
 {% endhighlight %}</pre>
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 import pandas as pd
 df=pd.read_csv("/home/kodingwindow/kw.csv")
 print(df)
@@ -51,7 +51,7 @@ print(df)
 +------------+---------------+---------+------------+----------+--------+
 </pre>
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 import pandas as pd
 df=pd.read_excel("/home/kodingwindow/kw.xlsx")
 print(df)
@@ -71,7 +71,7 @@ print(df)
 
 <div class="codecard">Python Pandas to create a DataFrame from Dictionary</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 import pandas as pd
 holders={
 "account_no": [25622348989, 25622348990, 25622348991, 25622348992, 25622348993, 25622348994, 25622348995], 
@@ -99,7 +99,7 @@ print(df)
 
 <div class="codecard">Python Pandas to create a DataFrame from List of Tuples</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 import pandas as pd
 holders=[
 (25622348989,"James Moore","Phoenix","1985-05-26","Barclays",5000),

@@ -5,13 +5,13 @@ title: Python program to print the prime numbers
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 import sympy
 print(list(sympy.primerange(2,50)))
 {% endhighlight %}</pre>
 
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 lst=[]
 for n in range(2,50):
     if all(n%i!=0 for i in range(2,n)):
@@ -20,7 +20,7 @@ print(lst)
 {% endhighlight %}</pre>
 
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 lst=list()
 for n in range(2,50):
     prime=True
@@ -33,7 +33,7 @@ print(lst)
 {% endhighlight %}</pre>
 
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 def prime(limit):
     lst=list()
     for n in range(2,limit):

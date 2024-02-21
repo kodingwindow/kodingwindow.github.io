@@ -5,7 +5,7 @@ title: Python implementation of the calendar module
 
 <div class="codecard">Example 1: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 import calendar
 for m in calendar.month_name:
     print(m)
@@ -41,7 +41,7 @@ Sunday
 
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 import calendar
 cal=calendar.month(2020,5)
 print(cal)
@@ -71,7 +71,7 @@ Fr Sa Su Mo Tu We Th
 
 <div class="codecard">Example 3: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre>{% highlight python %}
+<pre class="code">{% highlight python %}
 import calendar
 cal=calendar.month(2020,5)
 print(calendar.TextCalendar(calendar.MONDAY).formatyear(2020,5,1,1,2))

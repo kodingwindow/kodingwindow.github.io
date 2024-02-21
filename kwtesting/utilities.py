@@ -1,4 +1,4 @@
-import os, sys, yaml, time
+import os, sys, yaml, time, re
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.edge.service import Service
@@ -9,12 +9,14 @@ if sys.platform == 'linux':
     chrome_driver = Service("/usr/bin/chromedriver")
     firefox_driver = Service("/usr/bin/geckodriver")
     msedge_driver = Service("/usr/bin/msedgedriver")
-    datapath = r'/home/kodingwindow/kodingwindow.github.io/_data/'
+    kw = '/home/kodingwindow/kodingwindow.github.io/'
+    datapath = kw + '_data/'
+    kwtesting = "/home/kodingwindow/kwtesting/"
 else:
     chrome_driver = Service("D:\\Drivers\\chromedriver.exe")
     firefox_driver = Service("D:\\Drivers\\geckodriver.exe")
     msedge_driver = Service("D:\\Drivers\\msedgedriver.exe")
-    datapath = r'D:/kodingwindow.github.io/_data/'
+    datapath = 'D:/kodingwindow.github.io/_data/'
 
 def verify_title(driver, path, expected_title):
     driver.maximize_window()
@@ -38,14 +40,16 @@ def verify_scrolling(driver):
         print("Back to top: Unsuccessful")
 
 def read_file(driver, kwfile, element):
+    paths = []
     with open(datapath+'%s'%kwfile) as file:
         document = yaml.safe_load(file)
         try:
             parent = document["sidenav"][0]
             element_title = parent["parent"]
             element_url = parent["url"]
-            verify_title(driver, element_url, element_title)
-            verify_scrolling(driver)
+            if driver is not None:
+                verify_title(driver, element_url, element_title)
+                verify_scrolling(driver)
             element_size = len(document[element])
             for i in range(0, element_size):
                 parent = document[element][i]
@@ -57,6 +61,9 @@ def read_file(driver, kwfile, element):
                     for child in children:
                         element_title = child["title"]
                         element_url = child["url"]
-                        verify_title(driver, element_url, element_title)
+                        paths.append(element_url)
+                        if driver is not None:
+                            verify_title(driver, element_url, element_title)
         except KeyError:
             pass
+    return paths

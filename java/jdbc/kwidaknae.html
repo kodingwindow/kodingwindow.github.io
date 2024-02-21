@@ -34,7 +34,7 @@ switched to db DB
 <div class="codecard">{{ page.title }}</div>
 <div class="infocard"><b>Note: </b>In the following program, database and collection automatically get created. If database and collection already exist in MongoDB, then new documents will get inserted into an existing collection.</div>
 <div class="card">{{ site.javafile }}</div>
-<pre>{% highlight java %}
+<pre class="code">{% highlight java %}
 import java.util.ArrayList;
 import org.bson.Document;
 import com.mongodb.MongoClient;
@@ -43,14 +43,14 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import com.mongodb.client.MongoDatabase;
 
-public class KW
+class KW
 {
     public static void main(String[] args)
     {
         try
         {
             MongoClient mc = new MongoClient("localhost", 27017);
-            MongoDatabase md = mk.getDatabase("DB");
+            MongoDatabase md = mc.getDatabase("DB");
             MongoCollection<Document> collection = md.getCollection("holders");
             
             String document1,document2,document3,document4;
@@ -81,7 +81,7 @@ public class KW
             {
                 System.out.println(cursor.next());
             }
-            mk.close();
+            mc.close();
         }
         catch(Exception e)
         {
