@@ -25,7 +25,7 @@ LOOP:
             y = 230 + (120 * sin(2 * 3.14 * x / 200));
             x = x + 3;
             putpixel(x, y, 14);
-            outtextxy(x, y, "o");
+            outtextxy(x, y, (char*)"o");
             setcolor(2);
             line(x, y, x, 230);
             delay(50);
