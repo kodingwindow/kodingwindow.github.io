@@ -1,58 +1,61 @@
 from utilities import *
 
-start = time.time()
-os.makedirs(kwtesting, exist_ok=True)
-os.chdir(kwtesting)
+
+def kw_compile(compiler, filename, extension, args):
+    code = re.findall('<pre class="code">(.+?){% endhighlight %}</pre>', html_input, flags=re.DOTALL)
+    if code is not None:
+        output = "".join(code[0])
+        f2 = open(subpath + filename + extension, "w")
+        f2.write(output)
+        f2 = open(subpath + filename + extension, "w")
+        os.system("sed -i '1d;' {0}".format(subpath + filename + extension))
+        f2.close
+
+        if os.system(compiler + " " + subpath + filename + extension + args) == 0:
+            print("Successful: " + subpath + filename + extension)
+        else:
+            print("Unsuccessful: " + subpath + filename + extension)
+
+
+os.makedirs(kwfied, exist_ok=True)
+os.chdir(kwfied)
 for filename in os.listdir(datapath):
     paths = read_file(None, filename, "grandparent")
     for i in range(0, len(paths)):
         path = str(paths[i]).split("/")
+        subpath = path[0] + "/" + path[1] + "/"
+        os.makedirs(subpath, exist_ok=True)
         args = ""
-        if path[0] == "c":
-            compiler = "gcc"
+        f1 = open(kw + paths[i] + ".html", "r")
+        html_input = f1.read()
+        if html_input.__contains__('<pre class="code">{% highlight nasm %}'):
+            extension = ".asm"
+            compiler = "nasm -felf64"
+            kw_compile(compiler, path[2], extension, args)
+        elif html_input.__contains__('<pre class="code">{% highlight c %}'):
             extension = ".c"
-        elif path[0] == "cpp":
-            compiler = "g++"
-            extension = ".cpp"
-        elif path[0] == "java":
-            compiler = "javac"
-            extension = ".java"
-        elif path[0] == "cg":
-            compiler = "g++"
-            extension = ".cpp"
-            args = " -lgraph"
+            compiler = "gcc"
+            kw_compile(compiler, path[2], extension, args)
+        elif html_input.__contains__('<pre class="code">{% highlight cpp %}'):
             if path[1] == "opengl":
                 args = " -lGL -lGLU -lglut"
-        elif path[0] == "rust":
-            compiler = "rustc"
+            elif path[0] == "cg":
+                args = " -lgraph"
+            extension = ".cpp"
+            compiler = "g++"
+            kw_compile(compiler, path[2], extension, args)
+        elif (html_input.__contains__('<pre class="code">{% highlight java %}') and path[0] == "java"):
+            extension = ".java"
+            compiler = "javac"
+            kw_compile(compiler, path[2], extension, args)
+        elif html_input.__contains__('<pre class="code">{% highlight python %}'):
+            extension = ".py"
+            compiler = "python3 -m py_compile"
+            kw_compile(compiler, path[2], extension, args)
+        elif html_input.__contains__('<pre class="code">{% highlight rust %}'):
             extension = ".rs"
-        elif path[0] == "asm":
-            compiler = "nasm -felf64"
-            extension = ".asm"
-        else:
-            compiler = None
-            extension = ""
-        if compiler is not None:
-            f1 = open(kw + paths[i] + ".html", "r")
-            f2 = open(kwtesting + path[2] + extension, "w")
-            html_input = f1.read()
-            try:
-                matches = re.findall('<pre class="code">(.+?){% endhighlight %}</pre>', html_input, flags=re.DOTALL)
-                output = "".join(matches[0])
-                f2.write(output)
-                f2 = open(kwtesting + path[2] + extension, "w")
-                os.system("sed -i '1d;' {0}".format(kwtesting + path[2] + extension))
-            except IndexError:
-                pass
-            f1.close
-            f2.close
-            
-            if os.system(compiler + " " + path[2] + extension + args) == 0:
-                print("Successful: " + path[1] +"/"+ path[2] + extension)
-            else:
-                print("Unsuccessful: " + path[1] +"/"+ path[2] + extension)
+            compiler = "rustc"
+            kw_compile(compiler, path[2], extension, args)
+        f1.close
 
-end = time.time()
-m, s = divmod(round(end - start), 60)
-h, m = divmod(m, 60)
-print("Total Execution Time: "+f'{h:02d}:{m:02d}:{s:02d}')
+os.system("rm -rf " + kwfied)

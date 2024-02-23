@@ -5,26 +5,26 @@ from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
 
 baseurl = "http://localhost:4000/"
-if sys.platform == 'linux':
+if sys.platform == "linux":
     chrome_driver = Service("/usr/bin/chromedriver")
     firefox_driver = Service("/usr/bin/geckodriver")
     msedge_driver = Service("/usr/bin/msedgedriver")
-    kw = '/home/kodingwindow/kodingwindow.github.io/'
-    datapath = kw + '_data/'
-    kwtesting = "/home/kodingwindow/kwtesting/"
+    kw = "/home/kodingwindow/kodingwindow.github.io/"
+    datapath = kw + "_data/"
+    kwfied = kw + "kwfied/"
 else:
     chrome_driver = Service("D:\\Drivers\\chromedriver.exe")
-    firefox_driver = Service("D:\\Drivers\\geckodriver.exe")
     msedge_driver = Service("D:\\Drivers\\msedgedriver.exe")
-    datapath = 'D:/kodingwindow.github.io/_data/'
+    datapath = "D:/kodingwindow.github.io/_data/"
+
 
 def verify_title(driver, path, expected_title):
     driver.maximize_window()
-    driver.get(baseurl + path)   
+    driver.get(baseurl + path)
     actual_title = driver.title
     if actual_title != expected_title:
-        print("Actual Title  :", actual_title, "\nExpected Title:", expected_title, "\nPath:", path)
-        print("Test Failed: Title Unmatched\n")
+        print("Title Unmatched: " + path)
+
 
 def verify_scrolling(driver):
     before_scroll = driver.execute_script("return document.body.scrollHeight")
@@ -39,9 +39,10 @@ def verify_scrolling(driver):
     if back_to_top != before_scroll:
         print("Back to top: Unsuccessful")
 
+
 def read_file(driver, kwfile, element):
     paths = []
-    with open(datapath+'%s'%kwfile) as file:
+    with open(datapath + "%s" % kwfile) as file:
         document = yaml.safe_load(file)
         try:
             parent = document["sidenav"][0]
@@ -67,3 +68,15 @@ def read_file(driver, kwfile, element):
         except KeyError:
             pass
     return paths
+
+def start_tests(driver):
+    for filename in os.listdir(datapath):
+        read_file(driver, filename, "sidenav")
+        read_file(driver, filename, "grandparent")
+
+    verify_title(driver, "", "Kodingwindow")
+    verify_title(driver, "search/", "Kodingwindow's Search")
+    verify_title(driver, "dashboard/", "Kodingwindow's Dashboard")
+    verify_title(driver, "404/", "404 Page Not Found")
+    verify_title(driver, "shubhamrdarda/", "Shubham Darda")
+    driver.close()
