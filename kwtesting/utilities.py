@@ -3,19 +3,37 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.edge.service import Service
 from selenium.webdriver.common.by import By
+from selenium import webdriver
 
+global kwdata
 baseurl = "http://localhost:4000/"
+
 if sys.platform == "linux":
     chrome_driver = Service("/usr/bin/chromedriver")
     firefox_driver = Service("/usr/bin/geckodriver")
     msedge_driver = Service("/usr/bin/msedgedriver")
     kw = "/home/kodingwindow/kodingwindow.github.io/"
-    datapath = kw + "_data/"
+    kwdata = kw + "_data/"
     kwfied = kw + "kwfied/"
-else:
+elif sys.platform == "win32":
     chrome_driver = Service("D:\\Drivers\\chromedriver.exe")
     msedge_driver = Service("D:\\Drivers\\msedgedriver.exe")
-    datapath = "D:/kodingwindow.github.io/_data/"
+    firefox_driver = None
+    kwdata = "D:/kodingwindow.github.io/_data/"
+
+def startup(browser):
+    if browser == "chrome":
+        options = webdriver.ChromeOptions()
+        options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
+        driver = webdriver.Chrome(options=options, service=chrome_driver)
+    elif browser == "msedge":
+        options = webdriver.EdgeOptions()
+        options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
+        driver = webdriver.Edge(options=options, service=msedge_driver)
+    elif browser == "firefox":
+        options = webdriver.FirefoxOptions()
+        driver = webdriver.Firefox(options=options, service=firefox_driver)
+    return driver
 
 
 def verify_title(driver, path, expected_title):
@@ -23,7 +41,7 @@ def verify_title(driver, path, expected_title):
     driver.get(baseurl + path)
     actual_title = driver.title
     if actual_title != expected_title:
-        print("Title Unmatched: " + path)
+        print("Title Unmatched: https://kodingwindow.com/" + path)
 
 
 def verify_scrolling(driver):
@@ -42,7 +60,7 @@ def verify_scrolling(driver):
 
 def read_file(driver, kwfile, element):
     paths = []
-    with open(datapath + "%s" % kwfile) as file:
+    with open(kwdata + "%s" % kwfile) as file:
         document = yaml.safe_load(file)
         try:
             parent = document["sidenav"][0]
@@ -69,15 +87,16 @@ def read_file(driver, kwfile, element):
             pass
     return paths
 
-def start_tests(driver):
-    for filename in os.listdir(datapath):
+
+def start_tests(browser):
+    driver = startup(browser)
+    for filename in os.listdir(kwdata):
         read_file(driver, filename, "sidenav")
         read_file(driver, filename, "grandparent")
-
     verify_title(driver, "", "Kodingwindow")
     verify_title(driver, "search/", "Kodingwindow's Search")
     verify_title(driver, "dashboard/", "Kodingwindow's Dashboard")
     verify_title(driver, "404/", "404 Page Not Found")
     verify_title(driver, "shubhamrdarda/", "Shubham Darda")
     driver.delete_all_cookies()
-    driver.close()
+    driver.quit()

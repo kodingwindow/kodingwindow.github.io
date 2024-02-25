@@ -19,7 +19,7 @@ def kw_compile(compiler, filename, extension, args):
 
 os.makedirs(kwfied, exist_ok=True)
 os.chdir(kwfied)
-for filename in os.listdir(datapath):
+for filename in os.listdir(kwdata):
     paths = read_file(None, filename, "grandparent")
     for i in range(0, len(paths)):
         path = str(paths[i]).split("/")
