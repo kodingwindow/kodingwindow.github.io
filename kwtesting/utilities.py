@@ -79,4 +79,5 @@ def start_tests(driver):
     verify_title(driver, "dashboard/", "Kodingwindow's Dashboard")
     verify_title(driver, "404/", "404 Page Not Found")
     verify_title(driver, "shubhamrdarda/", "Shubham Darda")
+    driver.delete_all_cookies()
     driver.close()
