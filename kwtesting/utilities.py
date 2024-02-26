@@ -2,37 +2,27 @@ import os, sys, yaml, time, re
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.edge.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
+from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 
-global kwdata
 baseurl = "http://localhost:4000/"
 
-if sys.platform == "linux":
-    chrome_driver = Service("/usr/bin/chromedriver")
-    firefox_driver = Service("/usr/bin/geckodriver")
-    msedge_driver = Service("/usr/bin/msedgedriver")
-    kw = "/home/kodingwindow/kodingwindow.github.io/"
-    kwdata = kw + "_data/"
-    kwfied = kw + "kwfied/"
-elif sys.platform == "win32":
-    chrome_driver = Service("D:\\Drivers\\chromedriver.exe")
-    msedge_driver = Service("D:\\Drivers\\msedgedriver.exe")
-    firefox_driver = None
-    kwdata = "D:/kodingwindow.github.io/_data/"
 
 def startup(browser):
     if browser == "chrome":
         options = webdriver.ChromeOptions()
         options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
-        driver = webdriver.Chrome(options=options, service=chrome_driver)
+        driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
     elif browser == "msedge":
         options = webdriver.EdgeOptions()
         options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
-        driver = webdriver.Edge(options=options, service=msedge_driver)
+        driver = webdriver.Edge(options=options, service=Service(EdgeChromiumDriverManager().install()))
     elif browser == "firefox":
         options = webdriver.FirefoxOptions()
-        driver = webdriver.Firefox(options=options, service=firefox_driver)
+        driver = webdriver.Firefox(options=options, service=Service(GeckoDriverManager().install()))
     return driver
 
 
@@ -58,7 +48,7 @@ def verify_scrolling(driver):
         print("Back to top: Unsuccessful")
 
 
-def read_file(driver, kwfile, element):
+def read_file(driver, kwdata, kwfile, element):
     paths = []
     with open(kwdata + "%s" % kwfile) as file:
         document = yaml.safe_load(file)
@@ -88,11 +78,11 @@ def read_file(driver, kwfile, element):
     return paths
 
 
-def start_tests(browser):
+def start_tests(browser, kwdata):
     driver = startup(browser)
-    for filename in os.listdir(kwdata):
-        read_file(driver, filename, "sidenav")
-        read_file(driver, filename, "grandparent")
+    for kwfile in os.listdir(kwdata):
+        read_file(driver, kwdata, kwfile, "sidenav")
+        read_file(driver, kwdata, kwfile, "grandparent")
     verify_title(driver, "", "Kodingwindow")
     verify_title(driver, "search/", "Kodingwindow's Search")
     verify_title(driver, "dashboard/", "Kodingwindow's Dashboard")
