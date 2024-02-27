@@ -109,9 +109,7 @@
                     {% endif %}
                 {% endfor %}
                 {% include pagination.html %}
-                {% if path[2] != nil or path[3] != nil %}
-                    {% include ads.html %}
-                {% endif %}
+                {% include ads.html %}
             </div>
         </main>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto" style="padding: 0px;">{% include footer.html %}</div>
