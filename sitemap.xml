@@ -11,21 +11,21 @@
         {% if segment.url == "c/" %}{% assign sitemap = site.data.c %}
         {% elsif segment.url == "cpp/" %}{% assign sitemap = site.data.cpp %}
         {% elsif segment.url == "java/" %}{% assign sitemap = site.data.java %}
-        {% elsif segment.url == "csharp/" %}{% assign sitemap = site.data.csharp %}
         {% elsif segment.url == "python/" %}{% assign sitemap = site.data.python %}
+        {% elsif segment.url == "ds/" %}{% assign sitemap = site.data.ds %}
         {% elsif segment.url == "r/" %}{% assign sitemap = site.data.r %}
         {% elsif segment.url == "julia/" %}{% assign sitemap = site.data.julia %}
-        {% elsif segment.url == "fsharp/" %}{% assign sitemap = site.data.fsharp %}
-        {% elsif segment.url == "ds/" %}{% assign sitemap = site.data.ds %}
         {% elsif segment.url == "octave/" %}{% assign sitemap = site.data.octave %}
+        {% elsif segment.url == "csharp/" %}{% assign sitemap = site.data.csharp %}
+        {% elsif segment.url == "fsharp/" %}{% assign sitemap = site.data.fsharp %}
+        {% elsif segment.url == "rust/" %}{% assign sitemap = site.data.rust %}
         {% elsif segment.url == "lisp/" %}{% assign sitemap = site.data.lisp %}
-        {% elsif segment.url == "linux/" %}{% assign sitemap = site.data.linux %}
         {% elsif segment.url == "dsa/" %}{% assign sitemap = site.data.dsa %}
+        {% elsif segment.url == "linux/" %}{% assign sitemap = site.data.linux %}
         {% elsif segment.url == "mysql/" %}{% assign sitemap = site.data.mysql %}
         {% elsif segment.url == "mongodb/" %}{% assign sitemap = site.data.mongodb %}
-        {% elsif segment.url == "cg/" %}{% assign sitemap = site.data.cg %}
         {% elsif segment.url == "selenium/" %}{% assign sitemap = site.data.selenium %}
-        {% elsif segment.url == "rust/" %}{% assign sitemap = site.data.rust %}
+        {% elsif segment.url == "cg/" %}{% assign sitemap = site.data.cg %}
         {% elsif segment.url == "asm/" %}{% assign sitemap = site.data.asm %}
         {% elsif segment.url == "cluster/" %}{% assign sitemap = site.data.cluster %}
         {% elsif segment.url == "about/" %}{% assign sitemap = site.data.about %}

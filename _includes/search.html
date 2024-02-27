@@ -58,26 +58,26 @@ $(document).keydown(function(event)
     <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="margin: 0px; text-align: left;">
         {% for segment in site.data.kw.segments %}
             <span style="display: none;" id="{{ segment.url | split: '/' }}">
-            {% if segment.url == "c/" %}{% assign search = site.data.c %}
-            {% elsif segment.url == "cpp/" %}{% assign search = site.data.cpp %}
-            {% elsif segment.url == "java/" %}{% assign search = site.data.java %}
-            {% elsif segment.url == "csharp/" %}{% assign search = site.data.csharp %}
-            {% elsif segment.url == "python/" %}{% assign search = site.data.python %}
-            {% elsif segment.url == "r/" %}{% assign search = site.data.r %}
-            {% elsif segment.url == "julia/" %}{% assign search = site.data.julia %}
-            {% elsif segment.url == "fsharp/" %}{% assign search = site.data.fsharp %}
-            {% elsif segment.url == "ds/" %}{% assign search = site.data.ds %}
-            {% elsif segment.url == "octave/" %}{% assign search = site.data.octave %}
-            {% elsif segment.url == "lisp/" %}{% assign search = site.data.lisp %}
-            {% elsif segment.url == "linux/" %}{% assign search = site.data.linux %}
-            {% elsif segment.url == "dsa/" %}{% assign search = site.data.dsa %}
-            {% elsif segment.url == "mysql/" %}{% assign search = site.data.mysql %}
-            {% elsif segment.url == "mongodb/" %}{% assign search = site.data.mongodb %}
-            {% elsif segment.url == "cg/" %}{% assign search = site.data.cg %}
-            {% elsif segment.url == "selenium/" %}{% assign search = site.data.selenium %}
-            {% elsif segment.url == "rust/" %}{% assign search = site.data.rust %}
-            {% elsif segment.url == "asm/" %}{% assign search = site.data.asm %}
-            {% elsif segment.url == "cluster/" %}{% assign search = site.data.cluster %}{% else %}{% endif %}
+            {% if segment.url == "c/" %}{% assign sitemap = site.data.c %}
+            {% elsif segment.url == "cpp/" %}{% assign sitemap = site.data.cpp %}
+            {% elsif segment.url == "java/" %}{% assign sitemap = site.data.java %}
+            {% elsif segment.url == "python/" %}{% assign sitemap = site.data.python %}
+            {% elsif segment.url == "ds/" %}{% assign sitemap = site.data.ds %}
+            {% elsif segment.url == "r/" %}{% assign sitemap = site.data.r %}
+            {% elsif segment.url == "julia/" %}{% assign sitemap = site.data.julia %}
+            {% elsif segment.url == "octave/" %}{% assign sitemap = site.data.octave %}
+            {% elsif segment.url == "csharp/" %}{% assign sitemap = site.data.csharp %}
+            {% elsif segment.url == "fsharp/" %}{% assign sitemap = site.data.fsharp %}
+            {% elsif segment.url == "rust/" %}{% assign sitemap = site.data.rust %}
+            {% elsif segment.url == "lisp/" %}{% assign sitemap = site.data.lisp %}
+            {% elsif segment.url == "dsa/" %}{% assign sitemap = site.data.dsa %}
+            {% elsif segment.url == "linux/" %}{% assign sitemap = site.data.linux %}
+            {% elsif segment.url == "mysql/" %}{% assign sitemap = site.data.mysql %}
+            {% elsif segment.url == "mongodb/" %}{% assign sitemap = site.data.mongodb %}
+            {% elsif segment.url == "selenium/" %}{% assign sitemap = site.data.selenium %}
+            {% elsif segment.url == "cg/" %}{% assign sitemap = site.data.cg %}
+            {% elsif segment.url == "asm/" %}{% assign sitemap = site.data.asm %}
+            {% elsif segment.url == "cluster/" %}{% assign sitemap = site.data.cluster %}{% else %}{% endif %}
             <a class="codecard card" href="{{ segment.url }}" onclick="clearinput();">{{ segment.title }}</a>
             {% for parent in search.grandparent %}
                 <a class="codecard card" href="{{ parent.url }}" onclick="clearinput();">{{ parent.parent }}</a>

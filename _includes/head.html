@@ -51,21 +51,21 @@
         {% endif %}
     {% endfor %}
 
-{% elsif path[1] == "csharp" %}
-    {% assign segment = "C# Programming" %}
-    {% assign parent=" / CSharp / " %}
-    {% assign kw = site.data.csharp %}
-    {% for item in site.data.csharp.grandparent %}
-        {% if page.url contains item.url %}
-            {% assign child = item.subtree %}
-        {% endif %}
-    {% endfor %}
-
 {% elsif path[1] == "python" %}
     {% assign segment = "Python Programming" %}
     {% assign parent=" / Python / " %}
     {% assign kw = site.data.python %}
     {% for item in site.data.python.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "ds" %}
+    {% assign segment = "Data Science" %}
+    {% assign parent=" / DS / " %}
+    {% assign kw = site.data.ds %}
+    {% for item in site.data.ds.grandparent %}
         {% if page.url contains item.url %}
             {% assign child = item.subtree %}
         {% endif %}
@@ -91,6 +91,26 @@
         {% endif %}
     {% endfor %}
 
+{% elsif path[1] == "octave" %}
+    {% assign segment = "GNU Octave" %}
+    {% assign parent=" / Octave / " %}
+    {% assign kw = site.data.octave %}
+    {% for item in site.data.octave.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "csharp" %}
+    {% assign segment = "C# Programming" %}
+    {% assign parent=" / CSharp / " %}
+    {% assign kw = site.data.csharp %}
+    {% for item in site.data.csharp.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
 {% elsif path[1] == "fsharp" %}
     {% assign segment = "F# Programming" %}
     {% assign parent=" / FSharp / " %}
@@ -101,21 +121,11 @@
         {% endif %}
     {% endfor %}
 
-{% elsif path[1] == "ds" %}
-    {% assign segment = "Data Science" %}
-    {% assign parent=" / DS / " %}
-    {% assign kw = site.data.ds %}
-    {% for item in site.data.ds.grandparent %}
-        {% if page.url contains item.url %}
-            {% assign child = item.subtree %}
-        {% endif %}
-    {% endfor %}
-
-{% elsif path[1] == "octave" %}
-    {% assign segment = "GNU Octave" %}
-    {% assign parent=" / Octave / " %}
-    {% assign kw = site.data.octave %}
-    {% for item in site.data.octave.grandparent %}
+{% elsif path[1] == "rust" %}
+    {% assign segment = "Rust Programming" %}
+    {% assign parent=" / Rust / " %}
+    {% assign kw = site.data.rust %}
+    {% for item in site.data.rust.grandparent %}
         {% if page.url contains item.url %}
             {% assign child = item.subtree %}
         {% endif %}
@@ -131,21 +141,21 @@
         {% endif %}
     {% endfor %}
 
-{% elsif path[1] == "linux" %}
-    {% assign segment = "Linux Commands and Scripting" %}
-    {% assign parent=" / Linux / " %}
-    {% assign kw = site.data.linux %}
-    {% for item in site.data.linux.grandparent %}
-        {% if page.url contains item.url %}
-            {% assign child = item.subtree %}
-        {% endif %}
-    {% endfor %}
-
 {% elsif path[1] == "dsa" %}
     {% assign segment = "Data Structures and Algorithms" %}
     {% assign parent=" / DSA / " %}
     {% assign kw = site.data.dsa %}
     {% for item in site.data.dsa.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "linux" %}
+    {% assign segment = "Linux Commands and Scripting" %}
+    {% assign parent=" / Linux / " %}
+    {% assign kw = site.data.linux %}
+    {% for item in site.data.linux.grandparent %}
         {% if page.url contains item.url %}
             {% assign child = item.subtree %}
         {% endif %}
@@ -171,16 +181,6 @@
         {% endif %}
     {% endfor %}
 
-{% elsif path[1] == "cg" %}
-    {% assign segment = "Computer Graphics" %}
-    {% assign parent=" / CG / " %}
-    {% assign kw = site.data.cg %}
-    {% for item in site.data.cg.grandparent %}
-        {% if page.url contains item.url %}
-            {% assign child = item.subtree %}
-        {% endif %}
-    {% endfor %}
-
 {% elsif path[1] == "selenium" %}
     {% assign segment = "Selenium WebDriver" %}
     {% assign parent=" / Selenium / " %}
@@ -191,11 +191,11 @@
         {% endif %}
     {% endfor %}
 
-{% elsif path[1] == "rust" %}
-    {% assign segment = "Rust Programming" %}
-    {% assign parent=" / Rust / " %}
-    {% assign kw = site.data.rust %}
-    {% for item in site.data.rust.grandparent %}
+{% elsif path[1] == "cg" %}
+    {% assign segment = "Computer Graphics" %}
+    {% assign parent=" / CG / " %}
+    {% assign kw = site.data.cg %}
+    {% for item in site.data.cg.grandparent %}
         {% if page.url contains item.url %}
             {% assign child = item.subtree %}
         {% endif %}
