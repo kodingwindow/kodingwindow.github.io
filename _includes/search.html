@@ -74,8 +74,8 @@ $(document).keydown(function(event)
             {% elsif segment.url == "linux/" %}{% assign sitemap = site.data.linux %}
             {% elsif segment.url == "mysql/" %}{% assign sitemap = site.data.mysql %}
             {% elsif segment.url == "mongodb/" %}{% assign sitemap = site.data.mongodb %}
-            {% elsif segment.url == "selenium/" %}{% assign sitemap = site.data.selenium %}
             {% elsif segment.url == "cg/" %}{% assign sitemap = site.data.cg %}
+            {% elsif segment.url == "selenium/" %}{% assign sitemap = site.data.selenium %}
             {% elsif segment.url == "asm/" %}{% assign sitemap = site.data.asm %}
             {% elsif segment.url == "cluster/" %}{% assign sitemap = site.data.cluster %}{% else %}{% endif %}
             <a class="codecard card" href="{{ segment.url }}" onclick="clearinput();">{{ segment.title }}</a>

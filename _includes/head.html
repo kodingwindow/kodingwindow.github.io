@@ -181,21 +181,21 @@
         {% endif %}
     {% endfor %}
 
-{% elsif path[1] == "selenium" %}
-    {% assign segment = "Selenium WebDriver" %}
-    {% assign parent=" / Selenium / " %}
-    {% assign kw = site.data.selenium %}
-    {% for item in site.data.selenium.grandparent %}
-        {% if page.url contains item.url %}
-            {% assign child = item.subtree %}
-        {% endif %}
-    {% endfor %}
-
 {% elsif path[1] == "cg" %}
     {% assign segment = "Computer Graphics" %}
     {% assign parent=" / CG / " %}
     {% assign kw = site.data.cg %}
     {% for item in site.data.cg.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "selenium" %}
+    {% assign segment = "Selenium WebDriver" %}
+    {% assign parent=" / Selenium / " %}
+    {% assign kw = site.data.selenium %}
+    {% for item in site.data.selenium.grandparent %}
         {% if page.url contains item.url %}
             {% assign child = item.subtree %}
         {% endif %}
