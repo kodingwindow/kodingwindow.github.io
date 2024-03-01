@@ -12,7 +12,6 @@ class KW
     {
         Thread t1=Thread.currentThread();
         System.out.println("Thread Name "+t1.getName());
-        System.out.println("Thread Id "+t1.getId());
         System.out.println("Thread Priority "+t1.getPriority());
         t1.setName("My Thread");
         System.out.println("Name "+t1);
@@ -23,7 +22,6 @@ class KW
 <span><pre>
 {{ site.runjava }}
 Thread Name main
-Thread Id 1
 Thread Priority 5
 Name Thread[My Thread,5,main]
 kodingwindow@kw:~$ 

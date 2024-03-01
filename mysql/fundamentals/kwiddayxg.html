@@ -7,81 +7,44 @@ title: How to setup, install, and start MySQL on Ubuntu
 
 <div class="terminalcard">Step-1: Open a terminal and execute the following commands</div>
 <span><pre>
-kodingwindow@kw:~$ <mark>su</mark>
-Password: 
-root@kw:/home/kodingwindow# <mark>apt-get update</mark>
-Hit:1 http://in.archive.ubuntu.com/ubuntu focal InRelease
-Hit:2 http://in.archive.ubuntu.com/ubuntu focal-updates InRelease              
-Ign:3 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 InRelease     
-Hit:4 https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/4.2 Release       
-Hit:5 http://in.archive.ubuntu.com/ubuntu focal-backports InRelease            
-Hit:6 http://dl.google.com/linux/chrome/deb stable InRelease                   
-Hit:7 http://security.ubuntu.com/ubuntu focal-security InRelease            
-Reading package lists... Done
-
-root@kw:/home/kodingwindow# <mark>apt-get install mysql-server</mark>
+kodingwindow@kw:~$ <mark>sudo apt-get install mysql-server</mark>
+[sudo] password for kodingwindow: 
 Reading package lists... Done
 Building dependency tree       
 Reading state information... Done
 The following additional packages will be installed:
-  libaio1 libevent-core-2.1-7 libmecab2 mecab-ipadic mecab-ipadic-utf8
-  mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common
-  mysql-server-8.0 mysql-server-core-8.0
-Suggested packages:
-  mailx tinyca
-The following NEW packages will be installed:
-  libaio1 libevent-core-2.1-7 libmecab2 mecab-ipadic mecab-ipadic-utf8
-  mecab-utils mysql-client-8.0 mysql-client-core-8.0 mysql-common mysql-server
-  mysql-server-8.0 mysql-server-core-8.0
-0 upgraded, 12 newly installed, 0 to remove and 4 not upgraded.
-Need to get 29.9 MB of archives.
+...
 After this operation, 246 MB of additional disk space will be used.
 Do you want to continue? [Y/n] y
 </pre></span>
 
-<div class="terminalcard">Step-2: Set Password</div>
+<div class="terminalcard">Step-2: Check MySQL server status</div>
 <span><pre>
-<img src="mysql/images/kwidfuygg.png" loading="lazy">
-</pre></span>
-
-<div class="terminalcard">Step-3: Click right arrow and press Enter button</div>
-<span><pre>
-<img src="mysql/images/kwiddnrdz.png" loading="lazy">
-</pre></span>
-
-<div class="terminalcard">Step-4: Press button Enter (complete the package configuration)</div>
-<span><pre>
-<img src="mysql/images/kwidwhwpz.png" loading="lazy">
-</pre></span>
-
-<div class="terminalcard">Step-5: Check MySQL server status</div>
-<span><pre>
-root@kw:/home/kodingwindow# <mark>systemctl status mysql</mark>
+  kodingwindow@kw:~$ <mark>systemctl status mysql</mark>
 ● mysql.service - MySQL Community Server
      Loaded: loaded (/lib/systemd/system/mysql.service; enabled; vendor preset:>
-     Active: active (running) since Sun 2020-08-30 15:15:26 IST; 27s ago
-   Main PID: 3988 (mysqld)
+     Active: active (running) since Fri 2024-03-01 09:49:13 IST; 30min ago
+   Main PID: 723 (mysqld)
      Status: "Server is operational"
-      Tasks: 39 (limit: 9227)
-     Memory: 332.4M
+      Tasks: 38 (limit: 9171)
+     Memory: 424.0M
+        CPU: 12.957s
      CGroup: /system.slice/mysql.service
-             └─3988 /usr/sbin/mysqld
+             └─723 /usr/sbin/mysqld
 
-Aug 30 15:15:22 kw systemd[1]: Starting MySQL Community Server...
-Aug 30 15:15:26 kw systemd[1]: Started MySQL Community Server.
-lines 1-12/12 (END)
+Mar 01 09:49:12 kw systemd[1]: Starting MySQL Community Server...
+Mar 01 09:49:13 kw systemd[1]: Started MySQL Community Server.
 </pre></span>
 
-<div class="terminalcard">Step-6: Start MySQL</div>
+<div class="terminalcard">Step-3: Start MySQL</div>
 <span><pre>
 kodingwindow@kw:~$ <mark>sudo mysql -u root -p</mark>
-[sudo] password for kodingwindow: 
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 9
-Server version: 8.0.21-0ubuntu0.20.04.4 (Ubuntu)
+Your MySQL connection id is 10
+Server version: 8.0.36-0ubuntu0.22.04.1 (Ubuntu)
 
-Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
 
 Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective

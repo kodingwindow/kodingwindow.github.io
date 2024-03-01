@@ -44,9 +44,13 @@ def compile_all(kw, kwdata, kwfied):
                 extension = ".cpp"
                 compiler = "g++"
                 extract_compile(html_input, compiler, subpath, path[2], extension, args)
-            elif (html_input.__contains__('<pre class="code">{% highlight java %}') and path[0] == "java"):
+            elif (html_input.__contains__('<pre class="code">{% highlight java %}') and path[0] == "java" and path[1] != "jdbc"):
                 extension = ".java"
                 compiler = "javac"
+                extract_compile(html_input, compiler, subpath, path[2], extension, args)
+            elif html_input.__contains__('<pre class="code">{% highlight shell %}'):
+                extension = ".sh"
+                compiler = "shc -f"
                 extract_compile(html_input, compiler, subpath, path[2], extension, args)
             elif html_input.__contains__('<pre class="code">{% highlight python %}'):
                 extension = ".py"
