@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
         webview.settings.allowFileAccess = false
         webview.settings.allowContentAccess = false
         webview.settings.setSupportZoom(false)
-        webview.settings.textZoom = 100
         webview.settings.cacheMode = WebSettings.LOAD_DEFAULT
         webview.settings.javaScriptEnabled = true
         webview.settings.loadsImagesAutomatically = true
@@ -88,10 +87,5 @@ class MainActivity : AppCompatActivity() {
                     onBackPressedDispatcher.onBackPressed()
             }
         })
-    }
-
-    public override fun onDestroy() {
-        super.onDestroy()
-        webview.clearCache(true)
     }
 }

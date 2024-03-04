@@ -12,9 +12,26 @@
       "filters": [],
       "attributes": [],
       "versionCode": 1,
-      "versionName": "24.2.12",
+      "versionName": "24.3.2",
       "outputFile": "kwindow-release.apk"
     }
   ],
-  "elementType": "File"
+  "elementType": "File",
+  "baselineProfiles": [
+    {
+      "minApi": 28,
+      "maxApi": 30,
+      "baselineProfiles": [
+        "baselineProfiles/1/kwindow-release.dm"
+      ]
+    },
+    {
+      "minApi": 31,
+      "maxApi": 2147483647,
+      "baselineProfiles": [
+        "baselineProfiles/0/kwindow-release.dm"
+      ]
+    }
+  ],
+  "minSdkVersionForDexing": 28
 }

@@ -12,7 +12,7 @@ android {
         minSdk = 28
         targetSdk = 34
         versionCode = 1
-        versionName = "24.2.12"
+        versionName = "24.3.2"
         setProperty("archivesBaseName", "kwindow")
     }
 
