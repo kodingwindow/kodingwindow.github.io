@@ -103,6 +103,8 @@ grandparent:
     subtree: OpenGL
     url: cg/opengl/
     children: 
+      - title: C++ program to draw a rhombus using OpenGL
+        url: cg/opengl/kwiddcivl
       - title: C++ program for DDA line drawing algorithm using OpenGL
         url: cg/opengl/kwidyulza
       - title: C++ program for Bresenham's line drawing algorithm using OpenGL
@@ -111,6 +113,8 @@ grandparent:
         url: cg/opengl/kwidwgeyh
       - title: C++ program for Bresenham's circle drawing algorithm using OpenGL
         url: cg/opengl/kwiddadyi
+      - title: C++ program for 8 X 8 Chess Board using OpenGL
+        url: cg/opengl/kwidfuygg
 
 sidenav:
   - parent: Computer Graphics
