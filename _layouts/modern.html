@@ -120,10 +120,10 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header"><h5 class="modal-title" id="appmodalLabel"><i class="bi bi-android2"></i> Kodingwindow Android App</h5></div>
-                <div class="modal-body">Dear User, <br>Thank you for showing interest in the Kodingwindow Android app. We will soon launch it on the Google Play Store. As of now, you need to install the apk manually, and Android version 10 and up is required. Do you want to download the app?</div>
+                <div class="modal-body">Dear User, <br>We are grateful for your interest in the Kodingwindow Android app. We intend to soon make it available on the Google Play Store. Currently, Android versions 10 and up require manual apk installations. Would you like to get the app?</div>
                 <div class="modal-footer justify-content-center">
                     <a style="cursor: pointer; border: 1px solid #e63636;" class="btn" data-bs-dismiss="modal"><i class="bi bi-cloud-slash"></i> No</a>
-                    <a href="{{ site.android_app }}" style="border: 1px solid #00b050;" class="btn" target="_blank"><i class="bi bi-cloud-arrow-down"></i> Yes</a>
+                    <a href="{{ site.android_app }}" style="border: 1px solid #00b050;" class="btn" onclick="$('#appmodal').modal('hide');"><i class="bi bi-cloud-arrow-down"></i> Yes</a>
                 </div>
             </div>
         </div>
