@@ -14,15 +14,19 @@ import android.webkit.WebViewClient
 import android.widget.Button
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.Firebase
+import com.google.firebase.analytics.FirebaseAnalytics
+import com.google.firebase.analytics.analytics
 
 
 class MainActivity : AppCompatActivity() {
     lateinit var webview: WebView
-
+    private lateinit var analytics: FirebaseAnalytics
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        analytics = Firebase.analytics
         webview = findViewById(R.id.webView)
         webview.settings.safeBrowsingEnabled = true
         webview.settings.useWideViewPort = false
