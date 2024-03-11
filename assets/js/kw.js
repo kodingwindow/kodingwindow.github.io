@@ -32,6 +32,7 @@ $(function () {
         $('.leftsidebar-collapse').removeClass('open')
         $('.rightsidebar-collapse').removeClass('open')
     })
+    $('html').on('dragstart', 'a', function () { return false; });
 });
 
 $(document).keydown(function (event) {
