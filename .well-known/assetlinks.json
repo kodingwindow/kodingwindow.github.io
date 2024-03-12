@@ -1,9 +1,25 @@
 [{
-    "relation": ["delegate_permission/common.handle_all_urls"],
-    "target": {
-      "namespace": "android_app",
-      "package_name": "com.kodingwindow.kodingwindow",
-      "sha256_cert_fingerprints":
-      ["2A:39:36:57:5B:C6:8F:5E:D2:68:C3:01:7B:85:F5:FE:49:AC:06:C7:98:AD:DB:DE:EA:27:42:B8:09:4B:E8:67"]
-    }
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.kodingwindow.kodingwindow",
+    "sha256_cert_fingerprints":
+    ["2A:39:36:57:5B:C6:8F:5E:D2:68:C3:01:7B:85:F5:FE:49:AC:06:C7:98:AD:DB:DE:EA:27:42:B8:09:4B:E8:67"]
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "web",
+    "site": "https://kodingwindow.com"
+  }
+},
+{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "com.kodingwindow.kodingwindow",
+    "sha256_cert_fingerprints":
+    ["2A:39:36:57:5B:C6:8F:5E:D2:68:C3:01:7B:85:F5:FE:49:AC:06:C7:98:AD:DB:DE:EA:27:42:B8:09:4B:E8:67"]
+  }
 }]
