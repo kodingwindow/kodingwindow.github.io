@@ -57,6 +57,9 @@ runopengl: "kodingwindow@kw:~$ <mark>g++ kw.cpp -lGL -lGLU -lglut</mark><br>kodi
 runasm: "kodingwindow@kw:~$ <mark>nasm -felf64 kw.asm</mark><br>kodingwindow@kw:~$ <mark>ld kw.o && ./a.out</mark>"
 output: "<span class='bi bi-terminal'> Output</span>"
 
+plugins:
+   - jekyll-sitemap
+   
 #Exclude from processing
 exclude:
    - Gemfile
