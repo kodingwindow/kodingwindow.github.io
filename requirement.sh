@@ -17,6 +17,7 @@ sudo apt-get autoremove -y
 
 sudo gem install jekyll bundler
 update bundler
+bundle config set --local path vendor/bundle
 bundle install
 bundle update
 echo "———————————————————————————————————————————"
