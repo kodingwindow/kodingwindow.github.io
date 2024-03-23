@@ -23,7 +23,10 @@ bundle update
 echo "———————————————————————————————————————————"
 echo "Current versions on $(lsb_release -d --short)"
 echo "———————————————————————————————————————————"
-printf "$(ruby -v)\nGem $(gem -v)\n$(jekyll -v)\n$(bundler -v)\n"
+printf "$(bundle exec ruby -v)
+Gem $(bundle exec gem -v)
+$(bundle exec jekyll -v)
+$(bundle exec bundler -v)\n"
 echo "———————————————————————————————————————————"
 sudo kill -9 $(sudo lsof -t -i:4000) 2> /dev/null
 sudo bundle exec jekyll serve
