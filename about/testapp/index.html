@@ -1,6 +1,7 @@
 ---
 layout: modern
 title: Kodingwindow's TestApp
+permalink: testapp/
 ---
 
 <div class="d-flex flex-column min-vh-100 min-vw-100">
@@ -9,7 +10,7 @@ title: Kodingwindow's TestApp
             <div class="box card-header d-flex justify-content-center">
                 <h5>Kodingwindow Login</h5>
             </div>
-            <form name="kwlogin" action="testapp/profile" onsubmit="return validate()">
+            <form name="kwlogin" action="{{ site.data.url.shubhamrdarda }}" onsubmit="return validate()">
                 <div class="box card-body">
                     <div class="mb-3">
                         <input id="username" name="username" type="text" class="form-control" placeholder="Username" autocomplete="off" maxlength="12" minlength="12">
