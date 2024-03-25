@@ -1,4 +1,7 @@
 grandparent:
+  - parent: Analytics Reports
+    subtree: Reports
+    url: about/reports/
   - parent: Frequently Asked Questions
     subtree: FAQs
     url: about/faqs/
@@ -18,6 +21,8 @@ sidenav:
     children: 
       - title: Frequently Asked Questions
         url: about/faqs/
+      - title: Analytics Reports
+        url: about/reports/
       - title: Terms of Use
         url: about/terms/
       - title: Privacy Policy

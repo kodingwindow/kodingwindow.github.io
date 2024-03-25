@@ -48,8 +48,7 @@
     #other > a:hover, #other > a:focus, .nav-link.sidebar-item-active.about, a.about:hover, a.about:focus
     { border-left: 5px solid var(--other); }
 
-    #fc-, #fc-search, #fc-about, #fc-testapp, #fc-dashboard, #fc-shubhamrdarda, .wvnav-item-active-, .wvnav-item-active-search, .wvnav-item-active-dashboard, .wvnav-item-active-about,
-    #fc-:hover, #fc-search:hover, #fc-about:hover, #fc-testapp:hover, #fc-dashboard:hover, #fc-shubhamrdarda:hover
+    #fc-, #fc-search, #fc-about, #fc-testapp, #fc-shubhamrdarda, .wvnav-item-active-, .wvnav-item-active-search, .wvnav-item-active-about, #fc-:hover, #fc-search:hover, #fc-about:hover, #fc-testapp:hover #fc-shubhamrdarda:hover
     { color: var(--other); }
 
     input.bc-search:focus 
@@ -97,8 +96,7 @@
     #other > a:hover, #other > a:focus, .nav-link.sidebar-item-active.about, a.about:hover, a.about:focus
     { border-left: 5px solid var(--other); }
 
-    #fc-, #fc-search, #fc-about, #fc-testapp, #fc-dashboard, #fc-shubhamrdarda, .wvnav-item-active-, .wvnav-item-active-search, .wvnav-item-active-dashboard, .wvnav-item-active-about,
-    #fc-:hover, #fc-search:hover, #fc-about:hover, #fc-testapp:hover, #fc-dashboard:hover, #fc-shubhamrdarda:hover
+    #fc-, #fc-search, #fc-about, #fc-testapp, #fc-shubhamrdarda, .wvnav-item-active-, .wvnav-item-active-search, .wvnav-item-active-about, #fc-:hover, #fc-search:hover, #fc-about:hover, #fc-testapp:hover #fc-shubhamrdarda:hover
     { color: var(--other); }
 
     input.bc-search:focus 
