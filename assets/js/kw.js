@@ -51,7 +51,7 @@ const isWebview = (isAndroid && /; wv\)/.test(normalizedUserAgent));
 /* --------------------------------------------------------------------------------------------- */
 
 $(document).ready(function () {
-    $('#backtotop').click(function () { $('html, body').animate({ scrollTop: 0 }, 100); });
+    $('.back-to-top').click(function () { $('html, body').animate({ scrollTop: 0 }, 100); });
     $(window).scroll(function (e) {
         var is_shown = sessionStorage.getItem('status');
         var scrollTop = $(window).scrollTop();
