@@ -41,20 +41,6 @@ $(document).keydown(function (event) {
 
 /* --------------------------------------------------------------------------------------------- */
 
-function validate() {
-    var username = document.kwlogin.username.value;
-    var password = document.kwlogin.password.value;
-    if (username.toLowerCase() == "kodingwindow" && password.toLowerCase() == "kodingwindow") {
-        return true;
-    }
-    else {
-        alert("\nPlease use the following credentials to login\nUsername: kodingwindow\nPassword: kodingwindow");
-        return false;
-    }
-}
-
-/* --------------------------------------------------------------------------------------------- */
-
 const navigator = window.navigator;
 const userAgent = navigator.userAgent;
 const normalizedUserAgent = userAgent.toLowerCase();
@@ -65,7 +51,7 @@ const isWebview = (isAndroid && /; wv\)/.test(normalizedUserAgent));
 /* --------------------------------------------------------------------------------------------- */
 
 $(document).ready(function () {
-    $('#back-to-top').click(function () { $('html, body').animate({ scrollTop: 0 }, 100); });
+    $('#backtotop').click(function () { $('html, body').animate({ scrollTop: 0 }, 100); });
     $(window).scroll(function (e) {
         var is_shown = sessionStorage.getItem('status');
         var scrollTop = $(window).scrollTop();
@@ -84,10 +70,10 @@ $(document).ready(function () {
 });
 window.onscroll = function () {
     if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
-        document.getElementById("back-to-top").style.display = "block";
+        document.getElementById("backtotop").style.display = "block";
     }
     else {
-        document.getElementById("back-to-top").style.display = "none";
+        document.getElementById("backtotop").style.display = "none";
     }
     $('.leftsidebar-collapse').removeClass('open')
     $('.rightsidebar-collapse').removeClass('open')

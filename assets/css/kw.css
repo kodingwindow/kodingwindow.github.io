@@ -664,7 +664,7 @@ a>i {
     color: var(--svgicon);
 }
 
-span#back-to-top>i.svgicon {
+a.back-to-top>i.svgicon {
     padding: 8px 10px 8px 10px;
     border-radius: 50px;
     background-color: var(--color4);
@@ -702,7 +702,7 @@ a.wvnav-item>i.wvsvg {
     font-size: 22px;
 }
 
-.wvnav-item-active>i{
+.wvnav-item-active>i {
     background-color: var(--wvnav-item-active);
     border-radius: 25px;
 }

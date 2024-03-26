@@ -10,13 +10,13 @@ permalink: testapp/
             <div class="box card-header d-flex justify-content-center">
                 <h5>Kodingwindow Login</h5>
             </div>
-            <form name="kwlogin" action="{{ site.data.url.shubhamrdarda }}" onsubmit="return validate()">
+            <form name="kwlogin" action="{{ site.data.url.shubhamrdarda }}">
                 <div class="box card-body">
                     <div class="mb-3">
-                        <input id="username" name="username" type="text" class="form-control" placeholder="Username" autocomplete="off" maxlength="12" minlength="12">
+                        <input id="username" name="username" type="text" class="form-control" placeholder="Username" autocomplete="off" maxlength="15" minlength="3" required>
                     </div>
                     <div class="mb-3">
-                        <input id="password" name="password" type="password" class="form-control" placeholder="Password" autocomplete="off" maxlength="12" minlength="12">
+                        <input id="password" name="password" type="password" class="form-control" placeholder="Password" autocomplete="off" maxlength="15" minlength="3" required>
                     </div>
                     <div class="row">
                         <div class="col-6">
@@ -43,4 +43,20 @@ permalink: testapp/
             </form>
         </div>
     </div>
+    {% include footer.html %}
+    <script type="text/javascript">
+    if(isWebview && userAgent.includes("Kodingwindow"))
+    {
+        document.getElementById("rsidebar").style.display = "none";
+        document.getElementById("isWebView").style.display = "block";
+        document.getElementById("isWebsite").style.display = "none";
+        onselectstart = (e) => { e.preventDefault() }
+        $('body').on('contextmenu', function() { return false; });
+    }
+    else
+    {
+        document.getElementById("isWebsite").style.display = "none";
+        document.getElementById("isWebView").style.display = "none";
+    }
+    </script>
 </div>

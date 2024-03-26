@@ -40,7 +40,7 @@ def verify_scrolling(driver):
     time.sleep(1)
     after_scroll = driver.execute_script("return document.body.scrollHeight")
     if after_scroll > before_scroll:
-        element = driver.find_element(By.ID, "back-to-top")
+        element = driver.find_element(By.ID, "backtotop")
         element.click()
         time.sleep(1)
     back_to_top = after_scroll = driver.execute_script("return document.body.scrollHeight")
