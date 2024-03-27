@@ -92,18 +92,16 @@ $(document).keydown(function(event)
 
 {% include footer.html %}
 <script type="text/javascript">
-if(isWebview && userAgent.includes("Kodingwindow"))
-{
+if (isWebview && userAgent.includes("Kodingwindow")) {
     document.getElementById("rsidebar").style.display = "none";
     document.getElementById("isWebView").style.display = "block";
     document.getElementById("isWebsite").style.display = "none";
     onselectstart = (e) => { e.preventDefault() }
-    $('body').on('contextmenu', function() { return false; });
+    $('body').on('contextmenu', function () { return false; });
 }
-else
-{
+else {
     document.getElementById("isWebsite").style.display = "none";
     document.getElementById("isWebView").style.display = "none";
-    document.getElementById("backtotop").style.paddingBottom = "15px";
+    document.getElementById("backtotop").style.paddingBottom = "30px";
 }
 </script>
