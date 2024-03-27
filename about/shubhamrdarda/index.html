@@ -81,7 +81,7 @@ i.srdsvg
 
 {% include footer.html %}
 <script type="text/javascript">
-if (!isWebview && !userAgent.includes("Kodingwindow")) {
+if (isWebview && userAgent.includes("Kodingwindow")) {
     document.getElementById("rsidebar").style.display = "none";
     document.getElementById("isWebView").style.display = "block";
     document.getElementById("isWebsite").style.display = "none";
@@ -93,7 +93,7 @@ else {
 }
 $('#about').on('shown.bs.collapse', function () {
     document.getElementById("profile").style.marginTop = "80px";
-    document.getElementById("isWebView").style.marginBottom = "75px";
+    document.getElementById("isWebView").style.marginBottom = "100px";
     document.getElementById("card-footer").style.marginBottom = "30px";
 });
 $('#about').on('hidden.bs.collapse', function () {
