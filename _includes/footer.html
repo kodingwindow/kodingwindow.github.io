@@ -12,7 +12,7 @@
 </div>
 {% endif %}
 
-<div id="backtotop" class="text-center" style="padding-top: 30px; padding-bottom: 20px; display: none;"><a class="back-to-top" style="cursor: pointer;" title="Back to top"><i class="svgicon bi bi-arrow-bar-up"></i></a></div>
+<div id="backtotop" class="text-center" style="display: none; padding: 30px 0px 15px 0px;"><a class="back-to-top" style="cursor: pointer;" title="Back to top"><i class="svgicon bi bi-arrow-bar-up"></i></a></div>
 <footer class="isWebsite" id="isWebsite" style="display: block;">
     <div class="footer">
         <div class="container">
@@ -81,7 +81,7 @@ if(isWebview && userAgent.includes("Kodingwindow"))
     document.getElementById("rsidebar").style.display = "none";
     document.getElementById("isWebsite").style.display = "none";
     document.getElementById("isWebView").style.display = "block";
-    document.getElementById("isWebView").style.marginBottom = "70px";
+    document.getElementById("isWebView").style.marginBottom = "75px";
     onselectstart = (e) => { e.preventDefault() }
     $('body').on('contextmenu', function() { return false; });
 }

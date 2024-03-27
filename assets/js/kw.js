@@ -69,11 +69,13 @@ $(document).ready(function () {
     });
 });
 window.onscroll = function () {
-    if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         document.getElementById("backtotop").style.display = "block";
+        document.getElementById("isWebsite").style.paddingTop = "5px";
     }
     else {
         document.getElementById("backtotop").style.display = "none";
+        document.getElementById("isWebsite").style.paddingTop = "30px";
     }
     $('.leftsidebar-collapse').removeClass('open')
     $('.rightsidebar-collapse').removeClass('open')

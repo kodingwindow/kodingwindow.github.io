@@ -21,14 +21,14 @@ permalink: shubhamrdarda/
                     </div>
                 </div>
             </div>
-            <div class="card-footer d-flex justify-content-between" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
+            <div id="card-footer" class="card-footer d-flex justify-content-between" style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px;">
                 <a href="https://linkedin.com/in/shubhamrdarda" target="_blank" title="LinkedIn"><i class="svgicon bi bi-linkedin"></i></a>
                 <a href="https://instagram.com/shubhamrdarda" target="_blank" title="Instagram"><i class="svgicon bi bi-instagram"></i></a>
                 <a href="https://www.threads.net/@shubhamrdarda" target="_blank" title="Threads"><i class="svgicon bi bi-threads"></i></a>
+                <a href="https://x.com/shubhamrdarda" target="_blank" title="Twitter"><i class="svgicon bi bi-twitter-x"></i></a>
                 <a href="https://github.com/shubhamrdarda" target="_blank" title="GitHub"><i class="svgicon bi bi-github"></i></a>
                 <a href="https://facebook.com/shubhamrdarda" target="_blank" title="Facebook"><i class="svgicon bi bi-facebook"></i></a>
                 <a href="https://www.youtube.com/@shubhamrdarda" target="_blank" title="YouTube"><i class="svgicon bi bi-youtube"></i></a>
-                <a href="https://github.com/sponsors/shubhamrdarda" title="GitHub Sponsor" target="_blank"><i class="svgicon bi bi-suit-heart"></i></a>
             </div>
         </div>
     </div>
@@ -81,7 +81,7 @@ i.srdsvg
 
 {% include footer.html %}
 <script type="text/javascript">
-if (isWebview && userAgent.includes("Kodingwindow")) {
+if (!isWebview && !userAgent.includes("Kodingwindow")) {
     document.getElementById("rsidebar").style.display = "none";
     document.getElementById("isWebView").style.display = "block";
     document.getElementById("isWebsite").style.display = "none";
@@ -93,8 +93,12 @@ else {
 }
 $('#about').on('shown.bs.collapse', function () {
     document.getElementById("profile").style.marginTop = "80px";
+    document.getElementById("isWebView").style.marginBottom = "75px";
+    document.getElementById("card-footer").style.marginBottom = "30px";
 });
 $('#about').on('hidden.bs.collapse', function () {
     document.getElementById("profile").style.marginTop = "-15px";
+    document.getElementById("isWebView").style.marginBottom = "0px";
+    document.getElementById("card-footer").style.marginBottom = "0px";
 });
 </script>
