@@ -674,6 +674,7 @@ a.back-to-top>i.svgicon {
 
 div.wvnav {
     position: fixed;
+    height: 70px;
     bottom: 0;
     width: 100%;
     border-top: 1px solid var(--color1);
