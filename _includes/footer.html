@@ -45,7 +45,7 @@
                     <h6>Social Handles</h6>
                     <a href="{{ site.data.url.linkedin }}" target="_blank"><div>LinkedIn</div></a>
                     <a href="{{ site.data.url.instagram }}" target="_blank"><div>Instagram</div></a>
-                    <a href="{{ site.data.url.threads }}" target="_blank"><div>Threads</div></a>
+                    <a href="{{ site.data.url.x }}" target="_blank"><div>X</div></a>
                     <a href="{{ site.data.url.youtube }}" target="_blank"><div>YouTube</div></a>
                     <a href="{{ site.data.url.facebook }}" target="_blank"><div>Facebook</div></a>
                 </div>
@@ -53,14 +53,14 @@
         </div>
     </div>
     <div class="d-flex justify-content-center" style="background-color: #16181d; padding: 15px; margin: 0px;"> 
-        <span><a href="" style="color: #ffffff;"><img alt="" src="{{ site.icon }}" width="25" height="25"><span style="padding: 5px;">{{ site.title }}</span></a><a style="color: #ffffff;" href="shubhamrdarda/"><span>by {{ site.founder }}</span></a></span>
+        <img alt="" src="{{ site.icon }}" width="25" height="25"><span style="padding-top: 2px;">{{ site.title }} by <a class="hlink" href="/shubhamrdarda">{{ site.founder }}</span></a>
     </div>
 </footer>
 
 <footer class="isWebView" id="isWebView" style="display: none;">
     {% if page.url contains "search/" %}
         {% assign search="wvnav-item-active" %}
-    {% elsif path[1] == "about" or page.url contains "shubhamrdarda/" %}
+    {% elsif path[1] == "about" or page.url contains "shubhamrdarda" %}
         {% assign about="wvnav-item-active" %}
     {% else %}
         {% assign home="wvnav-item-active" %}

@@ -59,7 +59,7 @@ The Kodingwindow website's versioning is maintained on [GitHub][kwidezvdy] throu
 Step 1: kodingwindow@kw:~$ git clone https://github.com/kodingwindow/kodingwindow.github.io.git
 Step 2: kodingwindow@kw:~$ cd kodingwindow.github.io/
 Step 3: kodingwindow@kw:~/kodingwindow.github.io$ bash requirement.sh
-Step 4: Visit the local website at http://127.0.0.1:4000 or http://localhost:4000/
+Step 4: Visit the local website at http://127.0.0.1:4000 or http://localhost:4000
 ```
 
 ## License
@@ -68,46 +68,46 @@ Kodingwindow, Since 2018. The entire codebase is licensed under the [MIT LICENSE
 ## Social Handles
 - [LinkedIn][kwidyyeee]
 - [Instagram][kwidgvdvz]
-- [Twitter][kwidywhul]
-- [Facebook][kwidgawwf]
+- [X][kwidywhul]
 - [YouTube][kwidbgtwt]
+- [Facebook][kwidgawwf]
 
 ## Contact Us
 For any queries, appreciation, and requirements, you can write to us at kodingwindow@outlook.com
 
-[kwidzzegt]: https://kodingwindow.com/
-[kwidzgzzw]: https://kodingwindow.com/c/
-[kwidsshvg]: https://kodingwindow.com/cpp/
-[kwidxyawz]: https://kodingwindow.com/java/
-[kwidddsgd]: https://kodingwindow.com/csharp/
-[kwidyigxk]: https://kodingwindow.com/python/
-[kwidpdygw]: https://kodingwindow.com/r/
-[kwidaeswq]: https://kodingwindow.com/julia/
-[kwidgggvq]: https://kodingwindow.com/fsharp/
-[kwidocuey]: https://kodingwindow.com/ds/
-[kwidvzapz]: https://kodingwindow.com/octave/
-[kwidvolqb]: https://kodingwindow.com/lisp/
-[kwidawgvo]: https://kodingwindow.com/linux/
-[kwidvgwaz]: https://kodingwindow.com/dsa/
-[kwidcgaye]: https://kodingwindow.com/mysql/
-[kwidvwkzg]: https://kodingwindow.com/mongodb/
-[kwidgzwzz]: https://kodingwindow.com/cg/
-[kwidkwdvv]: https://kodingwindow.com/selenium/
-[kwidvvvvh]: https://kodingwindow.com/rust/
-[kwidtgvee]: https://kodingwindow.com/asm/
-[kwidykavz]: https://kodingwindow.com/cluster/
-[kwidfyezq]: https://kodingwindow.com/search/
-[kwidwzddw]: https://kodingwindow.com/about/faqs/
-[kwidaekky]: https://kodingwindow.com/shubhamrdarda/
-[kwidyyeee]: https://www.linkedin.com/company/kodingwindow/
-[kwidywhul]: https://www.twitter.com/kodingwindow/
-[kwidgvdvz]: https://www.instagram.com/kodingwindow/
-[kwidbgtwt]: https://www.youtube.com/@kodingwindow/
-[kwidgawwf]: https://www.facebook.com/kodingwindow/
-[kwidezvdy]: https://github.com/
-[kwidzuddz]: https://getbootstrap.com/
-[kwidddcia]: https://jquery.com/
-[kwidwwvga]: https://jekyllrb.com/
-[kwidzyzav]: https://git-scm.com/
+[kwidzzegt]: https://kodingwindow.com
+[kwidzgzzw]: https://kodingwindow.com/c
+[kwidsshvg]: https://kodingwindow.com/cpp
+[kwidxyawz]: https://kodingwindow.com/java
+[kwidddsgd]: https://kodingwindow.com/csharp
+[kwidyigxk]: https://kodingwindow.com/python
+[kwidpdygw]: https://kodingwindow.com/r
+[kwidaeswq]: https://kodingwindow.com/julia
+[kwidgggvq]: https://kodingwindow.com/fsharp
+[kwidocuey]: https://kodingwindow.com/ds
+[kwidvzapz]: https://kodingwindow.com/octave
+[kwidvolqb]: https://kodingwindow.com/lisp
+[kwidawgvo]: https://kodingwindow.com/linux
+[kwidvgwaz]: https://kodingwindow.com/dsa
+[kwidcgaye]: https://kodingwindow.com/mysql
+[kwidvwkzg]: https://kodingwindow.com/mongodb
+[kwidgzwzz]: https://kodingwindow.com/cg
+[kwidkwdvv]: https://kodingwindow.com/selenium
+[kwidvvvvh]: https://kodingwindow.com/rust
+[kwidtgvee]: https://kodingwindow.com/asm
+[kwidykavz]: https://kodingwindow.com/cluster
+[kwidfyezq]: https://kodingwindow.com/search
+[kwidwzddw]: https://kodingwindow.com/about/faqs
+[kwidaekky]: https://kodingwindow.com/shubhamrdarda
+[kwidyyeee]: https://www.linkedin.com/company/kodingwindow
+[kwidywhul]: https://x.com/kodingwindow
+[kwidgvdvz]: https://www.instagram.com/kodingwindow
+[kwidbgtwt]: https://www.youtube.com/@kodingwindow
+[kwidgawwf]: https://www.facebook.com/kodingwindow
+[kwidezvdy]: https://github.com
+[kwidzuddz]: https://getbootstrap.com
+[kwidddcia]: https://jquery.com
+[kwidwwvga]: https://jekyllrb.com
+[kwidzyzav]: https://git-scm.com
 [kwidzdngz]: https://github.com/kodingwindow/kodingwindow.github.io?tab=MIT-1-ov-file
 [kwidwxaed]: https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam
