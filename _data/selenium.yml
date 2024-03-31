@@ -3,15 +3,15 @@ grandparent:
     subtree: Fundamentals
     url: selenium/fundamentals/
     children: 
-      - title: Selenium Java to launch the browser and navigate to a given URL
+      - title: How to launch the browser using Selenium Java
         url: selenium/fundamentals/kwidrvyfv
-      - title: Selenium Java to launch the Chromium browser and navigate to a given URL
-        url: selenium/fundamentals/kwidzzegt
-      - title: Selenium Python to launch the browser and navigate to a given URL
+      - title: How to launch the browser using Selenium Python
         url: selenium/fundamentals/kwidureze
+      - title: How to launch the Chromium browser using Selenium Java
+        url: selenium/fundamentals/kwidzzegt
       - title: Selenium Java to maximize the browser window and get its properties
         url: selenium/fundamentals/kwidavaga
-      - title: Selenium Java to resize the browser window size
+      - title: Selenium Java to resize the browser window
         url: selenium/fundamentals/kwidecmzw
       - title: Selenium Java to get the present browser URL
         url: selenium/fundamentals/kwidlarzw

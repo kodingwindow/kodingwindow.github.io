@@ -9,8 +9,6 @@ title: Selenium Java to select an option from the Chrome context menu
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -21,11 +19,10 @@ import org.openqa.selenium.interactions.Actions;
 
 class KW
 {
-    @SuppressWarnings("deprecation")
     public static void main(String[] args) throws AWTException
     {   
         Robot robot = new Robot();
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://kodingwindow.com/testapp/");
@@ -34,14 +31,12 @@ class KW
         Action multipleActions = builder.moveToElement(un).click().sendKeys(un, "kodingwindow").click(un)
         		.doubleClick(un).contextClick().build();
         
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         multipleActions.perform();
 
         robot.keyPress(KeyEvent.VK_DOWN);
         robot.keyRelease(KeyEvent.VK_DOWN);
         robot.keyPress(KeyEvent.VK_ENTER);
 
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         driver.findElement(By.name("password")).sendKeys(Keys.CONTROL, "v");
         driver.findElement(By.name("login")).click();
     }

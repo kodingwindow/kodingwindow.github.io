@@ -4,8 +4,14 @@ title: How to generate Extent Reports in Selenium WebDriver
 ---
 
 <div class="board"><div class="boardtitle">Prerequisites</div>
-    <p>TestNG installed in Eclispse. <br><b>For Example 1: </b>you need to download the jar file <a href="{{ site.data.url.kwidgdewb }}" target="_blank" class="hlink">(com.aventstack)</a>  of Extent Reports. Once downloaded, you can import the library by right-clicking on the project -> Properties -> Java Build Path -> Libraries -> Add External JARs...</p>
-    <p><b>For Example 2: </b>you need to download the jar file <a href="{{ site.data.url.kwidezgge }}" target="_blank" class="hlink">(com.relevantcodes)</a> of Extent Reports. Once downloaded, you can import the library by right-clicking on the project -> Properties -> Java Build Path -> Libraries -> Add External JARs...</p>
+    <p>
+        1. TestNG installed in Eclispse. 
+        <br>2. You need to download the following jar files for Extent Reports. Once downloaded, you can import the library by right-clicking on the project -> Properties -> Java Build Path -> Libraries -> Add External JARs...
+        <br><a href="{{ site.data.url.kwidgdewb }}" target="_blank" class="hlink">ExtentReports</a>
+        <br><a href="{{ site.data.url.kwidezgge }}" target="_blank" class="hlink">ExtentReports For Selenium</a>
+        <br><a href="{{ site.data.url.kwidzvllg }}" target="_blank" class="hlink">Apache FreeMarker</a>
+        <br><a href="{{ site.data.url.kwiddedwy }}" target="_blank" class="hlink">RxJava</a>
+    </p>
 </div>
 
 <div class="codecard">{{ page.title }} (Example 1)</div>
@@ -14,47 +20,46 @@ title: How to generate Extent Reports in Selenium WebDriver
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class KWTestNG 
+public class KW 
 {
     WebDriver driver;
     
     @BeforeClass
     public void SetBrowser() 
     {
-        System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\Drivers\\geckodriver.exe");
-        driver = new FirefoxDriver();
+    	System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
+        driver = new ChromeDriver();
     }
     
     @Test
     public void VerifyTitle() throws IOException, InterruptedException 
     {
-        ExtentHtmlReporter ehr = new ExtentHtmlReporter("D:\\Selenium\\ExtentReport.html");
+    	ExtentSparkReporter esr = new ExtentSparkReporter("/home/kodingwindow/ExtentReport.html");
         ExtentReports er = new ExtentReports();
-        er.attachReporter(ehr);
+        er.attachReporter(esr);
         
-        ehr.config().setDocumentTitle("Extent Report");
-        ehr.config().setTheme(Theme.DARK);
+        esr.config().setDocumentTitle("Extent Report");
+        esr.config().setTheme(Theme.DARK);
         
         ExtentTest et = er.createTest("VerifyHomePageTitle");
-        et.log(Status.INFO, "Firefox Browser Launched");
+        et.log(Status.INFO, "Chrome Browser Launched");
         
-        driver.navigate().to("http://newtours.demoaut.com");
+        driver.navigate().to("https://kodingwindow.com/testapp/");
         et.log(Status.INFO,"Successfully Navigated to the URL");
         
         String actual = driver.getTitle();
-        String expected = "Welcome: Mercury Tours";
+        String expected = "Kodingwindow's TestApp";
         
         et.log(Status.INFO, "Actual Title: " +actual);
         et.log(Status.INFO, "Expected Title: "+expected);
@@ -79,6 +84,19 @@ public class KWTestNG
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
+[RemoteTestNG] detected TestNG version 7.4.0
+PASSED: VerifyTitle
+
+===============================================
+    Default test
+    Tests run: 1, Failures: 0, Skips: 0
+===============================================
+
+===============================================
+Default suite
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
 <img src="selenium/images/kwideyxca.png" loading="lazy">
 </pre></span>
 
@@ -86,7 +104,7 @@ public class KWTestNG
 <div class="card">{{ site.javafile }}</div>
 <pre class="code">{% highlight java %}
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
@@ -95,7 +113,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
-public class KWTestNG 
+public class KW 
 {
     WebDriver driver;
     ExtentReports er;
@@ -104,17 +122,17 @@ public class KWTestNG
     @Test
     public void VerifyTitle()
     {
-        er = new ExtentReports("D:\\Selenium\\ExtentReport.html");
+        er = new ExtentReports("/home/kodingwindow/ExtentReport.html");
         et = er.startTest("VerifyTitle");
         
-        System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\Drivers\\geckodriver.exe");
-        driver = new FirefoxDriver();
+    	System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
+        driver = new ChromeDriver();
         
-        driver.navigate().to("http://newtours.demoaut.com");
+        driver.navigate().to("https://kodingwindow.com/testapp/");
         et.log(LogStatus.INFO,"Successfully Navigated to the URL");
         
         String actual = driver.getTitle();
-        String expected = "Welcome: Mercury Tours";
+        String expected = "Kodingwindow's TestApp";
         
         et.log(LogStatus.INFO, "Actual Title: " +actual);
         et.log(LogStatus.INFO, "Expected Title: "+expected);
@@ -140,5 +158,18 @@ public class KWTestNG
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
+[RemoteTestNG] detected TestNG version 7.4.0
+PASSED: VerifyTitle
+
+===============================================
+    Default test
+    Tests run: 1, Failures: 0, Skips: 0
+===============================================
+
+===============================================
+Default suite
+Total tests run: 1, Passes: 1, Failures: 0, Skips: 0
+===============================================
+
 <img src="selenium/images/kwidzddiz.png" loading="lazy">
 </pre></span>

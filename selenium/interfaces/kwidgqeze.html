@@ -4,7 +4,7 @@ title: Selenium Java to take screenshots using TakesScreenshot interface
 ---
 
 <div class="board"><div class="boardtitle">Prerequisites</div>
-    <p>Firstly, you need to download the jar file of <a href="https://mvnrepository.com/artifact/commons-io/commons-io">Apache Commons IO</a>. Once downloaded, you can import the library by right-clicking on the project -> Properties -> Java Build Path -> Libraries -> Add External JARs...</p>
+    <p>Firstly, you need to download the jar file of <a href="{{ site.data.url.kwidzewdu }}" target="_blank">Apache Commons IO</a>. Once downloaded, you can import the library by right-clicking on the project -> Properties -> Java Build Path -> Libraries -> Add External JARs...</p>
 </div>
 
 <div class="codecard">{{ page.title }}</div>
@@ -36,7 +36,7 @@ class KW
     }
     public static void main(String[] args) 
     {   
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("https://kodingwindow.com/testapp/");

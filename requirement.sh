@@ -7,7 +7,7 @@ packages=(git-all ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base oct
 sudo apt-get -y --ignore-missing install "${packages[@]}"
 
 python=(python3 python3-pip python3-selenium python3-numpy python3-scipy python3-pandas python3-matplotlib 
-python3-pymysql python3-pymongo python3-mysql.connector)
+python3-pymysql python3-pymongo python3-mysql.connector python3-netaddr)
 sudo apt-get -y --ignore-missing install "${python[@]}"
 pip3 install webdriver-manager
 
@@ -16,8 +16,8 @@ sudo apt-get autoclean -y
 sudo apt-get autoremove -y
 
 sudo gem install jekyll bundler
-update bundler
 bundle config set --local path vendor/bundle
+update bundler
 bundle install
 bundle update
 echo "———————————————————————————————————————————"

@@ -40,15 +40,15 @@ class KW
         FirefoxOptions fo = new FirefoxOptions();
         EdgeOptions eo = new EdgeOptions();
                 
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         driver = new ChromeDriver(co);
         NameVersionOS();
         
-        System.setProperty("webdriver.gecko.driver", "D://Selenium//Drivers//geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "/home/kodingwindow/drivers/geckodriver");
         driver = new FirefoxDriver(fo);
         NameVersionOS();
         
-        System.setProperty("webdriver.edge.driver", "D://Selenium//Drivers//msedgedriver.exe");
+        System.setProperty("webdriver.edge.driver", "/home/kodingwindow/drivers/msedgedriver");
         driver = new EdgeDriver(eo);
         NameVersionOS();
     }

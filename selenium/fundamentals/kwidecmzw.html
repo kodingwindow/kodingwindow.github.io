@@ -1,30 +1,9 @@
 ---
 layout: modern
-title: Selenium Java to resize the browser window size
+title: Selenium Java to resize the browser window
 ---
 
-<div class="codecard">Selenium Java to resize the Firefox browser window size</div>
-<div class="card">{{ site.javafile }}</div>
-<pre class="editorcard">{% highlight java %}
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
-class KW
-{
-    public static void main(String[] args) 
-    {   
-        System.setProperty("webdriver.gecko.driver", "D://Selenium//Drivers//geckodriver.exe");
-        WebDriver driver = new FirefoxDriver();
-        Dimension d = new Dimension(700, 700);
-        driver.manage().window().setSize(d);
-        driver.navigate().to("https://kodingwindow.com/testapp/");
-        driver.close();
-    }
-}
-{% endhighlight %}</pre>
-
-<div class="codecard">Selenium Java to resize the Chrome browser window size</div>
+<div class="codecard">Selenium Java to resize the Chrome browser window</div>
 <div class="card">{{ site.javafile }}</div>
 <pre class="editorcard">{% highlight java %}
 import org.openqa.selenium.WebDriver;
@@ -36,7 +15,7 @@ class KW
 {
     public static void main(String[] args) 
     {   
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         ChromeOptions co = new ChromeOptions();
         co.addArguments("window-size=700,700");
         
@@ -44,6 +23,27 @@ class KW
         dc.setCapability(ChromeOptions.CAPABILITY, co);
         
         WebDriver driver = new ChromeDriver(dc);
+        driver.navigate().to("https://kodingwindow.com/testapp/");
+        driver.close();
+    }
+}
+{% endhighlight %}</pre>
+
+<div class="codecard">Selenium Java to resize the Firefox browser window</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="editorcard">{% highlight java %}
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+class KW
+{
+    public static void main(String[] args) 
+    {   
+        System.setProperty("webdriver.gecko.driver", "/home/kodingwindow/drivers/geckodriver");
+        WebDriver driver = new FirefoxDriver();
+        Dimension d = new Dimension(700, 700);
+        driver.manage().window().setSize(d);
         driver.navigate().to("https://kodingwindow.com/testapp/");
         driver.close();
     }

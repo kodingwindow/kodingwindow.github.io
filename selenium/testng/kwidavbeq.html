@@ -20,7 +20,7 @@ public class KWTestNG
     public void NavigateLogin()
     {
         System.out.println("\nThread Name: "+Thread.currentThread().getName()+"\nThread ID: "+Thread.currentThread().getId());
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("http://newtours.demoaut.com");

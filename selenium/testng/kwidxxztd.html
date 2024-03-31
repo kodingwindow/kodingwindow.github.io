@@ -18,7 +18,7 @@ public class KWTestNG
     @Test(invocationCount = 3)
     public void NavigateLogin()
     {
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("http://newtours.demoaut.com");

@@ -1,6 +1,6 @@
 ---
 layout: modern
-title: Selenium Java to launch the Chromium browser and navigate to a given URL
+title: How to launch the Chromium browser using Selenium Java
 ---
 
 <div class="board"><div class="boardtitle">Prerequisites</div>
@@ -19,7 +19,7 @@ class KW
 {
     public static void main(String[] args) 
     {
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         ChromeOptions co = new ChromeOptions();
         co.setBinary("D:\\Selenium\\chrome-win\\chrome.exe");
         WebDriver driver = new ChromeDriver(co);

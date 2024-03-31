@@ -19,7 +19,7 @@ public class Login
     @Test
     public void OpenChorme()
     {
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         System.out.println("Chrome Thread ID "+Thread.currentThread().getId());
         WebDriver driver = new ChromeDriver();
         driver.navigate().to("http://newtours.demoaut.com");
@@ -46,7 +46,7 @@ public class VerifyTitle
     @Test        
     public void OpenFirefox()      
     {
-        System.setProperty("webdriver.gecko.driver", "D://Selenium//Drivers//geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "/home/kodingwindow/drivers/geckodriver");
         System.out.println("Firefox Thread ID "+Thread.currentThread().getId());
         WebDriver driver = new FirefoxDriver();
         driver.navigate().to("http://newtours.demoaut.com");  

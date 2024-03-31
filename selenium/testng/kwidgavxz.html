@@ -22,7 +22,7 @@ public class KWTestNG
     @Test(priority = 0)
     public void OpenBrowser()
     {
-        System.setProperty("webdriver.chrome.driver", "D://Selenium//Drivers//chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/home/kodingwindow/drivers/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.navigate().to("http://newtours.demoaut.com");
