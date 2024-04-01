@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             val btn = findViewById<Button>(R.id.tryagain)
             btn.setOnClickListener { recreate() }
         } else {
-            webview.loadUrl("https://kodingwindow.com/")
+            webview.loadUrl("https://kodingwindow.com")
         }
         webview.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
@@ -60,11 +60,12 @@ class MainActivity : AppCompatActivity() {
                 }
                 var url = request.url.toString()
                 if (url.startsWith("share")) {
-                    url = url.replace("share:", "").replace(".com//", ".com/").replace(".html", "")
+                    url = url.replace("share:", "").replace(".html", "")
                     val shareIntent = Intent(Intent.ACTION_SEND)
                     shareIntent.setType("text/plain")
+                    shareIntent.putExtra(Intent.EXTRA_TITLE, view.title.toString())
                     shareIntent.putExtra(Intent.EXTRA_TEXT, url)
-                    startActivity(Intent.createChooser(shareIntent, "Share via"))
+                    startActivity(Intent.createChooser(shareIntent, title))
                     return true
                 }
                 if (url.startsWith("clear:")) {
@@ -72,7 +73,7 @@ class MainActivity : AppCompatActivity() {
                     webview.clearCache(true)
                     return true
                 }
-                if (url.endsWith("testapp/") || !url.startsWith("https://kodingwindow.com/")) {
+                if (!url.startsWith("https://kodingwindow.com")) {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                     return true
                 }
