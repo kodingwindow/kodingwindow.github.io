@@ -1,7 +1,7 @@
 grandparent: 
   - parent: VBScript
     subtree: VBScript
-    url: cluster/vbscript/
+    url: cluster/vbscript
     children: 
       - title: VBScript to print Hello World
         url: cluster/vbscript/kwidgyved
@@ -54,7 +54,7 @@ grandparent:
 
   - parent: Ranorex
     subtree: Ranorex
-    url: cluster/ranorex/
+    url: cluster/ranorex
     children: 
       - title: How to open and close a browser using the Process class in Ranorex
         url: cluster/ranorex/kwidwryqa
@@ -73,11 +73,11 @@ grandparent:
 
 sidenav:
   - parent: Cluster
-    url: cluster/
+    url: cluster
     children:  
       - title: VBScript
-        url: cluster/vbscript/
+        url: cluster/vbscript
       - title: Ranorex
-        url: cluster/ranorex/
+        url: cluster/ranorex
       - title: Cluster Search
-        url: cluster/search/
+        url: cluster/search

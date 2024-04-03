@@ -1,7 +1,7 @@
 grandparent: 
   - parent: 32-bit Assembly Programming
     subtree: 32-bit
-    url: asm/32-bit/
+    url: asm/32-bit
     children: 
       - title: ALP to print Hello World (32-bit)
         url: asm/32-bit/kwidvxqaz
@@ -24,7 +24,7 @@ grandparent:
 
   - parent: 64-bit Assembly Programming
     subtree: 64-bit
-    url: asm/64-bit/
+    url: asm/64-bit
     children: 
       - title: ALP to print Hello World without using macro (64-bit)
         url: asm/64-bit/kwidatnak
@@ -49,11 +49,11 @@ grandparent:
 
 sidenav: 
   - parent: Assembly Programming
-    url: asm/
+    url: asm
     children: 
       - title: 32-bit Assembly Programming
-        url: asm/32-bit/
+        url: asm/32-bit
       - title: 64-bit Assembly Programming
-        url: asm/64-bit/
+        url: asm/64-bit
       - title: Assembly Search
-        url: asm/search/
+        url: asm/search

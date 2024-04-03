@@ -1,7 +1,7 @@
 grandparent: 
   - parent: LISP (List Processing) Fundamentals
     subtree: Fundamentals
-    url: lisp/fundamentals/
+    url: lisp/fundamentals
     children: 
       - title: CLISP Command Line Interface (CLI)
         url: lisp/fundamentals/kwidggdyw
@@ -26,7 +26,7 @@ grandparent:
 
   - parent: LISP Control Statements
     subtree: Controls
-    url: lisp/controls/
+    url: lisp/controls
     children: 
       - title: LISP program for the positive-negative test of a given number
         url: lisp/controls/kwidkdena
@@ -35,14 +35,14 @@ grandparent:
 
   - parent: LISP Loops
     subtree: Loops
-    url: lisp/loops/
+    url: lisp/loops
     children: 
       - title: LISP program to print the even and odd numbers
         url: lisp/loops/kwidzzzay
 
   - parent: LISP Strings
     subtree: Strings
-    url: lisp/strings/
+    url: lisp/strings
     children: 
       - title: LISP program to perform the string operations
         url: lisp/strings/kwidtrkke
@@ -51,24 +51,24 @@ grandparent:
 
   - parent: LISP Functions
     subtree: Functions
-    url: lisp/functions/
+    url: lisp/functions
     children: 
       - title: LISP program to find the area of a circle using a function
         url: lisp/functions/kwiduzcrz
 
 sidenav:
   - parent: LISP Programming
-    url: lisp/
+    url: lisp
     children: 
       - title: LISP Fundamentals
-        url: lisp/fundamentals/
+        url: lisp/fundamentals
       - title: LISP Control Statements
-        url: lisp/controls/
+        url: lisp/controls
       - title: LISP Loops
-        url: lisp/loops/
+        url: lisp/loops
       - title: LISP Strings
-        url: lisp/strings/
+        url: lisp/strings
       - title: LISP Functions
-        url: lisp/functions/
+        url: lisp/functions
       - title: LISP Search
-        url: lisp/search/
+        url: lisp/search

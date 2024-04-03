@@ -1,7 +1,7 @@
 grandparent: 
   - parent: Java Fundamentals
     subtree: Fundamentals
-    url: java/fundamentals/
+    url: java/fundamentals
     children:
       - title: Java Hello World program
         url: java/fundamentals/kwidmgeee
@@ -26,7 +26,7 @@ grandparent:
 
   - parent: Java Control Statements
     subtree: Controls
-    url: java/controls/
+    url: java/controls
     children: 
       - title: Java program to check the equality of given numbers
         url: java/controls/kwidkvfsb
@@ -37,7 +37,7 @@ grandparent:
 
   - parent: Java Loops
     subtree: Loops
-    url: java/loops/
+    url: java/loops
     children: 
       - title: Java program to print the even and odd numbers
         url: java/loops/kwidgvwnz
@@ -50,7 +50,7 @@ grandparent:
 
   - parent: Java Strings
     subtree: Strings
-    url: java/strings/
+    url: java/strings
     children: 
       - title: Java program to concatenate the given strings
         url: java/strings/kwidwazdq
@@ -91,7 +91,7 @@ grandparent:
 
   - parent: Java Arrays
     subtree: Arrays
-    url: java/arrays/
+    url: java/arrays
     children: 
       - title: Java program to print the sum of all numbers in a given array
         url: java/arrays/kwidtgkdg
@@ -104,7 +104,7 @@ grandparent:
 
   - parent: Java Classes
     subtree: Classes
-    url: java/classes/
+    url: java/classes
     children: 
       - title: Java program to demonstrate the use of Math class methods
         url: java/classes/kwidruzgv
@@ -125,7 +125,7 @@ grandparent:
 
   - parent: Java Methods
     subtree: Methods
-    url: java/methods/
+    url: java/methods
     children: 
       - title: Java program to get the Operating System details
         url: java/methods/kwidyigxk
@@ -136,7 +136,7 @@ grandparent:
 
   - parent: Java Inheritance
     subtree: Inheritance
-    url: java/inheritance/
+    url: java/inheritance
     children: 
       - title: Java program for Single Inheritance
         url: java/inheritance/kwidzpasd
@@ -149,7 +149,7 @@ grandparent:
 
   - parent: Java Polymorphism
     subtree: Polymorphism
-    url: java/polymorphism/
+    url: java/polymorphism
     children: 
       - title: Implementation of Java method overloading
         url: java/polymorphism/kwideeacv
@@ -160,7 +160,7 @@ grandparent:
 
   - parent: Java Abstraction
     subtree: Abstraction
-    url: java/abstraction/
+    url: java/abstraction
     children: 
       - title: Java program for Abstract class
         url: java/abstraction/kwidaalaw
@@ -173,7 +173,7 @@ grandparent:
 
   - parent: Java Collections
     subtree: Collections
-    url: java/collections/
+    url: java/collections
     children: 
       - title: Implementation of Java ArrayList class
         url: java/collections/kwidsadac
@@ -200,7 +200,7 @@ grandparent:
 
   - parent: Java Exception Handling
     subtree: Exceptions
-    url: java/exceptions/
+    url: java/exceptions
     children: 
       - title: Java program to demonstrate the use of try and catch blocks
         url: java/exceptions/kwidvolqb
@@ -225,7 +225,7 @@ grandparent:
 
   - parent: Java Regular Expressions
     subtree: RE
-    url: java/re/
+    url: java/re
     children: 
       - title: Implementation of Java Regular Expressions
         url: java/re/kwidwdgez
@@ -234,7 +234,7 @@ grandparent:
 
   - parent: Java Multithreading
     subtree: Multithreading
-    url: java/multithreading/
+    url: java/multithreading
     children: 
       - title: Java program to extends the Thread class
         url: java/multithreading/kwidgaasz
@@ -255,7 +255,7 @@ grandparent:
 
   - parent: Java AWT and Swing Graphics
     subtree: AWT
-    url: java/awt/
+    url: java/awt
     children: 
       - title: Java program to draw a Line using Graphics2D class
         url: java/awt/kwidyvqli
@@ -274,7 +274,7 @@ grandparent:
 
   - parent: Java Database Connectivity (JDBC)
     subtree: JDBC
-    url: java/jdbc/
+    url: java/jdbc
     children: 
       - title: Java MySQL to connect, create database, and table
         url: java/jdbc/kwidpuuhg
@@ -293,39 +293,39 @@ grandparent:
 
 sidenav:
   - parent: Java Programming
-    url: java/
+    url: java
     children: 
       - title: Java Fundamentals
-        url: java/fundamentals/
+        url: java/fundamentals
       - title: Java Control Statements
-        url: java/controls/
+        url: java/controls
       - title: Java Loops
-        url: java/loops/
+        url: java/loops
       - title: Java Strings
-        url: java/strings/
+        url: java/strings
       - title: Java Arrays
-        url: java/arrays/
+        url: java/arrays
       - title: Java Classes
-        url: java/classes/
+        url: java/classes
       - title: Java Methods
-        url: java/methods/
+        url: java/methods
       - title: Java Inheritance
-        url: java/inheritance/
+        url: java/inheritance
       - title: Java Polymorphism
-        url: java/polymorphism/
+        url: java/polymorphism
       - title: Java Abstraction
-        url: java/abstraction/
+        url: java/abstraction
       - title: Java Collections
-        url: java/collections/
+        url: java/collections
       - title: Java Exception Handling
-        url: java/exceptions/
+        url: java/exceptions
       - title: Java Regular Expressions
-        url: java/re/
+        url: java/re
       - title: Java Multithreading
-        url: java/multithreading/
+        url: java/multithreading
       - title: Java AWT and Swing Graphics
-        url: java/awt/
+        url: java/awt
       - title: Java Database Connectivity (JDBC)
-        url: java/jdbc/
+        url: java/jdbc
       - title: Java Search
-        url: java/search/
+        url: java/search

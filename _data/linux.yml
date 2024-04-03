@@ -1,7 +1,7 @@
 grandparent: 
   - parent: Linux Commands
     subtree: Commands
-    url: linux/commands/
+    url: linux/commands
     children: 
       - title: Linux commands to display the lists of files and directories
         url: linux/commands/kwidasgke
@@ -30,7 +30,7 @@ grandparent:
 
   - parent: Bash Shell Scripting
     subtree: Bash
-    url: linux/bash/
+    url: linux/bash
     children: 
       - title: Bash shell script to print Hello World
         url: linux/bash/kwidgitdy
@@ -55,11 +55,11 @@ grandparent:
 
 sidenav:
   - parent: Linux Commands and Scripting
-    url: linux/
+    url: linux
     children: 
       - title: Linux Commands
-        url: linux/commands/
+        url: linux/commands
       - title: Bash Shell Scripting
-        url: linux/bash/
+        url: linux/bash
       - title: Linux Search
-        url: linux/search/
+        url: linux/search

@@ -1,7 +1,7 @@
 grandparent: 
   - parent: C++ Fundamentals
     subtree: Fundamentals
-    url: cpp/fundamentals/
+    url: cpp/fundamentals
     children: 
       - title: C++ Hello World program
         url: cpp/fundamentals/kwiddvwxm
@@ -28,7 +28,7 @@ grandparent:
 
   - parent: C++ Control Statements
     subtree: Controls
-    url: cpp/controls/
+    url: cpp/controls
     children: 
       - title: C++ program to check the given number is positive or negative
         url: cpp/controls/kwidgwhse
@@ -41,7 +41,7 @@ grandparent:
 
   - parent: C++ Loops
     subtree: Loops
-    url: cpp/loops/
+    url: cpp/loops
     children: 
       - title: C++ program to print the star pyramid patterns
         url: cpp/loops/kwidbvode
@@ -60,7 +60,7 @@ grandparent:
 
   - parent: C++ Strings
     subtree: Strings
-    url: cpp/strings/
+    url: cpp/strings
     children: 
       - title: C++ program to swap the given strings
         url: cpp/strings/kwidzdyvg
@@ -81,7 +81,7 @@ grandparent:
 
   - parent: C++ Arrays
     subtree: Arrays
-    url: cpp/arrays/
+    url: cpp/arrays
     children: 
       - title: C++ program to print the given matrix
         url: cpp/arrays/kwidaziwv
@@ -94,7 +94,7 @@ grandparent:
 
   - parent: C++ Classes
     subtree: Classes
-    url: cpp/classes/
+    url: cpp/classes
     children: 
       - title: C++ program to demonstrate the use of class and object
         url: cpp/classes/kwidutzrm
@@ -105,7 +105,7 @@ grandparent:
 
   - parent: C++ Functions
     subtree: Functions
-    url: cpp/functions/
+    url: cpp/functions
     children: 
       - title: C++ program for addition of numbers using a function
         url: cpp/functions/kwidtaync
@@ -120,21 +120,21 @@ grandparent:
 
 sidenav:
   - parent: C++ Programming
-    url: cpp/
+    url: cpp
     children: 
       - title: C++ Fundamentals
-        url: cpp/fundamentals/
+        url: cpp/fundamentals
       - title: C++ Control Statements
-        url: cpp/controls/
+        url: cpp/controls
       - title: C++ Loops
-        url: cpp/loops/
+        url: cpp/loops
       - title: C++ Strings
-        url: cpp/strings/
+        url: cpp/strings
       - title: C++ Arrays
-        url: cpp/arrays/
+        url: cpp/arrays
       - title: C++ Classes
-        url: cpp/classes/
+        url: cpp/classes
       - title: C++ Functions
-        url: cpp/functions/
+        url: cpp/functions
       - title: C++ Search
-        url: cpp/search/
+        url: cpp/search

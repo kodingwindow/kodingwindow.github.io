@@ -1,7 +1,7 @@
 grandparent: 
   - parent: Octave Fundamentals
     subtree: Fundamentals
-    url: octave/fundamentals/
+    url: octave/fundamentals
     children: 
       - title: Octave Arithmetic Operations
         url: octave/fundamentals/kwidfxzpq
@@ -16,7 +16,7 @@ grandparent:
 
   - parent: Octave Strings
     subtree: Strings
-    url: octave/strings/
+    url: octave/strings
     children: 
       - title: Octave basic string operations
         url: octave/strings/kwiduaulz
@@ -29,11 +29,11 @@ grandparent:
 
 sidenav: 
   - parent: GNU Octave
-    url: octave/
+    url: octave
     children: 
       - title: Octave Fundamentals
-        url: octave/fundamentals/
+        url: octave/fundamentals
       - title: Octave Strings
-        url: octave/strings/
+        url: octave/strings
       - title: Octave Search
-        url: octave/search/
+        url: octave/search

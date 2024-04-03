@@ -1,7 +1,7 @@
 grandparent: 
   - parent: R Command Line Interface (CLI)
     subtree: CLI
-    url: r/cli/
+    url: r/cli
     children: 
       - title: R Mathematical Operations and Functions
         url: r/cli/kwidegdgz
@@ -22,9 +22,9 @@ grandparent:
 
 sidenav:
   - parent: R Programming
-    url: r/
+    url: r
     children: 
       - title: R Command Line Interface (CLI)
-        url: r/cli/
+        url: r/cli
       - title: R Search
-        url: r/search/
+        url: r/search

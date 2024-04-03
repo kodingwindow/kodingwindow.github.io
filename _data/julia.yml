@@ -1,7 +1,7 @@
 grandparent: 
   - parent: Julia Command Line Interface
     subtree: CLI
-    url: julia/cli/
+    url: julia/cli
     children: 
       - title: Julia Arithmetic Operations
         url: julia/cli/kwidxkekw
@@ -12,9 +12,9 @@ grandparent:
 
 sidenav:
   - parent: Julia Programming
-    url: julia/
+    url: julia
     children: 
       - title: Julia Command Line Interface
-        url: julia/cli/
+        url: julia/cli
       - title: Julia Search
-        url: julia/search/
+        url: julia/search

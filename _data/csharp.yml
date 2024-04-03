@@ -1,7 +1,7 @@
 grandparent: 
   - parent: C# Fundamentals
     subtree: Fundamentals
-    url: csharp/fundamentals/
+    url: csharp/fundamentals
     children: 
       - title: C# Hello World program
         url: csharp/fundamentals/kwidpdvhg
@@ -18,7 +18,7 @@ grandparent:
 
   - parent: C# Control Statements
     subtree: Controls
-    url: csharp/controls/
+    url: csharp/controls
     children: 
       - title: C# program to check the given number is even or odd
         url: csharp/controls/kwidvevfk
@@ -31,7 +31,7 @@ grandparent:
 
   - parent: C# Loops
     subtree: Loops
-    url: csharp/loops/
+    url: csharp/loops
     children: 
       - title: C# program to use the loops and control statements
         url: csharp/loops/kwidxagiz
@@ -54,7 +54,7 @@ grandparent:
 
   - parent: C# Strings
     subtree: Strings
-    url: csharp/strings/
+    url: csharp/strings
     children: 
       - title: C# program to find the length of a given string
         url: csharp/strings/kwiddoika
@@ -73,7 +73,7 @@ grandparent:
 
   - parent: C# Arrays
     subtree: Arrays
-    url: csharp/arrays/
+    url: csharp/arrays
     children: 
       - title: C# program to sort the given numbers in an array
         url: csharp/arrays/kwidywhzb
@@ -82,7 +82,7 @@ grandparent:
 
   - parent: C# Classes
     subtree: Classes
-    url: csharp/classes/
+    url: csharp/classes
     children: 
       - title: C# program to print the current date and time
         url: csharp/classes/kwidezylc
@@ -99,7 +99,7 @@ grandparent:
 
   - parent: C# Methods
     subtree: Methods
-    url: csharp/methods/
+    url: csharp/methods
     children: 
       - title: C# program to demonstrate the use of math library methods
         url: csharp/methods/kwidfuzuz
@@ -110,7 +110,7 @@ grandparent:
 
   - parent: C# Inheritance
     subtree: Inheritance
-    url: csharp/inheritance/
+    url: csharp/inheritance
     children: 
       - title: C# program for Single Inheritance
         url: csharp/inheritance/kwidagvur
@@ -123,7 +123,7 @@ grandparent:
 
   - parent: C# Polymorphism
     subtree: Polymorphism
-    url: csharp/polymorphism/
+    url: csharp/polymorphism
     children: 
       - title: Implementation of C# method overloading
         url: csharp/polymorphism/kwidfzldx
@@ -136,7 +136,7 @@ grandparent:
 
   - parent: C# Abstraction
     subtree: Abstraction
-    url: csharp/abstraction/
+    url: csharp/abstraction
     children: 
       - title: C# program for Abstract class
         url: csharp/abstraction/kwidvwyou
@@ -147,14 +147,14 @@ grandparent:
 
   - parent: C# Namespaces
     subtree: Namespaces
-    url: csharp/namespaces/
+    url: csharp/namespaces
     children: 
       - title: C# program to demonstrate the use of namespace
         url: csharp/namespaces/kwidgzuze
 
   - parent: C# Collections (Generic and Non-generic)
     subtree: Collections
-    url: csharp/collections/
+    url: csharp/collections
     children: 
       - title: Implementation of C# List class
         url: csharp/collections/kwidrlbiw
@@ -183,7 +183,7 @@ grandparent:
         
   - parent: C# Exception Handling
     subtree: Exceptions
-    url: csharp/exceptions/
+    url: csharp/exceptions
     children: 
       - title: C# program to demonstrate the use of try and catch blocks
         url: csharp/exceptions/kwidgzwzz
@@ -208,21 +208,21 @@ grandparent:
 
   - parent: C# File Handling
     subtree: FileIO
-    url: csharp/fileio/
+    url: csharp/fileio
     children: 
       - title: C# program to perform the operations on a file
         url: csharp/fileio/kwidzekyz
 
   - parent: C# Regular Expressions
     subtree: RE
-    url: csharp/re/
+    url: csharp/re
     children: 
       - title: C# program to demonstrate the use of regular expressions
         url: csharp/re/kwidvpoef
 
   - parent: C# Multithreading
     subtree: Multithreading
-    url: csharp/multithreading/
+    url: csharp/multithreading
     children: 
       - title: C# program to implement Thread class and its properties
         url: csharp/multithreading/kwidvkyzy
@@ -239,14 +239,14 @@ grandparent:
 
   - parent: C# Reflection
     subtree: Reflection
-    url: csharp/reflection/
+    url: csharp/reflection
     children: 
       - title: C# program to demonstrate the use of reflection objects
         url: csharp/reflection/kwidcdgkn
 
   - parent: C# Database Connectivity
     subtree: DBC
-    url: csharp/dbc/
+    url: csharp/dbc
     children: 
       - title: C# program to connect with MySQL Database
         url: csharp/dbc/kwidfravc
@@ -259,43 +259,43 @@ grandparent:
 
 sidenav:
   - parent: C# Programming
-    url: csharp/
+    url: csharp
     children: 
       - title: C# Fundamentals
-        url: csharp/fundamentals/
+        url: csharp/fundamentals
       - title: C# Control Statements
-        url: csharp/controls/
+        url: csharp/controls
       - title: C# Loops
-        url: csharp/loops/
+        url: csharp/loops
       - title: C# Strings
-        url: csharp/strings/
+        url: csharp/strings
       - title: C# Arrays
-        url: csharp/arrays/
+        url: csharp/arrays
       - title: C# Classes
-        url: csharp/classes/
+        url: csharp/classes
       - title: C# Methods
-        url: csharp/methods/
+        url: csharp/methods
       - title: C# Inheritance
-        url: csharp/inheritance/
+        url: csharp/inheritance
       - title: C# Polymorphism
-        url: csharp/polymorphism/
+        url: csharp/polymorphism
       - title: C# Abstraction
-        url: csharp/abstraction/
+        url: csharp/abstraction
       - title: C# Namespaces
-        url: csharp/namespaces/
+        url: csharp/namespaces
       - title: C# Collections
-        url: csharp/collections/
+        url: csharp/collections
       - title: C# Exception Handling
-        url: csharp/exceptions/
+        url: csharp/exceptions
       - title: C# File Handling
-        url: csharp/fileio/
+        url: csharp/fileio
       - title: C# Regular Expressions
-        url: csharp/re/
+        url: csharp/re
       - title: C# Multithreading
-        url: csharp/multithreading/
+        url: csharp/multithreading
       - title: C# Reflection
-        url: csharp/reflection/
+        url: csharp/reflection
       - title: C# Database Connectivity
-        url: csharp/dbc/
+        url: csharp/dbc
       - title: C# Search
-        url: csharp/search/
+        url: csharp/search

@@ -1,7 +1,7 @@
 grandparent: 
   - parent: Selenium Fundamentals
     subtree: Fundamentals
-    url: selenium/fundamentals/
+    url: selenium/fundamentals
     children: 
       - title: How to launch the browser using Selenium Java
         url: selenium/fundamentals/kwidrvyfv
@@ -24,7 +24,7 @@ grandparent:
 
   - parent: Selenium Locators
     subtree: Locators
-    url: selenium/locators/
+    url: selenium/locators
     children: 
       - title: Selenium Java to get the tag name
         url: selenium/locators/kwidavegp
@@ -41,7 +41,7 @@ grandparent:
 
   - parent: Selenium XPath
     subtree: XPath
-    url: selenium/xpath/
+    url: selenium/xpath
     children: 
       - title: Selenium Java to get the attribute name using relative XPath
         url: selenium/xpath/kwidydnod
@@ -58,7 +58,7 @@ grandparent:
 
   - parent: Classes in Selenium
     subtree: Classes
-    url: selenium/classes/
+    url: selenium/classes
     children: 
       - title: Selenium Java to demonstrate the use of ChromeOptions class
         url: selenium/classes/kwidggyzb
@@ -81,7 +81,7 @@ grandparent:
 
   - parent: Interfaces in Selenium
     subtree: Interfaces
-    url: selenium/interfaces/
+    url: selenium/interfaces
     children: 
       - title: Selenium Java to get domain name, URL, and page title using JavascriptExecutor
         url: selenium/interfaces/kwidmweyz
@@ -94,7 +94,7 @@ grandparent:
 
   - parent: Selenium Page Object Model
     subtree: POM
-    url: selenium/pom/
+    url: selenium/pom
     children: 
       - title: Selenium Java Page Object Model with Page Factory
         url: selenium/pom/kwidgvdks
@@ -105,7 +105,7 @@ grandparent:
 
   - parent: Selenium Data Driven Framework
     subtree: DDF
-    url: selenium/ddf/
+    url: selenium/ddf
     children: 
       - title: How to read an Excel file using Apache POI
         url: selenium/ddf/kwidhvzcz
@@ -114,7 +114,7 @@ grandparent:
 
   - parent: Selenium TestNG
     subtree: TestNG
-    url: selenium/testng/
+    url: selenium/testng
     children: 
       - title: How to use TestNG Annotations in Selenium
         url: selenium/testng/kwidvrrkz
@@ -137,23 +137,23 @@ grandparent:
 
 sidenav:
   - parent: Selenium WebDriver
-    url: selenium/
+    url: selenium
     children: 
       - title: Selenium Fundamentals
-        url: selenium/fundamentals/
+        url: selenium/fundamentals
       - title: Selenium Locators
-        url: selenium/locators/
+        url: selenium/locators
       - title: Selenium XPath
-        url: selenium/xpath/
+        url: selenium/xpath
       - title: Classes in Selenium
-        url: selenium/classes/
+        url: selenium/classes
       - title: Interfaces in Selenium
-        url: selenium/interfaces/
+        url: selenium/interfaces
       - title: Selenium Page Object Model
-        url: selenium/pom/
+        url: selenium/pom
       - title: Selenium Data Driven Framework
-        url: selenium/ddf/
+        url: selenium/ddf
       - title: Selenium TestNG
-        url: selenium/testng/
+        url: selenium/testng
       - title: Selenium Search
-        url: selenium/search/
+        url: selenium/search

@@ -1,7 +1,7 @@
 grandparent: 
   - parent: Python Fundamentals
     subtree: Fundamentals
-    url: python/fundamentals/
+    url: python/fundamentals
     children: 
       - title: Python Arithmetic Operations
         url: python/fundamentals/kwidawgvo
@@ -38,7 +38,7 @@ grandparent:
 
   - parent: Python Control Statements
     subtree: Controls
-    url: python/controls/
+    url: python/controls
     children: 
       - title: Python program to check the equality of given numbers
         url: python/controls/kwidgmsmv
@@ -51,7 +51,7 @@ grandparent:
 
   - parent: Python Loops
     subtree: Loops
-    url: python/loops/
+    url: python/loops
     children: 
       - title: Python program to print the star pyramid patterns
         url: python/loops/kwidvfyae
@@ -72,7 +72,7 @@ grandparent:
 
   - parent: Python Strings
     subtree: Strings
-    url: python/strings/
+    url: python/strings
     children: 
       - title: Python Basic String Operations
         url: python/strings/kwiddduzz
@@ -87,7 +87,7 @@ grandparent:
 
   - parent: Python Data Structures
     subtree: Data Structures
-    url: python/ds/
+    url: python/ds
     children: 
       - title: Python Lists
         url: python/ds/kwidkzaae
@@ -100,7 +100,7 @@ grandparent:
 
   - parent: Python Arrays
     subtree: Arrays
-    url: python/arrays/
+    url: python/arrays
     children: 
       - title: Python Arrays using Array module
         url: python/arrays/kwidwzddw
@@ -131,7 +131,7 @@ grandparent:
 
   - parent: Python File Handling
     subtree: FileIO
-    url: python/fileio/
+    url: python/fileio
     children: 
       - title: Python program to count the lines, words, and characters from a given file
         url: python/fileio/kwiddzeng
@@ -140,7 +140,7 @@ grandparent:
 
   - parent: Python Networking
     subtree: Networking
-    url: python/networking/
+    url: python/networking
     children: 
       - title: Python networking using the netaddr module
         url: python/networking/kwidyslwy
@@ -151,7 +151,7 @@ grandparent:
 
   - parent: Python Database Connectivity
     subtree: DBC
-    url: python/dbc/
+    url: python/dbc
     children: 
       - title: How to install pymysql and pymongo on Ubuntu
         url: python/dbc/kwidwdnax
@@ -168,25 +168,25 @@ grandparent:
 
 sidenav:
   - parent: Python Programming
-    url: python/
+    url: python
     children: 
       - title: Python Fundamentals
-        url: python/fundamentals/
+        url: python/fundamentals
       - title: Python Control Statements
-        url: python/controls/
+        url: python/controls
       - title: Python Loops
-        url: python/loops/
+        url: python/loops
       - title: Python Strings
-        url: python/strings/
+        url: python/strings
       - title: Python Data Structures
-        url: python/ds/
+        url: python/ds
       - title: Python Arrays
-        url: python/arrays/
+        url: python/arrays
       - title: Python File Handling
-        url: python/fileio/
+        url: python/fileio
       - title: Python Networking
-        url: python/networking/
+        url: python/networking
       - title: Python Database Connectivity
-        url: python/dbc/
+        url: python/dbc
       - title: Python Search
-        url: python/search/
+        url: python/search

@@ -1,7 +1,7 @@
 grandparent: 
   - parent: MongoDB Fundamentals
     subtree: Fundamentals
-    url: mongodb/fundamentals/
+    url: mongodb/fundamentals
     children: 
       - title: MongoDB Getting started with the mongosh
         url: mongodb/fundamentals/kwidvivwa
@@ -12,7 +12,7 @@ grandparent:
 
   - parent: MongoDB CRUD Operations
     subtree: CRUD
-    url: mongodb/crud/
+    url: mongodb/crud
     children: 
       - title: MongoDB Create a Database and Collection
         url: mongodb/crud/kwidyxxwo
@@ -29,10 +29,10 @@ grandparent:
 
 sidenav:
   - parent: MongoDB (NoSQL Database)
-    url: mongodb/
+    url: mongodb
     children: 
       - title: MongoDB Fundamentals
-        url: mongodb/fundamentals/
+        url: mongodb/fundamentals
       - title: MongoDB Database and Collection
         url: mongodb/crud/kwidyxxwo
       - title: MongoDB Insert the Documents
@@ -46,4 +46,4 @@ sidenav:
       - title: MongoDB Update a Document
         url: mongodb/crud/kwidwawvv
       - title: MongoDB Search
-        url: mongodb/search/
+        url: mongodb/search

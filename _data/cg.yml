@@ -1,7 +1,7 @@
 grandparent: 
   - parent: Pixel and Line Drawing Programs
     subtree: Line Drawing
-    url: cg/line/
+    url: cg/line
     children: 
       - title: C++ program to draw a Pixel with given coordinates
         url: cg/line/kwidfdmuv
@@ -28,7 +28,7 @@ grandparent:
 
   - parent: Circle Drawing Programs
     subtree: Circle Drawing
-    url: cg/circle/
+    url: cg/circle
     children: 
       - title: C++ program to draw a circle using the circle function
         url: cg/circle/kwidzepyi
@@ -51,7 +51,7 @@ grandparent:
 
   - parent: Geometric Shapes
     subtree: Geometric Shapes
-    url: cg/shapes/
+    url: cg/shapes
     children: 
       - title: C++ program to draw 'S' character using the arc function
         url: cg/shapes/kwidzewpm
@@ -84,7 +84,7 @@ grandparent:
 
   - parent: Computer Graphics Algorithms
     subtree: Algorithms
-    url: cg/algorithms/
+    url: cg/algorithms
     children: 
       - title: C++ program for DDA line drawing algorithm
         url: cg/algorithms/kwidllgea
@@ -101,7 +101,7 @@ grandparent:
 
   - parent: OpenGL
     subtree: OpenGL
-    url: cg/opengl/
+    url: cg/opengl
     children: 
       - title: C++ program to draw a rhombus using OpenGL
         url: cg/opengl/kwiddcivl
@@ -118,17 +118,17 @@ grandparent:
 
 sidenav:
   - parent: Computer Graphics
-    url: cg/
+    url: cg
     children: 
       - title: Line Drawing Programs
-        url: cg/line/
+        url: cg/line
       - title: Circle Drawing Programs
-        url: cg/circle/
+        url: cg/circle
       - title: Geometric Shapes
-        url: cg/shapes/
+        url: cg/shapes
       - title: Computer Graphics Algorithms
-        url: cg/algorithms/
+        url: cg/algorithms
       - title: OpenGL
-        url: cg/opengl/
+        url: cg/opengl
       - title: Computer Graphics Search
-        url: cg/search/
+        url: cg/search

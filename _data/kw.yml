@@ -1,66 +1,66 @@
 segments:
   - title: C Programming
-    url: c/
+    url: c
 
   - title: C++ Programming
-    url: cpp/
+    url: cpp
 
   - title: Java Programming
-    url: java/
+    url: java
 
   - title: Python Programming
-    url: python/
+    url: python
 
   - title: Data Science
-    url: ds/
+    url: ds
 
   - title: R Programming
-    url: r/
+    url: r
 
   - title: Julia Programming
-    url: julia/
+    url: julia
 
   - title: GNU Octave
-    url: octave/
+    url: octave
 
   - title: C# Programming
-    url: csharp/
+    url: csharp
 
   - title: F# Programming
-    url: fsharp/
+    url: fsharp
 
   - title: Rust Programming
-    url: rust/
+    url: rust
 
   - title: LISP Programming
-    url: lisp/
+    url: lisp
 
   - title: Data Structures and Algorithms
-    url: dsa/
+    url: dsa
 
   - title: Linux Commands and Scripting
-    url: linux/
+    url: linux
 
   - title: MySQL (Relational Database)
-    url: mysql/
+    url: mysql
     
   - title: MongoDB (NoSQL Database)
-    url: mongodb/
+    url: mongodb
     
   - title: Selenium WebDriver
-    url: selenium/
+    url: selenium
 
   - title: Computer Graphics
-    url: cg/
+    url: cg
 
   - title: Assembly Programming
-    url: asm/
+    url: asm
 
   - title: Cluster
-    url: cluster/
+    url: cluster
 
   - title: About Us
-    url: about/
+    url: about
 
   - title: Kodingwindow's TestApp
-    url: testapp/
+    url: testapp

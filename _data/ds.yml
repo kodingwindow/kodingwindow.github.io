@@ -1,7 +1,7 @@
 grandparent: 
   - parent: Data Analysis
     subtree: Data Analysis
-    url: ds/analysis/
+    url: ds/analysis
     children: 
       - title: Python Pandas to create a DataFrame from CSV file, Dictionary, etc.
         url: ds/analysis/kwidkzmpr
@@ -14,18 +14,18 @@ grandparent:
 
   - parent: Data Visualization
     subtree: Data Visualization
-    url: ds/visualization/
+    url: ds/visualization
     children: 
       - title: Python Pandas to create a bar graph using the matplotlib module
         url: ds/visualization/kwidleovy
 
 sidenav:
   - parent: Data Science
-    url: ds/
+    url: ds
     children: 
       - title: Data Analysis
-        url: ds/analysis/
+        url: ds/analysis
       - title: Data Visualization
-        url: ds/visualization/
+        url: ds/visualization
       - title: Data Science Search
-        url: ds/search/
+        url: ds/search

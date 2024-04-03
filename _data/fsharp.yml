@@ -1,7 +1,7 @@
 grandparent: 
   - parent: F# Fundamentals
     subtree: Fundamentals
-    url: fsharp/fundamentals/
+    url: fsharp/fundamentals
     children: 
       - title: F# Hello World program
         url: fsharp/fundamentals/kwidegsem
@@ -14,7 +14,7 @@ grandparent:
 
   - parent: F# Control Statements
     subtree: Controls
-    url: fsharp/controls/
+    url: fsharp/controls
     children: 
       - title: F# program to check the given number is even or odd
         url: fsharp/controls/kwidzegce
@@ -23,11 +23,11 @@ grandparent:
 
 sidenav: 
   - parent: F# Programming
-    url: fsharp/
+    url: fsharp
     children: 
       - title: F# Fundamentals
-        url: fsharp/fundamentals/
+        url: fsharp/fundamentals
       - title: F# Control Statements
-        url: fsharp/controls/
+        url: fsharp/controls
       - title: F# Search
-        url: fsharp/search/
+        url: fsharp/search
