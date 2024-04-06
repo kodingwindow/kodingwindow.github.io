@@ -1,0 +1,128 @@
+---
+permalink: python/dbc/kwidgulma
+title: Python MongoDB to insert and retrieve the documents from a collection
+---
+
+<div class="board"><div class="boardtitle">Objective and Prerequisites</div>
+    <p><b>Objective: </b>This segment introduces how to insert and retrieve the documents from a collection in MongoDB using Python.<br><br>
+    <b>Prerequisites: </b>PyMongo is installed, and MongoDB is up and running in the background. If not, then refer to the <a href="python/dbc/" class="hlink">Python Database Connectivity</a> segment in sequence.</p>
+</div>
+
+<div class="terminalcard">Start MongoDB</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>cd mongodb-4.2.3/bin/</mark>
+kodingwindow@kw:~/mongodb-4.2.3/bin$ <mark>./mongod --dbpath /home/kodingwindow/data/db/</mark>
+
+*Open a new terminal and execute the following command.
+
+kodingwindow@kw:~/mongodb-4.2.3/bin$ <mark>./mongo</mark>
+MongoDB shell version v4.2.3
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+MongoDB server version: 4.2.3
+...
+
+<mark>> show dbs</mark>
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+</pre></span>
+
+<div class="codecard">{{ page.title }}</div>
+<div class="infocard">In the following program, database and collection automatically get created. If database and collection already exist in MongoDB, then new documents will get inserted into an existing collection.</div>
+<div class="card">{{ site.pyfile }}</div>
+<pre class="code">{% highlight python %}
+import pymongo
+from pymongo import MongoClient
+client=MongoClient()
+print("\nConnection Established")
+
+client=MongoClient('localhost',27017)
+db=client.DB
+collection=db.holders
+
+holder1={
+'account_no': 2562348989,
+'name': 'James Moore',
+'bank': 'Barclays',
+'amount': 5000
+}
+
+holder2={
+'account_no': 2562348990,
+'name': 'Donald Taylor',
+'bank': 'Citi',
+'amount': 7000
+}
+
+holder3={
+'account_no': 2562348991,
+'name': 'Edward Parkar',
+'bank': 'ICICI',
+'amount': 95000
+}
+
+docs=db.holders.insert_many([holder1,holder2,holder3])
+print(db.holders.find().count(),"Documents inserted successfully\n")
+
+for holder in db.holders.find():
+    print(holder,"\n")
+
+# Disabled _id attribute
+for holder in db.holders.find({},{'_id': 0,'account_no': 1,'name':1}):
+    print(holder)
+{% endhighlight %}</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runpy }}
+
+Connection Established
+3 Documents inserted successfully
+
+{'_id': ObjectId('5e6774f2757e290a82ca3f61'), 'account_no': 2562348989, 'name': 'James Moore', 'bank': 'Barclays', 'amount': 5000} 
+
+{'_id': ObjectId('5e6774f2757e290a82ca3f62'), 'account_no': 2562348990, 'name': 'Donald Taylor', 'bank': 'Citi', 'amount': 7000} 
+
+{'_id': ObjectId('5e6774f2757e290a82ca3f63'), 'account_no': 2562348991, 'name': 'Edward Parkar', 'bank': 'ICICI', 'amount': 95000} 
+
+{'account_no': 2562348989, 'name': 'James Moore'}
+{'account_no': 2562348990, 'name': 'Donald Taylor'}
+{'account_no': 2562348991, 'name': 'Edward Parkar'}
+</pre></span>
+
+<div class="terminalcard">MongoDB Instance</b></div>
+<span><pre>
+<mark>> show dbs</mark>
+DB      0.000GB
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+<mark>> use DB</mark>
+switched to db DB
+
+<mark>> db.getCollectionNames()</mark>
+[ "holders" ]
+
+<mark>> db.holders.find().pretty()</mark>
+{
+    "_id" : ObjectId("5e677382757e290a1fee782c"),
+    "account_no" : NumberLong("2562348989"),
+    "name" : "James Moore",
+    "bank" : "Barclays",
+    "amount" : 5000
+}
+{
+    "_id" : ObjectId("5e677382757e290a1fee782d"),
+    "account_no" : NumberLong("2562348990"),
+    "name" : "Donald Taylor",
+    "bank" : "Citi",
+    "amount" : 7000
+}
+{
+    "_id" : ObjectId("5e677382757e290a1fee782e"),
+    "account_no" : NumberLong("2562348991"),
+    "name" : "Edward Parkar",
+    "bank" : "ICICI",
+    "amount" : 95000
+}
+</pre></span>

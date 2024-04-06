@@ -56,9 +56,28 @@ runopengl: "kodingwindow@kw:~$ <mark>g++ kw.cpp -lGL -lGLU -lglut</mark><br>kodi
 runasm: "kodingwindow@kw:~$ <mark>nasm -felf64 kw.asm</mark><br>kodingwindow@kw:~$ <mark>ld kw.o && ./a.out</mark>"
 output: "<span class='bi bi-terminal'> Output</span>"
 
+defaults:
+  -
+   scope:
+      path: "assets/css/color.css"
+   values:
+      layout: none
+  -
+   scope:
+      path: "404"
+   values:
+      layout: none
+  -
+   scope:
+      path: ""
+   values:
+      layout: "modern"
+
 plugins:
    - jekyll-sitemap
-   
+
+include: ['_pages']
+
 #Exclude from processing
 exclude:
    - Gemfile

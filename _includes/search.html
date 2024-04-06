@@ -56,28 +56,28 @@ $(document).keydown(function(event)
     <a id="kwdisplay" class="btn kwbtn bc-{{ path[1] }}" style="cursor: pointer; display: none; margin-bottom: 20px;" onclick="clearinput();">Clear Input</a>
 
     <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="margin: 0px; text-align: left;">
-        {% for segment in site.data.kw.segments %}
-            <span style="display: none;" id="{{ segment.url | split: '/' }}">
-            {% if segment.url == "c/" %}{% assign search = site.data.c %}
-            {% elsif segment.url == "cpp/" %}{% assign search = site.data.cpp %}
-            {% elsif segment.url == "java/" %}{% assign search = site.data.java %}
-            {% elsif segment.url == "python/" %}{% assign search = site.data.python %}
-            {% elsif segment.url == "ds/" %}{% assign search = site.data.ds %}
-            {% elsif segment.url == "r/" %}{% assign search = site.data.r %}
-            {% elsif segment.url == "julia/" %}{% assign search = site.data.julia %}
-            {% elsif segment.url == "octave/" %}{% assign search = site.data.octave %}
-            {% elsif segment.url == "csharp/" %}{% assign search = site.data.csharp %}
-            {% elsif segment.url == "fsharp/" %}{% assign search = site.data.fsharp %}
-            {% elsif segment.url == "rust/" %}{% assign search = site.data.rust %}
-            {% elsif segment.url == "lisp/" %}{% assign search = site.data.lisp %}
-            {% elsif segment.url == "dsa/" %}{% assign search = site.data.dsa %}
-            {% elsif segment.url == "linux/" %}{% assign search = site.data.linux %}
-            {% elsif segment.url == "mysql/" %}{% assign search = site.data.mysql %}
-            {% elsif segment.url == "mongodb/" %}{% assign search = site.data.mongodb %}
-            {% elsif segment.url == "cg/" %}{% assign search = site.data.cg %}
-            {% elsif segment.url == "selenium/" %}{% assign search = site.data.selenium %}
-            {% elsif segment.url == "asm/" %}{% assign search = site.data.asm %}
-            {% elsif segment.url == "cluster/" %}{% assign search = site.data.cluster %}{% else %}{% endif %}
+        {% for segment in site.data.kw.segments limit:20 %}
+            <span style="display: none;" id="{{ segment.url }}">
+            {% if segment.url == "c" %}{% assign search = site.data.c %}
+            {% elsif segment.url == "cpp" %}{% assign search = site.data.cpp %}
+            {% elsif segment.url == "java" %}{% assign search = site.data.java %}
+            {% elsif segment.url == "python" %}{% assign search = site.data.python %}
+            {% elsif segment.url == "ds" %}{% assign search = site.data.ds %}
+            {% elsif segment.url == "r" %}{% assign search = site.data.r %}
+            {% elsif segment.url == "julia" %}{% assign search = site.data.julia %}
+            {% elsif segment.url == "octave" %}{% assign search = site.data.octave %}
+            {% elsif segment.url == "csharp" %}{% assign search = site.data.csharp %}
+            {% elsif segment.url == "fsharp" %}{% assign search = site.data.fsharp %}
+            {% elsif segment.url == "rust" %}{% assign search = site.data.rust %}
+            {% elsif segment.url == "lisp" %}{% assign search = site.data.lisp %}
+            {% elsif segment.url == "dsa" %}{% assign search = site.data.dsa %}
+            {% elsif segment.url == "linux" %}{% assign search = site.data.linux %}
+            {% elsif segment.url == "mysql" %}{% assign search = site.data.mysql %}
+            {% elsif segment.url == "mongodb" %}{% assign search = site.data.mongodb %}
+            {% elsif segment.url == "cg" %}{% assign search = site.data.cg %}
+            {% elsif segment.url == "selenium" %}{% assign search = site.data.selenium %}
+            {% elsif segment.url == "asm" %}{% assign search = site.data.asm %}
+            {% elsif segment.url == "cluster" %}{% assign search = site.data.cluster %}{% else %}{% endif %}
             <a class="codecard card" href="{{ segment.url }}" onclick="clearinput();">{{ segment.title }}</a>
             {% for parent in search.grandparent %}
                 <a class="codecard card" href="{{ parent.url }}" onclick="clearinput();">{{ parent.parent }}</a>

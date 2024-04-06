@@ -5,13 +5,14 @@ success = False
 username = os.getlogin()
 kw = "/home/"+username+"/kodingwindow.github.io/"
 kwdata = kw + "_data/"
-kwfied = kw + "kwfied/"
+source = kw + "_pages/"
+destination = kw + "kwfied/"
 
 start = time.time()
 try:
     start_tests("chrome", kwdata)
     start_tests("firefox", kwdata)
-    compile_all(kw, kwdata, kwfied)
+    compile_all(source, kwdata, destination)
     success = True
 except:
     print("The script execution was aborted due to the following reasons: \n1. The local server isn't up and running. \n2. The required driver isn't found at the given location. \n3. Due to the mismatch of browser and driver versions \n4. If you manually intervened in the execution.")

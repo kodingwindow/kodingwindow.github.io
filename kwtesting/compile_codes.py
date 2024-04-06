@@ -16,9 +16,9 @@ def extract_compile(html_input, compiler, subpath, filename, extension, args):
         else:
             print("Unsuccessful: " + subpath + filename + extension)
 
-def compile_all(kw, kwdata, kwfied):
-    os.makedirs(kwfied, exist_ok=True)
-    os.chdir(kwfied)
+def compile_all(source, kwdata, destination):
+    os.makedirs(destination, exist_ok=True)
+    os.chdir(destination)
     for kwfile in os.listdir(kwdata):
         paths = read_file(None, kwdata, kwfile, "grandparent")
         for i in range(0, len(paths)):
@@ -26,7 +26,7 @@ def compile_all(kw, kwdata, kwfied):
             subpath = path[0] + "/" + path[1] + "/"
             os.makedirs(subpath, exist_ok=True)
             args = ""
-            f1 = open(kw + paths[i] + ".html", "r")
+            f1 = open(source + paths[i] + ".html", "r")
             html_input = f1.read()
             if html_input.__contains__('<pre class="code">{% highlight nasm %}'):
                 extension = ".asm"
@@ -61,4 +61,4 @@ def compile_all(kw, kwdata, kwfied):
                 compiler = "rustc"
                 extract_compile(html_input, compiler, subpath, path[2], extension, args)
             f1.close
-    os.system("rm -rf " + kwfied)
+    os.system("rm -rf " + destination)
