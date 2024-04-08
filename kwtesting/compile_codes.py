@@ -16,7 +16,7 @@ def extract_compile(html_input, compiler, subpath, filename, extension, args):
         else:
             print("Unsuccessful: " + subpath + filename + extension)
 
-def compile_all(source, kwdata, destination):
+def compile_all(source, destination, kwdata):
     os.makedirs(destination, exist_ok=True)
     os.chdir(destination)
     for kwfile in os.listdir(kwdata):
