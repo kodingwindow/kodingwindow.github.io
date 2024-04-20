@@ -1,0 +1,15 @@
+matplotlib
+mysql-connector-python
+netaddr
+numpy
+pandas
+pip
+pyclean
+pymongo
+PyMySQL
+pytest
+PyYAML
+scipy
+selenium
+toml
+webdriver-manager
