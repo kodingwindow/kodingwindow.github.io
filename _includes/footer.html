@@ -76,13 +76,24 @@
 </footer>
 
 <script type="text/javascript">
-if(isWebview && userAgent.includes("Kodingwindow"))
-{
+if (isWebview && userAgent.includes("Kodingwindow")) {
     document.getElementById("rsidebar").style.display = "none";
     document.getElementById("isWebsite").style.display = "none";
     document.getElementById("isWebView").style.display = "block";
-    document.getElementById("isWebView").style.marginBottom = "100px";
+    document.getElementById("backtotop").style.paddingBottom = "30px";
     onselectstart = (e) => { e.preventDefault() }
-    $('body').on('contextmenu', function() { return false; });
+    $('body').on('contextmenu', function () { return false; });
+
+    var lastScrollTop = 0;
+    $(window).on('scroll', function () {
+        scrollTop = $(this).scrollTop();
+        if (scrollTop < lastScrollTop) {
+            $("#isWebView").css("display", "block");
+        }
+        else {
+            $("#isWebView").css("display", "none");
+        }
+        lastScrollTop = scrollTop;
+    });
 }
 </script>
