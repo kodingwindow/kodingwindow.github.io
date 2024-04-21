@@ -80,18 +80,21 @@ if (isWebview && userAgent.includes("Kodingwindow")) {
     document.getElementById("rsidebar").style.display = "none";
     document.getElementById("isWebsite").style.display = "none";
     document.getElementById("isWebView").style.display = "block";
-    document.getElementById("backtotop").style.paddingBottom = "30px";
+    document.getElementById("isWebView").style.marginBottom = "100px";
     onselectstart = (e) => { e.preventDefault() }
     $('body').on('contextmenu', function () { return false; });
 
     var lastScrollTop = 0;
     $(window).on('scroll', function () {
         scrollTop = $(this).scrollTop();
-        if (scrollTop < lastScrollTop) {
-            $("#isWebView").css("display", "block");
+        if ((document.body.scrollHeight - 300) <= (window.scrollY + window.innerHeight)) {
+            $("#isWebView").fadeIn(250);
+        }
+        else if(scrollTop > lastScrollTop) {
+            $("#isWebView").fadeOut(500);
         }
         else {
-            $("#isWebView").css("display", "none");
+            $("#isWebView").fadeIn(250);
         }
         lastScrollTop = scrollTop;
     });

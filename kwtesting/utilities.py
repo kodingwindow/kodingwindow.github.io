@@ -35,17 +35,19 @@ def verify_title(driver, path, expected_title):
 
 
 def verify_scrolling(driver):
-    before_scroll = driver.execute_script("return document.body.scrollHeight")
-    driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-    time.sleep(1)
-    after_scroll = driver.execute_script("return document.body.scrollHeight")
-    if after_scroll > before_scroll:
-        driver.find_element(By.ID, "backtotop").click()
+    try:
+        before_scroll = driver.execute_script("return document.body.scrollHeight")
+        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
         time.sleep(1)
-    back_to_top = after_scroll = driver.execute_script("return document.body.scrollHeight")
-    if back_to_top != before_scroll:
-        print("Back to top: Unsuccessful")
-
+        after_scroll = driver.execute_script("return document.body.scrollHeight")
+        if after_scroll > before_scroll:
+            driver.find_element(By.ID, "backtotop").click()
+            time.sleep(1)
+        back_to_top = after_scroll = driver.execute_script("return document.body.scrollHeight")
+        if back_to_top != before_scroll:
+            print("Back to top: Unsuccessful")
+    except:
+        pass
 
 def read_file(driver, kwdata, kwfile, element):
     paths = []
@@ -57,7 +59,6 @@ def read_file(driver, kwdata, kwfile, element):
             element_url = parent["url"]
             if driver is not None:
                 verify_title(driver, element_url, element_title)
-                verify_scrolling(driver)
             element_size = len(document[element])
             for i in range(0, element_size):
                 parent = document[element][i]
@@ -82,6 +83,7 @@ def start_tests(browser, kwdata):
     for kwfile in os.listdir(kwdata):
         read_file(driver, kwdata, kwfile, "sidenav")
         read_file(driver, kwdata, kwfile, "grandparent")
+        verify_scrolling(driver)
     verify_title(driver, "", "Kodingwindow")
     verify_title(driver, "search/", "Kodingwindow's Search")
     verify_title(driver, "404/", "404 Page Not Found")

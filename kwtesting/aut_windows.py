@@ -7,9 +7,10 @@ start = time.time()
 try:
     start_tests("chrome", kwdata)
     start_tests("msedge", kwdata)
+    os.system("pyclean kwtesting")
     success = True
 except:
-    print("The script execution was aborted due to the following reasons: \n1. The local server isn't up and running. \n2. The required driver isn't found at the given location. \n3. Due to the mismatch of browser and driver versions \n4. If you manually intervened in the execution.")
+    print("The script execution was aborted due to the following reasons: \n1. The local server isn't up and running. \n2. The required driver isn't found at the given location. \n3. Due to the mismatch of browser and driver versions \n4. If you manually intervened in the execution.\n5. Due to code changes done locally.")
 
 if success:
     end = time.time()
