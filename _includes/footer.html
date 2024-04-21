@@ -87,11 +87,11 @@ if (isWebview && userAgent.includes("Kodingwindow")) {
     var lastScrollTop = 0;
     $(window).on('scroll', function () {
         scrollTop = $(this).scrollTop();
-        if ((document.body.scrollHeight - 300) <= (window.scrollY + window.innerHeight)) {
+        if ((document.body.scrollHeight - 150) <= (window.scrollY + window.innerHeight)) {
             $("#isWebView").fadeIn(250);
         }
-        else if(scrollTop > lastScrollTop) {
-            $("#isWebView").fadeOut(500);
+        else if(scrollTop > lastScrollTop && document.body.scrollHeight >= 1200) {
+            $("#isWebView").fadeOut(250);
         }
         else {
             $("#isWebView").fadeIn(250);
