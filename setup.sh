@@ -3,7 +3,7 @@
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
-packages=(git-all ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp rustc freeglut3-dev mysql-server nasm gnupg curl mongodb-org nmap shc)
+packages=(git-all ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger)
 sudo apt-get -y --ignore-missing install "${packages[@]}"
 pip install -r requirements.txt
 

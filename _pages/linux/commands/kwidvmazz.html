@@ -10,7 +10,7 @@ kodingwindow@kw:~$ <mark>uname</mark>
 Linux
 
 kodingwindow@kw:~$ <mark>uname -a</mark>
-Linux kw 5.4.0-33-generic #37-Ubuntu SMP Thu May 21 12:53:59 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+Linux kw 6.8.0-31-generic #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 
 kodingwindow@kw:~$ <mark>uname -i</mark>
 x86_64
@@ -28,13 +28,13 @@ kodingwindow@kw:~$ <mark>uname -p</mark>
 x86_64
 
 kodingwindow@kw:~$ <mark>uname -r</mark>
-5.4.0-33-generic
+6.8.0-31-generic
 
 kodingwindow@kw:~$ <mark>uname -s</mark>
 Linux
 
 kodingwindow@kw:~$ <mark>uname -v</mark>
-#37-Ubuntu SMP Thu May 21 12:53:59 UTC 2020
+#31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024
 
 kodingwindow@kw:~$ <mark>uname --help</mark>
 Usage: uname [OPTION]...
@@ -58,9 +58,9 @@ Full documentation at: https://www.gnu.org/software/coreutils/uname
 or available locally via: info '(coreutils) uname invocation'
 
 kodingwindow@kw:~$ <mark>uname --version</mark>
-uname (GNU coreutils) 8.30
-Copyright (C) 2018 Free Software Foundation, Inc.
-License GPLv3+: GNU GPL version 3 or later https://gnu.org/licenses/gpl.html
+uname (GNU coreutils) 9.4
+Copyright (C) 2023 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.
 This is free software: you are free to change and redistribute it.
 There is NO WARRANTY, to the extent permitted by law.
 
@@ -76,25 +76,26 @@ kodingwindow  Kodingwindow  *:0             May 31 10:48 (:0)
 <span><pre>
 kodingwindow@kw:~$ <mark>lsb_release -a</mark>
 No LSB modules are available.
-Distributor ID: Ubuntu
-Description:    Ubuntu 20.04 LTS
-Release:    20.04
-Codename:   focal
+Distributor ID:	Ubuntu
+Description:	Ubuntu 24.04 LTS
+Release:	24.04
+Codename:	noble
 
 kodingwindow@kw:~$ <mark>lsb_release -c</mark>
-Codename:   focal
+No LSB modules are available.
+Codename:	noble
 
 kodingwindow@kw:~$ <mark>lsb_release -d</mark>
-Description:    Ubuntu 20.04 LTS
+No LSB modules are available.
+Description:	Ubuntu 24.04 LTS
 
 kodingwindow@kw:~$ <mark>lsb_release -i</mark>
+No LSB modules are available.
 Distributor ID: Ubuntu
 
 kodingwindow@kw:~$ <mark>lsb_release -r</mark>
-Release:    20.04
-
-kodingwindow@kw:~$ <mark>lsb_release -s</mark>
 No LSB modules are available.
+Release:	24.04
 
 kodingwindow@kw:~$ <mark>lsb_release -s</mark>
 No LSB modules are available.
@@ -116,37 +117,37 @@ Options:
 <div class="terminalcard">System information using cat command</div>
 <span><pre>
 kodingwindow@kw:~$ <mark>cat /proc/version</mark>
-Linux version 5.4.0-33-generic (buildd@lcy01-amd64-022) 
-(gcc version 9.3.0 (Ubuntu 9.3.0-10ubuntu2)) #37-Ubuntu SMP Thu May 21 12:53:59 UTC 2020
+Linux version 6.8.0-31-generic (buildd@lcy02-amd64-080) (x86_64-linux-gnu-gcc-13 (Ubuntu 13.2.0-23ubuntu4) 13.2.0, GNU ld (GNU Binutils for Ubuntu) 2.42) #31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024
 
 kodingwindow@kw:~$ <mark>cat /proc/sys/kernel/{ostype,osrelease,version}</mark>
 Linux
-5.4.0-33-generic
-#37-Ubuntu SMP Thu May 21 12:53:59 UTC 2020
+6.8.0-31-generic
+#31-Ubuntu SMP PREEMPT_DYNAMIC Sat Apr 20 00:40:06 UTC 2024
 
 kodingwindow@kw:~$ <mark>cat /etc/lsb-release</mark>
 DISTRIB_ID=Ubuntu
-DISTRIB_RELEASE=20.04
-DISTRIB_CODENAME=focal
-DISTRIB_DESCRIPTION="Ubuntu 20.04 LTS"
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04 LTS"
 
 kodingwindow@kw:~$ <mark>cat /etc/issue.net</mark>
-Ubuntu 20.04 LTS
+Ubuntu 24.04 LTS
 
 kodingwindow@kw:~$ <mark>cat /etc/debian_version</mark>
-bullseye/sid
+trixie/sid
 
 kodingwindow@kw:~$ <mark>cat /etc/os-release</mark>
+PRETTY_NAME="Ubuntu 24.04 LTS"
 NAME="Ubuntu"
-VERSION="20.04 LTS (Focal Fossa)"
+VERSION_ID="24.04"
+VERSION="24.04 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
 ID=ubuntu
 ID_LIKE=debian
-PRETTY_NAME="Ubuntu 20.04 LTS"
-VERSION_ID="20.04"
 HOME_URL="https://www.ubuntu.com/"
 SUPPORT_URL="https://help.ubuntu.com/"
 BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
-VERSION_CODENAME=focal
-UBUNTU_CODENAME=focal
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
 </pre></span>
