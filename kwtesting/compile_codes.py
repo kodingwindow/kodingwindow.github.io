@@ -1,8 +1,12 @@
 from utilities import *
 
+passed = failed = 0
+
 
 def extract_compile(html_input, compiler, subpath, filename, extension, args):
-    code = re.findall('<pre class="code">(.+?){% endhighlight %}</pre>', html_input, flags=re.DOTALL)
+    code = re.findall(
+        '<pre class="code">(.+?){% endhighlight %}</pre>', html_input, flags=re.DOTALL
+    )
     if code is not None:
         output = "".join(code[0])
         f2 = open(subpath + filename + extension, "w")
@@ -11,10 +15,21 @@ def extract_compile(html_input, compiler, subpath, filename, extension, args):
         os.system("sed -i '1d;' {0}".format(subpath + filename + extension))
         f2.close
 
-        if os.system(compiler + " " + subpath + filename + extension + args) == 0:
+        global passed, failed 
+        try:
+            subprocess.check_output(
+                compiler + " " + subpath + filename + extension + args,
+                shell=True,
+                stderr=subprocess.DEVNULL,
+            )
+            # Code compilation is successful as it is bug-free
             print("Successful: " + subpath + filename + extension)
-        else:
+            passed += 1
+        except:
+            # Code compilation is unsuccessful due to required resources are unfound (e.g. graphics.h)
             print("Unsuccessful: " + subpath + filename + extension)
+            failed += 1
+
 
 def compile_all(source, destination, kwdata):
     os.makedirs(destination, exist_ok=True)
@@ -44,7 +59,11 @@ def compile_all(source, destination, kwdata):
                 extension = ".cpp"
                 compiler = "g++"
                 extract_compile(html_input, compiler, subpath, path[2], extension, args)
-            elif (html_input.__contains__('<pre class="code">{% highlight java %}') and path[0] == "java" and path[1] != "jdbc"):
+            elif (
+                html_input.__contains__('<pre class="code">{% highlight java %}')
+                and path[0] == "java"
+                and path[1] != "jdbc"
+            ):
                 extension = ".java"
                 compiler = "javac"
                 extract_compile(html_input, compiler, subpath, path[2], extension, args)
@@ -62,3 +81,4 @@ def compile_all(source, destination, kwdata):
                 extract_compile(html_input, compiler, subpath, path[2], extension, args)
             f1.close
     os.system("rm -rf " + destination)
+    return passed, failed

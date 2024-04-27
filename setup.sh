@@ -3,7 +3,7 @@
 function install() {
     sudo apt-get update -y
     sudo apt-get upgrade -y
-    packages=(python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger)
+    packages=(default-jre default-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger wget)
     sudo apt-get -y --ignore-missing install "${packages[@]}"
     pip install --user -r requirements.txt --break-system-packages | grep -v 'already satisfied'
 

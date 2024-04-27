@@ -1,4 +1,4 @@
-import os, sys, yaml, time, re
+import os, yaml, time, re, subprocess
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.edge.service import Service
@@ -9,7 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 
 baseurl = "http://localhost:4000/"
-
+matched = unmatched = 0
 
 def startup(browser):
     if browser == "chrome":
@@ -27,11 +27,16 @@ def startup(browser):
 
 
 def verify_title(driver, path, expected_title):
+    global matched, unmatched
     driver.maximize_window()
     driver.get(baseurl + path)
     actual_title = driver.title
     if actual_title != expected_title:
         print("Title Unmatched: https://kodingwindow.com/" + path)
+        unmatched += 1
+    else:
+        # print("Title Matched: https://kodingwindow.com/" + path)
+        matched += 1
 
 
 def verify_scrolling(driver):
@@ -54,14 +59,14 @@ def read_file(driver, kwdata, kwfile, element):
     with open(kwdata + "%s" % kwfile) as file:
         document = yaml.safe_load(file)
         try:
-            parent = document["sidenav"][0]
-            element_title = parent["parent"]
-            element_url = parent["url"]
-            if driver is not None:
-                verify_title(driver, element_url, element_title)
             element_size = len(document[element])
             for i in range(0, element_size):
                 parent = document[element][i]
+                if element == "sidenav":
+                    element_title = parent["parent"]
+                    element_url = parent["url"]
+                    if driver is not None:
+                        verify_title(driver, element_url, element_title)
                 try:
                     children = parent["children"]
                 except KeyError:
@@ -90,3 +95,4 @@ def start_tests(browser, kwdata):
     verify_title(driver, "shubhamrdarda/", "Shubham Darda")
     driver.delete_all_cookies()
     driver.quit()
+    return matched, unmatched

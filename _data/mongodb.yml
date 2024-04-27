@@ -33,17 +33,7 @@ sidenav:
     children: 
       - title: MongoDB Fundamentals
         url: mongodb/fundamentals
-      - title: MongoDB Database and Collection
-        url: mongodb/crud/kwidyxxwo
-      - title: MongoDB Insert the Documents
-        url: mongodb/crud/kwideuazw
-      - title: MongoDB Methods
-        url: mongodb/crud/kwidhydqg
-      - title: MongoDB Logical Query Operators
-        url: mongodb/crud/kwidhzgdy
-      - title: MongoDB Projection
-        url: mongodb/crud/kwidrmzzy
-      - title: MongoDB Update a Document
-        url: mongodb/crud/kwidwawvv
+      - title: MongoDB CRUD Operations
+        url: mongodb/crud
       - title: MongoDB Search
         url: mongodb/search
