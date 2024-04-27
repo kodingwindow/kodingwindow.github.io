@@ -54,12 +54,13 @@ The Kodingwindow website's versioning is maintained on [GitHub][kwidezvdy] throu
 
 ## Development and Testing Usage
 
-**Prerequisites:** [Git][kwidzyzav], [Python][kwidxadth], and [Ruby][kwidkcqso] are installed on the Linux Ubuntu machine.
+**Prerequisites:** [Visual Studio Code][kwidkcqso], [Git][kwidzyzav], and [Python][kwidxadth] are installed on the Linux Ubuntu machine.
 ```
-Step 1: kodingwindow@kw:~$ git clone https://github.com/kodingwindow/kodingwindow.github.io.git
-Step 2: kodingwindow@kw:~$ cd kodingwindow.github.io/
-Step 3: kodingwindow@kw:~/kodingwindow.github.io$ bash setup.sh
-Step 4: Visit the local website at http://127.0.0.1:4000 or http://localhost:4000
+Step 1: kodingwindow@kw:~$ code
+Step 2: kodingwindow@kw:~$ git clone https://github.com/kodingwindow/kodingwindow.github.io.git
+Step 3: kodingwindow@kw:~$ cd kodingwindow.github.io/
+Step 4: kodingwindow@kw:~/kodingwindow.github.io$ bash setup.sh full
+Step 5: Visit the local website at http://127.0.0.1:4000 or http://localhost:4000
 ```
 
 ## License
@@ -110,6 +111,6 @@ For any queries, appreciation, and requirements, you can write to us at kodingwi
 [kwidwwvga]: https://jekyllrb.com
 [kwidzyzav]: https://git-scm.com
 [kwidxadth]: https://www.python.org
-[kwidkcqso]: https://rubyinstaller.org
+[kwidkcqso]: https://code.visualstudio.com
 [kwidzdngz]: https://github.com/kodingwindow/kodingwindow.github.io?tab=MIT-1-ov-file
 [kwidwxaed]: https://en.wikipedia.org/wiki/A._P._J._Abdul_Kalam
