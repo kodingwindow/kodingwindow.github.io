@@ -10,18 +10,17 @@ title: Python MongoDB to insert and retrieve the documents from a collection
 
 <div class="terminalcard">Start MongoDB</div>
 <span><pre>
-kodingwindow@kw:~$ <mark>cd mongodb-4.2.3/bin/</mark>
-kodingwindow@kw:~/mongodb-4.2.3/bin$ <mark>./mongod --dbpath /home/kodingwindow/data/db/</mark>
+kodingwindow@kw:~$ <mark>sudo systemctl start mongod</mark>
+kodingwindow@kw:~$ <mark>mongosh</mark>
+Current Mongosh Log ID:	65154469633b7d0fc9cad531
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.5
+Using MongoDB:		7.0.9
+Using Mongosh:		2.2.5
 
-*Open a new terminal and execute the following command.
-
-kodingwindow@kw:~/mongodb-4.2.3/bin$ <mark>./mongo</mark>
-MongoDB shell version v4.2.3
-connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
-MongoDB server version: 4.2.3
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
 ...
 
-<mark>> show dbs</mark>
+test> <mark>show dbs</mark>
 admin   0.000GB
 config  0.000GB
 local   0.000GB
@@ -34,7 +33,7 @@ local   0.000GB
 import pymongo
 from pymongo import MongoClient
 client=MongoClient()
-print("\nConnection Established")
+print("Connection Established")
 
 client=MongoClient('localhost',27017)
 db=client.DB
@@ -62,7 +61,7 @@ holder3={
 }
 
 docs=db.holders.insert_many([holder1,holder2,holder3])
-print(db.holders.find().count(),"Documents inserted successfully\n")
+print("Documents inserted successfully")
 
 for holder in db.holders.find():
     print(holder,"\n")
@@ -74,15 +73,13 @@ for holder in db.holders.find({},{'_id': 0,'account_no': 1,'name':1}):
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
-
 Connection Established
-3 Documents inserted successfully
+Documents inserted successfully
+{'_id': ObjectId('662dff2171fef7fb94353a22'), 'account_no': 2562348989, 'name': 'James Moore', 'bank': 'Barclays', 'amount': 5000} 
 
-{'_id': ObjectId('5e6774f2757e290a82ca3f61'), 'account_no': 2562348989, 'name': 'James Moore', 'bank': 'Barclays', 'amount': 5000} 
+{'_id': ObjectId('662dff2171fef7fb94353a23'), 'account_no': 2562348990, 'name': 'Donald Taylor', 'bank': 'Citi', 'amount': 7000} 
 
-{'_id': ObjectId('5e6774f2757e290a82ca3f62'), 'account_no': 2562348990, 'name': 'Donald Taylor', 'bank': 'Citi', 'amount': 7000} 
-
-{'_id': ObjectId('5e6774f2757e290a82ca3f63'), 'account_no': 2562348991, 'name': 'Edward Parkar', 'bank': 'ICICI', 'amount': 95000} 
+{'_id': ObjectId('662dff2171fef7fb94353a24'), 'account_no': 2562348991, 'name': 'Edward Parkar', 'bank': 'ICICI', 'amount': 95000} 
 
 {'account_no': 2562348989, 'name': 'James Moore'}
 {'account_no': 2562348990, 'name': 'Donald Taylor'}
@@ -91,38 +88,40 @@ Connection Established
 
 <div class="terminalcard">MongoDB Instance</b></div>
 <span><pre>
-<mark>> show dbs</mark>
+test> <mark>show dbs</mark>
 DB      0.000GB
 admin   0.000GB
 config  0.000GB
 local   0.000GB
 
-<mark>> use DB</mark>
+test> <mark>use DB</mark>
 switched to db DB
 
-<mark>> db.getCollectionNames()</mark>
+DB> <mark>db.getCollectionNames()</mark>
 [ "holders" ]
 
-<mark>> db.holders.find().pretty()</mark>
-{
-    "_id" : ObjectId("5e677382757e290a1fee782c"),
-    "account_no" : NumberLong("2562348989"),
-    "name" : "James Moore",
-    "bank" : "Barclays",
-    "amount" : 5000
-}
-{
-    "_id" : ObjectId("5e677382757e290a1fee782d"),
-    "account_no" : NumberLong("2562348990"),
-    "name" : "Donald Taylor",
-    "bank" : "Citi",
-    "amount" : 7000
-}
-{
-    "_id" : ObjectId("5e677382757e290a1fee782e"),
-    "account_no" : NumberLong("2562348991"),
-    "name" : "Edward Parkar",
-    "bank" : "ICICI",
-    "amount" : 95000
-}
+DB> <mark>db.holders.find().pretty()</mark>
+[
+  {
+    _id: ObjectId('662dff2171fef7fb94353a22'),
+    account_no: Long('2562348989'),
+    name: 'James Moore',
+    bank: 'Barclays',
+    amount: 5000
+  },
+  {
+    _id: ObjectId('662dff2171fef7fb94353a23'),
+    account_no: Long('2562348990'),
+    name: 'Donald Taylor',
+    bank: 'Citi',
+    amount: 7000
+  },
+  {
+    _id: ObjectId('662dff2171fef7fb94353a24'),
+    account_no: Long('2562348991'),
+    name: 'Edward Parkar',
+    bank: 'ICICI',
+    amount: 95000
+  }
+]
 </pre></span>

@@ -15,6 +15,7 @@ title: Java MySQL to insert and retrieve the records from a table
 
 <div class="terminalcard">Start MySQL</div>
 <span><pre>
+kodingwindow@kw:~$ <mark>sudo mysql -u root -p</mark>
 Enter password: ******
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 11
@@ -92,7 +93,7 @@ class KW
     {
         try
         {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/DB","root", "passwd");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/DB","root", "kodingwindow");
             PreparedStatement statement = con.prepareStatement("INSERT INTO holders(account_no,name,bank,amount) VALUES(?,?,?,?)");
                     
             CSVReader reader = new CSVReaderBuilder(new FileReader("kw.csv")).withSkipLines(1).build();

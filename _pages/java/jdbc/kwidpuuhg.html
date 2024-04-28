@@ -10,6 +10,7 @@ title: Java MySQL to connect, create database, and table
 
 <div class="terminalcard">Start MySQL</div>
 <span><pre>
+kodingwindow@kw:~$ <mark>sudo mysql -u root -p</mark>
 Enter password: ******
 Welcome to the MySQL monitor.  Commands end with ; or \g.
 Your MySQL connection id is 11
@@ -22,6 +23,9 @@ affiliates. Other names may be trademarks of their respective
 owners.
 
 Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> <mark>ALTER USER 'root'@'localhost' IDENTIFIED BY 'kodingwindow';</mark>
+Query OK, 0 rows affected (0.01 sec)
 
 mysql> <mark>SHOW DATABASES;</mark>
 +--------------------+
@@ -49,7 +53,7 @@ class KW
         String dbname="DB";
         try
         {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306","root", "passwd");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306","root", "kodingwindow");
             System.out.println("Connection Established Successfully");
             Statement st = con.createStatement();
             st.executeUpdate("DROP DATABASE IF EXISTS "+ dbname + "");
@@ -68,7 +72,8 @@ class KW
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
-{{ site.runjava }}
+kodingwindow@kw:~$ <mark>javac KW.java</mark>
+kodingwindow@kw:~$ <mark>java -cp mysql-connector-java-8.0.30.jar: KW</mark>
 Connection Established Successfully
 Database Created
 Connection Released Successfully
@@ -89,7 +94,7 @@ class KW
     {
         try
         {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/DB","root", "passwd");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/DB","root", "kodingwindow");
             Statement st = con.createStatement();
             st.executeUpdate("DROP TABLE IF EXISTS holders");
             st.executeUpdate("CREATE TABLE holders(account_no BIGINT PRIMARY KEY, name VARCHAR(30) NOT NULL, bank VARCHAR(10), amount BIGINT NOT NULL)");
@@ -112,7 +117,8 @@ class KW
 {% endhighlight %}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
-{{ site.runjava }}
+kodingwindow@kw:~$ <mark>javac KW.java</mark>
+kodingwindow@kw:~$ <mark>java -cp mysql-connector-java-8.0.30.jar: KW</mark>
 Table Created
 List of Tables
 holders

@@ -10,18 +10,17 @@ title: Python MongoDB to connect, create database, and collection
 
 <div class="terminalcard">Start MongoDB</div>
 <span><pre>
-kodingwindow@kw:~$ <mark>cd mongodb-4.2.3/bin/</mark>
-kodingwindow@kw:~/mongodb-4.2.3/bin$ <mark>./mongod --dbpath /home/kodingwindow/data/db/</mark>
+kodingwindow@kw:~$ <mark>sudo systemctl start mongod</mark>
+kodingwindow@kw:~$ <mark>mongosh</mark>
+Current Mongosh Log ID:	65154469633b7d0fc9cad531
+Connecting to:		mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.2.5
+Using MongoDB:		7.0.9
+Using Mongosh:		2.2.5
 
-*Open a new terminal and execute the following command.
-
-kodingwindow@kw:~/mongodb-4.2.3/bin$ <mark>./mongo</mark>
-MongoDB shell version v4.2.3
-connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
-MongoDB server version: 4.2.3
+For mongosh info see: https://docs.mongodb.com/mongodb-shell/
 ...
 
-<mark>> show dbs</mark>
+test> <mark>show dbs</mark>
 admin   0.000GB
 config  0.000GB
 local   0.000GB
@@ -63,30 +62,32 @@ Connection Established
 
 Collection Name(s):  ['holders']
 
-First document key: 5e67708d757e2908ce073c3d
+First document key: 662df3178b52d7e4502224af
 </pre></span>
 
 <div class="terminalcard">MongoDB Instance</b></div>
 <span>
 <pre>
-<marK>> show dbs</marK>
+test> <marK>show dbs</marK>
 DB      0.000GB
 admin   0.000GB
 config  0.000GB
 local   0.000GB
 
-<mark>> use DB</mark>
+test> <mark>use DB</mark>
 switched to db DB
 
-<mark>> db.getCollectionNames()</mark>
+DB> <mark>db.getCollectionNames()</mark>
 [ "holders" ]
 
-<mark>> db.holders.find().pretty()</mark>
-{
-    "_id" : ObjectId("5e67708d757e2908ce073c3d"),
-    "account_no" : NumberLong("2562348989"),
-    "name" : "James Moore",
-    "bank" : "Barclays",
-    "amount" : 5000
-}
+DB> <mark>db.holders.find().pretty()</mark>
+[
+  {
+    _id: ObjectId('662df3178b52d7e4502224af'),
+    account_no: Long('2562348989'),
+    name: 'James Moore',
+    bank: 'Barclays',
+    amount: 5000
+  }
+]
 </pre></span>

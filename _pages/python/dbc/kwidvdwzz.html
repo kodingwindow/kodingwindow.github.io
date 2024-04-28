@@ -10,13 +10,13 @@ title: Python MySQL to connect, create a database, and table
 
 <div class="terminalcard">Start MySQL</div>
 <span><pre>
-kodingwindow@kw:~$ <mark>mysql -u root -p</mark>
+kodingwindow@kw:~$ <mark>sudo mysql -u root -p</mark>
 Enter password: 
 Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 13
-Server version: 8.0.17 MySQL Community Server - GPL
+Your MySQL connection id is 10
+Server version: 8.0.36-2ubuntu3 (Ubuntu)
 
-Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+Copyright (c) 2000, 2024, Oracle and/or its affiliates.
 
 Oracle is a registered trademark of Oracle Corporation and/or its
 affiliates. Other names may be trademarks of their respective
@@ -42,7 +42,7 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 <pre class="code">{% highlight python %}
 import mysql.connector
 
-db=mysql.connector.connect(host="localhost",user="root",passwd="password")
+db=mysql.connector.connect(host="localhost",user="root",passwd="kodingwindow")
 print("Connection Established")
 cursor=db.cursor()
 
@@ -97,7 +97,7 @@ Empty set (0.00 sec)
 <pre class="code">{% highlight python %}
 import pymysql
 
-db=pymysql.connect("localhost","root","password")
+db=pymysql.connect(host='localhost', user='root', password='kodingwindow')
 print("Connection Established")
 cursor=db.cursor()
 

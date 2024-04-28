@@ -362,7 +362,7 @@ public class Employee
         Connection con;
         try
         {
-            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "passwd");
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "kodingwindow");
             System.out.println("Connection Established");
             
         }
@@ -398,7 +398,7 @@ public class DataStoreHelper
 {
     public void addEmployee(Employee e1) throws ClassNotFoundException, SQLException, IOException
     {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "passwd");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "kodingwindow");
         Statement st = con.createStatement();
         st.executeUpdate("INSERT INTO EMPLOYEES VALUES('"+Employee.empid+"','"+Employee.fname+"','"+Employee.lname+"','"+Employee.mob+"','"+Employee.designation+"','"+Employee.salary+"','"+Employee.city+"')");
         System.out.println("\nValues Inserted Successfully");
@@ -409,7 +409,7 @@ public class DataStoreHelper
         System.out.println("________________________________");
         try
         {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "passwd");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "kodingwindow");
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM EMPLOYEES WHERE EMPID='"+empid+"'");
             rs.next();
@@ -429,7 +429,7 @@ public class DataStoreHelper
         int count=0;
         try
         {
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "passwd");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "kodingwindow");
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery("SELECT * FROM EMPLOYEES");
             System.out.println("________________________________");
@@ -448,7 +448,7 @@ public class DataStoreHelper
     }
     public void removeEmployee(String empid) throws ClassNotFoundException, SQLException, IOException
     {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "passwd");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "kodingwindow");
         Statement st = con.createStatement();
         st.executeUpdate("DELETE FROM EMPLOYEES WHERE EMPID='"+empid+"'");
         System.out.println("Employee Removed Successfully");
@@ -456,7 +456,7 @@ public class DataStoreHelper
 
     public void updateEmployee(String empid) throws ClassNotFoundException, SQLException, IOException
     {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "passwd");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "kodingwindow");
         Statement st = con.createStatement();
         Scanner sc = new Scanner(System.in);
         int ch;
@@ -497,14 +497,14 @@ public class DataStoreHelper
     
     public void updateEmployeeDesig(String empid, String designation) throws ClassNotFoundException, SQLException, IOException
     {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "passwd");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "kodingwindow");
         con.createStatement();
         System.out.println("Record Updated Successfully");
     }
 
     public void dropAllEmployee() throws SQLException
     {
-        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "passwd");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/data","root", "kodingwindow");
         Statement st = con.createStatement();
         st.executeUpdate("DROP TABLE EMPLOYEES");
         System.out.println("All Employees Removed Successfully");
