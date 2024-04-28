@@ -32,10 +32,10 @@ def verify_title(driver, path, expected_title):
     driver.get(baseurl + path)
     actual_title = driver.title
     if actual_title != expected_title:
-        print("Title Unmatched: https://kodingwindow.com/" + path)
+        print("Title Unmatched: " + path)
         unmatched += 1
     else:
-        # print("Title Matched: https://kodingwindow.com/" + path)
+        # print("Title Matched: " + path)
         matched += 1
 
 
@@ -67,6 +67,7 @@ def read_file(driver, kwdata, kwfile, element):
                     element_url = parent["url"]
                     if driver is not None:
                         verify_title(driver, element_url, element_title)
+                        verify_scrolling(driver)
                 try:
                     children = parent["children"]
                 except KeyError:
@@ -88,7 +89,6 @@ def start_tests(browser, kwdata):
     for kwfile in os.listdir(kwdata):
         read_file(driver, kwdata, kwfile, "sidenav")
         read_file(driver, kwdata, kwfile, "grandparent")
-        verify_scrolling(driver)
     verify_title(driver, "", "Kodingwindow")
     verify_title(driver, "search/", "Kodingwindow's Search")
     verify_title(driver, "404/", "404 Page Not Found")
