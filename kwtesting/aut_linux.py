@@ -12,7 +12,7 @@ start = time.time()
 
 try:
     os.system("clear")
-    # https://support.mozilla.org/en-US/kb/install-firefox-linux
+    # sudo snap remove firefox and then https://support.mozilla.org/en-US/kb/install-firefox-linux
     matched, unmatched = start_tests("firefox", kwdata)
     # matched, unmatched = start_tests("chrome", kwdata)
     passed, failed = compile_all(source, destination, kwdata)
