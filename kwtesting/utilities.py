@@ -11,7 +11,9 @@ from selenium import webdriver
 baseurl = "http://localhost:4000/"
 matched = unmatched = 0
 
-def startup(browser):
+
+# It opens up the mentioned browser to start the automated tests.
+def open_browser(browser):
     if browser == "chrome":
         options = webdriver.ChromeOptions()
         options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
@@ -26,6 +28,7 @@ def startup(browser):
     return driver
 
 
+# It verifies the title of each page and returns the total count of matched and unmatched titles.
 def verify_title(driver, path, expected_title):
     global matched, unmatched
     driver.maximize_window()
@@ -39,6 +42,7 @@ def verify_title(driver, path, expected_title):
         matched += 1
 
 
+# It verifies the back-to-top button is working on each segment and passes if the scroll bar is at the top.
 def verify_scrolling(driver):
     try:
         before_scroll = driver.execute_script("return document.body.scrollHeight")
@@ -54,9 +58,12 @@ def verify_scrolling(driver):
     except:
         pass
 
-def read_file(driver, kwdata, kwfile, element):
+
+''' It reads the segment files from the _data folder and extracts the URLs to navigate. 
+Lastly, it returns the list of paths (which is required in compile_codes.py). '''
+def read_file(driver, data_path, file_name, element):
     paths = []
-    with open(kwdata + "%s" % kwfile) as file:
+    with open(data_path + "%s" % file_name) as file:
         document = yaml.safe_load(file)
         try:
             element_size = len(document[element])
@@ -84,11 +91,14 @@ def read_file(driver, kwdata, kwfile, element):
     return paths
 
 
-def start_tests(browser, kwdata):
-    driver = startup(browser)
-    for kwfile in os.listdir(kwdata):
-        read_file(driver, kwdata, kwfile, "sidenav")
-        read_file(driver, kwdata, kwfile, "grandparent")
+''' It starts the test by taking the name of the browser and the location of the data folder and 
+performs automated tests such as verifying the title of each page and scrolling. 
+In the end, it returns the total count of matched and unmatched titles. '''
+def start_tests(browser, data_path):
+    driver = open_browser(browser)
+    for file_name in os.listdir(data_path):
+        read_file(driver, data_path, file_name, "sidenav")
+        read_file(driver, data_path, file_name, "grandparent")
     verify_title(driver, "", "Kodingwindow")
     verify_title(driver, "search/", "Kodingwindow's Search")
     verify_title(driver, "404/", "404 Page Not Found")

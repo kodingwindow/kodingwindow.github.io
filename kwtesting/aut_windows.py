@@ -1,19 +1,20 @@
 from utilities import *
 
 done = False
-kwdata = "D:/kodingwindow.github.io/_data/"
+data_path = "D:/kodingwindow.github.io/_data/"
 
 start = time.time()
 try:
     os.system("CLS")
-    matched, unmatched = start_tests("chrome", kwdata)
-    # matched, unmatched = start_tests("msedge", kwdata)
+    matched, unmatched = start_tests("chrome", data_path)
+    # matched, unmatched = start_tests("msedge", data_path)
     done = True
 except:
     print("The script execution was aborted due to the following reasons: \n1. The local server isn't up and running. \n2. The required driver isn't found at the given location. \n3. Due to the mismatch of browser and driver versions \n4. If you manually intervened in the execution.\n5. Due to code changes done locally.")
 
 os.system("pyclean kwtesting")
 
+# It prints the report if there are no exceptions.
 if done:
     end = time.time()
     m, s = divmod(round(end - start), 60)
@@ -24,4 +25,3 @@ if done:
     print("Total Titles Unmatched:", unmatched)
     print("---------------------------------")
     print("Total Execution Time:", f"{h:02d}:{m:02d}:{s:02d}")
-
