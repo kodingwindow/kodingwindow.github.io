@@ -9,6 +9,7 @@ pymongo
 PyMySQL
 pytest
 PyYAML
+requests
 scipy
 selenium
 toml

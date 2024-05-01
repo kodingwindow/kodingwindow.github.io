@@ -1,7 +1,7 @@
-name: Environment setup for automation testing
+name: Environment Setup Workflow
 on:
   schedule:
-    - cron: '0 9 1 * *'
+    - cron: '0 11 1 * *'
     
 jobs:
   build:
@@ -9,7 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python 3.12
-        uses: actions/setup-python@v3
+        uses: actions/setup-python@v4
         with:
           python-version: '3.12'
       - name: Run the setup script
