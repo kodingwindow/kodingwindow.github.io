@@ -1,4 +1,4 @@
-import os, yaml, time, re, subprocess
+import os, sys, platform, yaml, time, re, subprocess, unittest
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.edge.service import Service
@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 
 baseurl = "http://localhost:4000/"
+website = "kodingwindow.com/"
 matched = unmatched = 0
 
 
@@ -24,6 +25,9 @@ def open_browser(browser):
         driver = webdriver.Edge(options=options, service=Service(EdgeChromiumDriverManager().install()))
     elif browser == "firefox":
         options = webdriver.FirefoxOptions()
+        if not "CI" in os.environ:
+            options.add_argument('--headless')
+            print("Headless automated tests are started...")
         driver = webdriver.Firefox(options=options, service=Service(GeckoDriverManager().install()))
     return driver
 
@@ -35,10 +39,10 @@ def verify_title(driver, path, expected_title):
     driver.get(baseurl + path)
     actual_title = driver.title
     if actual_title != expected_title:
-        print("Title Unmatched: " + path)
+        print("Title Unmatched: " + website + path)
         unmatched += 1
     else:
-        # print("Title Matched: " + path)
+        print("Title Matched: " + website + path)
         matched += 1
 
 

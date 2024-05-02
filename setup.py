@@ -46,7 +46,10 @@ def start_server():
         print(subprocess.check_output("bundler -v", shell=True).rstrip().decode("utf-8"))
         print("---------------------------------------------")
         if env.lower() == "ubuntu":
-            os.system("sudo bundle exec jekyll serve")
+            if "CI" in os.environ:
+                os.system("sudo bundle exec jekyll build")
+            else:
+                os.system("sudo bundle exec jekyll serve")
         else:
             os.system("bundle exec jekyll serve")
     except KeyboardInterrupt:
