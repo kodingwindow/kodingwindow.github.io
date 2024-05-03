@@ -78,5 +78,13 @@ def compile_codes(source, destination, data_path):
                 compiler = "rustc"
                 is_compiled(html_input, compiler, subpath, path[2], extension, args)
             f1.close
+    print("---------------------------------")
+    print("Compilers Version Used")
+    print("---------------------------------")
+    print("gcc/g++", subprocess.check_output("g++ -dumpfullversion", shell=True).rstrip().decode("utf-8"))
+    print(subprocess.check_output("javac --version", shell=True).rstrip().decode("utf-8"))
+    print(subprocess.check_output("python3 --version", shell=True).rstrip().decode("utf-8"))
+    print(subprocess.check_output("rustc --version", shell=True).rstrip().decode("utf-8"))
+    print(subprocess.check_output("nasm --version", shell=True).rstrip().decode("utf-8"))
     os.system("rm -rf " + destination)
     return passed, failed

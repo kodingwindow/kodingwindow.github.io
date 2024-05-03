@@ -70,6 +70,7 @@ def start_setup():
             os.system("sudo kill -9 $(sudo lsof -t -i:4000) 2>/dev/null")
             install()
             clean() 
+            os.system("clear")
             start_server()
         elif sys.platform == "win32" and full:
             install()

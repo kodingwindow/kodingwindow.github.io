@@ -10,27 +10,28 @@ else:
 
 try:
     if env.lower() == "ubuntu":
-        username = os.getlogin()
-        kw = "/home/" + username + "/kodingwindow.github.io/"
+        kw = os.getcwd() + "/"
         data_path = kw + "_data/"
         source = kw + "_pages/"
         destination = kw + "kwfied/"
         os.system("clear")
 
-        # sudo snap remove firefox and then https://support.mozilla.org/en-US/kb/install-firefox-linux
-        matched, unmatched = start_tests("firefox", data_path)
-        # matched, unmatched = start_tests("chrome", data_path)
+        if not "CI" in os.environ:
+            # sudo snap remove firefox and then https://support.mozilla.org/en-US/kb/install-firefox-linux
+            matched, unmatched = start_tests("firefox", data_path)
+            # matched, unmatched = start_tests("chrome", data_path)
         passed, failed = compile_codes(source, destination, data_path)
         os.chdir(kw)
+        done = True
     elif env.lower() == "windows":
         data_path = "D:/kodingwindow.github.io/_data/"
         os.system("CLS")
         
         matched, unmatched = start_tests("chrome", data_path)
         # matched, unmatched = start_tests("msedge", data_path)
+        done = True
     else:
         print("Script works on Windows and Ubuntu only")
-    done = True
 except:
     print("The script execution aborted due to the following possible reasons: \n1. The local server isn't up and running. \n2. The required driver isn't found at the given location. \n3. Due to unsupported OS, browser and driver versions \n4. If you manually intervened in the execution.\n5. Due to code changes done locally.")
 
