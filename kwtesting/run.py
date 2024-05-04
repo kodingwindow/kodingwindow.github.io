@@ -16,12 +16,11 @@ try:
         destination = kw + "kwfied/"
         os.system("clear")
 
-        if not "CI" in os.environ:
-            # sudo snap remove firefox and then https://support.mozilla.org/en-US/kb/install-firefox-linux
-            matched, unmatched = start_tests("firefox", data_path)
-            # matched, unmatched = start_tests("chrome", data_path)
         passed, failed = compile_codes(source, destination, data_path)
         os.chdir(kw)
+        # sudo snap remove firefox and then https://support.mozilla.org/en-US/kb/install-firefox-linux
+        matched, unmatched = start_tests("firefox", data_path)
+        # matched, unmatched = start_tests("chrome", data_path)
         done = True
     elif env.lower() == "windows":
         data_path = "D:/kodingwindow.github.io/_data/"

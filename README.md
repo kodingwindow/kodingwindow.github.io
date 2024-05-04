@@ -7,7 +7,7 @@ Kodingwindow's website versioning is maintained on [GitHub][kwidezvdy] through [
 
 ## Development and Testing Usage
 
-[![Environment Setup Workflow](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/setup.yml/badge.svg?branch=main)](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/setup.yml)
+[![Setup Environment](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/setup.yml/badge.svg?branch=main)](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/setup.yml)
 
 **Ubuntu Prerequisites:** [Git][kwidzyzav], [Visual Studio Code][kwidkcqso], and [Python][kwidxadth] are installed on the Linux Ubuntu machine.
 ```

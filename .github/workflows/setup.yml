@@ -1,7 +1,7 @@
-name: Environment Setup Workflow
+name: Setup Environment
 on:
   schedule:
-    - cron: '30 22 1-31 * *'
+    - cron: '30 4 1-31 * *'
     
 jobs:
   build:
@@ -15,7 +15,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install requests
-      - name: Environment Setup
+      - name: Setup Environment
         run: python3 setup.py full
       - name: Compile Codes
         run: python3 kwtesting/run.py

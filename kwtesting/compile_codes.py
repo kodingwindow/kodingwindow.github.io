@@ -20,12 +20,12 @@ def is_compiled(html_input, compiler, subpath, file_name, extension, args):
                 shell=True,
                 stderr=subprocess.DEVNULL,
             )
-            # Code compilation is successful as it is bug-free
-            print("Successful: " + website + subpath + file_name + extension)
+            # Code compiled as it is bug-free
+            print("Compiled: " + website + subpath + file_name)
             passed += 1
         except:
-            # Code compilation is unsuccessful due to required resources are unfound (e.g. graphics.h)
-            print("Unsuccessful: " + website + subpath + file_name + extension)
+            # Code compilation is failed due to required resources are unfound (e.g. graphics.h)
+            print("Failed: " + website + subpath + file_name)
             failed += 1
 
 

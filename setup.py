@@ -4,7 +4,7 @@ import sys, os, subprocess, requests, platform
 def install():
     os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     if env.lower() == "ubuntu":
-        packages = "default-jre default-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger wget"
+        packages = "default-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger wget"
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get upgrade -y")
         cmd = "sudo apt-get -y --ignore-missing install "
@@ -46,10 +46,7 @@ def start_server():
         print(subprocess.check_output("bundler -v", shell=True).rstrip().decode("utf-8"))
         print("---------------------------------------------")
         if env.lower() == "ubuntu":
-            if "CI" in os.environ:
-                os.system("sudo bundle exec jekyll build")
-            else:
-                os.system("sudo bundle exec jekyll serve")
+            os.system("sudo bundle exec jekyll serve")
         else:
             os.system("bundle exec jekyll serve")
     except KeyboardInterrupt:
@@ -70,7 +67,6 @@ def start_setup():
             os.system("sudo kill -9 $(sudo lsof -t -i:4000) 2>/dev/null")
             install()
             clean() 
-            os.system("clear")
             start_server()
         elif sys.platform == "win32" and full:
             install()
