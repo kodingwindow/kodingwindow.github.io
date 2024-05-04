@@ -1,7 +1,7 @@
 name: Setup Environment
 on:
   schedule:
-    - cron: '0 6 1-31 * *'
+    - cron: '45 9 1-31 * *'
     
 jobs:
   build:
@@ -16,6 +16,4 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install requests
       - name: Setup Environment and Start Testing
-        run: |
-          python3 setup.py full
-          python3 kwtesting/run.py
+        run: python3 setup.py full

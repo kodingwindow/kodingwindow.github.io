@@ -1,4 +1,4 @@
-import sys, os, subprocess, requests, platform
+import sys, os, subprocess, requests, platform, time
 
 
 def install():
@@ -46,9 +46,12 @@ def start_server():
         print(subprocess.check_output("bundler -v", shell=True).rstrip().decode("utf-8"))
         print("---------------------------------------------")
         if env.lower() == "ubuntu":
-            os.system("sudo bundle exec jekyll serve")
-        else:
-            os.system("bundle exec jekyll serve")
+            if "CI" in os.environ:
+                os.system("gnome-terminal -- bash -c 'sudo bundle exec jekyll serve; exec bash'")
+                time.sleep(30)
+                os.system("python3 kwtesting/run.py")
+            else:
+                os.system("sudo bundle exec jekyll serve")
     except KeyboardInterrupt:
         pass
     except:
@@ -62,9 +65,9 @@ def start_setup():
             full = True
     except:
         full
+    os.system("sudo kill -9 $(sudo lsof -t -i:4000) 2>/dev/null")
     if connected_to_internet():
         if sys.platform == "linux" and full:
-            os.system("sudo kill -9 $(sudo lsof -t -i:4000) 2>/dev/null")
             install()
             clean() 
             start_server()
