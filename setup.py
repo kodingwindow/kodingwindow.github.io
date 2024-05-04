@@ -50,7 +50,7 @@ def start_server():
         print("---------------------------------------------")
         if env.lower() == "ubuntu":
             if "CI" in os.environ:
-                os.system("gnome-terminal -- bash -c 'sudo bundle exec jekyll serve; exec bash'")
+                os.system("sudo bundle exec jekyll build")
             else:
                 os.system("sudo bundle exec jekyll serve")
     except KeyboardInterrupt:

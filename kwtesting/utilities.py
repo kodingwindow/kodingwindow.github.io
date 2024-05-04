@@ -8,7 +8,11 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 
-baseurl = "http://localhost:4000/"
+if "CI" in os.environ:
+    baseurl = "http://localhost:4000/"
+else:
+    baseurl = "https://kodingwindow.com/"
+
 website = "kodingwindow.com/"
 matched = unmatched = 0
 
