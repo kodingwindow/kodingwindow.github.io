@@ -2,10 +2,8 @@ import sys, os, subprocess, requests, platform
 
 
 def install():
-    os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     if env.lower() == "ubuntu":
-        os.system("sudo snap remove firefox")
-        packages = "openjdk-21-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger wget firefox"
+        packages = "google-chrome-stable openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger wget"
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get upgrade -y")
         cmd = "sudo apt-get -y --ignore-missing install "
@@ -13,6 +11,7 @@ def install():
             command = str(cmd) + str(pkg)
             subprocess.run(command.split())
         os.system("sudo gem install jekyll bundler")
+    os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     os.system("bundle config set --local path vendor/bundle")
     os.system("bundle install")
     os.system("bundle update --bundler")

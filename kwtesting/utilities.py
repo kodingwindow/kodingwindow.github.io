@@ -17,7 +17,11 @@ matched = unmatched = 0
 def open_browser(browser):
     if browser == "chrome":
         options = webdriver.ChromeOptions()
-        options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
+        if "CI" in os.environ:
+            options.add_argument('--headless')
+            print("Headless automated tests are started...")
+        else:
+            options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
         driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
     elif browser == "msedge":
         options = webdriver.EdgeOptions()
@@ -25,9 +29,6 @@ def open_browser(browser):
         driver = webdriver.Edge(options=options, service=Service(EdgeChromiumDriverManager().install()))
     elif browser == "firefox":
         options = webdriver.FirefoxOptions()
-        if "CI" in os.environ:
-            options.add_argument('--headless')
-            print("Headless automated tests are started...")
         driver = webdriver.Firefox(options=options, service=Service(GeckoDriverManager().install()))
     return driver
 
