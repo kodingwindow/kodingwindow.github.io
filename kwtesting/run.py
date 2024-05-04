@@ -14,7 +14,7 @@ if env.lower() == "ubuntu":
     data_path = kw + "_data/"
     source = kw + "_pages/"
     destination = kw + "kwfied/"
-    os.system("hostname -I | awk '{print $1}'")
+    print("IP Address:", subprocess.check_output("hostname -I | awk '{print $1}'", shell=True).rstrip().decode("utf-8"))
 
     passed, failed = compile_codes(source, destination, data_path)
     os.chdir(kw)

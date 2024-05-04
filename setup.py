@@ -4,7 +4,8 @@ import sys, os, subprocess, requests, platform
 def install():
     os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     if env.lower() == "ubuntu":
-        packages = "default-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger wget"
+        os.system("sudo snap remove firefox")
+        packages = "openjdk-21-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger wget firefox"
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get upgrade -y")
         cmd = "sudo apt-get -y --ignore-missing install "
