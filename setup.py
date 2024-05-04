@@ -1,4 +1,4 @@
-import sys, os, subprocess, requests, platform, time
+import sys, os, subprocess, requests, platform
 
 
 def install():
@@ -48,8 +48,6 @@ def start_server():
         if env.lower() == "ubuntu":
             if "CI" in os.environ:
                 os.system("gnome-terminal -- bash -c 'sudo bundle exec jekyll serve; exec bash'")
-                time.sleep(30)
-                os.system("python3 kwtesting/run.py")
             else:
                 os.system("sudo bundle exec jekyll serve")
     except KeyboardInterrupt:
