@@ -25,7 +25,7 @@ def open_browser(browser):
         driver = webdriver.Edge(options=options, service=Service(EdgeChromiumDriverManager().install()))
     elif browser == "firefox":
         options = webdriver.FirefoxOptions()
-        if not "CI" in os.environ:
+        if "CI" in os.environ:
             options.add_argument('--headless')
             print("Headless automated tests are started...")
         driver = webdriver.Firefox(options=options, service=Service(GeckoDriverManager().install()))

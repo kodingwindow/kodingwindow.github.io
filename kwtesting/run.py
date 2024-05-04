@@ -14,7 +14,7 @@ if env.lower() == "ubuntu":
     data_path = kw + "_data/"
     source = kw + "_pages/"
     destination = kw + "kwfied/"
-    os.system("clear")
+    os.system("hostname -I | awk '{print $1}'")
 
     passed, failed = compile_codes(source, destination, data_path)
     os.chdir(kw)
@@ -31,6 +31,7 @@ elif env.lower() == "windows":
     done = True
 else:
     print("Script works on Windows and Ubuntu only")
+
 
 subprocess.run("pyclean kwtesting", shell=True, stderr=subprocess.DEVNULL)
 
