@@ -1,12 +1,19 @@
 import sys, os, subprocess, requests, platform
 
 
-def install():
-    if env.lower() == "ubuntu":
+def chrome():
+    chrome_version = os.system("google-chrome --version > /dev/null")
+    if chrome_version != 0:
         os.system("sudo wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O /tmp/google.pub")
         os.system("sudo gpg --no-default-keyring --keyring /etc/apt/keyrings/google-chrome.gpg --import /tmp/google.pub")
         os.system("echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list")
-        packages = "gnome-terminal google-chrome-stable openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
+        os.system("sudo apt-get -y install google-chrome-stable")
+
+
+def install():
+    if env.lower() == "ubuntu":
+        chrome()
+        packages = "openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get upgrade -y")
         cmd = "sudo apt-get -y --ignore-missing install "
