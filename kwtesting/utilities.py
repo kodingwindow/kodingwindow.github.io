@@ -9,9 +9,9 @@ from selenium.webdriver.common.by import By
 from selenium import webdriver
 
 if "CI" in os.environ:
-    baseurl = "http://localhost:4000/"
-else:
     baseurl = "https://kodingwindow.com/"
+else:
+    baseurl = "http://localhost:4000/"
 
 website = "kodingwindow.com/"
 matched = unmatched = 0
