@@ -56,10 +56,12 @@ def start_server():
         print(subprocess.check_output("bundler -v", shell=True).rstrip().decode("utf-8"))
         print("---------------------------------------------")
         if env.lower() == "ubuntu":
-            if "CI" in os.environ:
+            if os.getenv("GITHUB_ACTIONS") == "true":
                 os.system("sudo bundle exec jekyll build")
             else:
                 os.system("sudo bundle exec jekyll serve")
+        elif env.lower() == "windows":
+            os.system("bundle exec jekyll serve")
     except KeyboardInterrupt:
         pass
     except:
@@ -73,7 +75,6 @@ def start_setup():
             full = True
     except:
         full
-    os.system("sudo kill -9 $(sudo lsof -t -i:4000) 2>/dev/null")
     if connected_to_internet():
         if sys.platform == "linux" and full:
             install()
@@ -92,6 +93,7 @@ def start_setup():
 
 if sys.platform == "linux":
     env = platform.freedesktop_os_release().get("ID")
+    os.system("sudo kill -9 $(sudo lsof -t -i:4000) 2>/dev/null")
 else:
     env = platform.system()
 

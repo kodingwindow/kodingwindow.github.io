@@ -8,7 +8,7 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 
-if "CI" in os.environ:
+if os.getenv("GITHUB_ACTIONS") == "true":
     baseurl = "https://kodingwindow.com/"
 else:
     baseurl = "http://localhost:4000/"
@@ -21,7 +21,7 @@ matched = unmatched = 0
 def open_browser(browser):
     if browser == "chrome":
         options = webdriver.ChromeOptions()
-        if "CI" in os.environ:
+        if os.getenv("GITHUB_ACTIONS") == "true":
             options.add_argument('--headless')
             print("Headless automated tests are started...")
         else:
