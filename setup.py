@@ -1,4 +1,12 @@
+'''
+Author: Shubham Darda
+Description: This script helps to setup and run the Kodingwindow website locally.
+'''
+
 import sys, os, subprocess, requests, platform
+
+cwd = os.getcwd() + "/"
+kw = "kodingwindow.github.io"
 
 
 def chrome():
@@ -13,7 +21,7 @@ def chrome():
 def install():
     if env.lower() == "ubuntu":
         chrome()
-        packages = "openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
+        packages = "git-all openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get upgrade -y")
         cmd = "sudo apt-get -y --ignore-missing install "
@@ -21,6 +29,18 @@ def install():
             command = str(cmd) + str(pkg)
             subprocess.run(command.split())
         os.system("sudo gem install jekyll bundler")
+    
+    if os.getenv("GITHUB_ACTIONS") != "true":
+        if kw not in os.getcwd():
+            os.system("git clone https://github.com/kodingwindow/kodingwindow.github.io.git")
+            os.chdir(cwd + kw + "/")
+        snap = os.system("snap --version > /dev/null")
+        vscode = os.system("code --version > /dev/null")
+        julia = os.system("julia --version > /dev/null")
+        if snap == 0 and vscode != 0:
+            os.system("sudo snap install --classic code")
+        if snap == 0 and julia != 0:
+            os.system("sudo snap install julia --classic")
     os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     os.system("bundle config set --local path vendor/bundle")
     os.system("bundle install")
@@ -47,6 +67,8 @@ def connected_to_internet():
 
 def start_server():
     try:
+        if kw not in os.getcwd():
+            os.chdir(cwd + kw + "/")
         print("---------------------------------------------")
         print("The following versions are getting used")
         print("---------------------------------------------")
@@ -65,7 +87,7 @@ def start_server():
     except KeyboardInterrupt:
         pass
     except:
-        print("Unable to start the Jekyll server")
+        print("Unable to start the Jekyll server: required resources are not found\nRecommended: python3 setup.py full")
 
 
 def start_setup():
@@ -101,4 +123,3 @@ if env.lower() == "ubuntu" or env.lower() == "windows":
     start_setup()
 else:
     print("Setup works on Windows and Ubuntu only")
-    
