@@ -21,7 +21,10 @@ def chrome():
 def install():
     if env.lower() == "ubuntu":
         chrome()
-        packages = "git-all openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
+        if os.getenv("GITHUB_ACTIONS") == "true":
+            packages = "ruby-full clisp rustc freeglut3-dev nasm"
+        else:
+            packages = "git-all openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get upgrade -y")
         cmd = "sudo apt-get -y --ignore-missing install "
@@ -34,13 +37,15 @@ def install():
         if kw not in os.getcwd():
             os.system("git clone https://github.com/kodingwindow/kodingwindow.github.io.git")
             os.chdir(cwd + kw + "/")
-        snap = os.system("snap --version > /dev/null")
-        vscode = os.system("code --version > /dev/null")
-        julia = os.system("julia --version > /dev/null")
-        if snap == 0 and vscode != 0:
-            os.system("sudo snap install --classic code")
-        if snap == 0 and julia != 0:
-            os.system("sudo snap install julia --classic")
+        if env.lower() == "ubuntu":
+            snap = os.system("snap --version > /dev/null")
+            vscode = os.system("code --version > /dev/null")
+            julia = os.system("julia --version > /dev/null")
+            if snap == 0 and vscode != 0:
+                os.system("sudo snap install --classic code")
+            if snap == 0 and julia != 0:
+                os.system("sudo snap install julia --classic")
+
     os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     os.system("bundle config set --local path vendor/bundle")
     os.system("bundle install")
