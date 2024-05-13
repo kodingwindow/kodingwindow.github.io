@@ -91,3 +91,4 @@ exclude:
    - _site
    - LICENSE
    - README.md
+   - kodingwindow

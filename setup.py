@@ -26,7 +26,7 @@ def install():
         else:
             packages = "git-all openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
         os.system("sudo apt-get update -y")
-        os.system("sudo apt-get upgrade -y")
+        os.system("sudo apt-get full-upgrade -y")
         cmd = "sudo apt-get -y --ignore-missing install "
         for pkg in packages.split():
             command = str(cmd) + str(pkg)
