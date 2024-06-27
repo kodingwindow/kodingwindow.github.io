@@ -9,16 +9,17 @@ Kodingwindow's website versioning is maintained on [GitHub][kwidezvdy] through [
 
 [![Setup Environment](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/setup.yml/badge.svg?branch=main)](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/setup.yml)
 
-**Ubuntu Prerequisites:** Download the setup.py file on the Linux Ubuntu machine.
+**Ubuntu Prerequisites:** Download the [setup.py][kwidzgwel] file on the Linux Ubuntu machine.
 ```
 Step 1: kodingwindow@kw:~$ python3 setup.py full
 Step 2: Visit the local website at http://127.0.0.1:4000 or http://localhost:4000
 ```
 **Windows Prerequisites:** [Git][kwidzyzav], [Visual Studio Code][kwidkcqso], [Python][kwidxadth] and [Ruby][kwidzrvdq] are installed on the Windows machine.
 ```
-Step 1: PS D:\> code (open Visual Studio Code -> Terminal)
-Step 2: PS D:\> python setup.py full
-Step 3: Visit the local website at http://127.0.0.1:4000 or http://localhost:4000
+Step 1: PS D:\> Open Visual Studio Code -> Terminal
+Step 2: PS D:\> git clone https://github.com/kodingwindow/kodingwindow.github.io.git
+Step 3: PS D:\kodingwindow.github.io> python setup.py full
+Step 4: Visit the local website at http://127.0.0.1:4000 or http://localhost:4000
 ```
 
 [kwidezvdy]: https://github.com
@@ -30,3 +31,4 @@ Step 3: Visit the local website at http://127.0.0.1:4000 or http://localhost:400
 [kwidzrvdq]: https://rubyinstaller.org/downloads
 [kwidkcqso]: https://code.visualstudio.com
 [kwidzdngz]: https://github.com/kodingwindow/kodingwindow.github.io?tab=MIT-1-ov-file
+[kwidzgwel]: https://github.com/kodingwindow/kodingwindow.github.io/blob/main/setup.py

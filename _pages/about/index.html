@@ -36,8 +36,8 @@ title: About Us
         </div>
     </div>
     <div class="board"><div class="boardtitle"><i class="bi bi-gear-wide-connected"></i> Help and Settings</div>
-        <a id="cache" class="card" href="clear:">Boost App Performance</a>
-        <a class="card disabled">App Theme: System Default</a>
+        <a id="cache" class="card" href="clear:">Clear Cache</a>
+        <a id="theme" class="card disabled"></a>
         <a class="card" href="mailto:{{ site.email }}">Contact Us</a>
     </div>
 </div>
@@ -49,7 +49,16 @@ if(isWebview && userAgent.includes("Kodingwindow"))
 }
 $("#cache").click(function () 
 {
-    $(this).html("App Performance Boosted");
+    $(this).html("Cache Cleared");
     $(this).css("color", "#00b050");
 });
+
+if(window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) 
+{
+    document.getElementById("theme").innerHTML = "App Theme: Dark (System Default)";
+} 
+else 
+{
+    document.getElementById("theme").innerHTML = "App Theme: Light (System Default)";
+}
 </script>
