@@ -12,7 +12,7 @@ android {
         minSdk = 29
         targetSdk = 34
         versionCode = 1
-        versionName = "24.6"
+        versionName = "24.7"
         setProperty("archivesBaseName", "kodingwindow")
     }
 
