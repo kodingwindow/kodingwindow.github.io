@@ -16,12 +16,12 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
-        version = findViewById(R.id.appversion);
+        version = findViewById(R.id.appversion)
         version.text = "App Version " + packageManager.getPackageInfo(packageName, 0).versionName
         Handler(Looper.getMainLooper()).postDelayed({
             val i = Intent(this@SplashActivity, MainActivity::class.java)
             startActivity(i)
             finish()
-        }, 1500)
+        }, 2000)
     }
 }
