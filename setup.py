@@ -62,7 +62,7 @@ def clean():
 def connected_to_internet():
     connection = None
     try:
-        if os.system('ping kodingwindow.com') == 0:
+        if os.system('ping kodingwindow.com -w 4') == 0:
             connection = True
         else:
             connection = False
