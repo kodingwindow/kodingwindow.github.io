@@ -86,6 +86,7 @@ class MainActivity : AppCompatActivity() {
                     webview.goBack()
                 else
                     onBackPressedDispatcher.onBackPressed()
+                    isEnabled = webview.canGoBack()
             }
         })
     }

@@ -1,4 +1,3 @@
 <resources>
-
     <style name="Theme.Kodingwindow" parent="Theme.AppCompat.DayNight.NoActionBar" />
 </resources>

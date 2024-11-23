@@ -1,9 +1,9 @@
 '''
 Author: Shubham Darda
-Description: This script helps to setup and run the Kodingwindow website locally.
+Description: This script helps to setup and run the Kodingwindow website on localhost.
 '''
 
-import sys, os, subprocess, requests, platform
+import sys, os, subprocess, platform
 
 cwd = os.getcwd() + "/"
 kw = "kodingwindow.github.io"
@@ -62,8 +62,10 @@ def clean():
 def connected_to_internet():
     connection = None
     try:
-        requests.get("https://kodingwindow.com")
-        connection = True
+        if os.system('ping kodingwindow.com') == 0:
+            connection = True
+        else:
+            connection = False
     except:
         connection = False
     finally:

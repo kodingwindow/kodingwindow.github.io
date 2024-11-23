@@ -1,7 +1,7 @@
 name: Setup Environment
 on:
   schedule:
-    - cron: '30 15 1 * *'
+    - cron: '30 23 25 * *'
     
 jobs:
   build:
