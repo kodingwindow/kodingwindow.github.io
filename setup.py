@@ -3,7 +3,7 @@ Author: Shubham Darda
 Description: This script helps to setup and run the Kodingwindow website on localhost.
 '''
 
-import sys, os, subprocess, platform
+import sys, os, subprocess, platform, socket
 
 cwd = os.getcwd() + "/"
 kw = "kodingwindow.github.io"
@@ -62,10 +62,8 @@ def clean():
 def connected_to_internet():
     connection = None
     try:
-        if os.system('ping kodingwindow.com -w 4') == 0:
-            connection = True
-        else:
-            connection = False
+        socket.create_connection(("8.8.8.8", 53))
+        connection = True
     except:
         connection = False
     finally:
