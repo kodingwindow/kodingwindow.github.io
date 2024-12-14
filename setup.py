@@ -3,13 +3,16 @@ Author: Shubham Darda
 Description: This script helps to setup and run the Kodingwindow website on localhost.
 '''
 
-import sys, os, subprocess, platform, socket
+import sys, os, subprocess, platform, socket, shutil
 
 cwd = os.getcwd() + "/"
 kw = "kodingwindow.github.io"
+ubuntu = False
+githubactions = False
+total, used, free = shutil.disk_usage(cwd)
+freedisk = free // (2**30)
 
-
-def chrome():
+def install_chrome():
     chrome_version = os.system("google-chrome --version > /dev/null")
     if chrome_version != 0:
         os.system("sudo wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O /tmp/google.pub")
@@ -19,25 +22,16 @@ def chrome():
 
 
 def install():
-    if env.lower() == "ubuntu":
-        chrome()
-        if os.getenv("GITHUB_ACTIONS") == "true":
-            packages = "ruby-full clisp rustc freeglut3-dev nasm"
-        else:
-            packages = "git-all openjdk-21-jre openjdk-21-jdk python3-pip ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
+    if ubuntu:
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get full-upgrade -y")
-        cmd = "sudo apt-get -y --ignore-missing install "
-        for pkg in packages.split():
-            command = str(cmd) + str(pkg)
-            subprocess.run(command.split())
-        os.system("sudo gem install jekyll bundler")
-    
-    if os.getenv("GITHUB_ACTIONS") != "true":
-        if kw not in os.getcwd():
-            os.system("git clone https://github.com/kodingwindow/kodingwindow.github.io.git")
-            os.chdir(cwd + kw + "/")
-        if env.lower() == "ubuntu":
+        install_chrome()
+
+        if githubactions:
+            packages = "ruby-full clisp rustc freeglut3-dev nasm shc"
+        else:
+            packages = "git-all openjdk-21-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-9.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
+
             snap = os.system("snap --version > /dev/null")
             vscode = os.system("code --version > /dev/null")
             julia = os.system("julia --version > /dev/null")
@@ -46,6 +40,18 @@ def install():
             if snap == 0 and julia != 0:
                 os.system("sudo snap install julia --classic")
 
+        cmd = "sudo apt-get -y --ignore-missing install "
+        for pkg in packages.split():
+            command = str(cmd) + str(pkg)
+            subprocess.run(command.split())
+        os.system("sudo gem install jekyll bundler")
+    
+        if not githubactions:
+            if kw not in os.getcwd():
+                os.system("git clone https://github.com/kodingwindow/kodingwindow.github.io.git")
+                os.chdir(cwd + kw + "/")
+
+    os.system("python -m pip install --upgrade pip")
     os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     os.system("bundle config set --local path vendor/bundle")
     os.system("bundle install")
@@ -82,12 +88,12 @@ def start_server():
         print(subprocess.check_output("bundle exec jekyll -v", shell=True).rstrip().decode("utf-8"))
         print(subprocess.check_output("bundler -v", shell=True).rstrip().decode("utf-8"))
         print("---------------------------------------------")
-        if env.lower() == "ubuntu":
-            if os.getenv("GITHUB_ACTIONS") == "true":
+        if ubuntu:
+            if githubactions:
                 os.system("sudo bundle exec jekyll build")
             else:
                 os.system("sudo bundle exec jekyll serve")
-        elif env.lower() == "windows":
+        else:
             os.system("bundle exec jekyll serve")
     except KeyboardInterrupt:
         pass
@@ -103,28 +109,37 @@ def start_setup():
     except:
         full
     if connected_to_internet():
-        if sys.platform == "linux" and full:
-            install()
-            clean() 
-            start_server()
-        elif sys.platform == "win32" and full:
-            install()
-            start_server()
+        if full and freedisk >= 2: 
+            if ubuntu and full:
+                install()
+                clean() 
+            elif not ubuntu and full:
+                install()
         else:
-            start_server()
+            print("Insufficient disk space. Required 2 GB or more for full setup.")
+        start_server()
     elif full:
         print("A full setup requires an internet connection. You may continue without the full option if the necessary resources are installed.")
     else:
         start_server()
 
 
-if sys.platform == "linux":
-    env = platform.freedesktop_os_release().get("ID")
-    os.system("sudo kill -9 $(sudo lsof -t -i:4000) 2>/dev/null")
+if sys.version_info.major == 3 and sys.version_info.minor >= 4:
+    if sys.platform == "linux":
+        env = platform.freedesktop_os_release().get("ID").lower()
+        os.system("sudo kill -9 $(sudo lsof -t -i:4000) 2>/dev/null")
+        if env == "ubuntu":
+            ubuntu = True
+            if os.getenv("GITHUB_ACTIONS") == "true":
+                githubactions = True
+            start_setup()
+        else:
+            print("Setup only works on Ubuntu Linux distribution.")
+    elif sys.platform == "win32":
+        env = platform.system().lower()
+        start_setup()
+    else:
+        print("Setup only works on Windows and Ubuntu OS.")
 else:
-    env = platform.system()
+    print("Require Python version 3.4 or later to setup.")
 
-if env.lower() == "ubuntu" or env.lower() == "windows":
-    start_setup()
-else:
-    print("Setup works on Windows and Ubuntu only")

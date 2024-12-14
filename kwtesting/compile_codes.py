@@ -52,7 +52,7 @@ def compile_codes(source, destination, data_path):
             elif html_input.__contains__('<pre class="code">{% highlight cpp %}'):
                 if path[1] == "opengl":
                     args = " -lGL -lGLU -lglut"
-                elif path[0] == "cg":
+                elif path[0] == "cg" and not githubactions:
                     args = " -lgraph"
                 extension = ".cpp"
                 compiler = "g++"

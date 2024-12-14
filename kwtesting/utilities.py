@@ -10,8 +10,10 @@ from selenium import webdriver
 
 if os.getenv("GITHUB_ACTIONS") == "true":
     baseurl = "https://kodingwindow.com/"
+    githubactions = True
 else:
     baseurl = "http://localhost:4000/"
+    githubactions = False
 
 website = "kodingwindow.com/"
 matched = unmatched = 0
@@ -21,7 +23,7 @@ matched = unmatched = 0
 def open_browser(browser):
     if browser == "chrome":
         options = webdriver.ChromeOptions()
-        if os.getenv("GITHUB_ACTIONS") == "true":
+        if githubactions:
             options.add_argument('--headless')
             print("Headless automated tests are started...")
         else:
@@ -83,7 +85,8 @@ def read_file(driver, data_path, file_name, element):
                     element_url = parent["url"]
                     if driver is not None:
                         verify_title(driver, element_url, element_title)
-                        verify_scrolling(driver)
+                        if not githubactions:
+                            verify_scrolling(driver)
                 try:
                     children = parent["children"]
                 except KeyError:
