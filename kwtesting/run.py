@@ -17,8 +17,8 @@ if sys.version_info.major == 3 and sys.version_info.minor >= 4:
             destination = kw + "kwfied/"
 
             # sudo snap remove firefox and then https://support.mozilla.org/en-US/kb/install-firefox-linux
-            # matched, unmatched = start_tests("firefox", data_path)
-            matched, unmatched = start_tests("chrome", data_path)
+            matched, unmatched = start_tests("firefox", data_path)
+            # matched, unmatched = start_tests("chrome", data_path)
             passed, failed = compile_codes(source, destination, data_path)
             os.chdir(kw)
         elif not ubuntu:
@@ -59,7 +59,7 @@ end = time.time()
 m, s = divmod(round(end - start), 60)
 h, m = divmod(m, 60)
 
-if s > 0:
+if m >= 1:
     print("---------------------------------")
     print("Total Execution Time:", f"{h:02d}:{m:02d}:{s:02d}")
-subprocess.run("pyclean kwtesting", shell=True, stderr=subprocess.STDOUT)
+subprocess.run("pyclean kwtesting", shell=True, stderr=subprocess.DEVNULL)

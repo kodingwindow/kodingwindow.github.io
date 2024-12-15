@@ -20,6 +20,7 @@ if sys.platform == "linux":
     env = platform.freedesktop_os_release().get("ID").lower()
     if env == "ubuntu":
         ubuntu = True
+        baseurl = "http://localhost:4000/"
         if os.getenv("GITHUB_ACTIONS") == "true":
             githubactions = True
             baseurl = "https://kodingwindow.com/"
@@ -62,6 +63,7 @@ def verify_title(driver, path, expected_title):
         print("Title Unmatched: " + baseurl + path)
         unmatched += 1
     else:
+        # print("Title Matched: " + baseurl + path)
         matched += 1
 
 

@@ -65,7 +65,7 @@ def compile_codes(source, destination, data_path):
                         args = " -lgraph"
                     extension = ".cpp"
                     compiler = "g++"
-                    if path[0] == "cg" and path[1] != "opengl" and githubactions:
+                    if path[0] == "cg" and path[1] != "opengl":
                         pass
                     else:
                         is_compiled(html_input, compiler, subpath, path[2], extension, args)
