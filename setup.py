@@ -111,10 +111,10 @@ def start_setup():
     if connected_to_internet():
         if freedisk >= 2:
             if full: 
-                if ubuntu and full:
+                if ubuntu:
                     install()
                     clean() 
-                elif not ubuntu and full:
+                elif not ubuntu:
                     install()
         else:
             print("Insufficient disk space. Required 2 GB or more for full setup.")

@@ -1,11 +1,11 @@
-#Welcome to Kodingwindow
+# Welcome to Kodingwindow
 title: Kodingwindow
 url: https://kodingwindow.com
 email: kodingwindow@outlook.com
 tagline: Let's learn and celebrate success together
 founder: Shubham Darda
 
-#Header
+# Resources
 kw_css: assets/css/kw.css
 color_css: assets/css/color.css
 kw_js: assets/js/kw.js
@@ -21,7 +21,7 @@ logo: assets/images/kodingwindow.png
 advertise: assets/images/advertise.png
 analytics: https://www.googletagmanager.com/gtag/js?id=G-4TDKQLW7N7
 
-#Filename
+# Filename
 highlighter: rouge
 cfile: "<span class='bi bi-file-code'> kw.c</span>"
 cppfile: "<span class='bi bi-file-code'> kw.cpp</span>"
@@ -40,7 +40,7 @@ csvfile: "<span class='bi bi-filetype-csv'> kw.csv</span>"
 jsonfile: "<span class='bi bi-filetype-json'> kw.json</span>"
 excelfile: "<span class='bi bi-filetype-xlsx'> kw.xlsx</span>"
 
-#Execution
+# Execution
 runc: "kodingwindow@kw:~$ <mark>gcc kw.c</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
 runcpp: "kodingwindow@kw:~$ <mark>g++ kw.cpp</mark><br>kodingwindow@kw:~$ <mark>./a.out</mark>"
 runjava: "kodingwindow@kw:~$ <mark>javac KW.java</mark><br>kodingwindow@kw:~$ <mark>java KW</mark>"
@@ -78,7 +78,7 @@ plugins:
 
 include: ['_pages']
 
-#Exclude from processing
+# Exclude from processing
 exclude:
    - Gemfile
    - Gemfile.lock
