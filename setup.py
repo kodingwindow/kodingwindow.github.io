@@ -1,7 +1,7 @@
-'''
+"""
 Author: Shubham Darda
-Description: This script helps to setup and run the Kodingwindow website on localhost.
-'''
+Description: The Kodingwindow website can be set up and operated on localhost with the aid of this script.
+"""
 
 import sys, os, subprocess, platform, socket, shutil
 
@@ -109,12 +109,13 @@ def start_setup():
     except:
         full
     if connected_to_internet():
-        if full and freedisk >= 2: 
-            if ubuntu and full:
-                install()
-                clean() 
-            elif not ubuntu and full:
-                install()
+        if freedisk >= 2:
+            if full: 
+                if ubuntu and full:
+                    install()
+                    clean() 
+                elif not ubuntu and full:
+                    install()
         else:
             print("Insufficient disk space. Required 2 GB or more for full setup.")
         start_server()
@@ -141,5 +142,4 @@ if sys.version_info.major == 3 and sys.version_info.minor >= 4:
     else:
         print("Setup only works on Windows and Ubuntu OS.")
 else:
-    print("Require Python version 3.4 or later to setup.")
-
+    print("Python 3.4 or later is needed for setup.")

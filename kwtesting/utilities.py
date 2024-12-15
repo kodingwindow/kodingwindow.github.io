@@ -1,3 +1,8 @@
+"""
+Author: Shubham Darda
+Description: A standard script file contains the functionalities needed for automated testing.
+"""
+
 import os, sys, platform, yaml, time, re, subprocess, unittest
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
@@ -8,15 +13,23 @@ from webdriver_manager.microsoft import EdgeChromiumDriverManager
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 
-if os.getenv("GITHUB_ACTIONS") == "true":
-    baseurl = "https://kodingwindow.com/"
-    githubactions = True
-else:
-    baseurl = "http://localhost:4000/"
-    githubactions = False
-
-website = "kodingwindow.com/"
+ubuntu = False
+githubactions = False
 matched = unmatched = 0
+if sys.platform == "linux":
+    env = platform.freedesktop_os_release().get("ID").lower()
+    if env == "ubuntu":
+        ubuntu = True
+        if os.getenv("GITHUB_ACTIONS") == "true":
+            githubactions = True
+            baseurl = "https://kodingwindow.com/"
+    else:
+        print("Setup only works on Ubuntu Linux distribution.")
+elif sys.platform == "win32":
+    env = platform.system().lower()
+    baseurl = "http://localhost:4000/"
+else:
+    print("Setup only works on Windows and Ubuntu OS.")
 
 
 # It opens up the mentioned browser to start the automated tests.
@@ -25,7 +38,7 @@ def open_browser(browser):
         options = webdriver.ChromeOptions()
         if githubactions:
             options.add_argument('--headless')
-            print("Headless automated tests are started...")
+            print("Starting headless automated tests.")
         else:
             options.add_experimental_option("excludeSwitches", ["enable-automation", "enable-logging"])
         driver = webdriver.Chrome(options=options, service=Service(ChromeDriverManager().install()))
@@ -46,10 +59,9 @@ def verify_title(driver, path, expected_title):
     driver.get(baseurl + path)
     actual_title = driver.title
     if actual_title != expected_title:
-        print("Title Unmatched: " + website + path)
+        print("Title Unmatched: " + baseurl + path)
         unmatched += 1
     else:
-        print("Title Matched: " + website + path)
         matched += 1
 
 
@@ -70,8 +82,9 @@ def verify_scrolling(driver):
         pass
 
 
-''' It reads the segment files from the _data folder and extracts the URLs to navigate. 
-Lastly, it returns the list of paths (which is required in compile_codes.py). '''
+""" It reads the segment files from the _data folder and extracts the URLs to navigate. 
+Lastly, it returns the list of paths (which is required in compile_codes.py). """
+
 def read_file(driver, data_path, file_name, element):
     paths = []
     with open(data_path + "%s" % file_name) as file:
@@ -103,9 +116,10 @@ def read_file(driver, data_path, file_name, element):
     return paths
 
 
-''' It starts the test by taking the name of the browser and the location of the data folder and 
+""" It starts the test by taking the name of the browser and the location of the data folder and 
 performs automated tests such as verifying the title of each page and scrolling. 
-In the end, it returns the total count of matched and unmatched titles. '''
+In the end, it returns the total count of matched and unmatched titles. """
+
 def start_tests(browser, data_path):
     driver = open_browser(browser)
     for file_name in os.listdir(data_path):
