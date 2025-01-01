@@ -44,13 +44,13 @@ def install():
         for pkg in packages.split():
             command = str(cmd) + str(pkg)
             subprocess.run(command.split())
-        os.system("sudo gem install jekyll bundler")
     
         if not githubactions:
             if kw not in os.getcwd():
                 os.system("git clone https://github.com/kodingwindow/kodingwindow.github.io.git")
                 os.chdir(cwd + kw + "/")
 
+    os.system("sudo gem install jekyll bundler")
     os.system("python -m pip install --upgrade pip")
     os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     os.system("bundle config set --local path vendor/bundle")

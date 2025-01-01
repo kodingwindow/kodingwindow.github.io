@@ -47,9 +47,6 @@ class MainActivity : AppCompatActivity() {
             btn.setOnClickListener { recreate() }
         } else {
             webview.loadUrl("https://kodingwindow.com")
-            if (webview.title != "Kodingwindow") {
-                setContentView(R.layout.app_down)
-            }
         }
         webview.webViewClient = object : WebViewClient() {
             override fun shouldOverrideUrlLoading(
