@@ -1,0 +1,21 @@
+name: Setup Environment
+on:
+  schedule:
+    - cron: '30 8 5 * *'
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - uses: actions/setup-java@v4
+        with:
+          distribution: 'oracle'
+          java-version: '21'
+      - name: Setup Environment
+        run: python3 setup.py full
+      - name: Run Automated Tests
+        run: python3 kwtesting/run.py

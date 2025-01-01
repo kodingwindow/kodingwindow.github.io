@@ -1,0 +1,52 @@
+---
+permalink: octave/strings/kwidcvyzd
+title: Octave to check the given string is alphanumeric
+---
+
+<div class="terminalcard">{{ page.title }}</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>octave</mark>
+...
+octave> <mark>kw = "Kodingwindow#12"</mark>
+kw = Kodingwindow#12
+octave> <mark>isalpha(kw)</mark>
+ans =
+
+  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0
+
+octave> <mark>isalnum(kw)</mark>
+ans =
+
+  1  1  1  1  1  1  1  1  1  1  1  1  0  1  1
+
+octave> <mark>isdigit(kw)</mark>
+ans =
+
+  0  0  0  0  0  0  0  0  0  0  0  0  0  1  1
+
+octave> <mark>isascii(kw)</mark>
+ans =
+
+  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+
+octave> <mark>isletter(kw)</mark>
+ans =
+
+  1  1  1  1  1  1  1  1  1  1  1  1  0  0  0
+
+octave> <mark>isupper(kw)</mark>
+ans =
+
+  1  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+octave> <mark>islower(kw)</mark>
+ans =
+
+  0  1  1  1  1  1  1  1  1  1  1  1  0  0  0
+
+octave> <mark>isspace(kw)</mark>
+ans =
+
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0
+
+</pre></span>

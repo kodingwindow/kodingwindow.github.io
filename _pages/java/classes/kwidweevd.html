@@ -1,0 +1,60 @@
+---
+permalink: java/classes/kwidweevd
+title: Java implementation of a call by value
+---
+
+<div class="codecard">{{ page.title }}</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="code">{% highlight java %}
+class KW
+{
+    public static int add(int a,int b)
+    {
+        a=100;
+        b=100;
+        int c=a+b;
+        return c;
+    }
+    public static void main(String args[])
+    {
+        int a=20,b=10,c;
+        c=a+b;
+        add(a,b);
+        System.out.println(a+b);
+    }
+}
+{% endhighlight %}</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+30
+kodingwindow@kw:~$ 
+</pre></span>
+
+<div class="codecard">{{ page.title }} by passing object as a value</div>
+<div class="card">{{ site.javafile }}</div>
+<pre class="code">{% highlight java %}
+class KW
+{
+    int a=100,b=100;
+    public void add(KW k)
+    {
+        k.a=k.a+k.b+500;
+    }
+    public static void main(String args[])
+    {
+        KW k=new KW();
+        k.a=k.a+k.b;
+        System.out.println(k.a);
+        k.add(c);
+        System.out.println(k.a);
+    }
+}
+{% endhighlight %}</pre>
+<div class="card">{{ site.output }}</div>
+<span><pre>
+{{ site.runjava }}
+200
+800
+kodingwindow@kw:~$ 
+</pre></span>

@@ -1,0 +1,64 @@
+grandparent: 
+  - parent: MySQL Fundamentals
+    subtree: Fundamentals
+    url: mysql/fundamentals
+    children: 
+      - title: How to setup, install, and start MySQL on Ubuntu
+        url: mysql/fundamentals/kwiddayxg
+      - title: MySQL Date and Time Functions
+        url: mysql/fundamentals/kwidrgtrz
+      - title: MySQL String Functions
+        url: mysql/fundamentals/kwidgpzwy
+
+  - parent: MySQL Data Definition
+    subtree: DDL
+    url: mysql/ddl
+    children: 
+      - title: MySQL CREATE a DATABASE and TABLE
+        url: mysql/ddl/kwiddwgvc
+      - title: MySQL FOREIGN KEY
+        url: mysql/ddl/kwiddvwtv
+      - title: MySQL NOT NULL Constraint
+        url: mysql/ddl/kwiddvvtd
+      - title: MySQL ALTER TABLE (ADD, DROP, MODIFY, CHANGE, RENAME TO)
+        url: mysql/ddl/kwiddwtwf
+      - title: MySQL DROP a TABLE and DATABASE
+        url: mysql/ddl/kwidedvew
+
+  - parent: MySQL Data Manipulation
+    subtree: DML
+    url: mysql/dml
+    children: 
+      - title: MySQL INSERT the VALUES into a TABLE
+        url: mysql/dml/kwidpdvnx
+      - title: MySQL SELECT and SELECT DISTINCT Statements
+        url: mysql/dml/kwiduidey
+      - title: MySQL WHERE Clause
+        url: mysql/dml/kwidbbevd
+      - title: MySQL UPDATE Clause
+        url: mysql/dml/kwidzzcev
+      - title: MySQL ORDER BY Clause
+        url: mysql/dml/kwidvzkzw
+      - title: MySQL AND OR NOT Operators
+        url: mysql/dml/kwidpzyig
+      - title: MySQL IN BETWEEN LIKE Operators
+        url: mysql/dml/kwidczgza
+      - title: MySQL LIMIT Clause
+        url: mysql/dml/kwidpwzaz
+      - title: MySQL JOINS (INNER, LEFT, RIGHT)
+        url: mysql/dml/kwidnhhen
+      - title: MySQL DELETE Statement
+        url: mysql/dml/kwidzsgwd
+
+sidenav:
+  - parent: MySQL (Relational Database)
+    url: mysql
+    children: 
+      - title: MySQL Fundamentals
+        url: mysql/fundamentals
+      - title: MySQL Data Definition
+        url: mysql/ddl
+      - title: MySQL Data Manipulation
+        url: mysql/dml
+      - title: MySQL Search
+        url: mysql/search

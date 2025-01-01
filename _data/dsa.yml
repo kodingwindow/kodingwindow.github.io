@@ -1,0 +1,66 @@
+grandparent: 
+  - parent: Data Structures Fundamentals
+    subtree: Fundamentals
+    url: dsa/fundamentals
+    children: 
+      - title: C++ implementation of the stack and its operations
+        url: dsa/fundamentals/kwiduqyab
+
+  - parent: Searching Algorithms
+    subtree: Searching
+    url: dsa/searching
+    children: 
+      - title: C++ implementation of Binary Search
+        url: dsa/searching/kwidecgzp
+      - title: Python implementation of Binary Search
+        url: dsa/searching/kwidwzavz
+
+  - parent: Sorting Algorithms
+    subtree: Sorting
+    url: dsa/sorting
+    children: 
+      - title: C progarm for Bubble Sort
+        url: dsa/sorting/kwidzxlqf
+      - title: C++ progarm for Bubble Sort
+        url: dsa/sorting/kwidwzsgz
+      - title: C++ progarm for optimized Bubble Sort
+        url: dsa/sorting/kwidvvavg
+      - title: Python progarm for Bubble Sort
+        url: dsa/sorting/kwidyezyi
+      - title: Python progarm for Merge Sort
+        url: dsa/sorting/kwidorpaw
+      - title: Python progarm for Insertion Sort
+        url: dsa/sorting/kwidaekky
+      - title: Python progarm for Quick Sort
+        url: dsa/sorting/kwidvzade
+
+  - parent: Shortest Path Algorithms
+    subtree: Trees
+    url: dsa/trees
+    children: 
+      - title: C++ implementation of Prim's spanning tree algorithm
+        url: dsa/trees/kwidbuzge
+
+  - parent: Applications of Data Structures
+    subtree: Applications
+    url: dsa/applications
+    children: 
+      - title: C++ program for Tic-Tac-Toe game
+        url: dsa/applications/kwidzdguw
+
+sidenav:
+  - parent: Data Structures and Algorithms
+    url: dsa
+    children: 
+      - title: Data Structures Fundamentals
+        url: dsa/fundamentals
+      - title: Searching Algorithms
+        url: dsa/searching
+      - title: Sorting Algorithms
+        url: dsa/sorting
+      - title: Shortest Path Algorithms
+        url: dsa/trees
+      - title: Applications of Data Structures
+        url: dsa/applications
+      - title: Data Structures Search
+        url: dsa/search

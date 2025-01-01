@@ -1,0 +1,107 @@
+{% assign path = page.url | split: '/' %}
+
+<script type="text/javascript">
+$(document).ready(function()
+{
+    $("#KSEInput").on("keyup", function() 
+    {
+        if($("#KSEInput").val().length > 0) 
+        {
+            document.getElementById("{{ path[1] }}").style.display = "block";
+        } 
+        else 
+        {
+            document.getElementById("{{ path[1] }}").style.display = "none";
+        }
+        var value = $(this).val().toLowerCase();
+        $("#{{ path[1] }} *").filter(function() 
+        {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+    });
+});
+function clearinput() 
+{
+    document.getElementById("KSEInput").value = "";
+    document.getElementById("{{ path[1] }}").style.display = "none";
+    document.getElementById("kwdisplay").style.display = "none";
+}
+function kwdisplay() 
+{
+    if($("#KSEInput").val().length > 0) 
+    {
+        document.getElementById("kwdisplay").style.display = "inline-block";
+    }
+    else
+    {
+        document.getElementById("kwdisplay").style.display = "none";
+    }
+}
+$(document).ready(function() 
+{
+    $("html").on("contextmenu", function(e) { return false; });
+});
+$(document).keydown(function(event) 
+{
+    if(event.keyCode == 123) { return false; }
+});
+</script>
+
+<div class="container"><center>
+    <div class="col-xs-12 col-sm-11 col-md-9 col-lg-7 col-xl-6 col-xxl-6" style="margin-top: 175px; margin-bottom: 20px;">
+        <h2 id="fc-{{ path[1] }}">Kodingwindow</h2>
+        <h6 style="padding-top: 5px; padding-bottom: 10px;">{{ site.tagline }}</h6>
+        <div class="input-group"><input id="KSEInput" class="form-control bc-{{ path[1] }}" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="kwdisplay();" onkeyup="kwdisplay();"></div>
+    </div>
+    <a id="kwdisplay" class="btn kwbtn bc-{{ path[1] }}" style="cursor: pointer; display: none; margin-bottom: 20px;" onclick="clearinput();">Clear Input</a>
+
+    <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="margin: 0px; text-align: left;">
+        {% for segment in site.data.kw.segments limit:20 %}
+            <span style="display: none;" id="{{ segment.url }}">
+            {% if segment.url == "c" %}{% assign search = site.data.c %}
+            {% elsif segment.url == "cpp" %}{% assign search = site.data.cpp %}
+            {% elsif segment.url == "java" %}{% assign search = site.data.java %}
+            {% elsif segment.url == "python" %}{% assign search = site.data.python %}
+            {% elsif segment.url == "ds" %}{% assign search = site.data.ds %}
+            {% elsif segment.url == "r" %}{% assign search = site.data.r %}
+            {% elsif segment.url == "julia" %}{% assign search = site.data.julia %}
+            {% elsif segment.url == "octave" %}{% assign search = site.data.octave %}
+            {% elsif segment.url == "csharp" %}{% assign search = site.data.csharp %}
+            {% elsif segment.url == "fsharp" %}{% assign search = site.data.fsharp %}
+            {% elsif segment.url == "rust" %}{% assign search = site.data.rust %}
+            {% elsif segment.url == "lisp" %}{% assign search = site.data.lisp %}
+            {% elsif segment.url == "dsa" %}{% assign search = site.data.dsa %}
+            {% elsif segment.url == "linux" %}{% assign search = site.data.linux %}
+            {% elsif segment.url == "mysql" %}{% assign search = site.data.mysql %}
+            {% elsif segment.url == "mongodb" %}{% assign search = site.data.mongodb %}
+            {% elsif segment.url == "cg" %}{% assign search = site.data.cg %}
+            {% elsif segment.url == "selenium" %}{% assign search = site.data.selenium %}
+            {% elsif segment.url == "asm" %}{% assign search = site.data.asm %}
+            {% elsif segment.url == "cluster" %}{% assign search = site.data.cluster %}{% else %}{% endif %}
+            <a class="codecard card" href="{{ segment.url }}" onclick="clearinput();">{{ segment.title }}</a>
+            {% for parent in search.grandparent %}
+                <a class="codecard card" href="{{ parent.url }}" onclick="clearinput();">{{ parent.parent }}</a>
+                {% for child in parent.children %}
+                    <a class="codecard card" href="{{ child.url }}" onclick="clearinput();">{{ child.title }}</a>
+                {% endfor %}
+            {% endfor %}
+            </span>
+        {% endfor %}
+    </div>
+</center></div>
+
+{% include footer.html %}
+<script type="text/javascript">
+if (isWebview && userAgent.includes("Kodingwindow")) {
+    document.getElementById("rsidebar").style.display = "none";
+    document.getElementById("isWebView").style.display = "block";
+    document.getElementById("isWebsite").style.display = "none";
+    onselectstart = (e) => { e.preventDefault() }
+    $('body').on('contextmenu', function () { return false; });
+}
+else {
+    document.getElementById("isWebsite").style.display = "none";
+    document.getElementById("isWebView").style.display = "none";
+    document.getElementById("backtotop").style.paddingBottom = "30px";
+}
+</script>

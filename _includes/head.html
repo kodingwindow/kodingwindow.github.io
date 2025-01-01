@@ -1,0 +1,237 @@
+<head>
+    <title>{{ page.title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="keywords" content="{{ page.title }}">
+    <meta name="description" content="{{ site.title }} by {{ site.founder }}{{ page.description }}">
+    <meta name="author" content="{{ site.founder }}">
+    <meta property="og:image" content="{{ site.og }}">
+    <link rel="icon" href="{{ site.icon | relative_url }}">
+    <link rel="stylesheet" href="{{ site.bs_css }}" integrity="{{ site.bs_cssi }}" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ site.bs_icons }}">
+    <link rel="stylesheet" type="text/css" href="{{ site.kw_css | relative_url }}">
+    <link rel="stylesheet" type="text/css" href="{{ site.color_css | relative_url }}">
+    <script async src="https://fundingchoicesmessages.google.com/i/pub-4915324505174537?ers=1" nonce="itY0B_1S04Pk_PW21pJW0A"></script><script nonce="itY0B_1S04Pk_PW21pJW0A">(function() {function signalGooglefcPresent() {if (!window.frames['googlefcPresent']) {if (document.body) {const iframe = document.createElement('iframe'); iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;'; iframe.style.display = 'none'; iframe.name = 'googlefcPresent'; document.body.appendChild(iframe);} else {setTimeout(signalGooglefcPresent, 0);}}}signalGooglefcPresent();})();</script>
+    <script src="{{ site.jquery }}"></script>
+    <script src="{{ site.bs_js }}" integrity="{{ site.bs_jsi }}" crossorigin="anonymous"></script>
+    <script src="{{ site.kw_js | relative_url }}"></script>
+    <script async src="{{ site.analytics }}"></script>
+    <base href="{{ site.url | absolute_url }}">
+</head>
+
+{% assign path = page.url | split: '/' %}
+{% if path[1] == "c" %}
+    {% assign segment = "C Programming" %}
+    {% assign parent=" / C / " %}
+    {% assign kw = site.data.c %}
+    {% for item in site.data.c.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "cpp" %}
+    {% assign segment = "C++ Programming" %}
+    {% assign parent=" / CPP / " %}
+    {% assign kw = site.data.cpp %}
+    {% for item in site.data.cpp.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "java" %}
+    {% assign segment = "Java Programming" %}
+    {% assign parent=" / Java / " %}
+    {% assign kw = site.data.java %}
+    {% for item in site.data.java.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "python" %}
+    {% assign segment = "Python Programming" %}
+    {% assign parent=" / Python / " %}
+    {% assign kw = site.data.python %}
+    {% for item in site.data.python.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "ds" %}
+    {% assign segment = "Data Science" %}
+    {% assign parent=" / DS / " %}
+    {% assign kw = site.data.ds %}
+    {% for item in site.data.ds.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "r" %}
+    {% assign segment = "R Programming" %}
+    {% assign parent=" / R / " %}
+    {% assign kw = site.data.r %}
+    {% for item in site.data.r.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "julia" %}
+    {% assign segment = "Julia Programming" %}
+    {% assign parent=" / Julia / " %}
+    {% assign kw = site.data.julia %}
+    {% for item in site.data.julia.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "octave" %}
+    {% assign segment = "GNU Octave" %}
+    {% assign parent=" / Octave / " %}
+    {% assign kw = site.data.octave %}
+    {% for item in site.data.octave.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "csharp" %}
+    {% assign segment = "C# Programming" %}
+    {% assign parent=" / CSharp / " %}
+    {% assign kw = site.data.csharp %}
+    {% for item in site.data.csharp.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "fsharp" %}
+    {% assign segment = "F# Programming" %}
+    {% assign parent=" / FSharp / " %}
+    {% assign kw = site.data.fsharp %}
+    {% for item in site.data.fsharp.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "rust" %}
+    {% assign segment = "Rust Programming" %}
+    {% assign parent=" / Rust / " %}
+    {% assign kw = site.data.rust %}
+    {% for item in site.data.rust.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "lisp" %}
+    {% assign segment = "LISP Programming" %}
+    {% assign parent=" / LISP / " %}
+    {% assign kw = site.data.lisp %}
+    {% for item in site.data.lisp.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "dsa" %}
+    {% assign segment = "Data Structures and Algorithms" %}
+    {% assign parent=" / DSA / " %}
+    {% assign kw = site.data.dsa %}
+    {% for item in site.data.dsa.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "linux" %}
+    {% assign segment = "Linux Commands and Scripting" %}
+    {% assign parent=" / Linux / " %}
+    {% assign kw = site.data.linux %}
+    {% for item in site.data.linux.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "mysql" %}
+    {% assign segment = "MySQL Database" %}
+    {% assign parent=" / MySQL / " %}
+    {% assign kw = site.data.mysql %}
+    {% for item in site.data.mysql.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "mongodb" %}
+    {% assign segment = "MongoDB (NoSQL Database)" %}
+    {% assign parent=" / MongoDB / " %}
+    {% assign kw = site.data.mongodb %}
+    {% for item in site.data.mongodb.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "cg" %}
+    {% assign segment = "Computer Graphics" %}
+    {% assign parent=" / CG / " %}
+    {% assign kw = site.data.cg %}
+    {% for item in site.data.cg.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "selenium" %}
+    {% assign segment = "Selenium WebDriver" %}
+    {% assign parent=" / Selenium / " %}
+    {% assign kw = site.data.selenium %}
+    {% for item in site.data.selenium.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "asm" %}
+    {% assign segment = "Assembly Programming" %}
+    {% assign parent=" / ASM / " %}
+    {% assign kw = site.data.asm %}
+    {% for item in site.data.asm.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "cluster" %}
+    {% assign segment = "Cluster" %}
+    {% assign parent=" / Cluster / " %}
+    {% assign kw = site.data.cluster %}
+    {% for item in site.data.cluster.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+            {% assign segment = item.parent %}
+        {% endif %}
+    {% endfor %}
+
+{% elsif path[1] == "about" %}
+    {% assign segment = "About Us" %}
+    {% assign parent=" / About / " %}
+    {% assign kw = site.data.about %}
+    {% for item in site.data.about.grandparent %}
+        {% if page.url contains item.url %}
+            {% assign child = item.subtree %}
+            {% assign segment = item.parent %}
+        {% endif %}
+    {% endfor %}
+
+{% else %}
+    {% assign parent=" Kodingwindow" %}
+{% endif %}

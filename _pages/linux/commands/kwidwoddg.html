@@ -1,0 +1,49 @@
+---
+permalink: linux/commands/kwidwoddg
+title: Linux commands to copy and move the files
+---
+
+<div class="titlecard">{{ page.title }}</div>
+<div class="terminalcard">mv command to rename a file</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>ls</mark>
+a.out  kw.cpp   kw.py    Documents  Fedora.txt  Pictures  Templates   Videos
+kw.c   KW.java  Desktop  Downloads  Music   Public    Ubuntu.txt  Weekdays
+<hr>kodingwindow@kw:~$ <mark>mv Fedora.txt FEDORA.TXT</mark>
+kodingwindow@kw:~$ <mark>ls</mark>
+a.out  kw.cpp   kw.py    Documents  FEDORA.TXT  Pictures  Templates   Videos
+kw.c   KW.java  Desktop  Downloads  Music   Public    Ubuntu.txt  Weekdays
+</pre></span>
+
+<div class="terminalcard">cp command to copy a file</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>cp FEDORA.TXT /home/kodingwindow/Documents/</mark>
+kodingwindow@kw:~$ <mark>ls $cat /home/kodingwindow/Documents/</mark>
+FEDORA.TXT
+</pre></span>
+
+<div class="terminalcard">cp and mv commands to copy and move the files</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>mkdir Linux</mark>
+kodingwindow@kw:~$ <mark>touch Ubuntu.txt Fedora.txt</mark>
+kodingwindow@kw:~$ <mark>cp Ubuntu.txt Fedora.txt</mark>
+kodingwindow@kw:~$ <mark>ls</mark>
+a.out   KW.java  Documents   Linux     Public      Videos
+kw.c    kw.py    Downloads   Music     Templates   Weekdays
+kw.cpp  Desktop  Fedora.txt  Pictures  Ubuntu.txt
+
+kodingwindow@kw:~$ <mark>cp Ubuntu.txt /home/kodingwindow/Linux/</mark>
+kodingwindow@kw:~$ <mark>ls $cat /home/kodingwindow/Linux/</mark>
+Ubuntu.txt
+
+kodingwindow@kw:~$ <mark>mv Fedora.txt /home/kodingwindow/Linux/</mark>
+kodingwindow@kw:~$ <mark>ls $cat /home/kodingwindow/Linux/</mark>
+Fedora.txt  Ubuntu.txt
+
+kodingwindow@kw:~$ <mark>ls</mark>
+a.out  kw.cpp   kw.py    Documents  Linux  Pictures  Templates   Videos
+kw.c   KW.java  Desktop  Downloads  Music  Public    Ubuntu.txt  Weekdays
+kodingwindow@kw:~$ <mark>cd Linux/</mark>
+kodingwindow@kw:~/Linux$ <mark>ls</mark>
+Fedora.txt  Ubuntu.txt
+</pre></span>

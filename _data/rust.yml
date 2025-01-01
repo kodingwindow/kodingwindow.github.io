@@ -1,0 +1,22 @@
+grandparent: 
+  - parent: Rust Fundamentals
+    subtree: Fundamentals
+    url: rust/fundamentals
+    children: 
+      - title: Rust Hello World program
+        url: rust/fundamentals/kwidvwkzg
+      - title: Rust program to perform the arithmetic operations
+        url: rust/fundamentals/kwidawgvo
+      - title: Rust program to calculate the area and circumference of a circle
+        url: rust/fundamentals/kwidvzzvi
+      - title: Rust program to accept the input from a user
+        url: rust/fundamentals/kwidgzwzz
+
+sidenav:
+  - parent: Rust Programming
+    url: rust
+    children: 
+      - title: Rust Fundamentals
+        url: rust/fundamentals
+      - title: Rust Search
+        url: rust/search

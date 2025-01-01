@@ -1,0 +1,64 @@
+---
+permalink: about/
+title: About Us
+---
+
+<center>
+    <div class="about col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-10 col-xxl-10" style="padding-top: 25px;">
+        <h5 style="padding-bottom: 10px;">Mission Statement</h5>
+        <p style="text-align: center;">&#10077; The mission of Kodingwindow is to inspire learners by providing a comprehensive and pragmatic approach to programming and making them realize their unfathomable potential. &#10078;</p>
+    </div>
+    <div class="about col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-10 col-xxl-10" style="padding-top: 25px;">
+        <h5 style="padding-bottom: 10px;">Founder's Message</h5>
+        <p>Kodingwindow is an open-source programming platform for learners to realize their potential and build mind-blowing practical solutions. This platform has hundreds of problem statements, solutions, and approaches in various programming languages to boost the confidence of students, novices, job seekers, IT professionals, etc.<br><br>Keep Learning, Keep Experimenting, Keep Doing More.</p>
+        <p>Regards,<br><a href="shubhamrdarda/" class="hlink">{{ site.founder }}</a><br>Founder and Architect</p>
+    </div>
+    <div class="about col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-10 col-xxl-10" style="padding-top: 25px;">
+        <h5 style="padding-bottom: 10px;">Kodingwindow's Specialities</h5>
+        <img src="{{ site.advertise | relative_url }}" class="ratio ratio-16x9" style="padding: 3px;">
+    </div>
+    <div class="about col-xs-12 col-sm-12 col-md-9 col-lg-10 col-xl-10 col-xxl-10" style="background-color: #000000; padding-bottom: 10px;">
+        <h5 style="color: #ffffff; padding-top: 15px; padding-bottom: 15px;">First Anniversary Celebration</h5>
+        <iframe src="https://www.youtube.com/embed/KFdQFLX99is" class="img-thumbnail" style="padding: 10px 15px 10px 15px; border-radius: 3px; border: none; padding: 0 !important; margin: 0px; height: 250px; width: 700px; background-color: #000000;"></iframe>
+    </div>
+</center>
+
+<div id="app" style="display: none;">
+    <div class="board"><div class="boardtitle"><i class="bi bi-link"></i> Social Handles</div>
+        <div class="card-footer d-flex justify-content-between" style="padding: 5px 10px 5px 10px;">
+            <a href="{{ site.data.url.linkedin }}" title="LinkedIn" target="_blank"><i class="svgicon bi bi-linkedin"></i></a>
+            <a href="{{ site.data.url.instagram }}" title="Instagram" target="_blank"><i class="svgicon bi bi-instagram"></i></a>
+            <a href="{{ site.data.url.threads }}" title="Threads" target="_blank"><i class="svgicon bi bi-threads"></i></a>
+            <a href="{{ site.data.url.twitter }}" title="Twitter" target="_blank"><i class="svgicon bi bi-twitter-x"></i></a>
+            <a href="{{ site.data.url.github }}" title="GitHub" target="_blank"><i class="svgicon bi bi-github"></i></a>
+            <a href="{{ site.data.url.facebook }}" title="Facebook" target="_blank"><i class="svgicon bi bi-facebook"></i></a>
+            <a href="{{ site.data.url.youtube }}" title="YouTube" target="_blank"><i class="svgicon bi bi-youtube"></i></a>
+        </div>
+    </div>
+    <div class="board"><div class="boardtitle"><i class="bi bi-gear-wide-connected"></i> Help and Settings</div>
+        <a id="cache" class="card" href="clear:">Clear Cache</a>
+        <a id="theme" class="card disabled"></a>
+        <a class="card" href="mailto:{{ site.email }}">Contact Us</a>
+    </div>
+</div>
+
+<script type="text/javascript">
+if(isWebview && userAgent.includes("Kodingwindow"))
+{
+    document.getElementById("app").style.display = "block";
+}
+$("#cache").click(function () 
+{
+    $(this).html("Cache Cleared");
+    $(this).css("color", "#00b050");
+});
+
+if(window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) 
+{
+    document.getElementById("theme").innerHTML = "App Theme: Dark (System Default)";
+} 
+else 
+{
+    document.getElementById("theme").innerHTML = "App Theme: Light (System Default)";
+}
+</script>

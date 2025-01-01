@@ -1,0 +1,140 @@
+grandparent: 
+  - parent: C++ Fundamentals
+    subtree: Fundamentals
+    url: cpp/fundamentals
+    children: 
+      - title: C++ Hello World program
+        url: cpp/fundamentals/kwiddvwxm
+      - title: C++ Hello World program without using a semicolon
+        url: cpp/fundamentals/kwiduzwdy
+      - title: C++ program to perform the arithmetic operations
+        url: cpp/fundamentals/kwiduagbm
+      - title: C++ program to perform the boolean operations
+        url: cpp/fundamentals/kwidzmzav
+      - title: C++ program to perform the relational operations
+        url: cpp/fundamentals/kwidoeeya
+      - title: C++ program to perform the assignment operations
+        url: cpp/fundamentals/kwidexgyv
+      - title: C++ program to perform arithmetic operations by accepting inputs from a user
+        url: cpp/fundamentals/kwidzzhqg
+      - title: C++ program to calculate the area and circumference of a circle
+        url: cpp/fundamentals/kwidnyeie
+      - title: C++ program to find the size of data types
+        url: cpp/fundamentals/kwidbodwv
+      - title: C++ program to find the range of data types
+        url: cpp/fundamentals/kwidqvvzg
+      - title: Find the output of C++ programs
+        url: cpp/fundamentals/kwidfclfh
+
+  - parent: C++ Control Statements
+    subtree: Controls
+    url: cpp/controls
+    children: 
+      - title: C++ program to check the given number is positive or negative
+        url: cpp/controls/kwidgwhse
+      - title: C++ program to check the equality of given numbers
+        url: cpp/controls/kwidkgzza
+      - title: C++ program to demonstrate the use of goto statement
+        url: cpp/controls/kwidinkrg
+      - title: C++ program to demonstrate the use of break and continue statements
+        url: cpp/controls/kwididhad
+
+  - parent: C++ Loops
+    subtree: Loops
+    url: cpp/loops
+    children: 
+      - title: C++ program to print the star pyramid patterns
+        url: cpp/loops/kwidbvode
+      - title: C++ program to print the ASCII values
+        url: cpp/loops/kwidvzpzf
+      - title: C++ program to print the natural numbers
+        url: cpp/loops/kwidvydev
+      - title: C++ program to print the addition of N numbers
+        url: cpp/loops/kwidwaaup
+      - title: C++ program to print the floating-point numbers
+        url: cpp/loops/kwidwangz
+      - title: C++ program to print the square of the numbers
+        url: cpp/loops/kwidvqyfg
+      - title: C++ program to find the factorial of a given number
+        url: cpp/loops/kwidvzgge
+
+  - parent: C++ Strings
+    subtree: Strings
+    url: cpp/strings
+    children: 
+      - title: C++ program to swap the given strings
+        url: cpp/strings/kwidzdyvg
+      - title: C++ program to find the length of a given string
+        url: cpp/strings/kwidadbwe
+      - title: C++ program to reverse a given string using loops
+        url: cpp/strings/kwidecfeo
+      - title: C++ program to reverse a given string using predefined methods
+        url: cpp/strings/kwidyyvwd
+      - title: C++ program to reverse a given string using recursion
+        url: cpp/strings/kwidarayv
+      - title: C++ program to reverse a given string using stack
+        url: cpp/strings/kwidywzwa
+      - title: C++ program to check whether a given string is a palindrome
+        url: cpp/strings/kwidyxqgg
+      - title: C++ program to perform the string operations
+        url: cpp/strings/kwidpzcle
+
+  - parent: C++ Arrays
+    subtree: Arrays
+    url: cpp/arrays
+    children: 
+      - title: C++ program to print the given matrix
+        url: cpp/arrays/kwidaziwv
+      - title: C++ program to print the transpose of a given matrix
+        url: cpp/arrays/kwidaayzg
+      - title: C++ program for addition of two matrices
+        url: cpp/arrays/kwidzwdez
+      - title: C++ program for addition and subtraction of two matrices
+        url: cpp/arrays/kwidauaoi
+
+  - parent: C++ Classes
+    subtree: Classes
+    url: cpp/classes
+    children: 
+      - title: C++ program to demonstrate the use of class and object
+        url: cpp/classes/kwidutzrm
+      - title: C++ program to demonstrate the use of constructors and destructors
+        url: cpp/classes/kwiddvyma
+      - title: C++ program to print the addition of numbers using constructor
+        url: cpp/classes/kwidtvfzm
+
+  - parent: C++ Functions
+    subtree: Functions
+    url: cpp/functions
+    children: 
+      - title: C++ program for addition of numbers using a function
+        url: cpp/functions/kwidtaync
+      - title: C++ program for call by value and call by reference
+        url: cpp/functions/kwidzddye
+      - title: C++ program to add the members of two different classes using the friend function
+        url: cpp/functions/kwidmeaby
+      - title: C++ program to demonstrate the use of math library functions
+        url: cpp/functions/kwidxybzk
+      - title: C++ program to print the current date and time
+        url: cpp/functions/kwidvzzwn
+
+sidenav:
+  - parent: C++ Programming
+    url: cpp
+    children: 
+      - title: C++ Fundamentals
+        url: cpp/fundamentals
+      - title: C++ Control Statements
+        url: cpp/controls
+      - title: C++ Loops
+        url: cpp/loops
+      - title: C++ Strings
+        url: cpp/strings
+      - title: C++ Arrays
+        url: cpp/arrays
+      - title: C++ Classes
+        url: cpp/classes
+      - title: C++ Functions
+        url: cpp/functions
+      - title: C++ Search
+        url: cpp/search

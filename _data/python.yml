@@ -1,0 +1,192 @@
+grandparent: 
+  - parent: Python Fundamentals
+    subtree: Fundamentals
+    url: python/fundamentals
+    children: 
+      - title: Python Arithmetic Operations
+        url: python/fundamentals/kwidawgvo
+      - title: Python Logical Operations
+        url: python/fundamentals/kwidexazw
+      - title: Python Built-in Functions
+        url: python/fundamentals/kwidgzwzz
+      - title: Python Mathematical Functions
+        url: python/fundamentals/kwidtgvee
+      - title: Python Trigonometric Functions
+        url: python/fundamentals/kwiddveuh
+      - title: How to use Python help utility
+        url: python/fundamentals/kwidlvgqy
+      - title: How to compile a Python program using the py_compile module
+        url: python/fundamentals/kwidgvzwx
+      - title: How to view the byte code instructions using the dis module
+        url: python/fundamentals/kwidbduad
+      - title: Python program to perform the arithmetic operations
+        url: python/fundamentals/kwidyosqg
+      - title: Python program to perform the relational operations
+        url: python/fundamentals/kwidetapa
+      - title: Python program to swap the given numbers
+        url: python/fundamentals/kwidylqva
+      - title: Python program to print the runtime arguments
+        url: python/fundamentals/kwidzidwc
+      - title: Python program for conversion of the number systems
+        url: python/fundamentals/kwidvaqvy
+      - title: Python program to demonstrate debugging of script
+        url: python/fundamentals/kwidzsead
+      - title: Python program to print the current date and time
+        url: python/fundamentals/kwidxdagf
+      - title: Python implementation of the calendar module
+        url: python/fundamentals/kwidscgzf
+
+  - parent: Python Control Statements
+    subtree: Controls
+    url: python/controls
+    children: 
+      - title: Python program to check the equality of given numbers
+        url: python/controls/kwidgmsmv
+      - title: Python program to check the given number is even or odd
+        url: python/controls/kwidgvewa
+      - title: Python program to check whether a given character is an alphabet
+        url: python/controls/kwidwmaxe
+      - title: Python program to check whether a given year is a leap
+        url: python/controls/kwidrwkxe
+
+  - parent: Python Loops
+    subtree: Loops
+    url: python/loops
+    children: 
+      - title: Python program to print the star pyramid patterns
+        url: python/loops/kwidvfyae
+      - title: Python program to print the ASCII values
+        url: python/loops/kwidwauzw
+      - title: Python program to print the prime numbers
+        url: python/loops/kwidwbtvh
+      - title: Python program to find the factorial of a given number
+        url: python/loops/kwidagzvl
+      - title: Python program to print the sum of all digits in a given number
+        url: python/loops/kwidalewy
+      - title: Python program to print the multiplication table of a given number
+        url: python/loops/kwidalmxy
+      - title: Python program to check whether a given number is a palindrome
+        url: python/loops/kwidggkza
+      - title: Python program to print the list of all leap years
+        url: python/loops/kwidrawfa
+
+  - parent: Python Strings
+    subtree: Strings
+    url: python/strings
+    children: 
+      - title: Python Basic String Operations
+        url: python/strings/kwiddduzz
+      - title: Python Strings Comparison
+        url: python/strings/kwidkgyxy
+      - title: Python String Slicing
+        url: python/strings/kwidkwdvv
+      - title: Python to check the given string is alphanumeric
+        url: python/strings/kwidozvev
+      - title: Python Strings Methods
+        url: python/strings/kwidyqzaz
+
+  - parent: Python Data Structures
+    subtree: Data Structures
+    url: python/ds
+    children: 
+      - title: Python Lists
+        url: python/ds/kwidkzaae
+      - title: Python Tuples
+        url: python/ds/kwidcgaye
+      - title: Python Sets
+        url: python/ds/kwidvzzvi
+      - title: Python Dictionary
+        url: python/ds/kwidvwkzg
+
+  - parent: Python Arrays
+    subtree: Arrays
+    url: python/arrays
+    children: 
+      - title: Python Arrays using Array module
+        url: python/arrays/kwidwzddw
+      - title: Python indexing and slicing on an array
+        url: python/arrays/kwiddrehr
+      - title: Python NumPy Arrays
+        url: python/arrays/kwidzyigz
+      - title: Python to create a view() and copy() of NumPy arrays
+        url: python/arrays/kwiddeqlk
+      - title: Python NumPy Arrays Comparison
+        url: python/arrays/kwidevyzz     
+      - title: Python NumPy Mathematical Functions for Arrays
+        url: python/arrays/kwidykhed
+      - title: Python indexing and slicing on NumPy arrays
+        url: python/arrays/kwidzxhny
+      - title: How to create arrays using the linspace() and logspace() functions
+        url: python/arrays/kwidskedg
+      - title: How to create arrays using the arange(), zeros(), and ones() functions
+        url: python/arrays/kwidvalhi
+      - title: Python NumPy Multi-dimensional Arrays
+        url: python/arrays/kwideazqm
+      - title: Python NumPy Matrices
+        url: python/arrays/kwiddkizz
+      - title: Python to print the transpose of a given matrix
+        url: python/arrays/kwideghdz
+      - title: Python to perform arithmetic operations on two matrices
+        url: python/arrays/kwidomegf
+
+  - parent: Python File Handling
+    subtree: FileIO
+    url: python/fileio
+    children: 
+      - title: Python program to count the lines, words, and characters from a given file
+        url: python/fileio/kwiddzeng
+      - title: Python program to count the frequency of words in a given file
+        url: python/fileio/kwidlyeay
+
+  - parent: Python Networking
+    subtree: Networking
+    url: python/networking
+    children: 
+      - title: Python networking using the netaddr module
+        url: python/networking/kwidyslwy
+      - title: Python program for two way communication using socket programming
+        url: python/networking/kwidgzlzd
+      - title: Python program for file sharing using socket programming
+        url: python/networking/kwidkyirx
+
+  - parent: Python Database Connectivity
+    subtree: DBC
+    url: python/dbc
+    children: 
+      - title: How to install pymysql and pymongo on Ubuntu
+        url: python/dbc/kwidwdnax
+      - title: Python MySQL to connect, create a database, and table
+        url: python/dbc/kwidvdwzz
+      - title: Python MySQL to insert and retrieve the records from a table
+        url: python/dbc/kwidtyalw
+      - title: Python MySQL to update the table records
+        url: python/dbc/kwidswyzn
+      - title: Python MongoDB to connect, create database, and collection
+        url: python/dbc/kwidmyyzz
+      - title: Python MongoDB to insert and retrieve the documents from a collection
+        url: python/dbc/kwidgulma
+
+sidenav:
+  - parent: Python Programming
+    url: python
+    children: 
+      - title: Python Fundamentals
+        url: python/fundamentals
+      - title: Python Control Statements
+        url: python/controls
+      - title: Python Loops
+        url: python/loops
+      - title: Python Strings
+        url: python/strings
+      - title: Python Data Structures
+        url: python/ds
+      - title: Python Arrays
+        url: python/arrays
+      - title: Python File Handling
+        url: python/fileio
+      - title: Python Networking
+        url: python/networking
+      - title: Python Database Connectivity
+        url: python/dbc
+      - title: Python Search
+        url: python/search

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            {% if path[1] == nil %}
+            <div class="navbar-brand" style="margin-left: 0px;">
+                <a><img id="logo" alt="Logo" src="{{ site.logo | relative_url }}"></a>
+                <a id="fc-{{ path[1] }}"> {{ parent }}</a>
+            </div>
+            {% elsif path[1] == "search" or path[1] == "testapp" or path[1] == "shubhamrdarda" %}
+            <div class="navbar-brand" style="margin-left: 0px;">
+                <a href=""><img id="logo" alt="Logo" src="{{ site.logo | relative_url }}"></a>
+                <a id="fc-{{ path[1] }}" href="{{ path[1] }}/"> / {{ path[1] | capitalize }} /</a>
+                {% if path[2] != nil %}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}/">{{ path[2] | capitalize }} / </a>{% endif %}
+            </div>
+            {% else %}
+            <div class="navbar-brand">
+                <a href=""><img id="logo" alt="Logo" src="{{ site.logo | relative_url }}"></a>
+                <a id="fc-{{ path[1] }}" href="{{ path[1] }}/">{{ parent }}</a>
+                {% if path[2] != nil and path[2] != "search" %}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}/">{{ child }} / </a>{% endif %}
+                {% if path[2] == "search" %}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/search/">Search / </a>{% endif %}
+            </div>
+            <button id="lsidebar" class="navbar-toggler p-0" type="button" data-bs-toggle="leftsidebar" data-bs-target="#leftsidebar" aria-label="lsidebar" style="position: fixed;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="leftsidebar" class="sidebar leftsidebar-collapse col-xs-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+            {% for parent in kw.sidenav %}
+                {% if page.url contains parent.url %}
+                    {% assign class = nil %}
+                    {% assign pu = parent.url | split: '/' %}
+                    {% if path[1] == pu[0] and path[2] == nil %}
+                        {% assign class="sidebar-item-active" %}
+                        <a id="fc-{{ path[1] }}" class="nav-link {{ class }} {{ path[1] }}" href="{{ parent.url }}">{{ parent.parent }}</a>
+                    {% else %}
+                        <a class="nav-link {{ path[1] }}" href="{{ parent.url }}">{{ parent.parent }}</a>
+                    {% endif %}
+                    {% for child in parent.children %}
+                        {% assign cu = child.url | split: '/' %}
+                        {% if cu.size == 2 and path[2] == cu[1] %}
+                            {% assign class="sidebar-item-active" %}
+                            <a id="fc-{{ path[1] }}" class="nav-link {{ class }} {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
+                        {% elsif cu.size == 3 and page.url contains cu[2] %}
+                            {% assign class="sidebar-item-active" %}
+                            <a id="fc-{{ path[1] }}" class="nav-link {{ class }} {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
+                        {% else %}
+                            <a class="nav-link {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+            </div>
+            {% endif %}
+            <button id="rsidebar" class="navbar-toggler p-0" type="button" data-bs-toggle="rightsidebar" data-bs-target="#rightsidebar" aria-label="rsidebar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="rightsidebar" class="rightsidebar-collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav mr-auto">
+                    {% if path[1] == nil %}{% else %}<li class="nav-item"><a class="nav-link" href=""><i class="navsvg bi bi-house-door"></i> Home</a></li>{% endif %}
+                    {% if path[1] == "search" %}{% else %}<li class="nav-item"><a class="nav-link" href="search"><i class="navsvg bi bi-search"></i> Search</a></li>{% endif %}
+                    <li class="nav-item"><a style="cursor: pointer;" class="nav-link" data-bs-toggle="modal" data-bs-target="#appmodal"><i class="navsvg bi bi-android2"></i> Android App</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ site.data.url.sponsor }}" target="_blank"><i class="navsvg bi bi-suit-heart"></i> Sponsor</a></li>
+                    {% if path[1] == "about" %}{% else %}<li class="nav-item"><a class="nav-link" href="about"><i class="navsvg bi bi-info-circle"></i> About Us</a></li>{% endif %}
+                    {% if path[1] == "shubhamrdarda" %}<li class="nav-item"><a class="nav-link" href="testapp"><i class="navsvg bi bi-power"></i> Logout</a></li>{% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div data-bs-toggle="collapseall">
+        {% if path[1] == nil %}
+        <main role="main">
+            {{ content }}
+        </main>
+        {% include footer.html %}
+        {% elsif path[1] == "search" or path[1] == "testapp" or path[1] == "shubhamrdarda" %}
+        <main role="main">
+            {{ content }}
+        </main>
+        {% elsif path[2] == "search" %}
+        <main class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto px-md-4" role="main">
+            {{ content }}
+        </main>
+        {% else %}
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto px-md-4 jumbotron text-center">
+            <h3>{{ site.title }}</h3>
+            <h6 id="fc-{{ path[1] }}">{{ segment }}</h6>
+        </div>
+        <main class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto px-md-4" role="main">
+            <div class="container">
+                {{ content }}
+                {% for parent in kw.grandparent %}
+                    {% if path[1] != "about" and path[2] == nil %}
+                        <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+                            {% for child in parent.children limit:4 %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
+                            {% assign count=parent.children | size %}
+                            {% if count>=5 %}<a class="card" href="{{ parent.url }}">Show More &#187;</a>{% endif %}
+                        </div>
+                    {% else %}
+                        {% if path[1] != "about" and path[3] == nil %}
+                            {% assign pu = parent.url | split: '/' %}
+                            {% if pu[1] == path[2] %}
+                            <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
+                                {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
+                            </div>
+                            {% endif %}
+                        {% endif %}
+                    {% endif %}
+                {% endfor %}
+                {% include pagination.html %}
+                {% include ads.html %}
+            </div>
+        </main>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto" style="padding: 0px;">{% include footer.html %}</div>
+        {% endif %}
+    </div>
+
+    <div class="modal fade" id="appmodal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="appmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title" id="appmodalLabel"><i class="bi bi-android2"></i> Kodingwindow Android App</h5></div>
+                <div class="modal-body">Dear User, <br>We are grateful for your interest in the Kodingwindow Android app. We intend to soon make it available on the Google Play Store. Currently, Android versions 10 and up require manual apk installations. Would you like to get the app?</div>
+                <div class="modal-footer justify-content-center">
+                    <a style="cursor: pointer; border: 1px solid #e63636;" class="btn" data-bs-dismiss="modal"><i class="bi bi-cloud-slash"></i> No</a>
+                    <a href="{{ site.data.url.android_app }}" style="border: 1px solid #00b050;" class="btn" onclick="$('#appmodal').modal('hide');"><i class="bi bi-cloud-arrow-down"></i> Yes</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

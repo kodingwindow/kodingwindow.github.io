@@ -1,0 +1,61 @@
+---
+permalink: r/cli/kwidgebwv
+title: R Strings
+---
+
+<div class="terminalcard">{{ page.title }}</div>
+<span><pre>
+kodingwindow@kw:~$ <mark>R</mark>
+...
+> <mark>"Kodingwindow"</mark>
+[1] "Kodingwindow"
+
+> <mark>print("Hello World")</mark>
+[1] "Hello World"
+
+> <mark>cat("Hello World\n")</mark>
+Hello World
+
+> <mark>length("Kodingwindow")</mark>
+[1] 1
+
+> <mark>nchar("Kodingwindow")</mark>
+[1] 12
+
+> <mark>toupper("Kodingwindow")</mark>
+[1] "KODINGWINDOW"
+
+> <mark>tolower("KODINGWINDOW")</mark>
+[1] "kodingwindow"
+
+> <mark>substring("Kodingwindow",7,12)</mark>
+[1] "window"
+
+> <mark>paste("Koding","window")</mark>
+[1] "Koding window"
+
+> <mark>paste("Koding","window",sep="")</mark>
+[1] "Kodingwindow"
+
+> <mark>paste("Koding","window",sep="@@@")</mark>
+[1] "Koding@@@window"
+<hr>
+> <mark>format("Kodingwindow",width=20)</mark>
+[1] "Kodingwindow        "
+
+> <mark>format("Kodingwindow",width=20,justify="")</mark>
+<error>Error in match.arg(justify) : 
+  'arg' should be one of “left”, “right”, “centre”, “none”</error>
+
+> <mark>format("Kodingwindow",width=20,justify="l")</mark>
+[1] "Kodingwindow        "
+
+> <mark>format("Kodingwindow",width=20,justify="c")</mark>
+[1] "    Kodingwindow    "
+
+> <mark>format("Kodingwindow",width=20,justify="r")</mark>
+[1] "        Kodingwindow"
+
+> <mark>format("Kodingwindow",width=20,justify="n")</mark>
+[1] "Kodingwindow"
+</pre></span>
