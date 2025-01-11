@@ -74,9 +74,13 @@
             {{ content }}
         </main>
         {% include footer.html %}
-        {% elsif path[1] == "search" or path[1] == "testapp" or path[1] == "shubhamrdarda" %}
+        {% elsif path[1] == "testapp" or path[1] == "shubhamrdarda" %}
         <main role="main">
             {{ content }}
+        </main>
+        {% elsif path[1] == "search" %}
+        <main role="main">
+            <div class="container">{{ content }}</div>
         </main>
         {% else %}
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto px-md-4 jumbotron text-center">
