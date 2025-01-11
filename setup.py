@@ -30,7 +30,7 @@ def install():
         if githubactions:
             packages = "ruby-full clisp rustc freeglut3-dev nasm shc"
         else:
-            packages = "git-all openjdk-21-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-9.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
+            packages = "git-all openjdk-21-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
 
             snap = os.system("snap --version > /dev/null")
             vscode = os.system("code --version > /dev/null")
@@ -51,7 +51,6 @@ def install():
                 os.chdir(cwd + kw + "/")
 
     os.system("sudo gem install jekyll bundler")
-    os.system("python -m pip install --upgrade pip")
     os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
     os.system("bundle config set --local path vendor/bundle")
     os.system("bundle install")
