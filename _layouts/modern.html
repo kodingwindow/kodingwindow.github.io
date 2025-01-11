@@ -61,7 +61,6 @@
                     {% if path[1] == nil %}{% else %}<li class="nav-item"><a class="nav-link" href=""><i class="navsvg bi bi-house-door"></i> Home</a></li>{% endif %}
                     {% if path[1] == "search" %}{% else %}<li class="nav-item"><a class="nav-link" href="search"><i class="navsvg bi bi-search"></i> Search</a></li>{% endif %}
                     <li class="nav-item"><a style="cursor: pointer;" class="nav-link" data-bs-toggle="modal" data-bs-target="#appmodal"><i class="navsvg bi bi-android2"></i> Android App</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ site.data.url.sponsor }}" target="_blank"><i class="navsvg bi bi-suit-heart"></i> Sponsor</a></li>
                     {% if path[1] == "about" %}{% else %}<li class="nav-item"><a class="nav-link" href="about"><i class="navsvg bi bi-info-circle"></i> About Us</a></li>{% endif %}
                     {% if path[1] == "shubhamrdarda" %}<li class="nav-item"><a class="nav-link" href="testapp"><i class="navsvg bi bi-power"></i> Logout</a></li>{% endif %}
                 </ul>
@@ -121,7 +120,7 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header"><h5 class="modal-title" id="appmodalLabel"><i class="bi bi-android2"></i> Kodingwindow Android App</h5></div>
-                <div class="modal-body">Dear User, <br>We are grateful for your interest in the Kodingwindow Android app. We intend to soon make it available on the Google Play Store. Currently, Android versions 10 and up require manual apk installations. Would you like to get the app?</div>
+                <div class="modal-body">Dear User, <br>We are grateful for your interest in the Kodingwindow Android app. We intend to soon make it available on the Google Play Store. Currently, you need to install apk manually. Would you like to get the app?<br>Minimum Requirement(s): Android 10</div>
                 <div class="modal-footer justify-content-center">
                     <a style="cursor: pointer; border: 1px solid #e63636;" class="btn" data-bs-dismiss="modal"><i class="bi bi-cloud-slash"></i> No</a>
                     <a href="{{ site.data.url.android_app }}" style="border: 1px solid #00b050;" class="btn" onclick="$('#appmodal').modal('hide');"><i class="bi bi-cloud-arrow-down"></i> Yes</a>
