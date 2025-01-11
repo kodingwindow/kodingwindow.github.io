@@ -688,19 +688,19 @@ a.wvnav-item>i {
 
 a.wvnav-item>div {
     color: var(--bnw);
-    font-size: 12px;
+    font-size: 13px;
 }
 
 a.wvnav-item:first-child {
-    margin-left: 5px;
+    margin-left: 7px;
 }
 
 a.wvnav-item:last-child {
-    margin-right: 5px;
+    margin-right: 7px;
 }
 
 a.wvnav-item>i.wvsvg {
-    font-size: 22px;
+    font-size: 23px;
 }
 
 .wvnav-item-active>i {

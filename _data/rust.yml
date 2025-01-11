@@ -18,5 +18,3 @@ sidenav:
     children: 
       - title: Rust Fundamentals
         url: rust/fundamentals
-      - title: Rust Search
-        url: rust/search

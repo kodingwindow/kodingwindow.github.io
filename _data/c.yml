@@ -148,5 +148,3 @@ sidenav:
         url: c/functions
       - title: C Pointers
         url: c/pointers
-      - title: C Search
-        url: c/search

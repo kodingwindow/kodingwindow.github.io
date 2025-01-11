@@ -55,5 +55,3 @@ sidenav:
         url: asm/32-bit
       - title: 64-bit Assembly Programming
         url: asm/64-bit
-      - title: Assembly Search
-        url: asm/search

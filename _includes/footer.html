@@ -83,7 +83,7 @@ if (isWebview && userAgent.includes("Kodingwindow")) {
     onselectstart = (e) => { e.preventDefault() }
     $('body').on('contextmenu', function () { return false; });
 
-    /* var lastScrollTop = 0;
+    var lastScrollTop = 0;
     $(window).on('scroll', function () {
         scrollTop = $(this).scrollTop();
         if ((document.body.scrollHeight - 150) <= (window.scrollY + window.innerHeight)) {
@@ -96,6 +96,6 @@ if (isWebview && userAgent.includes("Kodingwindow")) {
             $("#isWebView").fadeIn(250);
         }
         lastScrollTop = scrollTop;
-    }); */
+    });
 }
 </script>

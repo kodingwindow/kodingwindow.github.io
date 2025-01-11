@@ -61,5 +61,3 @@ sidenav:
         url: linux/commands
       - title: Bash Shell Scripting
         url: linux/bash
-      - title: Linux Search
-        url: linux/search

@@ -79,5 +79,3 @@ sidenav:
         url: cluster/vbscript
       - title: Ranorex
         url: cluster/ranorex
-      - title: Cluster Search
-        url: cluster/search

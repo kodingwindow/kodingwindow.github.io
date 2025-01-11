@@ -29,5 +29,3 @@ sidenav:
         url: fsharp/fundamentals
       - title: F# Control Statements
         url: fsharp/controls
-      - title: F# Search
-        url: fsharp/search

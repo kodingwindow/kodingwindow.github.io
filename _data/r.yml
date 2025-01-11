@@ -26,5 +26,3 @@ sidenav:
     children: 
       - title: R Command Line Interface (CLI)
         url: r/cli
-      - title: R Search
-        url: r/search

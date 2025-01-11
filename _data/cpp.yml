@@ -136,5 +136,3 @@ sidenav:
         url: cpp/classes
       - title: C++ Functions
         url: cpp/functions
-      - title: C++ Search
-        url: cpp/search

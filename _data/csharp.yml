@@ -297,5 +297,3 @@ sidenav:
         url: csharp/reflection
       - title: C# Database Connectivity
         url: csharp/dbc
-      - title: C# Search
-        url: csharp/search

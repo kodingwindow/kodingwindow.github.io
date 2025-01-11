@@ -60,5 +60,3 @@ sidenav:
         url: mysql/ddl
       - title: MySQL Data Manipulation
         url: mysql/dml
-      - title: MySQL Search
-        url: mysql/search

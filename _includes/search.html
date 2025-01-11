@@ -48,10 +48,12 @@ $(document).keydown(function(event)
 </script>
 
 <div class="container"><center>
-    <div class="col-xs-12 col-sm-11 col-md-9 col-lg-7 col-xl-6 col-xxl-6" style="margin-top: 175px; margin-bottom: 20px;">
-        <h2 id="fc-{{ path[1] }}">Kodingwindow</h2>
+    <div class="col-xs-12 col-sm-11 col-md-9 col-lg-7 col-xl-6 col-xxl-6" style="margin-bottom: 20px;">
+        {% if path[1] == "search" %}
+        <h2 style="margin-top: 175px;" id="fc-{{ path[1] }}">Kodingwindow</h2>
         <h6 style="padding-top: 5px; padding-bottom: 10px;">{{ site.tagline }}</h6>
-        <div class="input-group"><input id="KSEInput" class="form-control bc-{{ path[1] }}" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="kwdisplay();" onkeyup="kwdisplay();"></div>
+        {% endif %}
+        <div class="input-group input-group-lg"><input id="KSEInput" class="form-control bc-{{ path[1] }} rounded-pill" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="kwdisplay();" onkeyup="kwdisplay();"></div>
     </div>
     <a id="kwdisplay" class="btn kwbtn bc-{{ path[1] }}" style="cursor: pointer; display: none; margin-bottom: 20px;" onclick="clearinput();">Clear Input</a>
 
@@ -90,7 +92,9 @@ $(document).keydown(function(event)
     </div>
 </center></div>
 
+{% if path[1] == "search" %}
 {% include footer.html %}
+{% endif %}
 <script type="text/javascript">
 if (isWebview && userAgent.includes("Kodingwindow")) {
     document.getElementById("rsidebar").style.display = "none";

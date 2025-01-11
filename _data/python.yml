@@ -188,5 +188,3 @@ sidenav:
         url: python/networking
       - title: Python Database Connectivity
         url: python/dbc
-      - title: Python Search
-        url: python/search

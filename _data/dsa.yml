@@ -62,5 +62,3 @@ sidenav:
         url: dsa/trees
       - title: Applications of Data Structures
         url: dsa/applications
-      - title: Data Structures Search
-        url: dsa/search

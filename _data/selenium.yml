@@ -155,5 +155,3 @@ sidenav:
         url: selenium/ddf
       - title: Selenium TestNG
         url: selenium/testng
-      - title: Selenium Search
-        url: selenium/search

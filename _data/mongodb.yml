@@ -35,5 +35,3 @@ sidenav:
         url: mongodb/fundamentals
       - title: MongoDB CRUD Operations
         url: mongodb/crud
-      - title: MongoDB Search
-        url: mongodb/search

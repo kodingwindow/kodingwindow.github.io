@@ -38,6 +38,9 @@
     #fc-{{ s }}, #fc-{{ s }}:hover, .wvnav-item-active-{{ s }}
     { color: var(--{{ s }}); }
 
+    input.bc-{{ s }}
+    { border-bottom: 2px solid var(--color1); }
+
     input.bc-{{ s }}:focus
     { border-bottom: 2px solid var(--{{ s }}); }
 
@@ -51,6 +54,9 @@
 
     #fc-, #fc-search, #fc-about, #fc-shubhamrdarda, .wvnav-item-active-, .wvnav-item-active-search, .wvnav-item-active-about, #fc-:hover, #fc-search:hover, #fc-about:hover, #fc-shubhamrdarda:hover
     { color: var(--other); }
+
+    input.bc-search 
+    { border-bottom: 2px solid var(--color1); }
 
     input.bc-search:focus 
     { border-bottom: 2px solid var(--other); }
@@ -86,6 +92,9 @@
     #fc-{{ s }}, #fc-{{ s }}:hover, .wvnav-item-active-{{ s }}
     { color: var(--{{ s }}); }
 
+    input.bc-{{ s }}
+    { border-bottom: 2px solid var(--color1); }
+
     input.bc-{{ s }}:focus
     { border-bottom: 2px solid var(--{{ s }}); }
 
@@ -99,6 +108,9 @@
 
     #fc-, #fc-search, #fc-about, #fc-shubhamrdarda, .wvnav-item-active-, .wvnav-item-active-search, .wvnav-item-active-about, #fc-:hover, #fc-search:hover, #fc-about:hover, #fc-shubhamrdarda:hover
     { color: var(--other); }
+
+    input.bc-search 
+    { border-bottom: 2px solid var(--color1); }
 
     input.bc-search:focus 
     { border-bottom: 2px solid var(--other); }

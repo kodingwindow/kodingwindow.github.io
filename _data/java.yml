@@ -327,5 +327,3 @@ sidenav:
         url: java/awt
       - title: Java Database Connectivity (JDBC)
         url: java/jdbc
-      - title: Java Search
-        url: java/search

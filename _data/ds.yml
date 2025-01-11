@@ -27,5 +27,3 @@ sidenav:
         url: ds/analysis
       - title: Data Visualization
         url: ds/visualization
-      - title: Data Science Search
-        url: ds/search

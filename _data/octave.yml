@@ -35,5 +35,3 @@ sidenav:
         url: octave/fundamentals
       - title: Octave Strings
         url: octave/strings
-      - title: Octave Search
-        url: octave/search

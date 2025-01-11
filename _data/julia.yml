@@ -16,5 +16,3 @@ sidenav:
     children: 
       - title: Julia Command Line Interface
         url: julia/cli
-      - title: Julia Search
-        url: julia/search

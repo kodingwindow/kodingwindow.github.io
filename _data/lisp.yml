@@ -70,5 +70,3 @@ sidenav:
         url: lisp/strings
       - title: LISP Functions
         url: lisp/functions
-      - title: LISP Search
-        url: lisp/search
