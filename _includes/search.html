@@ -91,18 +91,3 @@ $(document).keydown(function(event)
         {% endfor %}
     </div>
 </center></div>
-
-<script type="text/javascript">
-if (isWebview && userAgent.includes("Kodingwindow")) {
-    document.getElementById("rsidebar").style.display = "none";
-    document.getElementById("isWebView").style.display = "block";
-    document.getElementById("isWebsite").style.display = "none";
-    onselectstart = (e) => { e.preventDefault() }
-    $('body').on('contextmenu', function () { return false; });
-}
-else {
-    document.getElementById("isWebsite").style.display = "none";
-    document.getElementById("isWebView").style.display = "none";
-    document.getElementById("backtotop").style.paddingBottom = "30px";
-}
-</script>

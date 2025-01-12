@@ -13,7 +13,8 @@
 {% endif %}
 
 <div id="backtotop" class="text-center" style="display: none; padding-top: 15px;"><a class="back-to-top" style="cursor: pointer;" title="Back to top"><i class="svgicon bi bi-arrow-bar-up"></i></a></div>
-<footer class="isWebsite" id="isWebsite" style="display: block; padding-top: 30px;">
+{% if path[1] == "search" %}{% assign w_search = "search" %}{% endif %}
+<footer class="isWebsite {{ w_search }}" id="isWebsite" style="display: block; padding-top: 30px;">
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -75,6 +76,8 @@
 </footer>
 
 <script type="text/javascript">
+const search_page = document.getElementById("isWebsite");
+
 if (isWebview && userAgent.includes("Kodingwindow")) {
     document.getElementById("rsidebar").style.display = "none";
     document.getElementById("isWebsite").style.display = "none";
@@ -97,5 +100,9 @@ if (isWebview && userAgent.includes("Kodingwindow")) {
         }
         lastScrollTop = scrollTop;
     });
+}
+else if (!isWebview && search_page.classList.contains("search"))
+{
+    document.getElementById("isWebsite").style.display = "none";
 }
 </script>
