@@ -17,8 +17,6 @@
         --board-tc: #d9d9d9;
         --pre-bg: #0b0c0f;
         --svgicon: #f2f2f2;
-        --wvnav: #000000;
-        --wvnav-item-active: #21252c;
     }
 }
 
@@ -40,8 +38,6 @@
         --board-tc: #424b57;
         --pre-bg: #e2e6e9;
         --svgicon: #424b57;
-        --wvnav: #ffffff;
-        --wvnav-item-active: #e2e5e9;
     }
 }
 
@@ -661,7 +657,7 @@ i.svgicon {
 }
 
 a>i {
-    color: var(--svgicon);
+    color: #f2f2f2;
 }
 
 a.back-to-top>i.svgicon {
@@ -677,8 +673,8 @@ div.wvnav {
     height: 68px;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid var(--color1);
-    background-color: var(--wvnav);
+    border-top: 1px solid #373d49;
+    background-color: #000000;
     padding: 8px;
 }
 
@@ -687,7 +683,7 @@ a.wvnav-item>i {
 }
 
 a.wvnav-item>div {
-    color: var(--bnw);
+    color: #ffffff;
     font-size: 13px;
 }
 
@@ -704,7 +700,7 @@ a.wvnav-item>i.wvsvg {
 }
 
 .wvnav-item-active>i {
-    background-color: var(--wvnav-item-active);
+    background-color: #21252c;
     border-radius: 25px;
 }
 
