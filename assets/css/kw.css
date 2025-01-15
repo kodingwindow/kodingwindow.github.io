@@ -20,6 +20,8 @@
         --bg_jumbotron: #050514;
         --hover_jumbotron: #000000;
         --hover_sideitem: #16181d;
+        --wvnav: #16181d;
+        --wvnav-item-active: #21252c;
     }
 }
 
@@ -44,6 +46,8 @@
         --bg_jumbotron: #c5cbd3;
         --hover_jumbotron: #99a4b2;
         --hover_sideitem: #c5cbd3;
+        --wvnav: #ffffff;
+        --wvnav-item-active: #e2e5e9;
     }
 }
 
@@ -662,7 +666,7 @@ i.svgicon {
 }
 
 a>i {
-    color: #f2f2f2;
+    color: var(--svgicon);
 }
 
 a.back-to-top>i.svgicon {
@@ -678,8 +682,8 @@ div.wvnav {
     height: 68px;
     bottom: 0;
     width: 100%;
-    border-top: 1px solid #373d49;
-    background-color: #000000;
+    border-top: 1px solid var(--color1);
+    background-color: var(--wvnav);
     padding: 8px;
 }
 
@@ -688,7 +692,7 @@ a.wvnav-item>i {
 }
 
 a.wvnav-item>div {
-    color: #ffffff;
+    color: var(--bnw);
     font-size: 13px;
 }
 
@@ -705,7 +709,7 @@ a.wvnav-item>i.wvsvg {
 }
 
 .wvnav-item-active>i {
-    background-color: #21252c;
+    background-color: var(--wvnav-item-active);
     border-radius: 25px;
 }
 

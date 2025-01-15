@@ -1,6 +1,8 @@
 package com.kodingwindow.kodingwindow
 
 import android.annotation.SuppressLint
+import android.app.UiModeManager
+import android.content.Context
 import android.content.Intent
 import android.net.ConnectivityManager
 import android.net.Uri
@@ -21,6 +23,13 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
+        val uiModeManager = getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
+        val currentMode = uiModeManager.nightMode
+        if (currentMode == UiModeManager.MODE_NIGHT_YES) {
+            setTheme(R.style.AppTheme_Dark);
+        } else {
+            setTheme(R.style.AppTheme_Light);
+        }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         webview = findViewById(R.id.webView)
@@ -86,7 +95,6 @@ class MainActivity : AppCompatActivity() {
                     webview.goBack()
                 else
                     onBackPressedDispatcher.onBackPressed()
-                isEnabled = webview.canGoBack()
             }
         })
     }
