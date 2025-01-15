@@ -53,9 +53,9 @@ $(document).keydown(function(event)
         <h2 style="margin-top: 175px;" id="fc-{{ path[1] }}">Kodingwindow</h2>
         <h6 style="padding-top: 5px; padding-bottom: 10px;">{{ site.tagline }}</h6>
         {% endif %}
-        <div class="input-group input-group-lg"><input id="KSEInput" class="form-control bc-{{ path[1] }} rounded-pill" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="kwdisplay();" onkeyup="kwdisplay();"></div>
+        <div class="input-group input-group-lg"><input id="KSEInput" class="form-control rounded-pill" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="kwdisplay();" onkeyup="kwdisplay();"></div>
     </div>
-    <a id="kwdisplay" class="btn kwbtn bc-{{ path[1] }}" style="cursor: pointer; display: none; margin-bottom: 20px;" onclick="clearinput();">Clear Input</a>
+    <a id="kwdisplay" class="btn" style="cursor: pointer; display: none; margin-bottom: 20px;" onclick="clearinput();">Clear Input</a>
 
     <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="margin: 0px; text-align: left;">
         {% for segment in site.data.kw.segments limit:20 %}

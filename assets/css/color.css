@@ -38,15 +38,6 @@
     #fc-{{ s }}, #fc-{{ s }}:hover, .wvnav-item-active-{{ s }}
     { color: var(--{{ s }}); }
 
-    input.bc-{{ s }}
-    { border-bottom: 2px solid var(--color1); }
-
-    input.bc-{{ s }}:focus
-    { border-bottom: 2px solid var(--{{ s }}); }
-
-    a.bc-{{ s }}:hover, a.bc-{{ s }}:focus, a.bc-{{ s }}:hover:active
-    { border: 1px solid var(--{{ s }}); }
-
     {% endfor %}
 
     #other > a:hover, #other > a:focus, .nav-link.sidebar-item-active.about, a.about:hover, a.about:focus
@@ -54,15 +45,6 @@
 
     #fc-, #fc-search, #fc-about, #fc-shubhamrdarda, .wvnav-item-active-, .wvnav-item-active-search, .wvnav-item-active-about, #fc-:hover, #fc-search:hover, #fc-about:hover, #fc-shubhamrdarda:hover
     { color: var(--other); }
-
-    input.bc-search 
-    { border-bottom: 2px solid var(--color1); }
-
-    input.bc-search:focus 
-    { border-bottom: 2px solid var(--other); }
-
-    a.bc-search:hover, a.bc-search:focus 
-    { border: 1px solid var(--other); }
 
     :root
     {
@@ -92,15 +74,6 @@
     #fc-{{ s }}, #fc-{{ s }}:hover, .wvnav-item-active-{{ s }}
     { color: var(--{{ s }}); }
 
-    input.bc-{{ s }}
-    { border-bottom: 2px solid var(--color1); }
-
-    input.bc-{{ s }}:focus
-    { border-bottom: 2px solid var(--{{ s }}); }
-
-    a.bc-{{ s }}:hover, a.bc-{{ s }}:focus, a.bc-{{ s }}:hover:active
-    { border: 1px solid var(--{{ s }}); }
-
     {% endfor %}
 
     #other > a:hover, #other > a:focus, .nav-link.sidebar-item-active.about, a.about:hover, a.about:focus
@@ -108,15 +81,6 @@
 
     #fc-, #fc-search, #fc-about, #fc-shubhamrdarda, .wvnav-item-active-, .wvnav-item-active-search, .wvnav-item-active-about, #fc-:hover, #fc-search:hover, #fc-about:hover, #fc-shubhamrdarda:hover
     { color: var(--other); }
-
-    input.bc-search 
-    { border-bottom: 2px solid var(--color1); }
-
-    input.bc-search:focus 
-    { border-bottom: 2px solid var(--other); }
-
-    a.bc-search:hover, a.bc-search:focus 
-    { border: 1px solid var(--other); }
     
     :root
     {

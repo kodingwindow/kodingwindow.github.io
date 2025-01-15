@@ -33,7 +33,7 @@
                     {% assign pu = parent.url | split: '/' %}
                     {% if path[1] == pu[0] and path[2] == nil %}
                         {% assign class="sidebar-item-active" %}
-                        <a id="fc-{{ path[1] }}" class="nav-link {{ class }} {{ path[1] }}" href="{{ parent.url }}">{{ parent.parent }}</a>
+                        <a class="nav-link {{ class }} {{ path[1] }}" href="{{ parent.url }}">{{ parent.parent }}</a>
                     {% else %}
                         <a class="nav-link {{ path[1] }}" href="{{ parent.url }}">{{ parent.parent }}</a>
                     {% endif %}
@@ -41,10 +41,10 @@
                         {% assign cu = child.url | split: '/' %}
                         {% if cu.size == 2 and path[2] == cu[1] %}
                             {% assign class="sidebar-item-active" %}
-                            <a id="fc-{{ path[1] }}" class="nav-link {{ class }} {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
+                            <a class="nav-link {{ class }} {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
                         {% elsif cu.size == 3 and page.url contains cu[2] %}
                             {% assign class="sidebar-item-active" %}
-                            <a id="fc-{{ path[1] }}" class="nav-link {{ class }} {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
+                            <a class="nav-link {{ class }} {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
                         {% else %}
                             <a class="nav-link {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
                         {% endif %}
@@ -86,7 +86,7 @@
         {% else %}
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto px-md-4 jumbotron text-center">
             <h3>{{ site.title }}</h3>
-            <h6 id="fc-{{ path[1] }}">{{ segment }}</h6>
+            <h6>{{ segment }}</h6>
         </div>
         <main class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto px-md-4" role="main">
             <div class="container">
