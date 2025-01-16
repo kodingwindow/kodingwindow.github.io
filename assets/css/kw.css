@@ -697,11 +697,11 @@ a.wvnav-item>div {
 }
 
 a.wvnav-item:first-child {
-    margin-left: 7px;
+    margin-left: 5px;
 }
 
 a.wvnav-item:last-child {
-    margin-right: 7px;
+    margin-right: 5px;
 }
 
 a.wvnav-item>i.wvsvg {
