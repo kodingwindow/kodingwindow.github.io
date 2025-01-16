@@ -69,12 +69,12 @@
     </nav>
 
     <div data-bs-toggle="collapseall">
-        {% if path[1] == nil %}
+        {% if path[1] == nil or path[1] == "testapp" %}
         <main role="main">
             {{ content }}
         </main>
         {% include footer.html %}
-        {% elsif path[1] == "testapp" or path[1] == "shubhamrdarda" %}
+        {% elsif path[1] == "shubhamrdarda" %}
         <main role="main">
             {{ content }}
         </main>

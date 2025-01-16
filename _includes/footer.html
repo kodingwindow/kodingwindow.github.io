@@ -13,8 +13,8 @@
 {% endif %}
 
 <div id="backtotop" class="text-center" style="display: none; padding-top: 15px;"><a class="back-to-top" style="cursor: pointer;" title="Back to top"><i class="svgicon bi bi-arrow-bar-up"></i></a></div>
-{% if path[1] == "search" %}{% assign w_search = "search" %}{% endif %}
-<footer class="isWebsite {{ w_search }}" id="isWebsite" style="display: block; padding-top: 30px;">
+{% if path[1] == "search" or path[1] == "testapp" %}{% assign flag = "block_webfooter" %}{% endif %}
+<footer class="isWebsite {{ flag }}" id="isWebsite" style="display: block; padding-top: 30px;">
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -73,15 +73,15 @@
 
     <div class="d-flex justify-content-between wvnav">
         <a class="wvnav-item {{ f_home }}" href="{{ site.url }}"><i class="wvsvg {{ f_home }}-{{ path[1] }} bi bi-house-door"></i><div class="text-center">Home</div></a>
-        {% if display == "true" %}<a class="wvnav-item {{ f_learn }}" href="{{ site.url }}/{{ path[1] }}"><i class="wvsvg {{ f_learn }}-{{ path[1] }} bi bi-code-square"></i><div class="text-center">Learning</div></a>{% endif %}
         <a class="wvnav-item {{ f_search }}" href="{{ site.url }}/search"><i class="wvsvg {{ f_search }}- bi bi-search"></i><div class="text-center">Search</div></a>
+        {% if display == "true" %}<a class="wvnav-item {{ f_learn }}" href="{{ site.url }}/{{ path[1] }}"><i class="wvsvg {{ f_learn }}-{{ path[1] }} bi bi-code-square"></i><div class="text-center">Learning</div></a>{% endif %}
         <a class="wvnav-item" href="share:{{ site.url }}{{ page.url }}"><i class="wvsvg bi bi-share"></i><div class="text-center">Share</div></a>
         <a class="wvnav-item {{ f_about }}" href="{{ site.url }}/about"><i class="wvsvg {{ f_about }}-{{ path[1] }} bi bi-info-circle"></i><div class="text-center">About</div></a>
     </div>
 </footer>
 
 <script type="text/javascript">
-const search_page = document.getElementById("isWebsite");
+const webfooter = document.getElementById("isWebsite");
 
 if (isWebview && userAgent.includes("Kodingwindow")) {
     document.getElementById("rsidebar").style.display = "none";
@@ -106,7 +106,7 @@ if (isWebview && userAgent.includes("Kodingwindow")) {
         lastScrollTop = scrollTop;
     });
 }
-else if (!isWebview && search_page.classList.contains("search"))
+else if (!isWebview && webfooter.classList.contains("block_webfooter"))
 {
     document.getElementById("isWebsite").style.display = "none";
 }

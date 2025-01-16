@@ -3,7 +3,7 @@ title: Kodingwindow's TestApp
 permalink: testapp/
 ---
 
-<div class="d-flex flex-column min-vh-100 min-vw-100">
+<div class="d-flex flex-column min-vh-100">
     <div class="d-flex flex-grow-1 justify-content-center align-items-center">
         <div class="container col-xs-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 col-xxl-4">
             <div class="box card-header d-flex justify-content-center">
@@ -42,21 +42,4 @@ permalink: testapp/
             </form>
         </div>
     </div>
-    {% include footer.html %}
-    <script type="text/javascript">
-    if(isWebview && userAgent.includes("Kodingwindow"))
-    {
-        document.getElementById("rsidebar").style.display = "none";
-        document.getElementById("isWebView").style.display = "block";
-        document.getElementById("isWebsite").style.display = "none";
-        document.getElementById("isWebView").style.marginBottom = "15px";
-        onselectstart = (e) => { e.preventDefault() }
-        $('body').on('contextmenu', function() { return false; });
-    }
-    else
-    {
-        document.getElementById("isWebsite").style.display = "none";
-        document.getElementById("isWebView").style.display = "none";
-    }
-    </script>
 </div>
