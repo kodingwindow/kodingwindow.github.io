@@ -57,7 +57,7 @@ $(document).keydown(function(event)
     </div>
     <a id="kwdisplay" class="btn" style="cursor: pointer; display: none; margin-bottom: 20px;" onclick="clearinput();">Clear Input</a>
 
-    <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="margin: 0px; text-align: left;">
+    <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="margin: 0px; text-align: left; padding-bottom: 20px;">
         {% for segment in site.data.kw.segments limit:20 %}
             <span style="display: none;" id="{{ segment.url }}">
             {% if segment.url == "c" %}{% assign search = site.data.c %}

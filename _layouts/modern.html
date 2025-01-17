@@ -62,22 +62,17 @@
                     {% if path[1] == "search" %}{% else %}<li class="nav-item"><a class="nav-link" href="search"><i class="navsvg bi bi-search"></i> Search</a></li>{% endif %}
                     <li class="nav-item"><a style="cursor: pointer;" class="nav-link" data-bs-toggle="modal" data-bs-target="#appmodal"><i class="navsvg bi bi-android2"></i> Android App</a></li>
                     {% if path[1] == "about" %}{% else %}<li class="nav-item"><a class="nav-link" href="about"><i class="navsvg bi bi-info-circle"></i> About Us</a></li>{% endif %}
-                    {% if path[1] == "shubhamrdarda" %}<li class="nav-item"><a class="nav-link" href="testapp"><i class="navsvg bi bi-power"></i> Logout</a></li>{% endif %}
                 </ul>
             </div>
         </div>
     </nav>
 
     <div data-bs-toggle="collapseall">
-        {% if path[1] == nil or path[1] == "testapp" %}
+        {% if path[1] == nil or path[1] == "shubhamrdarda" or path[1] == "testapp" %}
         <main role="main">
             {{ content }}
         </main>
         {% include footer.html %}
-        {% elsif path[1] == "shubhamrdarda" %}
-        <main role="main">
-            {{ content }}
-        </main>
         {% elsif path[1] == "search" %}
         <main role="main">
             <div class="container">{{ content }}</div>
