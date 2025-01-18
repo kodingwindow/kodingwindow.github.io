@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
         webview.settings.cacheMode = WebSettings.LOAD_DEFAULT
         webview.settings.javaScriptEnabled = true
         webview.settings.loadsImagesAutomatically = true
-        webview.settings.userAgentString += "Kodingwindow"
+        webview.settings.userAgentString += "KodingWindow"
         webview.webViewClient = WebViewClient()
         webview.isVerticalScrollBarEnabled = false
         webview.isHorizontalScrollBarEnabled = false

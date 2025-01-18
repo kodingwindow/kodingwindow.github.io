@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Kodingwindow"
+rootProject.name = "KodingWindow"
 include(":app")
  
