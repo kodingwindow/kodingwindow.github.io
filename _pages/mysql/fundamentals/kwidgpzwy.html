@@ -41,7 +41,7 @@ mysql> <mark>SELECT ORD('a');</mark>
 
 <div class="terminalcard">LENGHT and CHAR_LENGTH Functions</div>
 <span><pre>
-mysql> <mark>SELECT LENGTH("Kodingwindow") AS Length;</mark>
+mysql> <mark>SELECT LENGTH("KodingWindow") AS Length;</mark>
 +--------+
 | Length |
 +--------+
@@ -49,7 +49,7 @@ mysql> <mark>SELECT LENGTH("Kodingwindow") AS Length;</mark>
 +--------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT CHAR_LENGTH("Kodingwindow") AS Length;</mark>
+mysql> <mark>SELECT CHAR_LENGTH("KodingWindow") AS Length;</mark>
 +--------+
 | Length |
 +--------+
@@ -60,19 +60,19 @@ mysql> <mark>SELECT CHAR_LENGTH("Kodingwindow") AS Length;</mark>
 
 <div class="terminalcard">CONCAT Function</div>
 <span><pre>
-mysql> <mark>SELECT CONCAT("Koding","window") AS Concatenation;</mark>
+mysql> <mark>SELECT CONCAT("Koding","Window") AS Concatenation;</mark>
 +---------------+
 | Concatenation |
 +---------------+
-| Kodingwindow  |
+| KodingWindow  |
 +---------------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT CONCAT("Koding","window"," Experiments") AS Concatenation;</mark>
+mysql> <mark>SELECT CONCAT("Koding","Window"," Experiments") AS Concatenation;</mark>
 +--------------------------+
 | Concatenation            |
 +--------------------------+
-| Kodingwindow Experiments |
+| KodingWindow Experiments |
 +--------------------------+
 1 row in set (0.00 sec)
 </pre></span>
@@ -87,7 +87,7 @@ mysql> <mark>SELECT LOWER("KoDiNgWiNdOw") AS Lowercase;</mark>
 +--------------+
 1 row in set (0.12 sec)
 
-mysql> <mark>SELECT UPPER("Kodingwindow") AS Uppercase;</mark>
+mysql> <mark>SELECT UPPER("KodingWindow") AS Uppercase;</mark>
 +--------------+
 | Uppercase    |
 +--------------+
@@ -103,7 +103,7 @@ mysql> <mark>SELECT LCASE("KoDiNgWiNdOw") AS Lowercase;</mark>
 +--------------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT UCASE("Kodingwindow") AS Uppdercase;</mark>
+mysql> <mark>SELECT UCASE("KodingWindow") AS Uppdercase;</mark>
 +--------------+
 | Uppdercase   |
 +--------------+
@@ -114,7 +114,7 @@ mysql> <mark>SELECT UCASE("Kodingwindow") AS Uppdercase;</mark>
 
 <div class="terminalcard">LEFT and RIGHT Functions</div>
 <span><pre>
-mysql> <mark>SELECT LEFT("Kodingwindow",6) AS Extraction;</mark>
+mysql> <mark>SELECT LEFT("KodingWindow",6) AS Extraction;</mark>
 +------------+
 | Extraction |
 +------------+
@@ -122,11 +122,11 @@ mysql> <mark>SELECT LEFT("Kodingwindow",6) AS Extraction;</mark>
 +------------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT RIGHT("Kodingwindow",6) AS Extraction;</mark>
+mysql> <mark>SELECT RIGHT("KodingWindow",6) AS Extraction;</mark>
 +------------+
 | Extraction |
 +------------+
-| window     |
+| Window     |
 +------------+
 1 row in set (0.00 sec)
 </pre></span>
@@ -168,54 +168,54 @@ mysql> <mark>SELECT POSITION("window" IN "KODINGWINDOW") AS Position;</mark>
 
 <div class="terminalcard">SUBSTR and MID Functions</div>
 <span><pre>
-mysql> <mark>SELECT SUBSTR("Kodingwindow",7,12) AS Substring;</mark>
+mysql> <mark>SELECT SUBSTR("KodingWindow",7,12) AS Substring;</mark>
 +-----------+
 | Substring |
 +-----------+
-| window    |
+| Window    |
 +-----------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT SUBSTRING("Kodingwindow",7,12) AS Substring;</mark>
+mysql> <mark>SELECT SUBSTRING("KodingWindow",7,12) AS Substring;</mark>
 +-----------+
 | Substring |
 +-----------+
-| window    |
+| Window    |
 +-----------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT MID("Kodingwindow",7,12) AS Substring;</mark>
+mysql> <mark>SELECT MID("KodingWindow",7,12) AS Substring;</mark>
 +-----------+
 | Substring |
 +-----------+
-| window    |
+| Window    |
 +-----------+
 1 row in set (0.00 sec)
 </pre></span>
 
 <div class="terminalcard">LTRIM, RTRIM, and TRIM Functions</div>
 <span><pre>
-mysql> <mark>SELECT LTRIM("  Kodingwindow   ") AS "Left Trim";</mark>
+mysql> <mark>SELECT LTRIM("  KodingWindow   ") AS "Left Trim";</mark>
 +-----------------+
 | Left Trim       |
 +-----------------+
-| Kodingwindow    |
+| KodingWindow    |
 +-----------------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT RTRIM("  Kodingwindow   ") AS "Right Trim";</mark>
+mysql> <mark>SELECT RTRIM("  KodingWindow   ") AS "Right Trim";</mark>
 +----------------+
 | Right Trim     |
 +----------------+
-|   Kodingwindow |
+|   KodingWindow |
 +----------------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT TRIM("  Kodingwindow   ") AS "Trim";</mark>
+mysql> <mark>SELECT TRIM("  KodingWindow   ") AS "Trim";</mark>
 +--------------+
 | Trim         |
 +--------------+
-| Kodingwindow |
+| KodingWindow |
 +--------------+
 1 row in set (0.00 sec)
 </pre></span>
@@ -238,19 +238,19 @@ mysql> <mark>SELECT REPEAT("KW",5) AS "Repeat";</mark>
 +------------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT REPLACE("Kodingwindow","Koding","Learning") AS "Replace";</mark>
+mysql> <mark>SELECT REPLACE("KodingWindow","Koding","Learning") AS "Replace";</mark>
 +----------------+
 | Replace        |
 +----------------+
-| Learningwindow |
+| LearningWindow |
 +----------------+
 1 row in set (0.00 sec)
 
-mysql> <mark>SELECT REVERSE("Kodingwindow") AS "Reverse";</mark>
+mysql> <mark>SELECT REVERSE("KodingWindow") AS "Reverse";</mark>
 +--------------+
 | Reverse      |
 +--------------+
-| wodniwgnidoK |
+| wodniWgnidoK |
 +--------------+
 1 row in set (0.00 sec)
 </pre></span>

@@ -37,38 +37,38 @@ kodingwindow@kw:~$ <mark>python3</mark>
 >>> <mark>kw.lower()</mark>
 'kodingwindow'
 
->>> <mark>kw="Kodingwindow"</mark>
+>>> <mark>kw="KodingWindow"</mark>
 >>> <mark>kw.swapcase()</mark>
-'kODINGWINDOW'    
+'kODINGwINDOW'    
 </pre></span>
 
 <div class="terminalcard">String rjust() and ljust() methods</div>
 <span><pre>
->>> <mark>kw="Kodingwindow"</mark>
+>>> <mark>kw="KodingWindow"</mark>
 >>> <mark>kw.rjust(20)</mark>
-'        Kodingwindow'
+'        KodingWindow'
 
 >>> <mark>kw.ljust(20)</mark>
-'Kodingwindow        '
+'KodingWindow        '
 </pre></span>
 
 <div class="terminalcard">String strip(), rstrip(), and lstrip() methods</div>
 <span><pre>
->>> <mark>kw="    Kodingwindow           "</mark>
+>>> <mark>kw="    KodingWindow           "</mark>
 >>> <mark>kw.strip()</mark>
-'Kodingwindow' 
+'KodingWindow' 
 
 >>> <mark>kw.rstrip()</mark>
-'    Kodingwindow'
+'    KodingWindow'
 
 >>> <mark>kw.lstrip()</mark>
-'Kodingwindow           '
+'KodingWindow           '
 </pre></span>
 
 <div class="terminalcard">String find() and count() methods</div>
 <span><pre>
->>> <mark>kw="Kodingwindow"</mark>
->>> <mark>kw.find("w",0,len(kw))</mark>
+>>> <mark>kw="KodingWindow"</mark>
+>>> <mark>kw.find("W",0,len(kw))</mark>
 6
 
 >>> <mark>kw.find("in",0,len(kw))</mark>
@@ -97,17 +97,17 @@ AttributeError: 'tuple' object has no attribute 'sort'</error>
 
 <div class="terminalcard">String startswith() and endswith() methods</div>
 <span><pre>
->>> <mark>kw="Kodingwindow"</mark>
+>>> <mark>kw="KodingWindow"</mark>
 >>> <mark>kw.startswith("k")</mark>
 False
 
 >>> <mark>kw.startswith("K")</mark>
 True
 
->>> <mark>kw.startswith("Kodingwindow")</mark>
+>>> <mark>kw.startswith("KodingWindow")</mark>
 True
 
->>> <mark>kw.endswith("Kodingwindow")</mark>
+>>> <mark>kw.endswith("KodingWindow")</mark>
 True
 
 >>> <mark>kw.endswith("ow")</mark>
@@ -119,37 +119,37 @@ False
 
 <div class="terminalcard">String zfill() and replace() method</div>
 <span><pre>
->>> <mark>kw="Kodingwindow"</mark>
+>>> <mark>kw="KodingWindow"</mark>
 >>> <mark>len(kw)</mark>
 12
 
 >>> <mark>kw.zfill(12)</mark>
-'Kodingwindow'
+'KodingWindow'
 
 >>> <mark>kw.zfill(15)</mark>
-'000Kodingwindow'
+'000KodingWindow'
 
 >>> <mark>kw.zfill(0)</mark>
-'Kodingwindow'    
+'KodingWindow'    
 
 >>> <mark>kw.replace("i","###")</mark>
-'Kod###ngw###ndow'
+'Kod###ngW###ndow'
 
->>> <mark>kw.replace("w","###",1)</mark>
+>>> <mark>kw.replace("W","###",1)</mark>
 'Koding###indow'
 
->>> <mark>kw.replace("w","###",2)</mark>
-'Koding###indo###'
+>>> <mark>kw.replace("d","###",2)</mark>
+'Ko###ingWin###ow'
 </pre></span>
 
 <div class="terminalcard">String split() and splitlines() methods</div>
 <span><pre>
->>> <mark>kw="Koding\nwindow"</mark>
+>>> <mark>kw="Koding\nWindow"</mark>
 >>> <mark>kw.splitlines()</mark>
-['Koding', 'window']
+['Koding', 'Window']
 
 >>> <mark>kw.split("\n")</mark>
-['Koding', 'window']    
+['Koding', 'Window']    
 </pre></span>
 
 <div class="terminalcard">String functions and operations</div>

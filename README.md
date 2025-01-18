@@ -1,9 +1,9 @@
 ## License
-Kodingwindow, Since 2018. The entire codebase is licensed under the [MIT LICENSE][kwidzdngz].
+KodingWindow, Since 2018. The entire codebase is licensed under the [MIT LICENSE][kwidzdngz].
 
 ## Design Frameworks
 
-Kodingwindow's website versioning is maintained on [GitHub][kwidezvdy] through [Git][kwidzyzav], and it uses [Jekyll][kwidwwvga], [Bootstrap][kwidzuddz] and [jQuery][kwidddcia] frameworks. 
+KodingWindow's website versioning is maintained on [GitHub][kwidezvdy] through [Git][kwidzyzav], and it uses [Jekyll][kwidwwvga], [Bootstrap][kwidzuddz] and [jQuery][kwidddcia] frameworks. 
 
 ## Development and Testing Usage
 

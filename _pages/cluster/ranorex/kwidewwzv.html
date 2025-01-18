@@ -27,15 +27,15 @@ namespace GlobalProjects
     {
         private void Init()
         {
-            KodingwindowLogin();
+            KodingWindowLogin();
         }
 
-        public void KodingwindowLogin()
+        public void KodingWindowLogin()
         {
             Process.Start("chrome.exe","https://kodingwindow.com/testapp/");
-            repo.Kodingwindow.Username.Value = "kodingwindow";
-            repo.Kodingwindow.Username.Click();
-            repo.Kodingwindow.Username.DoubleClick();
+            repo.KodingWindow.Username.Value = "kodingwindow";
+            repo.KodingWindow.Username.Click();
+            repo.KodingWindow.Username.DoubleClick();
             
             Mouse.Click(WinForms.MouseButtons.Right);
             Delay.Duration(200);
@@ -56,9 +56,9 @@ namespace GlobalProjects
                 }
             }
             
-            repo.Kodingwindow.Password.PressKeys("{LControlKey down}{Vkey}{LControlKey up}");
+            repo.KodingWindow.Password.PressKeys("{LControlKey down}{Vkey}{LControlKey up}");
             Delay.Duration(100);
-            repo.Kodingwindow.Login.Click();
+            repo.KodingWindow.Login.Click();
         }
     }
 }

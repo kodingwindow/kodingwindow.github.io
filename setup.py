@@ -1,6 +1,6 @@
 """
 Author: Shubham Darda
-Description: The Kodingwindow website can be set up and operated on localhost with the aid of this script.
+Description: The KodingWindow website can be set up and operated on localhost with the aid of this script.
 """
 
 import sys, os, subprocess, platform, socket, shutil

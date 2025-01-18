@@ -127,8 +127,8 @@ def start_tests(browser, data_path):
     for file_name in os.listdir(data_path):
         read_file(driver, data_path, file_name, "sidenav")
         read_file(driver, data_path, file_name, "grandparent")
-    verify_title(driver, "", "Kodingwindow")
-    verify_title(driver, "search/", "Kodingwindow's Search")
+    verify_title(driver, "", "KodingWindow")
+    verify_title(driver, "search/", "KodingWindow's Search")
     verify_title(driver, "404/", "404 Page Not Found")
     verify_title(driver, "shubhamrdarda/", "Shubham Darda")
     driver.delete_all_cookies()
