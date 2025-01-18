@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <meta name="keywords" content="{{ page.title }}">
-    <meta name="description" content="{{ site.title }} by {{ site.founder }}{{ page.description }}">
+    {% if page.description == nil %}<meta name="description" content="{{ site.title }} by {{ site.founder }}">{% else %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.founder }}">
     <meta property="og:image" content="{{ site.og }}">
     <link rel="icon" href="{{ site.icon | relative_url }}">
@@ -32,7 +32,7 @@
 
 {% elsif path[1] == "cpp" %}
     {% assign segment = "C++ Programming" %}
-    {% assign parent=" / CPP / " %}
+    {% assign parent=" / C++ / " %}
     {% assign kw = site.data.cpp %}
     {% for item in site.data.cpp.grandparent %}
         {% if page.url contains item.url %}
