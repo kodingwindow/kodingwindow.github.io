@@ -551,6 +551,28 @@ div.box.card-footer {
 
 /* --------------------------------------------------------------------------------------------- */
 
+#KSEInput 
+{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: transparent;
+}
+
+#search_icon, #close_icon 
+{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid var(--color1);
+    color: #cccccc;
+}
+
+/* --------------------------------------------------------------------------------------------- */
+
+input[type="text"]
+{
+    border: 1px solid var(--color1);
+}
+
 input[type="radio"]+label {
     color: var(--textcolor);
 }

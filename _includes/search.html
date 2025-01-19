@@ -20,22 +20,34 @@ $(document).ready(function()
         });
     });
 });
-function clearinput() 
+function clear_input() 
 {
     document.getElementById("KSEInput").value = "";
     document.getElementById("{{ path[1] }}").style.display = "none";
-    document.getElementById("kwdisplay").style.display = "none";
+    document.getElementById("search").style.display = "none";
+    document.getElementById("close_icon").style.display = "none";
+    document.getElementById("search_icon").style.display = "inline-block";
 }
-function kwdisplay() 
+function display_results() 
 {
-    if($("#KSEInput").val().length > 0) 
+    if($("#KSEInput").val().length == 0) 
     {
-        document.getElementById("kwdisplay").style.display = "inline-block";
+        document.getElementById("close_icon").style.display = "none";
+        document.getElementById("search_icon").style.display = "inline-block";
+    }
+    else if($("#KSEInput").val().length >= 1)
+    {
+        document.getElementById("search").style.display = "inline-block";
+        document.getElementById("close_icon").style.display = "inline-block";
+        document.getElementById("close_icon").style.cursor = "pointer";
+        document.getElementById("search_icon").style.display = "none";
     }
     else
     {
-        document.getElementById("kwdisplay").style.display = "none";
+        document.getElementById("search").style.display = "none";
+        document.getElementById("search_icon").style.display = "inline-block";
     }
+
 }
 $(document).ready(function() 
 {
@@ -48,16 +60,22 @@ $(document).keydown(function(event)
 </script>
 
 <div><center>
-    <div class="col-xs-12 col-sm-11 col-md-9 col-lg-7 col-xl-6 col-xxl-6" style="margin-bottom: 20px;">
+    <div class="col-xs-12 col-sm-11 col-md-9 col-lg-7 col-xl-6 col-xxl-6" style="margin-bottom: 25px;">
         {% if path[1] == "search" %}
         <h2 style="margin-top: 175px;" id="fc-{{ path[1] }}">KodingWindow</h2>
         <h6 style="padding-top: 5px; padding-bottom: 10px;">{{ site.tagline }}</h6>
         {% endif %}
-        <div class="input-group input-group-lg"><input id="KSEInput" class="form-control rounded-pill" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="kwdisplay();" onkeyup="kwdisplay();"></div>
+        <div class="input-group input-group-lg"><input id="KSEInput" class="form-control" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="display_results();" onkeyup="display_results();">
+            <div id="search_icon" style="display: inline-block; padding: 10px 14px 7px 7px; font-size: 20px;" class="input-group-append">
+                <i class="bi bi-search"></i>
+            </div>
+            <div id="close_icon" onclick="clear_input();" style="display: none; padding: 5px; font-size: 25px;" class="input-group-append">
+                <i class="bi bi-x"></i>
+            </div>
+        </div>
     </div>
-    <a id="kwdisplay" class="btn" style="cursor: pointer; display: none; margin-bottom: 20px;" onclick="clearinput();">Clear Input</a>
 
-    <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="margin: 0px; text-align: left; padding-bottom: 10px;">
+    <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="text-align: left; margin-bottom: 10px;">
         {% for segment in site.data.kw.segments limit:20 %}
             <span style="display: none;" id="{{ segment.url }}">
             {% if segment.url == "c" %}{% assign search = site.data.c %}
@@ -80,11 +98,11 @@ $(document).keydown(function(event)
             {% elsif segment.url == "selenium" %}{% assign search = site.data.selenium %}
             {% elsif segment.url == "asm" %}{% assign search = site.data.asm %}
             {% elsif segment.url == "cluster" %}{% assign search = site.data.cluster %}{% else %}{% endif %}
-            <a class="codecard card" href="{{ segment.url }}" onclick="clearinput();">{{ segment.title }}</a>
+            <a class="codecard card" href="{{ segment.url }}" onclick="clear_input();">{{ segment.title }}</a>
             {% for parent in search.grandparent %}
-                <a class="codecard card" href="{{ parent.url }}" onclick="clearinput();">{{ parent.parent }}</a>
+                <a class="codecard card" href="{{ parent.url }}" onclick="clear_input();">{{ parent.parent }}</a>
                 {% for child in parent.children %}
-                    <a class="codecard card" href="{{ child.url }}" onclick="clearinput();">{{ child.title }}</a>
+                    <a class="codecard card" href="{{ child.url }}" onclick="clear_input();">{{ child.title }}</a>
                 {% endfor %}
             {% endfor %}
             </span>
