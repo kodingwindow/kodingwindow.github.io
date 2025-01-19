@@ -34,6 +34,8 @@ function display_results()
     {
         document.getElementById("close_icon").style.display = "none";
         document.getElementById("search_icon").style.display = "inline-block";
+        document.getElementById("{{ path[1] }}").style.display = "none";
+        document.getElementById("search").style.display = "none";
     }
     else if($("#KSEInput").val().length >= 1)
     {
@@ -42,12 +44,6 @@ function display_results()
         document.getElementById("close_icon").style.cursor = "pointer";
         document.getElementById("search_icon").style.display = "none";
     }
-    else
-    {
-        document.getElementById("search").style.display = "none";
-        document.getElementById("search_icon").style.display = "inline-block";
-    }
-
 }
 $(document).ready(function() 
 {
@@ -66,7 +62,7 @@ $(document).keydown(function(event)
         <h6 style="padding-top: 5px; padding-bottom: 10px;">{{ site.tagline }}</h6>
         {% endif %}
         <div class="input-group input-group-lg"><input id="KSEInput" class="form-control" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="display_results();" onkeyup="display_results();">
-            <div id="search_icon" style="display: inline-block; padding: 10px 14px 7px 7px; font-size: 20px;" class="input-group-append">
+            <div id="search_icon" style="display: inline-block; padding: 10px 15px 0px 7px; font-size: 20px;" class="input-group-append">
                 <i class="bi bi-search"></i>
             </div>
             <div id="close_icon" onclick="clear_input();" style="display: none; padding: 5px; font-size: 25px;" class="input-group-append">
@@ -78,27 +74,27 @@ $(document).keydown(function(event)
     <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="text-align: left; margin-bottom: 10px;">
         {% for segment in site.data.kw.segments limit:20 %}
             <span style="display: none;" id="{{ segment.url }}">
-            {% if segment.url == "c" %}{% assign search = site.data.c %}
-            {% elsif segment.url == "cpp" %}{% assign search = site.data.cpp %}
-            {% elsif segment.url == "java" %}{% assign search = site.data.java %}
-            {% elsif segment.url == "python" %}{% assign search = site.data.python %}
-            {% elsif segment.url == "ds" %}{% assign search = site.data.ds %}
-            {% elsif segment.url == "r" %}{% assign search = site.data.r %}
-            {% elsif segment.url == "julia" %}{% assign search = site.data.julia %}
-            {% elsif segment.url == "octave" %}{% assign search = site.data.octave %}
-            {% elsif segment.url == "csharp" %}{% assign search = site.data.csharp %}
-            {% elsif segment.url == "fsharp" %}{% assign search = site.data.fsharp %}
-            {% elsif segment.url == "rust" %}{% assign search = site.data.rust %}
-            {% elsif segment.url == "lisp" %}{% assign search = site.data.lisp %}
-            {% elsif segment.url == "dsa" %}{% assign search = site.data.dsa %}
-            {% elsif segment.url == "linux" %}{% assign search = site.data.linux %}
-            {% elsif segment.url == "mysql" %}{% assign search = site.data.mysql %}
-            {% elsif segment.url == "mongodb" %}{% assign search = site.data.mongodb %}
-            {% elsif segment.url == "cg" %}{% assign search = site.data.cg %}
-            {% elsif segment.url == "selenium" %}{% assign search = site.data.selenium %}
-            {% elsif segment.url == "asm" %}{% assign search = site.data.asm %}
-            {% elsif segment.url == "cluster" %}{% assign search = site.data.cluster %}{% else %}{% endif %}
-            <a class="codecard card" href="{{ segment.url }}" onclick="clear_input();">{{ segment.title }}</a>
+            {% if segment.url == "c" and path[1] == "search" %}{% assign search = site.data.c %}{% else %}{% if path[1] == "c" %}{% assign search = site.data.c %}{% endif %}{% endif %}
+            {% if segment.url == "cpp" and path[1] == "search" %}{% assign search = site.data.cpp %}{% else %}{% if path[1] == "cpp" %}{% assign search = site.data.cpp %}{% endif %}{% endif %}
+            {% if segment.url == "java" and path[1] == "search" %}{% assign search = site.data.java %}{% else %}{% if path[1] == "java" %}{% assign search = site.data.java %}{% endif %}{% endif %}
+            {% if segment.url == "python" and path[1] == "search" %}{% assign search = site.data.python %}{% else %}{% if path[1] == "python" %}{% assign search = site.data.python %}{% endif %}{% endif %}
+            {% if segment.url == "ds" and path[1] == "search" %}{% assign search = site.data.ds %}{% else %}{% if path[1] == "ds" %}{% assign search = site.data.ds %}{% endif %}{% endif %}
+            {% if segment.url == "r" and path[1] == "search" %}{% assign search = site.data.r %}{% else %}{% if path[1] == "r" %}{% assign search = site.data.r %}{% endif %}{% endif %}
+            {% if segment.url == "julia" and path[1] == "search" %}{% assign search = site.data.julia %}{% else %}{% if path[1] == "julia" %}{% assign search = site.data.julia %}{% endif %}{% endif %}
+            {% if segment.url == "octave" and path[1] == "search" %}{% assign search = site.data.octave %}{% else %}{% if path[1] == "octave" %}{% assign search = site.data.octave %}{% endif %}{% endif %}
+            {% if segment.url == "csharp" and path[1] == "search" %}{% assign search = site.data.csharp %}{% else %}{% if path[1] == "csharp" %}{% assign search = site.data.csharp %}{% endif %}{% endif %}
+            {% if segment.url == "fsharp" and path[1] == "search" %}{% assign search = site.data.fsharp %}{% else %}{% if path[1] == "fsharp" %}{% assign search = site.data.fsharp %}{% endif %}{% endif %}
+            {% if segment.url == "rust" and path[1] == "search" %}{% assign search = site.data.rust %}{% else %}{% if path[1] == "rust" %}{% assign search = site.data.rust %}{% endif %}{% endif %}
+            {% if segment.url == "lisp" and path[1] == "search" %}{% assign search = site.data.lisp %}{% else %}{% if path[1] == "lisp" %}{% assign search = site.data.lisp %}{% endif %}{% endif %}
+            {% if segment.url == "dsa" and path[1] == "search" %}{% assign search = site.data.dsa %}{% else %}{% if path[1] == "dsa" %}{% assign search = site.data.dsa %}{% endif %}{% endif %}
+            {% if segment.url == "linux" and path[1] == "search" %}{% assign search = site.data.linux %}{% else %}{% if path[1] == "linux" %}{% assign search = site.data.linux %}{% endif %}{% endif %}
+            {% if segment.url == "mysql" and path[1] == "search" %}{% assign search = site.data.mysql %}{% else %}{% if path[1] == "mysql" %}{% assign search = site.data.mysql %}{% endif %}{% endif %}
+            {% if segment.url == "mongodb" and path[1] == "search" %}{% assign search = site.data.mongodb %}{% else %}{% if path[1] == "mongodb" %}{% assign search = site.data.mongodb %}{% endif %}{% endif %}
+            {% if segment.url == "cg" and path[1] == "search" %}{% assign search = site.data.cg %}{% else %}{% if path[1] == "cg" %}{% assign search = site.data.cg %}{% endif %}{% endif %}
+            {% if segment.url == "selenium" and path[1] == "search" %}{% assign search = site.data.selenium %}{% else %}{% if path[1] == "selenium" %}{% assign search = site.data.selenium %}{% endif %}{% endif %}
+            {% if segment.url == "asm" and path[1] == "search" %}{% assign search = site.data.asm %}{% else %}{% if path[1] == "asm" %}{% assign search = site.data.asm %}{% endif %}{% endif %}
+            {% if segment.url == "cluster" and path[1] == "search" %}{% assign search = site.data.cluster %}{% else %}{% if path[1] == "cluster" %}{% assign search = site.data.cluster %}{% endif %}{% endif %}
+            {% if path[1] == "search" %}<a class="codecard card" href="{{ segment.url }}" onclick="clear_input();">{{ segment.title }}</a>{% endif %}
             {% for parent in search.grandparent %}
                 <a class="codecard card" href="{{ parent.url }}" onclick="clear_input();">{{ parent.parent }}</a>
                 {% for child in parent.children %}
