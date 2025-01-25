@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         webview = findViewById(R.id.webView)
         webview.settings.safeBrowsingEnabled = true
+        webview.settings.domStorageEnabled = true
         webview.settings.useWideViewPort = false
         webview.settings.displayZoomControls = false
         webview.settings.builtInZoomControls = false
@@ -82,6 +83,13 @@ class MainActivity : AppCompatActivity() {
                     webview.clearCache(true)
                     return true
                 }
+                if (url.startsWith("https://giscus.app") ||
+                    (url.startsWith("https://github.com/login") ||
+                    (url.startsWith("https://github.com/session"))))
+                {
+                    webview.loadUrl(url)
+                    return true
+                }
                 if (!url.startsWith("https://kodingwindow.com")) {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                     return true
@@ -91,10 +99,10 @@ class MainActivity : AppCompatActivity() {
         }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (webview.canGoBack())
+                if (webview.url?.startsWith("https://kodingwindow.com") == true && webview.canGoBack())
                     webview.goBack()
                 else
-                    onBackPressedDispatcher.onBackPressed()
+                    finishAffinity()
             }
         })
     }
