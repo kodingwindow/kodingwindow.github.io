@@ -39,7 +39,7 @@ function display_results()
     }
     else if($("#KSEInput").val().length >= 1)
     {
-        document.getElementById("search").style.display = "inline-block";
+        document.getElementById("search").style.display = "block";
         document.getElementById("close_icon").style.display = "inline-block";
         document.getElementById("close_icon").style.cursor = "pointer";
         document.getElementById("search_icon").style.display = "none";
@@ -71,9 +71,9 @@ $(document).keydown(function(event)
         </div>
     </div>
 
-    <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="text-align: left; margin-bottom: 10px;">
+    <div id="search" class="col-xs-12 col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-7" style="text-align: left; margin-bottom: 30px;">
         {% for segment in site.data.kw.segments limit:20 %}
-            <span style="display: none;" id="{{ segment.url }}">
+            <span style="display: none; margin-bottom: 30px;" id="{{ segment.url }}">
             {% if segment.url == "c" and path[1] == "search" %}{% assign search = site.data.c %}{% else %}{% if path[1] == "c" %}{% assign search = site.data.c %}{% endif %}{% endif %}
             {% if segment.url == "cpp" and path[1] == "search" %}{% assign search = site.data.cpp %}{% else %}{% if path[1] == "cpp" %}{% assign search = site.data.cpp %}{% endif %}{% endif %}
             {% if segment.url == "java" and path[1] == "search" %}{% assign search = site.data.java %}{% else %}{% if path[1] == "java" %}{% assign search = site.data.java %}{% endif %}{% endif %}
