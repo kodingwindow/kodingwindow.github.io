@@ -14,6 +14,7 @@ import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 
@@ -26,9 +27,9 @@ class MainActivity : AppCompatActivity() {
         val uiModeManager = getSystemService(Context.UI_MODE_SERVICE) as UiModeManager
         val currentMode = uiModeManager.nightMode
         if (currentMode == UiModeManager.MODE_NIGHT_YES) {
-            setTheme(R.style.AppTheme_Dark);
+            setTheme(R.style.AppTheme_Dark)
         } else {
-            setTheme(R.style.AppTheme_Light);
+            setTheme(R.style.AppTheme_Light)
         }
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -69,6 +70,9 @@ class MainActivity : AppCompatActivity() {
                     btn.setOnClickListener { recreate() }
                 }
                 var url = request.url.toString()
+                if (url.startsWith("https://kodingwindow.com")) {
+                    return "$url/" == webview.getUrl()
+                }
                 if (url.startsWith("share")) {
                     url = url.replace("share:", "").replace(".html", "")
                     val shareIntent = Intent(Intent.ACTION_SEND)
@@ -81,9 +85,10 @@ class MainActivity : AppCompatActivity() {
                 if (url.startsWith("clear:")) {
                     webview.clearHistory()
                     webview.clearCache(true)
+                    webview.clearFormData()
                     return true
                 }
-                if (url.startsWith("https://giscus.app") ||
+                if (url.startsWith("https://giscus.app/") ||
                     (url.startsWith("https://github.com/login") ||
                     (url.startsWith("https://github.com/session"))))
                 {
@@ -94,12 +99,22 @@ class MainActivity : AppCompatActivity() {
                     startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                     return true
                 }
-                return false
+                return true
             }
         }
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (webview.url?.startsWith("https://kodingwindow.com") == true && webview.canGoBack())
+                if (webview.title.toString() == "KodingWindow")
+                    finishAffinity()
+                else if (webview.url.toString().startsWith("https://github.com/sessions/two-factor")) {
+                    Toast.makeText(
+                        webview.context,
+                        "Session Expired",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                    finishAffinity()
+                }
+                else if (webview.canGoBack())
                     webview.goBack()
                 else
                     finishAffinity()
