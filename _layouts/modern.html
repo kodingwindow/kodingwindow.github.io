@@ -17,11 +17,10 @@
                 {% if path[2] != nil %}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}/">{{ path[2] | capitalize }} / </a>{% endif %}
             </div>
             {% else %}
-            <div class="navbar-brand">
+            <div id="navbar-brand" class="navbar-brand">
                 <a href=""><img id="logo" alt="Logo" src="{{ site.logo | relative_url }}"></a>
                 <a id="fc-{{ path[1] }}" href="{{ path[1] }}/">{{ parent }}</a>
-                {% if path[2] != nil and path[2] != "search" %}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}/">{{ child }} / </a>{% endif %}
-                {% if path[2] == "search" %}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/search/">Search / </a>{% endif %}
+                {% if path[2] != nil %}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}/">{{ child }} / </a>{% endif %}
             </div>
             <button id="lsidebar" class="navbar-toggler p-0" type="button" data-bs-toggle="leftsidebar" data-bs-target="#leftsidebar" aria-label="lsidebar" style="position: fixed;">
                 <span class="navbar-toggler-icon"></span>

@@ -61,7 +61,6 @@ def install():
         os.system("bundle install")
         os.system("bundle update --bundler")
         os.system("bundle update")
-        os.system("gem update")
     else:
         quit()
 
