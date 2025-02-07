@@ -3,7 +3,13 @@ Author: Shubham Darda
 Description: The KodingWindow website can be set up and operated on localhost with the aid of this script.
 """
 
-import sys, os, subprocess, platform, socket, shutil
+import sys
+import os
+import subprocess
+import platform
+import socket
+import shutil
+import time
 
 cwd = os.getcwd() + "/"
 kw = "kodingwindow.github.io"
@@ -20,17 +26,14 @@ def install_chrome():
         os.system("echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list")
         os.system("sudo apt-get -y install google-chrome-stable")
 
-
 def install():
     if ubuntu:
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get full-upgrade -y")
-        install_chrome()
-
         if githubactions:
             packages = "ruby-full clisp rustc freeglut3-dev nasm shc"
         else:
-            packages = "git-all openjdk-21-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
+            packages = "python3-pip git-all openjdk-21-jre openjdk-21-jdk ruby-full build-essential zlib1g-dev dotnet-sdk-8.0 r-base octave clisp maxima rustc freeglut3-dev mysql-server nasm nmap shc finger"
 
             snap = os.system("snap --version > /dev/null")
             vscode = os.system("code --version > /dev/null")
@@ -49,31 +52,18 @@ def install():
             if kw not in os.getcwd():
                 os.system("git clone https://github.com/kodingwindow/kodingwindow.github.io.git")
                 os.chdir(cwd + kw + "/")
-
-    os.system("sudo gem install jekyll bundler")
-    os.system("pip install --user -r requirements.txt --break-system-packages --no-warn-script-location")
-    os.system("bundle config set --local path vendor/bundle")
-    os.system("bundle install")
-    os.system("bundle update --bundler")
-    os.system("bundle update")
-
-
-def clean():
-    os.system("sudo apt-get clean -y")
-    os.system("sudo apt-get autoclean -y")
-    os.system("sudo apt-get autoremove -y")
-
-
-def connected_to_internet():
-    connection = None
-    try:
-        socket.create_connection(("8.8.8.8", 53))
-        connection = True
-    except:
-        connection = False
-    finally:
-        return connection
-
+        install_chrome()
+        
+    if os.system("sudo gem install jekyll bundler") == 0:
+        time.sleep(15)
+        os.system("pip install --user --upgrade -r requirements.txt --break-system-packages --no-warn-script-location")
+        os.system("bundle config set --local path vendor/bundle")
+        os.system("bundle install")
+        os.system("bundle update --bundler")
+        os.system("bundle update")
+        os.system("gem update")
+    else:
+        quit()
 
 def start_server():
     try:
@@ -97,22 +87,39 @@ def start_server():
     except KeyboardInterrupt:
         pass
     except:
-        print("Unable to start the Jekyll server: required resources are not found\nRecommended: python3 setup.py full")
+        print("Unable to start the Jekyll server as required resources are not found.\nRecommended to run setup.py with full as an argument to install the necessary resources.")
 
+def connected_to_internet():
+    connection = None
+    try:
+        socket.create_connection(("8.8.8.8", 53))
+        connection = True
+    except:
+        connection = False
+    finally:
+        return connection
 
 def start_setup():
     full = False
     try:
-        if sys.argv[1].lower() == "full":
+        if sys.argv[1].lower() == "full" or sys.argv[1].lower() == "-full" or sys.argv[1].lower() == "--full":
             full = True
     except:
         full
     if connected_to_internet():
         if freedisk >= 2:
-            if full: 
+            if full:
+                if os.path.split(os.getcwd())[-1] == "kodingwindow.github.io":
+                    with open(".gitignore", "r") as ignore_file:
+                        cleanup = ignore_file.readlines()
+                        for data in cleanup:
+                            if data.strip() != "":
+                                shutil.rmtree(data.strip(), ignore_errors=True)
                 if ubuntu:
                     install()
-                    clean() 
+                    os.system("sudo apt-get clean -y")
+                    os.system("sudo apt-get autoclean -y")
+                    os.system("sudo apt-get autoremove -y")
                 elif not ubuntu:
                     install()
         else:
@@ -122,7 +129,6 @@ def start_setup():
         print("A full setup requires an internet connection. You may continue without the full option if the necessary resources are installed.")
     else:
         start_server()
-
 
 if sys.version_info.major == 3 and sys.version_info.minor >= 4:
     if sys.platform == "linux":
