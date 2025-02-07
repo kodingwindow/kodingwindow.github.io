@@ -12,6 +12,33 @@
 </div>
 {% endif %}
 
+{% if path[1] == "about" and path[2] == nil %}{% assign about_section = "about_home_true" %}
+{% elsif path[1] == "about" and path[2] != nil %}{% assign about_section = "about_home_false" %}{% endif %}
+<div id="app" class="container {{ about_section }}" style="display: none;">
+    <div class="board"><div class="boardtitle"><i class="bi bi-info-circle"></i> About</div>
+        <a class="card" href="about/faqs/">Frequently Asked Questions</a>
+        <a class="card" href="about/reports">Analytics Reports</a>
+        <a class="card" href="about/terms">Terms of Use</a>
+        <a class="card" href="about/privacy">Privacy Policy</a>
+        <a class="card" href="about/disclaimer">Disclaimer</a>
+    </div>
+    <div class="board"><div class="boardtitle"><i class="bi bi-link"></i> Social Handles</div>
+        <div class="card-footer d-flex justify-content-between" style="padding: 5px 10px 5px 10px;">
+            <a href="{{ site.data.url.linkedin }}" title="LinkedIn" target="_blank"><i class="svgicon bi bi-linkedin"></i></a>
+            <a href="{{ site.data.url.instagram }}" title="Instagram" target="_blank"><i class="svgicon bi bi-instagram"></i></a>
+            <a href="{{ site.data.url.x }}" title="X" target="_blank"><i class="svgicon bi bi-twitter-x"></i></a>
+            <a href="{{ site.data.url.github }}" title="GitHub" target="_blank"><i class="svgicon bi bi-github"></i></a>
+            <a href="{{ site.data.url.facebook }}" title="Facebook" target="_blank"><i class="svgicon bi bi-facebook"></i></a>
+            <a href="{{ site.data.url.youtube }}" title="YouTube" target="_blank"><i class="svgicon bi bi-youtube"></i></a>
+        </div>
+    </div>
+    <div class="board"><div class="boardtitle"><i class="bi bi-gear-wide-connected"></i> Help and Settings</div>
+        <a id="cache" class="card" href="clear:">Clear Cache</a>
+        <a id="theme" class="card disabled"></a>
+        <a class="card" href="mailto:{{ site.email }}">Contact Us</a>
+    </div>
+</div>
+
 {% if path[1] == "search" or path[1] == "testapp" %}{% assign flag = "block_webfooter" %}
 {% else %}
 <div id="backtotop" class="text-center" style="display: none; padding-top: 15px;"><a class="back-to-top" style="cursor: pointer;" title="Back to top"><i class="svgicon bi bi-arrow-bar-up"></i></a></div>
@@ -85,6 +112,7 @@
 
 <script type="text/javascript">
 const webfooter = document.getElementById("isWebsite");
+const about_section = document.getElementById("app");
 
 if (isWebview && userAgent.includes("KodingWindow")) {
     document.getElementById("rsidebar").style.display = "none";
@@ -112,5 +140,29 @@ if (isWebview && userAgent.includes("KodingWindow")) {
 else if (!isWebview && webfooter.classList.contains("block_webfooter"))
 {
     document.getElementById("isWebsite").style.display = "none";
+}
+if(isWebview && userAgent.includes("KodingWindow") && about_section.classList.contains("about_home_true"))
+{
+    document.getElementById("app").style.display = "block";
+    document.getElementById("navbar-brand").style.marginLeft = "0px";
+    document.getElementById("lsidebar").style.display = "none";
+}
+else if(isWebview && userAgent.includes("KodingWindow") && about_section.classList.contains("about_home_false"))
+{
+    document.getElementById("navbar-brand").style.marginLeft = "0px";
+    document.getElementById("lsidebar").style.display = "none";
+}
+$("#cache").click(function () 
+{
+    $(this).html("Cache Cleared");
+    $(this).css("color", "#00b050");
+});
+if(window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) 
+{
+    document.getElementById("theme").innerHTML = "System Default Dark Theme";
+} 
+else 
+{
+    document.getElementById("theme").innerHTML = "System Default Light Theme";
 }
 </script>
