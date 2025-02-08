@@ -105,9 +105,9 @@
                         {% endif %}
                     {% endif %}
                 {% endfor %}
-                {% include comments.html %}
+                {% if path[3] != nil %}{% include comments.html %}{% endif %}
                 {% include pagination.html %}
-                {% include ads.html %}
+                {% if path[1] != "about" %}{% include ads.html %}{% endif %}
             </div>
         </main>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto" style="padding: 0px;">{% include footer.html %}</div>

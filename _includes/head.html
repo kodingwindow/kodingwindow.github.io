@@ -1,11 +1,15 @@
 <head>
     <title>{{ page.title }}</title>
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="{{ site.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ site.og }}" />
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
-    <meta name="keywords" content="{{ page.title }}">
-    {% if page.description == nil %}<meta name="description" content="{{ page.title }}">{% else %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="{{ site.founder }}">
-    <meta property="og:image" content="{{ site.og }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0" />
+    <meta name="keywords" content="{{ page.title }}" />
+    {% if page.description == nil %}<meta name="description" content="{{ page.title }}" />{% else %}<meta name="description" content="{{ page.description }}" />{% endif %}
+    <meta name="author" content="{{ site.founder }}" />
     <link rel="icon" href="{{ site.icon | relative_url }}">
     <link rel="stylesheet" href="{{ site.bs_css }}" integrity="{{ site.bs_cssi }}" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ site.bs_icons }}">
