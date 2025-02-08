@@ -5,14 +5,14 @@ title: Python implementation of the calendar module
 
 <div class="codecard">Example 1: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import calendar
 for m in calendar.month_name:
     print(m)
 print("")
 for d in calendar.day_name:
     print(d)
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -41,14 +41,14 @@ Sunday
 
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import calendar
 cal=calendar.month(2020,5)
 print(cal)
 
 cal=calendar.TextCalendar(calendar.FRIDAY)
 print(cal.formatmonth(2020,5))
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -71,11 +71,11 @@ Fr Sa Su Mo Tu We Th
 
 <div class="codecard">Example 3: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import calendar
 cal=calendar.month(2020,5)
 print(calendar.TextCalendar(calendar.MONDAY).formatyear(2020,5,1,1,2))
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}

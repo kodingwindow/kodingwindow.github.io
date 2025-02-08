@@ -3,8 +3,8 @@ permalink: dsa/trees/
 title: Shortest Path Algorithms
 ---
 
-{% for parent in site.data.dsa.grandparent %}{% if parent.url contains "/trees/" %}
+{%- for parent in site.data.dsa.grandparent -%}{%- if parent.url contains "/trees/" -%}
 <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
-    {% for child in parent.children %}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{% endfor %}
+    {%- for child in parent.children -%}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{%- endfor -%}
 </div>
-{% endif %}{% endfor %}
+{%- endif -%}{%- endfor -%}

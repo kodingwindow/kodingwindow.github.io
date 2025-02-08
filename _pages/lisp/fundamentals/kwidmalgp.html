@@ -5,7 +5,7 @@ title: LISP program to perform the bitwise operations
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.lispfile }}</div>
-<pre class="code">{% highlight lisp %}
+<pre class="code">{%- highlight lisp -%}
 (write-line "———————————————————————————————————————————")
 (write-line "Program to perform the bitwise operations")
 (write-line "———————————————————————————————————————————")
@@ -20,7 +20,7 @@ title: LISP program to perform the bitwise operations
 (format t "~%~d NOT ~d           | ~d"a b(lognor a b))
 (format t "~%~d EQUIVALANCE ~d   | ~d"a b(logeqv a b))
 (terpri)(format t "———————————————————————————————————————————")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runlisp }}

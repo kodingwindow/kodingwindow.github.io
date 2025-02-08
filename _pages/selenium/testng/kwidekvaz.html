@@ -5,7 +5,7 @@ title: How to use TestNG Parameters and Data Provider for Data Driven Testing
 
 <div class="codecard">TestNG Parameters using XML file for Data Driven Testing</div>
 <div class="card">File: VerifyTitle.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import java.util.concurrent.TimeUnit;
@@ -51,11 +51,11 @@ public class VerifyTitle
         driver.close();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: testng.xml</div>
 <pre>
-{% highlight xml %}
+{%- highlight xml -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test">
@@ -73,7 +73,7 @@ public class VerifyTitle
         </classes>
     </test>   
 </suite>
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 [RemoteTestNG] detected TestNG version 7.0.0
@@ -89,7 +89,7 @@ Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
 
 <div class="codecard">TestNG Data Provider Annotation for Data Driven Testing</div>
 <div class="card">File: VerifyTitle.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import java.util.concurrent.TimeUnit;
@@ -139,7 +139,7 @@ public class VerifyTitle
         return new Object[][] { {"firefox"}, {"chrome"} };
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 [RemoteTestNG] detected TestNG version 7.0.0

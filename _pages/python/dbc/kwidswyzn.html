@@ -74,7 +74,7 @@ mysql> <mark>SELECT name, amount FROM holders;</mark>
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import pymysql
 import csv
 
@@ -106,7 +106,7 @@ try:
     db.close()
 except pymysql.Error as err:
     print("Error: {}".format(err))
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">Explanation: </div>
 <div class="infocard">When the first update query executed with WHERE clause, account number 25622348993 updated with an amount of 2000 as a bonus. On the other hand, when the second update query executed without WHERE clause, then all the records updated with an amount of 2000 as a bonus. Hence the final amount 16250 for account number 25622348993.</div>
 <div class="card">{{ site.output }}</div>

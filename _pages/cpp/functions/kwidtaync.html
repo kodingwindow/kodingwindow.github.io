@@ -5,7 +5,7 @@ title: C++ program for addition of numbers using a function
 
 <div class="codecard">Example 1: {{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
-<pre class="code">{% highlight cpp %}
+<pre class="code">{%- highlight cpp -%}
 #include <iostream>
 using namespace std;
 int add(int a = 7, int b = 8)
@@ -17,7 +17,7 @@ int main()
     cout<<add()<<"\n";
     return 0;
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcpp }}
@@ -27,7 +27,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.cppfile }}</div>
-<pre class="code">{% highlight cpp %}
+<pre class="code">{%- highlight cpp -%}
 #include <iostream>
 using namespace std;
 int add(int a, int b)
@@ -40,7 +40,7 @@ int main()
     cout<<add(i, j)<<"\n";
     return 0;
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcpp }}

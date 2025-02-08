@@ -5,7 +5,7 @@ title: Java program to print the current date and time
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 import java.util.*;
 class KW
 {
@@ -14,10 +14,10 @@ class KW
         System.out.println(new Date());
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 import java.util.Date;
 class KW
 {
@@ -27,10 +27,10 @@ class KW
         System.out.println(d);
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 import java.util.Calendar;
 class KW
 {
@@ -40,7 +40,7 @@ class KW
         System.out.println(c.getTime());
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

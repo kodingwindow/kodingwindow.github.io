@@ -5,10 +5,10 @@ title: C# program to handle the TimeZoneNotFoundException
 
 <div class="codecard">C# TimeZoneNotFoundException</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 var tz = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, TimeZoneInfo.FindSystemTimeZoneById("IndiaIndia Standard Time"));
 Console.WriteLine(tz);
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}
@@ -22,7 +22,7 @@ kodingwindow@kw:~/csharp$
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 try
 {
     var ctz = TimeZoneInfo.ConvertTime(DateTime.Now, TimeZoneInfo.Local, TimeZoneInfo.FindSystemTimeZoneById("IndiaIndia Standard Time"));
@@ -39,7 +39,7 @@ catch(TimeZoneNotFoundException e)
         Console.WriteLine(tzi.Id);
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

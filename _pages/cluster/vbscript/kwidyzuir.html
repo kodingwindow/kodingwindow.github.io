@@ -5,7 +5,7 @@ title: VBScript to perform the string operations
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.vbsfile }}</div>
-<pre>{% highlight vb %}
+<pre>{%- highlight vb -%}
 Str = "Hello World"
 print "Original String: "&Str
 print "Length: " &Len(Str)
@@ -19,7 +19,7 @@ print "Original String: "&Str
 print "Replace: " &Replace(Str,"L","L",1,8,0)
 print "Replace: " &Replace(Str,"L","L",1,8,1)
 print "Reverse: " &StrReverse(Str)
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 Original String: Hello World
@@ -38,7 +38,7 @@ Reverse: dlroW olleH
 
 <div class="codecard">Example 2</div>
 <div class="card">{{ site.vbsfile }}</div>
-<pre>{% highlight vb %}
+<pre>{%- highlight vb -%}
 s1="hello world"
 s2="        HELLO WORLD        "
 
@@ -59,7 +59,7 @@ s = Split(s1," ")
 For Each str in s
 print str
 Next
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 Position 7

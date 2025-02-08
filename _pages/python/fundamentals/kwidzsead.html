@@ -5,7 +5,7 @@ title: Python program to demonstrate debugging of script
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import pdb
 
 def add(a):
@@ -17,7 +17,7 @@ c = int(a) + int(b)
 print(c)
 d = add(3)
 print(d)
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}

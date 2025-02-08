@@ -5,7 +5,7 @@ title: Java implementation of final and static keywords
 
 <div class="codecard">Example 1: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     static int a=10;
@@ -14,7 +14,7 @@ class KW
         System.out.println(KW.a);
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -24,7 +24,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     static int a=10;
@@ -37,7 +37,7 @@ class KW
         System.out.println(KW.a);
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -47,7 +47,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 3: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     static int a=9;
@@ -60,7 +60,7 @@ class KW
         System.out.println(KW.a+1);
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -70,7 +70,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 4: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     static int i=0;
@@ -86,7 +86,7 @@ class KW
         KW k2=new KW();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -98,7 +98,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 5: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     static int i=0;
@@ -118,7 +118,7 @@ class KW
         KW k2=new KW();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -130,7 +130,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 6: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     final int i=0;
@@ -144,7 +144,7 @@ class KW
         KW k1=new KW(20);
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -155,7 +155,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 7: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     static int a=10+1;
@@ -166,7 +166,7 @@ class KW
         System.out.println(KW.a+1+a);
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

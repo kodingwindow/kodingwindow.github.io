@@ -5,7 +5,7 @@ title: VBScript to perform SortedList operation
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.vbsfile }}</div>
-<pre>{% highlight vb %}
+<pre>{%- highlight vb -%}
 Set SortedList = CreateObject("System.Collections.SortedList")
 SortedList.Add "Apple", 4
 SortedList.Add "Banana", 2
@@ -22,7 +22,7 @@ SortedList.RemoveAt 0
 For i = 0 To SortedList.Count - 1
     print vbCrLf & SortedList.GetKey(i) & vbTab & SortedList.GetByIndex(i)
 Next
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 Count 4

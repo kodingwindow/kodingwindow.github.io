@@ -5,7 +5,7 @@ title: C# program for Single Inheritance
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 WhiteBank wb = new WhiteBank();
 //wb.Bonus();
 wb.WhiteBankBonus();
@@ -25,7 +25,7 @@ class WhiteBank : Bank
         Console.Write("WhiteBank 1500");
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

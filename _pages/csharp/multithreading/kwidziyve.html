@@ -5,7 +5,7 @@ title: C# program to demonstrate two threads working concurrently
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 Thread t1 = new Thread(new ThreadStart(ParallelThread.thread1));
 Thread t2 = new Thread(new ThreadStart(ParallelThread.thread2));
 
@@ -31,7 +31,7 @@ class ParallelThread
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">Explanation: </div>
 <div class="infocard">In this program, we have created the two static methods: thread1() and thread2() in the ParallelThread class. In the main method, we have created the object of Thread class and passed the thread1 and thread2 methods in ThreadStart delegate with classname.methodname. Then, we used <mark>Thread.Sleep()</mark> method to suspends the current thread for the specified amount of time. At the end, we called <mark>Start()</mark> method of Thread class with t1 and t2 objects accordingly. The output clearly shows the two thread worked simultaneously.</div>
 <div class="card">{{ site.output }}</div>

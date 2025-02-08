@@ -5,7 +5,7 @@ title: How to use and implement TestNG Listeners
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">File: KWTestNG.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.openqa.selenium.By;
@@ -48,10 +48,10 @@ public class KWTestNG
         driver.close();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: KWListener.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.testng.ITestListener;
@@ -84,7 +84,7 @@ public class KWListener implements ITestListener
         
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 [RemoteTestNG] detected TestNG version 7.0.0
@@ -112,7 +112,7 @@ Total tests run: 3, Passes: 3, Failures: 0, Skips: 0
 
 <div class="terminalcard">File: testng.xml</div>
 <pre class="editorcard">
-{% highlight xml %}
+{%- highlight xml -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Selenium Project">
@@ -126,4 +126,4 @@ Total tests run: 3, Passes: 3, Failures: 0, Skips: 0
         </classes>
     </test>
 </suite>
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>

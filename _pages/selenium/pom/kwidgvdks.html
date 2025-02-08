@@ -5,7 +5,7 @@ title: Selenium Java Page Object Model with Page Factory
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">File: BasePOM.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.openqa.selenium.WebDriver;
@@ -30,10 +30,10 @@ public class BasePOM
         driver.close();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: Test1VerifyHomePageTitle.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.testng.annotations.Test;
@@ -53,10 +53,10 @@ public class Test1VerifyHomePageTitle extends BasePOM
         }       
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: Test2SubmitFindFlightDetails.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.openqa.selenium.support.PageFactory;
@@ -86,10 +86,10 @@ public class Test2SubmitFindFlightDetails extends BasePOM
         ffp.ClickFindFlights();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: Test3SelectFlight.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.openqa.selenium.support.PageFactory;
@@ -108,10 +108,10 @@ public class Test3SelectFlight extends Test2SubmitFindFlightDetails
         sf.ClickReserveFlights();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: HomePage.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package pages;
 
 import org.openqa.selenium.WebDriver;
@@ -143,10 +143,10 @@ public class HomePage
         login.click();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: FindFlightPage.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package pages;
 
 import org.openqa.selenium.By;
@@ -188,10 +188,10 @@ public class FindFlightPage extends BasePOM
         findflights.click();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: SelectFlight.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package pages;
 
 import org.openqa.selenium.By;
@@ -222,11 +222,11 @@ public class SelectFlight
         reserveflights.click();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: testng.xml</div>
 <pre>
-{% highlight xml %}
+{%- highlight xml -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test">
@@ -238,7 +238,7 @@ public class SelectFlight
         </classes>
     </test>
 </suite>
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 [RemoteTestNG] detected TestNG version 7.0.0

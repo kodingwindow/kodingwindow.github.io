@@ -68,16 +68,16 @@ mysql> <mark>DESC holders;</mark>
 <div class="infocard">In the following program, we will be inserting records into a table using CSV (comma-separated values) file. Once all the records inserted, we will retrieve those records using MySQL SELECT statement and WHERE clause.</div>
 <div class="card">{{ site.csvfile }}</div>
 <pre>
-{% highlight viml %}
+{%- highlight viml -%}
 account_no,name,bank,amount
 25622348989,James Moore,Barclays,5000
 25622348990,Donald Taylor,Citi,7000
 25622348991,Edward Parkar,ICICI,95000
 25622348992,Ryan Bakshi,Citi,50000
 25622348993,Marie Peters,DZBank,12250
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -134,7 +134,7 @@ class KW
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

@@ -5,7 +5,7 @@ title: Python progarm for Bubble Sort
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 def bubble_sort(nlist):
     for length in range(len(nlist)):
         for i in range(length):
@@ -19,7 +19,7 @@ def bubble_sort(nlist):
 nlist = [12, 1024, -2048, 0, -1, 95, 987]
 bubble_sort(nlist)
 print(nlist)
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}

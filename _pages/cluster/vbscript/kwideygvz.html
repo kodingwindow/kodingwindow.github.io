@@ -5,7 +5,7 @@ title: VBScript to demonstrate the use of math functions
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.vbsfile }}</div>
-<pre>{% highlight vb %}
+<pre>{%- highlight vb -%}
 print "Returns the absolute value: " & Abs(-50.00)
 print "Returns the arctangent: " & Atn(1)*4
 print "Returns the sine: " & Sin(30)
@@ -17,7 +17,7 @@ print "Returns the natural logarithm: " & Log(2)
 print "Returns the square root: " & Sqr(676)
 Randomize
 print "Returns a random number: " & Rnd
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 Returns the absolute value: 50

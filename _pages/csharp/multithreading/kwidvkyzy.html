@@ -5,7 +5,7 @@ title: C# program to implement Thread class and its properties
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 Thread t = Thread.CurrentThread;
 t.Name = "Main Thread";
 Console.WriteLine(t.Name);
@@ -15,7 +15,7 @@ Console.WriteLine(t.CurrentCulture);
 Console.WriteLine(t.IsThreadPoolThread);
 Console.WriteLine(t.ManagedThreadId);
 Console.WriteLine(t.ThreadState);
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">Explanation: </div>
 <div class="infocard">In the above program, we have created a reference variable of Thread class and stored the CurrentThread in it, and with the help of the reference variable, we have printed the various properties of a thread on the Console. The explanation for each property is given below: <br><br>
 

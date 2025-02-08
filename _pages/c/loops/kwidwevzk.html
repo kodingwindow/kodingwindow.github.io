@@ -6,7 +6,7 @@ title: Find the output of C programs
 <div class="titlecard">{{ page.title }}</div>
 <div class="codecard">Program 1</div>
 <div class="card">{{ site.cfile }}</div>
-<pre class="code">{% highlight c %}
+<pre class="code">{%- highlight c -%}
 #include <stdio.h>
 int main()
 {
@@ -16,7 +16,7 @@ int main()
     printf("%d %d %d\n", ++b, ++b, ++b);
     return 0;
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div style="cursor: pointer;" class="card collapsed" data-bs-toggle="collapse" data-bs-target="#p1"><span class="show">Show Output</span><span class="hide">Output</span></div>
 <div id="p1" class="collapse">
 <span><pre>

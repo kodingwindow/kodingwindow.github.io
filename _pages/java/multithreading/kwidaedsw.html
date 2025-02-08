@@ -5,7 +5,7 @@ title: Java program to perform multiple tasks by multiple threads
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class task1 extends Thread
 {
     public void run()
@@ -39,7 +39,7 @@ class KW
         t2.start(); 
     }  
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

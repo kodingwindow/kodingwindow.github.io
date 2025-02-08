@@ -5,9 +5,9 @@ title: How to view the byte code instructions using the dis module
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 print("Hello, World!")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -26,11 +26,11 @@ kodingwindow@kw:~$
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 a,b=10,20
 (a,b)=(b,a)
 print(a,b)
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}

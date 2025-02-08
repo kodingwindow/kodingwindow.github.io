@@ -1,4 +1,4 @@
-{% if path[3] != nil %}
+{%- if path[3] != nil -%}
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -10,10 +10,10 @@
         </div>
     </div>
 </div>
-{% endif %}
+{%- endif -%}
 
-{% if path[1] == "about" and path[2] == nil %}{% assign about_section = "about_home_true" %}
-{% elsif path[1] == "about" and path[2] != nil %}{% assign about_section = "about_home_false" %}{% endif %}
+{%- if path[1] == "about" and path[2] == nil -%}{%- assign about_section = "about_home_true" -%}
+{%- elsif path[1] == "about" and path[2] != nil -%}{%- assign about_section = "about_home_false" -%}{%- endif -%}
 <div id="app" class="container {{ about_section }}" style="display: none;">
     <div class="board"><div class="boardtitle"><i class="bi bi-info-circle"></i> About</div>
         <a class="card" href="about/faqs/">Frequently Asked Questions</a>
@@ -39,10 +39,10 @@
     </div>
 </div>
 
-{% if path[1] == "search" or path[1] == "testapp" %}{% assign flag = "block_webfooter" %}
-{% else %}
+{%- if path[1] == "search" or path[1] == "testapp" -%}{%- assign flag = "block_webfooter" -%}
+{%- else -%}
 <div id="backtotop" class="text-center" style="display: none; padding-top: 15px;"><a class="back-to-top" style="cursor: pointer;" title="Back to top"><i class="svgicon bi bi-arrow-bar-up"></i></a></div>
-{% endif %}
+{%- endif -%}
 <footer class="isWebsite {{ flag }}" id="isWebsite" style="display: block; padding-top: 30px;">
     <div class="footer">
         <div class="container">
@@ -88,23 +88,23 @@
 </footer>
 
 <footer class="isWebView" id="isWebView" style="display: none;">
-    {% assign display="false" %}
-    {% if path[1] == nil %}
-        {% assign f_home="wvnav-item-active" %}
-    {% elsif path[1] == "search" %}
-        {% assign f_search="wvnav-item-active" %}
-    {% elsif path[1] == "about" or path[1] == "shubhamrdarda" %}
-        {% assign f_about="wvnav-item-active" %}
-    {% else %}
-        {% assign f_learn="wvnav-item-active" %}
-        {% assign display="true" %}
-    {% endif %}
+    {%- assign display="false" -%}
+    {%- if path[1] == nil -%}
+        {%- assign f_home="wvnav-item-active" -%}
+    {%- elsif path[1] == "search" -%}
+        {%- assign f_search="wvnav-item-active" -%}
+    {%- elsif path[1] == "about" or path[1] == "shubhamrdarda" -%}
+        {%- assign f_about="wvnav-item-active" -%}
+    {%- else -%}
+        {%- assign f_learn="wvnav-item-active" -%}
+        {%- assign display="true" -%}
+    {%- endif -%}
 
     <div class="d-flex justify-content-between wvnav">
         <a class="wvnav-item {{ f_home }}" href="{{ site.url }}"><i class="wvsvg {{ f_home }}- bi bi-house-door"></i><div class="text-center">Home</div></a>
         <a class="wvnav-item {{ f_search }}" href="{{ site.url }}/search"><i class="wvsvg {{ f_search }}- bi bi-search"></i><div class="text-center">Search</div></a>
-        {% if path[1] == nil or path[1] == "search" or path[1] == "about" or path[1] == "shubhamrdarda" %}<a class="wvnav-item" href="{{ site.data.url.sponsor }}"><i class="wvsvg bi bi-suit-heart"></i><div class="text-center">Sponsor</div></a>{% endif %}
-        {% if display == "true" %}<a class="wvnav-item {{ f_learn }}" href="{{ site.url }}/{{ path[1] }}"><i class="wvsvg {{ f_learn }}-{{ path[1] }} bi bi-code-square"></i><div class="text-center">Learning</div></a>{% endif %}
+        {%- if path[1] == nil or path[1] == "search" or path[1] == "about" or path[1] == "shubhamrdarda" -%}<a class="wvnav-item" href="{{ site.data.url.sponsor }}"><i class="wvsvg bi bi-suit-heart"></i><div class="text-center">Sponsor</div></a>{%- endif -%}
+        {%- if display == "true" -%}<a class="wvnav-item {{ f_learn }}" href="{{ site.url }}/{{ path[1] }}"><i class="wvsvg {{ f_learn }}-{{ path[1] }} bi bi-code-square"></i><div class="text-center">Learning</div></a>{%- endif -%}
         <a class="wvnav-item" href="share:{{ site.url }}{{ page.url }}"><i class="wvsvg bi bi-share"></i><div class="text-center">Share</div></a>
         <a class="wvnav-item {{ f_about }}" href="{{ site.url }}/about"><i class="wvsvg {{ f_about }}-about bi bi-info-circle"></i><div class="text-center">About</div></a>
     </div>

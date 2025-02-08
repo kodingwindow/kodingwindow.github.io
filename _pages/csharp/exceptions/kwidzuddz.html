@@ -5,7 +5,7 @@ title: C# program to handle the IndexOutOfRangeException
 
 <div class="codecard">C# IndexOutOfRangeException</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 using System;
 namespace KodingWindow
 {
@@ -21,7 +21,7 @@ namespace KodingWindow
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}
@@ -35,7 +35,7 @@ kodingwindow@kw:~/csharp$
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 string[] s = { "Mango", "Pineaple", "Grapes", "Banana", "Apple", "Strawberry" };
 Console.WriteLine("Array Length: " + s.Length);
 Console.WriteLine("First Element: " + s[0]);
@@ -48,7 +48,7 @@ catch (IndexOutOfRangeException)
 {
     Console.WriteLine("Requested element not found");
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

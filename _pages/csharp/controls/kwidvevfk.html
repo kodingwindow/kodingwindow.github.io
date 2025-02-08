@@ -5,7 +5,7 @@ title: C# program to check the given number is even or odd
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 int n;
 Console.Write("Enter a number ");
 n = Convert.ToInt32(Console.ReadLine());
@@ -17,7 +17,7 @@ else
 {
     Console.WriteLine(n + " is an ODD number");
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

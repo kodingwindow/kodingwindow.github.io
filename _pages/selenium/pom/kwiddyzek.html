@@ -5,7 +5,7 @@ title: Selenium Java Page Object Model Example 2
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">File: HomePage.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package pageObjects;
 
 import org.openqa.selenium.*;
@@ -33,10 +33,10 @@ public class HomePage
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: LoginPage.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package pageObjects;
 
 import org.openqa.selenium.*;
@@ -80,10 +80,10 @@ public class LoginPage
         this.clickLogin();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: TestCase.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package test;
 
 import java.util.concurrent.TimeUnit;
@@ -116,7 +116,7 @@ public class TestCase
         driver.close();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">Package Explorer</div>
 <span><pre>

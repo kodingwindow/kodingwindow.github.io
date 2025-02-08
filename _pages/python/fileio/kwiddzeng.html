@@ -5,13 +5,13 @@ title: Python program to count the lines, words, and characters from a given fil
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import string
 data = open('/home/kodingwindow/Weekdays', 'r').read()
 print("Characters - %s"%(len(data)))
 print("Lines - %s"%(len(data.splitlines())))
 print("Words - %s"%(len(str.split(data))))
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 <mark>cat Weekdays</mark> 

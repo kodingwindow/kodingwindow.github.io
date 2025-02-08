@@ -5,7 +5,7 @@ title: Selenium Java to select an option from the Chrome context menu
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="editorcard">{% highlight java %}
+<pre class="editorcard">{%- highlight java -%}
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
@@ -41,4 +41,4 @@ class KW
         driver.findElement(By.name("login")).click();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>

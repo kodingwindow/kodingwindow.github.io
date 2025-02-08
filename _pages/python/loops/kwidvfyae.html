@@ -5,7 +5,7 @@ title: Python program to print the star pyramid patterns
 
 <div class="codecard">Python program to print the right half star pyramid pattern</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 for i in range(1,11):
     print("*"*i)
 
@@ -15,7 +15,7 @@ for n in range(1,11):
         print("*",end="")
     print()
 '''
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -33,7 +33,7 @@ for n in range(1,11):
 
 <div class="codecard">Python program to print the inverted right half star pyramid pattern</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 for i in range(10,0,-1):
     print("*"*i)
 
@@ -43,7 +43,7 @@ for n in range(10,0,-1):
         print("*",end="")
     print()
 '''
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -61,10 +61,10 @@ for n in range(10,0,-1):
 
 <div class="codecard">Python program to print the left half star pyramid pattern</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 for i in range(1,11):
     print((10-i)*" "+i*"*")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -82,10 +82,10 @@ for i in range(1,11):
 
 <div class="codecard">Python program to print the inverted left half star pyramid pattern</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 for i in range(10,0,-1):
     print((10-i)*" "+i*"*")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -103,13 +103,13 @@ for i in range(10,0,-1):
 
 <div class="codecard">Python program to print the diamond star pyramid pattern</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 for i in range(1,10):
     print((10-i)*" "+i*"* ")
     
 for i in range(10,0,-1):
     print((10-i)*" "+i*"* ")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -136,14 +136,14 @@ for i in range(10,0,-1):
 
 <div class="codecard">Python program to print the right half pyramid pattern using alphabets</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 anum=65
 for n in range(1,7):
     for i in range(n):
         print(chr(anum),end="")
         anum+=1
     print()
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -157,14 +157,14 @@ PQRSTU
 
 <div class="codecard">Python program to print the right half pyramid pattern using whole numbers</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 num=0
 for n in range(1,11):
     for i in range(n):
         print(num,end=" ")
         num+=1
     print()
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -182,14 +182,14 @@ for n in range(1,11):
 
 <div class="codecard">Python program to print the right half pyramid pattern using even numbers</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 even=0
 for n in range(1,11):
     for i in range(n):
         print(even,end=" ")
         even+=2
     print()
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -207,14 +207,14 @@ for n in range(1,11):
 
 <div class="codecard">Python program to print the right half pyramid pattern using odd numbers</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 odd=1
 for n in range(1,11):
     for i in range(n):
         print(odd,end=" ")
         odd+=2
     print()
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}

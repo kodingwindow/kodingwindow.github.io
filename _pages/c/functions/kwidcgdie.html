@@ -12,7 +12,7 @@ title: C program for the Tower of Hanoi
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cfile }}</div>
-<pre class="code">{% highlight c %}
+<pre class="code">{%- highlight c -%}
 #include <stdio.h>
 int main()
 {
@@ -38,7 +38,7 @@ void towers(int n, char source, char destination, char auxiliary)
     printf("\nMove disk %d from peg %c to peg %c", n, source, destination);
     towers(n - 1, auxiliary, destination, source);
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runc }}

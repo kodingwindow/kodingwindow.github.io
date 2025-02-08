@@ -5,7 +5,7 @@ title: Implementation of C# ArrayList class
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 using System.Collections;
 
 ArrayList al = new ArrayList();
@@ -32,7 +32,7 @@ foreach(var fruits in al)
     Console.Write(fruits+" ");
 }
 Console.WriteLine();
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

@@ -5,7 +5,7 @@ title: C++ implementation of Binary Search
 
 <div class="codecard">{{ page.title }} without using sort function</div>
 <div class="card">{{ site.cppfile }}</div>
-<pre class="code">{% highlight cpp %}
+<pre class="code">{%- highlight cpp -%}
 #include<iostream>
 using namespace std;
 void BinarySearch(int a[],int num,int first,int last)
@@ -82,7 +82,7 @@ int main()
     }
     return(0);
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcpp }}
@@ -110,7 +110,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">{{ page.title }} using sort function</div>
 <div class="card">{{ site.cppfile }}</div>
-<pre class="code">{% highlight cpp %}
+<pre class="code">{%- highlight cpp -%}
 #include<iostream>
 #include<algorithm>
 using namespace std;
@@ -169,7 +169,7 @@ int main()
     BinarySearch(a,num,beg,end);
     return(0);
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcpp }}

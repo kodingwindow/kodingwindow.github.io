@@ -5,7 +5,7 @@ title: VBScript to demonstrate the use of date and time functions
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.vbsfile }}</div>
-<pre>{% highlight vb %}
+<pre>{%- highlight vb -%}
 print CDate("March 4, 2017")
 print CDate(#9/20/2016#)
 print "Current System Date and Time: " & Date & " " & Time
@@ -39,7 +39,7 @@ print "Returns Month Name: " & MonthName(10)
 print "Number of seconds since 12:00 AM: " & Timer
 print "Returns the Time for a specific H, M, and S: " & TimeSerial(5,23,50)
 print "Returns a Variant of subtype Date that contains the Time: " & TimeValue("17:50")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 <img src="_pages/cluster/vbscript/images/kwidawudd.png" loading="lazy">

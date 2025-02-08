@@ -5,7 +5,7 @@ title: LISP program to check whether a given string is a palindrome
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.lispfile }}</div>
-<pre class="code">{% highlight lisp %}
+<pre class="code">{%- highlight lisp -%}
 (write-line "———————————————————————————————————————————")
 (write-line "Program to check whether string is palindrome")
 (write-line "———————————————————————————————————————————")
@@ -18,7 +18,7 @@ title: LISP program to check whether a given string is a palindrome
 (if (string-not-equal s1 s2)
 (format t "~%~d is not palindrome"s1))
 (terpri)(princ "———————————————————————————————————————————")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runlisp }}

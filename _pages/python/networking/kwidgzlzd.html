@@ -5,7 +5,7 @@ title: Python program for two way communication using socket programming
 
 <div class="codecard">{{ page.title }} (client-server chat)</div>
 <div class="card">File: server.py</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import socket
 
 server_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -22,9 +22,9 @@ while True:
     client_socket.sendall(bytearray(input("You> "),"utf-8"))
 client_socket.close()   
 server_socket.close()
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">File: client.py</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import socket
 
 client_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
@@ -40,7 +40,7 @@ while True:
     server=client_socket.recv(2048)
     print("Server> ",server)
 client_socket.close()
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">Output (Terminal-1)</div>
 <span><pre>
 kodingwindow@kw:~$ <mark>python3 server.py</mark>

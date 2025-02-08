@@ -5,7 +5,7 @@ title: VBScript to perform Queue operations
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.vbsfile }}</div>
-<pre>{% highlight vb %}
+<pre>{%- highlight vb -%}
 Set Queue = CreateObject("System.Collections.Queue") 
 Queue.Enqueue "Apple"
 Queue.Enqueue "Banana"
@@ -21,7 +21,7 @@ print Queue.Contains("Apple") & vbCrLf
 print "Dequeue " & Queue.Dequeue & vbCrLf
 print "Peek " & Queue.Peek & vbCrLf 
 print Join(Queue.ToArray, ", ") & vbCrLf 
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 Apple Banana Cherry Durian 

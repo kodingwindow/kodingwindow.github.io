@@ -35,14 +35,14 @@ switched to db DB
 <div class="infocard">In the following program, database and collection automatically get created. If database and collection already exist in MongoDB, then new documents will get inserted into an existing collection. Furthermore, we will be inserting documents into a <b>holders</b> collection using the JSON file, and once all the documents inserted, we will retrieve those using find() method.</div>
 <div class="card">{{ site.jsonfile }}</div>
 <pre>
-{% highlight json %}
+{%- highlight json -%}
 { "account_no" : 2562348989, "name" : "James Moore", "city" : "Phoenix", "DOB" : ISODate("1985-05-26T00:00:00Z"), "bank" : "Barclays", "amount" : 5000, "loan" : [ { "Personal" : 5660, "Home" : 15000 } ] }
 { "account_no" : 2562348990, "name" : "Donald Taylor", "city" : "Irvine", "DOB" : ISODate("1990-08-20T00:00:00Z"), "bank" : "Citi", "amount" : 7000, "loan" : [ { "Home" : 10000, "Car" : 20000 } ] }
 { "account_no" : 2562348991, "name" : "Edward Parkar", "city" : "Irvine", "DOB" : ISODate("1994-01-29T00:00:00Z"), "bank" : "ICICI", "amount" : 95000, "loan" : [ { "Personal" : 25000, "Home" : 450000, "Car" : 10000 } ] }
 { "account_no" : 2562348992, "name" : "Ryan Bakshi", "city" : "Mumbai", "DOB" : ISODate("1982-01-14T00:00:00Z"), "bank" : "Citi", "amount" : 50000, "loan" : [ { "Personal" : null, "Home" : null, "Car" : null } ] }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 import java.io.BufferedReader;
 import java.io.FileReader;
 
@@ -86,7 +86,7 @@ class KW
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 Documents inserted successfully

@@ -10,7 +10,7 @@ passed = failed = 0
 
 def is_compiled(html_input, compiler, subpath, file_name, extension, args):
     try:
-        code = re.findall('<pre class="code">(.+?){% endhighlight %}</pre>', html_input, flags=re.DOTALL)
+        code = re.findall('<pre class="code">(.+?){%- endhighlight -%}</pre>', html_input, flags=re.DOTALL)
         if code is not None:
             output = "".join(code[0])
             f2 = open(subpath + file_name + extension, "w")
@@ -50,15 +50,15 @@ def compile_codes(source, destination, data_path):
                 args = ""
                 f1 = open(source + paths[i] + ".html", "r")
                 html_input = f1.read()
-                if html_input.__contains__('<pre class="code">{% highlight nasm %}'):
+                if html_input.__contains__('<pre class="code">{%- highlight nasm -%}'):
                     extension = ".asm"
                     compiler = "nasm -felf64"
                     is_compiled(html_input, compiler, subpath, path[2], extension, args)
-                elif html_input.__contains__('<pre class="code">{% highlight c %}'):
+                elif html_input.__contains__('<pre class="code">{%- highlight c -%}'):
                     extension = ".c"
                     compiler = "gcc"
                     is_compiled(html_input, compiler, subpath, path[2], extension, args)
-                elif html_input.__contains__('<pre class="code">{% highlight cpp %}'):
+                elif html_input.__contains__('<pre class="code">{%- highlight cpp -%}'):
                     if path[1] == "opengl":
                         args = " -lGL -lGLU -lglut"
                     elif path[0] == "cg":
@@ -70,22 +70,22 @@ def compile_codes(source, destination, data_path):
                     else:
                         is_compiled(html_input, compiler, subpath, path[2], extension, args)
                 elif (
-                    html_input.__contains__('<pre class="code">{% highlight java %}')
+                    html_input.__contains__('<pre class="code">{%- highlight java -%}')
                     and path[0] == "java"
                     and path[1] != "jdbc"
                 ):
                     extension = ".java"
                     compiler = "javac"
                     is_compiled(html_input, compiler, subpath, path[2], extension, args)
-                elif html_input.__contains__('<pre class="code">{% highlight shell %}'):
+                elif html_input.__contains__('<pre class="code">{%- highlight shell -%}'):
                     extension = ".sh"
                     compiler = "shc -f"
                     is_compiled(html_input, compiler, subpath, path[2], extension, args)
-                elif html_input.__contains__('<pre class="code">{% highlight python %}'):
+                elif html_input.__contains__('<pre class="code">{%- highlight python -%}'):
                     extension = ".py"
                     compiler = "python3 -m py_compile"
                     is_compiled(html_input, compiler, subpath, path[2], extension, args)
-                elif html_input.__contains__('<pre class="code">{% highlight rust %}'):
+                elif html_input.__contains__('<pre class="code">{%- highlight rust -%}'):
                     extension = ".rs"
                     compiler = "rustc"
                     is_compiled(html_input, compiler, subpath, path[2], extension, args)

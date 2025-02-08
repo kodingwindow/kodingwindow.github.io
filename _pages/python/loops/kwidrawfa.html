@@ -5,7 +5,7 @@ title: Python program to print the list of all leap years
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 print("________________________________________")
 print("Program to print the list of all leap years")
 print("________________________________________")
@@ -30,7 +30,7 @@ else:
             print("{0} is not a leap year".format(year))
     print("Total leap years between 2024 to {0} is".format(year),lc)
 print("________________________________________")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}

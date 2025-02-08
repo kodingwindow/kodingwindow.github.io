@@ -10,10 +10,10 @@ description: "Welcome to KodingWindow, your ultimate destination for programming
 
 <div class="container">
     <div class="row">
-        {% for segment in site.data.kw.segments limit:20 %}
+        {%- for segment in site.data.kw.segments limit:20 -%}
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-3 col-xxl-3">
             <a href="{{ segment.url }}"><div class="{{ segment.url | split: '/' }} procard">{{ segment.title }}</div></a>
         </div>
-        {% endfor %}
+        {%- endfor -%}
     </div>
 </div>

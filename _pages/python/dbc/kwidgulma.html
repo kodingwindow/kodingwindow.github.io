@@ -29,7 +29,7 @@ local   0.000GB
 <div class="codecard">{{ page.title }}</div>
 <div class="infocard">In the following program, database and collection automatically get created. If database and collection already exist in MongoDB, then new documents will get inserted into an existing collection.</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import pymongo
 from pymongo import MongoClient
 client=MongoClient()
@@ -69,7 +69,7 @@ for holder in db.holders.find():
 # Disabled _id attribute
 for holder in db.holders.find({},{'_id': 0,'account_no': 1,'name':1}):
     print(holder)
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}

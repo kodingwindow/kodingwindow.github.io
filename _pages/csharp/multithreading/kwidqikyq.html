@@ -5,7 +5,7 @@ title: C# program for sleep(), abort() and join() methods
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 Thread t1 = new Thread(new ThreadStart(KWThread.thread));
 Thread t2 = new Thread(new ThreadStart(KWThread.thread));
 t1.Start();
@@ -26,7 +26,7 @@ public class KWThread
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

@@ -5,7 +5,7 @@ title: Rust program to accept the input from a user
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.rustfile }}</div>
-<pre class="code">{% highlight rust %}
+<pre class="code">{%- highlight rust -%}
 use std::io::{self, Write};
 fn main()
 {
@@ -23,7 +23,7 @@ fn main()
     println!("The circumference of a circle is {c}",c=2.0*PI*r);
     println!("———————————————————————————————————————————");
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runrust }}

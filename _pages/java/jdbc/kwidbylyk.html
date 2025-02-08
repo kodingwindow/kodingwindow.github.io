@@ -11,7 +11,7 @@ title: Java MySQL to perform JDBC CRUD operations
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">File: Employee.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -381,10 +381,10 @@ public class Employee
     }
     
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: DataStoreHelper.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -510,7 +510,7 @@ public class DataStoreHelper
         System.out.println("All Employees Removed Successfully");
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">{{ site.output }}</div>
 <span><pre>

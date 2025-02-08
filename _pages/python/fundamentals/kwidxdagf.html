@@ -5,7 +5,7 @@ title: Python program to print the current date and time
 
 <div class="codecard">Example 1: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import datetime
 print("________________________________________")
 print("Program to print the current date and time")
@@ -23,7 +23,7 @@ print("Second        | %s"%now.second)
 print("Microsecond   | %s"%now.microsecond)
 print("HH:MM:SS      | %s:%s:%s"%(now.hour,now.minute,now.second))
 print("________________________________________")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -46,7 +46,7 @@ ________________________________________
 
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import time
 print("________________________________________")
 print("Program to print the current date and time")
@@ -74,7 +74,7 @@ print("Week Number   |",time.strftime("%W"))
 print("Year Century  |",time.strftime("%Y"))
 print("Time Zone     |",time.strftime("%Z"))
 print("________________________________________")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}
@@ -108,7 +108,7 @@ ________________________________________
 
 <div class="codecard">Example 3: {{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import time 
 print("________________________________________")
 print("Program to print the current date and time")
@@ -124,7 +124,7 @@ print("\nLocal Time   |",time.gmtime())
 now=time.localtime(time.time())
 print("\nLocal Time   |",now)
 print("________________________________________")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runpy }}

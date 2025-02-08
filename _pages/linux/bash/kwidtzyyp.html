@@ -5,7 +5,7 @@ title: Bash shell script to print the current date and time
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.shfile }}</div>
-<pre class="code">{% highlight shell %}
+<pre class="code">{%- highlight shell -%}
 #!/bin/bash
 
 echo "———————————————————————————————————————————"
@@ -43,7 +43,7 @@ echo -n "Last Digit Of Year | ";date +"%y"
 echo -n "ISO Week Number    | ";date +"%V"
 echo -n "Alphabet Time Zone | ";date +"%Z"
 echo "———————————————————————————————————————————"
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runsh }}

@@ -5,7 +5,7 @@ title: F# program to calculate the area and circumference of a circle
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.fsfile }}</div>
-<pre class="code">{% highlight fsharp %}
+<pre class="code">{%- highlight fsharp -%}
 open System
 
 printfn "———————————————————————————————————————————"
@@ -16,7 +16,7 @@ let r = float(Console.ReadLine())
 printfn "The area of a circle is %f " (Math.PI * r * r)
 printfn "The circumference of a circle is %f " (float(2) * Math.PI * r)
 printfn "———————————————————————————————————————————"
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runfs }}

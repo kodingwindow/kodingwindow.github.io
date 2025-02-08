@@ -11,7 +11,7 @@ The synchronization in C# achieved using the <mark>lock</mark> keyword. The lock
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 ParallelThread pt = new ParallelThread();
 Thread t1 = new Thread(new ThreadStart(pt.thread));
 Thread t2 = new Thread(new ThreadStart(pt.thread));
@@ -33,7 +33,7 @@ class ParallelThread
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">Explanation: </div>
 <div class="infocard">In this program, we have used the lock keyword to execute a block of code synchronously. The output clearly shows that the two threads worked independently (one after another). When the first thread locked the block of code, then the object of the second thread can’t access the same block of code until it gets released from the first thread.</div>
 <div class="card">{{ site.output }}</div>

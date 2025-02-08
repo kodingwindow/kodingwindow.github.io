@@ -5,7 +5,7 @@ title: F# program to check the given number is positive or negative
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.fsfile }}</div>
-<pre class="code">{% highlight fsharp %}
+<pre class="code">{%- highlight fsharp -%}
 open System
 
 Console.Write("Enter the number ")
@@ -14,7 +14,7 @@ let n = int32(Console.ReadLine())
 if n < 0 then printfn "%i is a negative number" n
 elif n > 0 then printfn "%i is a positive number" n
 else printfn "Given number is Zero"
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runfs }}

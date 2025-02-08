@@ -5,7 +5,7 @@ title: C# program for addition of two numbers using a method
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 Arithmetic a = new Arithmetic();
 Console.Write("Addition: " + a.addition(10, 20));
 
@@ -17,7 +17,7 @@ class Arithmetic
         return sum;
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

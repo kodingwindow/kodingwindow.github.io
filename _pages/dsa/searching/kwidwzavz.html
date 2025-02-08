@@ -5,7 +5,7 @@ title: Python implementation of Binary Search
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 def BinarySearch(array,num,first,last):
     if(first>last):
         print("\nElement not found!")
@@ -43,7 +43,7 @@ try:
 except ValueError:
     print("\nInvalid Input!\nProgram Terminated")
     print("———————————————————————————————————————————")
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">Output: positive test</div>
 <span><pre>
 {{ site.runpy }}

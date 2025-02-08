@@ -5,7 +5,7 @@ title: Rust program to perform the arithmetic operations
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.rustfile }}</div>
-<pre class="code">{% highlight rust %}
+<pre class="code">{%- highlight rust -%}
 fn main()
 {
     println!("Addition {}",10+10);
@@ -14,7 +14,7 @@ fn main()
     println!("Division {}",-200/20);
     println!("Modulus {}",-10%3);
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runrust }}
@@ -28,7 +28,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.rustfile }}</div>
-<pre class="code">{% highlight rust %}
+<pre class="code">{%- highlight rust -%}
 fn main()
 {
     let a=10;
@@ -39,7 +39,7 @@ fn main()
     println!("Division {c}",c=b/a);
     println!("Modulus {c}",c=b%a);
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runrust }}
@@ -53,7 +53,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 3: {{ page.title }}</div>
 <div class="card">{{ site.rustfile }}</div>
-<pre class="code">{% highlight rust %}
+<pre class="code">{%- highlight rust -%}
 fn main()
 {
     let a:f32=3.14;
@@ -64,7 +64,7 @@ fn main()
     println!("Division {c}",c=b/a);
     println!("Modulus {c}",c=b%a);
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runrust }}

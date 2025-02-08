@@ -5,11 +5,11 @@ title: C# program to handle the PlatformNotSupportedException
 
 <div class="codecard">C# PlatformNotSupportedException</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 Thread t = Thread.CurrentThread;
 t.Name = "Main Thread";
 t.Abort();
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}
@@ -21,7 +21,7 @@ kodingwindow@kw:~/csharp$
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 try
 {
     Thread t = Thread.CurrentThread;
@@ -31,7 +31,7 @@ catch(PlatformNotSupportedException)
 {
     Console.WriteLine("Some part of your code doesn't supported on this platform");
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

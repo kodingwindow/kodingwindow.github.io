@@ -5,7 +5,7 @@ title: C Hello World program
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.cfile }}</div>
-<pre class="code">{% highlight c %}
+<pre class="code">{%- highlight c -%}
 #include <stdio.h>
 int main()
 {
@@ -19,7 +19,7 @@ int main()
     printf("%c%c%c%c%c%c%c%c%c%c%c\n", 72, 101, 108, 108, 111, 32, 87, 111, 114, 108, 100);
     return 0;
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runc }}

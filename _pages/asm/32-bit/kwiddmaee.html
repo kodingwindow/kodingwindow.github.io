@@ -5,7 +5,7 @@ title: ALP to print the values of registers in protected mode (32-bit)
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.asmfile }}</div>
-<pre class="code">{% highlight nasm %}
+<pre class="code">{%- highlight nasm -%}
 section .data
 title db "———————————————————————————————————————————"
     db 10, "ALP to print the values of GDTR,LDTR,IDTR"
@@ -145,7 +145,7 @@ skip1:
     mov edx,4
     int 80h
     ret
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runasm }}

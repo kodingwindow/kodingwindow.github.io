@@ -5,7 +5,7 @@ title: VBScript to perform Stack operations
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.vbsfile }}</div>
-<pre>{% highlight vb %}
+<pre>{%- highlight vb -%}
 Set Stack = CreateObject("System.Collections.Stack") 
 Stack.Push "Apple"
 Stack.Push "Banana"
@@ -21,7 +21,7 @@ print "Count " & Stack.Count
 print "Pop " & Stack.Pop & vbCrLf
 print "Peek " & Stack.Peek & vbCrLf 
 print Join(Stack.ToArray, ", ") & vbCrLf
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 Durian Cherry Banana Apple 

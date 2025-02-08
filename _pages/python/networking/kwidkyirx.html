@@ -5,7 +5,7 @@ title: Python program for file sharing using socket programming
 
 <div class="codecard">{{ page.title }} (client-server file sharing)</div>
 <div class="card">File: server.py</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import socket,os
 
 server_socket=socket.socket(socket.AF_INET,socket.SOCK_STREAM,0)
@@ -26,9 +26,9 @@ while 1:
         client_socket.close()
     print("File sent!")
     break;
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">File: client.py</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 import socket
 client_socket=socket.socket(socket.AF_INET, socket.SOCK_STREAM,0)
 client_socket.connect(("192.168.122.1",5000))
@@ -40,7 +40,7 @@ while 1:
         client_socket.close()
     print("\nFile received!")
     break;
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">Output (Terminal-1)</div>
 <span><pre>
 kodingwindow@kw:~$ <mark>hostname -i | awk '{print $3}'</mark>

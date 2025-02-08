@@ -5,7 +5,7 @@ title: How to achieve multiple inheritance in Java using interfaces
 
 <div class="codecard">Example 1: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 interface Male
 {
     void male();
@@ -43,7 +43,7 @@ class KW implements Category
         k.humanBeing();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -53,7 +53,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 2: {{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 interface WhiteBank
 {
     void bonus();
@@ -79,7 +79,7 @@ class KW implements WhiteBank, GreenBank
         k.gift();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

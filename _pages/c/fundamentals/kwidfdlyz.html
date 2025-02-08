@@ -5,7 +5,7 @@ title: C program to calculate the area and circumference of a circle
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">Algorithm</div>
-<pre>{% highlight vim %}
+<pre>{%- highlight vim -%}
 Step 1: Start
 Step 2: define PI 3.14
 Step 3: Declare variables R, A, and C
@@ -17,10 +17,10 @@ Step 7: Calculate the circumference of a circle
         C = 2 * PI * R
 Step 8: Print the circumference of a circle
 Step 9: End
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">{{ site.cfile }}</div>
-<pre class="code">{% highlight c %}
+<pre class="code">{%- highlight c -%}
 #include <stdio.h>
 #define PI 3.14
 int main()
@@ -39,7 +39,7 @@ int main()
     printf("\n———————————————————————————————————————————\n");
     return 0;
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runc }}

@@ -5,7 +5,7 @@ title: VBScript to demonstrate the use of format functions
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.vbsfile }}</div>
-<pre>{% highlight vb %}
+<pre>{%- highlight vb -%}
 print "Returns an expression formatted as a number: " & FormatNumber(500000)
 print "Returns an expression formatted as a number: " & FormatNumber(500000,10)
 print "Returns an expression formatted as a number: " & FormatNumber(5000000,,,,-1)
@@ -17,7 +17,7 @@ print "Returns Weekday, Monthname, Year: " & FormatDateTime(Now(), 1)
 print "Returns mm/dd/yy: " & FormatDateTime(Now(), 2)
 print "Returns hh:mm:ss PM/AM: " & FormatDateTime(Now(), 3)
 print "Returns hh:mm: " & FormatDateTime(Now(), 4)
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 Returns an expression formatted as a number: 500,000.00

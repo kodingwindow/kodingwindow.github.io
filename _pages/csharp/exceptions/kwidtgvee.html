@@ -5,7 +5,7 @@ title: C# program to catch all the exceptions using Exception class
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 int a = 1, b = 0;
 try
 {
@@ -25,7 +25,7 @@ catch (Exception e)
 {
     Console.WriteLine("Second Exception: " + e.ToString());
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

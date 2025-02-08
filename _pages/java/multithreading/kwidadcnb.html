@@ -5,7 +5,7 @@ title: Java program for a daemon thread
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW extends Thread
 {  
     public void run()
@@ -28,7 +28,7 @@ class KW extends Thread
         t2.start();    
     }  
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

@@ -5,7 +5,7 @@ title: Python program to count the frequency of words in a given file
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.pyfile }}</div>
-<pre class="code">{% highlight python %}
+<pre class="code">{%- highlight python -%}
 from collections import Counter
 char=0
 lines=0
@@ -21,7 +21,7 @@ with open(r'/home/kodingwindow/Weekdays') as f:
     c=Counter(words)
     for word,count in c.most_common():
         print(word,"-",count)
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 <mark>cat Weekdays</mark>

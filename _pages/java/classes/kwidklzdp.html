@@ -11,7 +11,7 @@ Method chaining is a technique in object-oriented programming to invoke multiple
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class holders
 {
     long haccno;
@@ -45,7 +45,7 @@ class KW
         insert.account_no(25622348992L).name("Ryan Bakshi").city("Mumbai").showrecords();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -56,7 +56,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Implementation without method chaining</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class holders
 {
     long haccno;
@@ -94,7 +94,7 @@ class KW
         insert.showrecords();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

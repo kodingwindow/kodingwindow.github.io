@@ -5,7 +5,7 @@ title: Bash shell script to convert Decimal to Hexadecimal and Octal
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.shfile }}</div>
-<pre class="code">{% highlight shell %}
+<pre class="code">{%- highlight shell -%}
 #!/bin/bash
 
 echo "———————————————————————————————————————————"
@@ -16,7 +16,7 @@ echo -n "Decimal="$a
 printf "\nOctal="%o $a
 printf "\nHexadecimal="%x $a
 echo -e "\n———————————————————————————————————————————"
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runsh }}

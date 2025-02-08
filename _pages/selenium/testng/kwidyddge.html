@@ -5,7 +5,7 @@ title: How to run parallel tests with Selenium WebDriver and TestNG
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">File: Login.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import java.util.concurrent.TimeUnit;
@@ -30,10 +30,10 @@ public class Login
         driver.close();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: VerifyTitle.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
   
 import java.util.concurrent.TimeUnit;
@@ -62,11 +62,11 @@ public class VerifyTitle
         driver.close();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: testng.xml</div>
 <pre>
-{% highlight xml %}
+{%- highlight xml -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test" parallel="methods" thread-count="2">
@@ -77,7 +77,7 @@ public class VerifyTitle
         </classes>
     </test> 
 </suite>
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 [RemoteTestNG] detected TestNG version 7.0.0

@@ -5,7 +5,7 @@ title: How to overload the main() method in Java
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     public static void main()
@@ -18,7 +18,7 @@ class KW
         main();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -29,7 +29,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Example 2</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     public static void main(String args) 
@@ -42,7 +42,7 @@ class KW
         main("KodingWindow");
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

@@ -5,7 +5,7 @@ title: C# program for Hierarchical Inheritance
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 WhiteBank wb = new WhiteBank();
 GreenBank gb = new GreenBank();
 
@@ -36,7 +36,7 @@ class GreenBank : Bank
         Console.Write("GreenBank 500");
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

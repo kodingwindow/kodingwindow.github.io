@@ -5,7 +5,7 @@ title: Implementation of C# method overriding
 
 <div class="codecard">{{ page.title }} (dynamic polymorphism)</div>
 <div class="card">{{ site.csfile }}</div>
-<pre class="code">{% highlight csharp %}
+<pre class="code">{%- highlight csharp -%}
 Tickets t = new Tickets();
 double fair = t.Fair(400, 1.5);
 Console.WriteLine("Approximate Fair " + fair);
@@ -39,7 +39,7 @@ class BusTicket : Tickets
         return distance * rate + 60;
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runcs }}

@@ -5,7 +5,7 @@ title: Java Hello World program
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW 
 {
     public static void main(String[] args) 
@@ -13,7 +13,7 @@ class KW
         System.out.println("Hello, World!");
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}
@@ -23,7 +23,7 @@ kodingwindow@kw:~$
 
 <div class="codecard">Java program without using main function (only compilation)</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 class KW
 {
     static 
@@ -31,7 +31,7 @@ class KW
         System.out.println("Hello World");
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 {{ site.runjava }}

@@ -75,7 +75,7 @@ mysql> <mark>SELECT name, amount FROM holders;</mark>
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">{{ site.javafile }}</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -112,7 +112,7 @@ class KW
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">Explanation: </div>
 <div class="infocard">When the first update query executed with WHERE clause, the account number 25622348993 updated with an amount of 2000 as a bonus. On the other hand, when the second update query executed without WHERE clause, then all the records updated with an amount of 2000 as a bonus. Hence the final amount 16250 for account number 25622348993.</div>
 <div class="card">{{ site.output }}</div>

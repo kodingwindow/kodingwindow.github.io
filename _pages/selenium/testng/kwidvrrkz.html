@@ -5,7 +5,7 @@ title: How to use TestNG Annotations in Selenium
 
 <div class="codecard">{{ page.title }}</div>
 <div class="card">File: BaseAnnotations.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.openqa.selenium.By;
@@ -45,10 +45,10 @@ public class BaseAnnotations
         driver.findElement(By.linkText("SIGN-OFF")).click();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: VerifyTitle.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.testng.annotations.Test;
@@ -68,10 +68,10 @@ public class VerifyTitle extends BaseAnnotations
         }
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: FindFlight.java</div>
-<pre class="code">{% highlight java %}
+<pre class="code">{%- highlight java -%}
 package tests;
 
 import org.openqa.selenium.By;
@@ -103,11 +103,11 @@ public class FindFlight extends BaseAnnotations
         driver.findElement(By.cssSelector("input[value='Business']")).click();
     }
 }
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 
 <div class="card">File: testng.xml</div>
 <pre>
-{% highlight xml %}
+{%- highlight xml -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test">
@@ -118,7 +118,7 @@ public class FindFlight extends BaseAnnotations
         </classes>
     </test>
 </suite>
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
 <div class="card">{{ site.output }}</div>
 <span><pre>
 [RemoteTestNG] detected TestNG version 7.0.0
@@ -136,7 +136,7 @@ Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
 <div class="terminalcard">File: testng.xml</div>
 <div class="infocard">If you want to run the project parallelly, then replace the above XML file with the following one.</div>
 <pre class="editorcard">
-{% highlight xml %}
+{%- highlight xml -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Test" parallel="classes" thread-count="2">
@@ -147,4 +147,4 @@ Total tests run: 2, Passes: 2, Failures: 0, Skips: 0
         </classes>
     </test>
 </suite>
-{% endhighlight %}</pre>
+{%- endhighlight -%}</pre>
