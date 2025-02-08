@@ -9,7 +9,6 @@ import subprocess
 import platform
 import socket
 import shutil
-import time
 
 cwd = os.getcwd() + "/"
 kw = "kodingwindow.github.io"
@@ -54,10 +53,8 @@ def install():
                 os.chdir(cwd + kw + "/")
         install_chrome()
         
-    if os.system("sudo gem install jekyll bundler") == 0:
-        time.sleep(15)
+    if os.system("bundle config set --local path vendor/bundle") == 0:
         os.system("pip install --user --upgrade -r requirements.txt --break-system-packages --no-warn-script-location")
-        os.system("bundle config set --local path vendor/bundle")
         os.system("bundle install")
         os.system("bundle update --bundler")
         os.system("bundle update")
@@ -108,7 +105,7 @@ def start_setup():
     if connected_to_internet():
         if freedisk >= 2:
             if full:
-                if os.path.split(os.getcwd())[-1] == "kodingwindow.github.io":
+                if os.path.split(os.getcwd())[-1] == kw:
                     with open(".gitignore", "r") as ignore_file:
                         cleanup = ignore_file.readlines()
                         for data in cleanup:

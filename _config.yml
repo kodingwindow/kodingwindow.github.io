@@ -77,12 +77,12 @@ defaults:
 
 plugins:
    - jekyll-sitemap
-   - jekyll-tidy
 
 include: ['_pages']
 
 # Exclude from processing
 exclude:
+   - .gitignore
    - Gemfile
    - Gemfile.lock
    - vendor
@@ -90,6 +90,10 @@ exclude:
    - .jekyll-cache
    - .jekyll-metadata
    - _site
+   - CNAME
    - LICENSE
    - README.md
+   - ads.txt
+   - requirements.txt
+   - robots.txt
    - kodingwindow
