@@ -54,7 +54,6 @@ def install():
         install_chrome()
         
     if os.system("bundle config set --local path vendor/bundle") == 0:
-        os.system("pip install --user --upgrade -r requirements.txt --break-system-packages --no-warn-script-location")
         os.system("bundle install")
         os.system("bundle update --bundler")
         os.system("bundle update")

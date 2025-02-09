@@ -16,6 +16,13 @@ from selenium import webdriver
 ubuntu = False
 githubactions = False
 matched = unmatched = 0
+
+if os.system("pip install --user --upgrade -r automated_tests/requirements.txt --break-system-packages --no-warn-script-location") == 0:
+    print("All the required packages are installed.")
+else:
+    print("The required packages are failed to install.")
+    quit()
+
 if sys.platform == "linux":
     env = platform.freedesktop_os_release().get("ID").lower()
     if env == "ubuntu":
