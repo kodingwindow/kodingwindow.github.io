@@ -111,6 +111,8 @@ def start_setup():
                         for data in cleanup:
                             if data.strip() != "":
                                 shutil.rmtree(data.strip(), ignore_errors=True)
+                            if ubuntu:
+                                os.system("sudo rm -rf _site/")
                 if ubuntu:
                     install()
                     os.system("sudo apt-get clean -y")
