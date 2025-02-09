@@ -146,6 +146,7 @@ if(isWebview && userAgent.includes("KodingWindow") && about_section.classList.co
     document.getElementById("app").style.display = "block";
     document.getElementById("navbar-brand").style.marginLeft = "0px";
     document.getElementById("lsidebar").style.display = "none";
+    $('.leftsidebar-collapse').removeClass('open')
 }
 else if(isWebview && userAgent.includes("KodingWindow") && about_section.classList.contains("about_home_false"))
 {
