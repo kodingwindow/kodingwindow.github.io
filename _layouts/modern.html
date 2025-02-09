@@ -13,14 +13,14 @@
             {%- elsif path[1] == "search" or path[1] == "testapp" or path[1] == "shubhamrdarda" -%}
             <div class="navbar-brand" style="margin-left: 0px;">
                 <a href=""><img id="logo" alt="Logo" src="{{ site.logo | relative_url }}"></a>
-                <a id="fc-{{ path[1] }}" href="{{ path[1] }}/"> / {{ path[1] | capitalize }} /</a>
-                {%- if path[2] != nil -%}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}/">{{ path[2] | capitalize }} / </a>{%- endif -%}
+                <a id="fc-{{ path[1] }}" href="{{ path[1] }}"> / {{ path[1] | capitalize }}</a>
+                {%- if path[2] != nil -%}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}">{{ path[2] | capitalize }}</a>{%- endif -%}
             </div>
             {%- else -%}
             <div id="navbar-brand" class="navbar-brand">
                 <a href=""><img id="logo" alt="Logo" src="{{ site.logo | relative_url }}"></a>
-                <a id="fc-{{ path[1] }}" href="{{ path[1] }}/">{{ parent }}</a>
-                {%- if path[2] != nil -%}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}/">{{ child }} / </a>{%- endif -%}
+                <a id="fc-{{ path[1] }}" href="{{ path[1] }}">{{ parent }}</a>
+                {%- if path[2] != nil -%}<a id="fc-{{ path[1] }}" href="{{ path[1] }}/{{ path[2] }}">{{ child }} / </a>{%- endif -%}
             </div>
             <button id="lsidebar" class="navbar-toggler p-0" type="button" data-bs-toggle="leftsidebar" data-bs-target="#leftsidebar" aria-label="lsidebar" style="position: fixed;">
                 <span class="navbar-toggler-icon"></span>
@@ -38,10 +38,7 @@
                     {%- endif -%}
                     {%- for child in parent.children -%}
                         {%- assign cu = child.url | split: '/' -%}
-                        {%- if cu.size == 2 and path[2] == cu[1] -%}
-                            {%- assign class="sidebar-item-active" -%}
-                            <a class="nav-link {{ class }} {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
-                        {%- elsif cu.size == 3 and page.url contains cu[2] -%}
+                        {%- if path[2] == cu[1] -%}
                             {%- assign class="sidebar-item-active" -%}
                             <a class="nav-link {{ class }} {{ path[1] }}" href="{{ child.url }}">{{ child.title }}</a>
                         {%- else -%}
@@ -91,8 +88,8 @@
                     {%- if path[1] != "about" and path[2] == nil -%}
                         <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
                             {%- for child in parent.children limit:4 -%}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{%- endfor -%}
-                            {%- assign count=parent.children | size -%}
-                            {%- if count>=5 -%}<a class="card" href="{{ parent.url }}">Show More &#187</a>{%- endif -%}
+                            {%- assign count = parent.children | size -%}
+                            {%- if count >= 5 -%}<a class="card" href="{{ parent.url }}">Show More &#187</a>{%- endif -%}
                         </div>
                     {%- else -%}
                         {%- if path[1] != "about" and path[3] == nil -%}
