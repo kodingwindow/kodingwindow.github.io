@@ -24,15 +24,17 @@
         <a class="card" href="mailto:{{ site.email }}">Contact Us</a>
     </div>
     <div class="board"><div class="boardtitle"><i class="bi bi-link"></i> Social Handles</div>
-        <a class="card" href="{{ site.data.url.linkedin }}">LinkedIn</a>
-        <a class="card" href="{{ site.data.url.instagram }}">Instagram</a>
-        <a class="card" href="{{ site.data.url.x }}">X (Twitter)</a>
-        <a class="card" href="{{ site.data.url.youtube }}">YouTube</a>
-        <a class="card" href="{{ site.data.url.facebook }}">Facebook</a>
+        <div class="card-footer d-flex justify-content-between" style="padding: 5px 10px 5px 10px;">
+            <a href="{{ site.data.url.linkedin }}"><i class="svgicon bi bi-linkedin"></i></a>
+            <a href="{{ site.data.url.instagram }}"><i class="svgicon bi bi-instagram"></i></a>
+            <a href="{{ site.data.url.x }}" title="X"><i class="svgicon bi bi-twitter-x"></i></a>
+            <a href="{{ site.data.url.youtube }}"><i class="svgicon bi bi-youtube"></i></a>
+            <a href="{{ site.data.url.facebook }}"><i class="svgicon bi bi-facebook"></i></a>
+        </div>
     </div>
     <div class="board"><div class="boardtitle"><i class="bi bi-gear-wide-connected"></i> App Settings</div>
         <a id="cache" class="card" href="clear:">Clear: Cache and History</a>
-        <a id="theme" class="card disabled"></a>
+        <a class="card disabled">Theme: System Default</a>
     </div>
 </div>
 
@@ -155,12 +157,4 @@ $("#cache").click(function ()
     $(this).html("Cleared: Cache and History");
     $(this).css("color", "#00b050");
 });
-if(window.matchMedia && window.matchMedia("(prefers-color-scheme:dark)").matches) 
-{
-    document.getElementById("theme").innerHTML = "Theme: System Default (Dark)";
-} 
-else 
-{
-    document.getElementById("theme").innerHTML = "Theme: System Default (Light)";
-}
 </script>

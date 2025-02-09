@@ -25,7 +25,7 @@
             <button id="lsidebar" class="navbar-toggler p-0" type="button" data-bs-toggle="leftsidebar" data-bs-target="#leftsidebar" aria-label="lsidebar" style="position: fixed;">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div id="leftsidebar" class="sidebar leftsidebar-collapse col-xs-2 col-sm-2 col-md-3 col-lg-3 col-xl-3 col-xxl-2">
+            <div id="leftsidebar" class="sidebar leftsidebar-collapse col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2">
             {%- for parent in kw.sidenav -%}
                 {%- if page.url contains parent.url -%}
                     {%- assign active_item = nil -%}{%- assign active_item = "sidebar-item-active" -%}{%- assign pu = parent.url | split: '/' -%}
@@ -56,6 +56,7 @@
                     <li class="nav-item"><a class="nav-link" href="{{ site.data.url.sponsor }}" target="_blank"><i class="navsvg bi bi-suit-heart"></i> Sponsor</a></li>
                     <li class="nav-item"><a style="cursor: pointer;" class="nav-link" data-bs-toggle="modal" data-bs-target="#appmodal"><i class="navsvg bi bi-android2"></i> Android App</a></li>
                     {%- if path[1] == "about" -%}{%- else -%}<li class="nav-item"><a class="nav-link" href="about"><i class="navsvg bi bi-info-circle"></i> About Us</a></li>{%- endif -%}
+                    <li class="nav-item"><a class="nav-link" disabled><i class="navsvg bi bi-mask"></i> Theme: System Default</a></li>
                 </ul>
             </div>
         </div>
@@ -73,11 +74,11 @@
         </main>
         {%- include footer.html -%}
         {%- else -%}
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto px-md-4 jumbotron text-center">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10 col-xxl-10 ms-sm-auto px-md-4 jumbotron text-center">
             <h3>{{ site.title }}</h3>
             <h6>{{ segment }}</h6>
         </div>
-        <main class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto px-md-4" role="main">
+        <main class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10 col-xxl-10 ms-sm-auto px-md-4" role="main">
             <div class="container">
                 {%- if path[2] == nil and path[1] != "about" -%}{%- include search.html -%}{%- endif -%}
                 {{ content }}
@@ -104,7 +105,7 @@
                 {%- if path[1] != "about" -%}{%- include ads.html -%}{%- endif -%}
             </div>
         </main>
-        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-10 ms-sm-auto" style="padding: 0px;">{%- include footer.html -%}</div>
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10 col-xxl-10 ms-sm-auto" style="padding: 0px;">{%- include footer.html -%}</div>
         {%- endif -%}
     </div>
 
