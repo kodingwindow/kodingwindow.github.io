@@ -59,6 +59,9 @@ segments:
   - title: Cluster
     url: cluster
 
+  - title: KodingWindow's Search
+    url: search
+    
   - title: About Us
     url: about
 
