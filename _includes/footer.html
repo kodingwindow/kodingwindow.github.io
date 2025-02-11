@@ -50,39 +50,48 @@
                     <h6>What's new</h6>
                     <a href="python/"><div>Python</div></a>
                     <a href="ds/"><div>Data Science</div></a>
-                    <a href="java/"><div>Java</div></a>
                     <a href="mongodb/"><div>MongoDB</div></a>
                     <a href="selenium/"><div>Selenium</div></a>
-                </div>
-                <div class="col-6 col-md-3" style="padding-bottom: 50px;">
-                    <h6>Searches</h6>
                     <a href="search"><div>Search</div></a>
-                    <a href="java/search"><div>Java Search</div></a>
-                    <a href="python/search"><div>Python Search</div></a>
-                    <a href="mongodb/search"><div>MongoDB Search</div></a>
-                    <a href="selenium/search"><div>Selenium Search</div></a>
                 </div>
                 <div class="col-6 col-md-3" style="padding-bottom: 50px;">
-                    <h6>About Us</h6>
+                    <h6>About</h6>
+                    <a href="about"><div>About Us</div></a>
                     <a href="about/faqs"><div>FAQs</div></a>
                     <a href="about/terms"><div>Terms</div></a>
                     <a href="about/privacy"><div>Privacy</div></a>
                     <a href="about/disclaimer"><div>Disclaimer</div></a>
-                    <a href="mailto:{{ site.email }}"><div>Contact Us</div></a>
+                </div>
+                <div class="col-6 col-md-3" style="padding-bottom: 50px;">
+                    <h6>KodingWindow</h6>
+                    <a href="shubhamrdarda"><div><i class="bi bi-person-square"></i> Meet Founder</div></a>
+                    <a data-bs-toggle="modal" data-bs-target="#appmodal" href="about/terms"><div><i class="navsvg bi bi-android2"></i> Android App</div></a>
+                    <a href="{{ site.data.url.sponsor }}" target="_blank"><div><i class="navsvg bi bi-suit-heart"></i> Sponsor</div></a>
+                    <a href="about/reports"><div><i class="bi bi-graph-up-arrow"></i> Analytics Reports</div></a>
+                    <a href="mailto:{{ site.email }}"><div><i class="bi bi-envelope"></i> Contact Us</div></a>
                 </div>
                 <div class="col-6 col-md-3" style="padding-bottom: 50px;">
                     <h6>Social Handles</h6>
-                    <a href="{{ site.data.url.linkedin }}" target="_blank"><div>LinkedIn</div></a>
-                    <a href="{{ site.data.url.instagram }}" target="_blank"><div>Instagram</div></a>
-                    <a href="{{ site.data.url.x }}" target="_blank"><div>X</div></a>
-                    <a href="{{ site.data.url.youtube }}" target="_blank"><div>YouTube</div></a>
-                    <a href="{{ site.data.url.facebook }}" target="_blank"><div>Facebook</div></a>
+                    <a href="{{ site.data.url.linkedin }}" target="_blank"><div><i class="bi bi-linkedin"></i> LinkedIn</div></a>
+                    <a href="{{ site.data.url.instagram }}" target="_blank"><div><i class="bi bi-instagram"></i> Instagram</div></a>
+                    <a href="{{ site.data.url.x }}" target="_blank"><div><i class="bi bi-twitter-x"></i> X</div></a>
+                    <a href="{{ site.data.url.youtube }}" target="_blank"><div><i class="bi bi-youtube"></i> YouTube</div></a>
+                    <a href="{{ site.data.url.facebook }}" target="_blank"><div><i class="bi bi-facebook"></i> Facebook</div></a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="d-flex justify-content-center" style="background-color: #16181d; padding: 15px; margin: 0px;"> 
-        <img alt="" src="{{ site.icon }}" width="25" height="25"><span style="padding-top: 2px; padding-left: 5px; color: #ffffff;">{{ site.title }} by <a class="hlink" href="shubhamrdarda">{{ site.founder }}</span></a>
+    <div class="modal fade" id="appmodal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="appmodalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title" id="appmodalLabel"><i class="bi bi-android2"></i> KodingWindow Android App</h5></div>
+                <div class="modal-body">Dear User, <br>We are grateful for your interest in the KodingWindow Android app. We intend to soon make it available on the Google Play Store. Currently, you need to install apk manually. Would you like to get the app?<br>Minimum Requirement(s): Android 10</div>
+                <div class="modal-footer justify-content-center">
+                    <a style="cursor: pointer; border: 1px solid #e63636;" class="btn" data-bs-dismiss="modal"><i class="bi bi-cloud-slash"></i> No</a>
+                    <a href="{{ site.data.url.android_app }}" style="border: 1px solid #00b050;" class="btn" onclick="$('#appmodal').modal('hide');"><i class="bi bi-cloud-arrow-down"></i> Yes</a>
+                </div>
+            </div>
+        </div>
     </div>
 </footer>
 
