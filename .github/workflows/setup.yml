@@ -18,4 +18,4 @@ jobs:
       - name: Setup Environment
         run: python3 setup.py full
       - name: Run Automated Tests
-        run: python3 automated_tests/run.py
+        run: python3 _tests/run.py

@@ -4,7 +4,7 @@ Description: The automated tests on the specified browser are started by this sc
 """
 
 from utilities import *
-from compile_codes import *
+from compile import *
 
 start = time.time()
 if sys.version_info.major == 3 and sys.version_info.minor >= 4:
@@ -65,4 +65,4 @@ h, m = divmod(m, 60)
 if m >= 1:
     print("---------------------------------")
     print("Total Execution Time:", f"{h:02d}:{m:02d}:{s:02d}")
-subprocess.run("pyclean automated_tests", shell=True, stderr=subprocess.DEVNULL)
+shutil.rmtree("_tests/__pycache__", ignore_errors=True)

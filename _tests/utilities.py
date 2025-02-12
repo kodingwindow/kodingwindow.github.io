@@ -3,7 +3,15 @@ Author: Shubham Darda
 Description: A standard script file contains the functionalities needed for automated testing.
 """
 
-import os, sys, platform, yaml, time, re, subprocess, unittest
+import os
+import sys
+import platform
+import yaml
+import shutil
+import time
+import re
+import subprocess
+import unittest
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.edge.service import Service
@@ -17,7 +25,7 @@ ubuntu = False
 githubactions = False
 matched = unmatched = 0
 
-if os.system("pip install --user --upgrade -r automated_tests/requirements.txt --break-system-packages --no-warn-script-location") == 0:
+if os.system("pip install --user --upgrade -r _tests/requirements.txt --break-system-packages --no-warn-script-location") == 0:
     print("All the required packages are installed.")
 else:
     print("The required packages are failed to install.")

@@ -4,7 +4,6 @@ mysql-connector-python
 netaddr
 numpy
 pandas
-pyclean
 pymongo
 PyMySQL
 pytest
