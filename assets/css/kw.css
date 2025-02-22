@@ -2,7 +2,6 @@
 ---
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif&display=swap');
 
 :root 
 {
@@ -196,7 +195,7 @@ div#KSE_input-{{ s }}
     }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 767.98px) {
     img#logo {
         margin: -4px 5px 0px 0px;
         width: 35px;
