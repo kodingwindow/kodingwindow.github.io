@@ -61,7 +61,7 @@ $(document).keydown(function(event)
         <h2 style="margin-top: 175px;" id="fc-{{ path[1] }}">KodingWindow</h2>
         <h6 style="padding-top: 5px; padding-bottom: 10px;">{{ site.tagline }}</h6>
         {%- endif -%}
-        <div id="KSE_input-{{ path[1] }}" class="input-group input-group-lg"><input id="KSEInput" class="form-control" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="display_results();" onkeyup="display_results();">
+        <div id="KSE_input-{{ path[1] }}" class="input-group input-group-lg"><input id="KSEInput" class="form-control" type="text" tabindex="1" placeholder="{{ page.title }} (type keywords to get results)" onkeypress="display_results();" onkeyup="display_results();" onload="clear_input();">
             <div id="search_icon" style="display: inline-block; padding: 10px 15px 0px 7px; font-size: 20px;" class="input-group-append">
                 <i class="bi bi-search"></i>
             </div>

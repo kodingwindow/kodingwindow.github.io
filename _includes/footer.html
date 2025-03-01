@@ -38,11 +38,10 @@
     </div>
 </div>
 
-{%- if path[1] == "search" or path[1] == "testapp" -%}{%- assign flag = "block_webfooter" -%}
-{%- else -%}
-<div id="backtotop" class="text-center" style="display: none; padding-top: 15px;"><a class="back-to-top" style="cursor: pointer;" title="Back to top"><i class="svgicon bi bi-arrow-bar-up"></i></a></div>
-{%- endif -%}
-<footer class="isWebsite {{ flag }}" id="isWebsite" style="display: block; padding-top: 30px;">
+{%- if path[1] == "search" or path[1] == "testapp" -%}{%- assign flag = "block_webfooter" -%}{%- endif -%}
+<div id="backtotop" class="text-center" style="display: none; padding-top: 15px; margin-bottom: 15px;"><a class="back-to-top" style="cursor: pointer;" title="Back to top"><i class="svgicon bi bi-arrow-bar-up"></i></a></div>
+
+<footer class="isWebsite {{ flag }}" id="isWebsite" style="display: block; padding-top: 15px;">
     <div class="footer">
         <div class="container">
             <div class="row">
