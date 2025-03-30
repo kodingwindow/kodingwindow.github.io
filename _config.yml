@@ -75,7 +75,7 @@ defaults:
 plugins:
    - jekyll-sitemap
 
-include: ['_pages']
+include: ['pages']
 
 # Exclude from processing
 exclude:
