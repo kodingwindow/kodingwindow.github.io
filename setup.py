@@ -52,9 +52,9 @@ def install():
                 os.system("git clone https://github.com/kodingwindow/kodingwindow.github.io.git")
                 os.chdir(cwd + kw + "/")
         install_chrome()
-        
+    
+    os.system("pip install --user --upgrade -r tests/requirements.txt --break-system-packages --no-warn-script-location")
     if os.system("bundle config set --local path vendor/bundle") == 0:
-        os.system("pip install --user --upgrade -r tests/requirements.txt --break-system-packages --no-warn-script-location")
         os.system("bundle install")
         os.system("bundle update --bundler")
         os.system("bundle update")
