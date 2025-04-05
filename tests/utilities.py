@@ -139,7 +139,7 @@ def start_tests(browser, data_path):
     verify_title(driver, "", "KodingWindow")
     verify_title(driver, "search/", "KodingWindow's Search")
     verify_title(driver, "404/", "404 Page Not Found")
-    verify_title(driver, "shubhamrdarda/", "Shubham Darda")
+    verify_title(driver, "shubhamrdarda", "Shubham Darda")
     driver.delete_all_cookies()
     driver.quit()
     return matched, unmatched
