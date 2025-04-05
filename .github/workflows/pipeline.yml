@@ -1,7 +1,7 @@
-name: Setup Environment
+name: Setup Environment and Automated Tests
 on:
   schedule:
-    - cron: '30 15 31 * *'
+    - cron: '30 8 5 * *'
     
 jobs:
   build:

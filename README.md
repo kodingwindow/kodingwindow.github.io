@@ -7,7 +7,7 @@ KodingWindow's website versioning is maintained on [GitHub][kwidezvdy] through [
 
 ## Development and Testing Usage
 
-[![Setup Environment](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/setup.yml/badge.svg?branch=main)](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/setup.yml)
+[![Setup Environment and Automated Tests](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/pipeline.yml/badge.svg?branch=main)](https://github.com/kodingwindow/kodingwindow.github.io/actions/workflows/pipeline.yml)
 
 **Ubuntu Prerequisites:** Download the [setup.py][kwidzgwel] file on the Linux Ubuntu machine.
 ```
