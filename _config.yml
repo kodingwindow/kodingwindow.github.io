@@ -82,7 +82,8 @@ exclude:
    - _site
    - .bundle
    - .jekyll-cache
-   - automated_tests
+   - android
+   - tests
    - vendor
    - .gitignore
    - .jekyll-metadata
