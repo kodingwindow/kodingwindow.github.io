@@ -4,72 +4,72 @@ grandparent:
     url: cluster/vbscript
     children: 
       - title: VBScript to print Hello World
-        url: cluster/vbscript/kwidgyved
+        url: cluster/vbscript/gidgyved
       - title: VBScript to perform the arithmetic operations
-        url: cluster/vbscript/kwidbwssb
+        url: cluster/vbscript/gidbwssb
       - title: VBScript to perform the string operations
-        url: cluster/vbscript/kwidyzuir
+        url: cluster/vbscript/gidyzuir
       - title: VBScript to demonstrate the use of Array
-        url: cluster/vbscript/kwidzovgy
+        url: cluster/vbscript/gidzovgy
       - title: VBScript to sort the Array elements using Bubble sort
-        url: cluster/vbscript/kwidauerk
+        url: cluster/vbscript/gidauerk
       - title: VBScript implementation of Fibonacci series
-        url: cluster/vbscript/kwidfvdhv
+        url: cluster/vbscript/gidfvdhv
       - title: VBScript to generate the random numbers
-        url: cluster/vbscript/kwidzdzhz
+        url: cluster/vbscript/gidzdzhz
       - title: VBScript to demonstrate the use of conversion functions
-        url: cluster/vbscript/kwidnnyye
+        url: cluster/vbscript/gidnnyye
       - title: VBScript to demonstrate the use of format functions
-        url: cluster/vbscript/kwidkavew
+        url: cluster/vbscript/gidkavew
       - title: VBScript to demonstrate the use of math functions
-        url: cluster/vbscript/kwideygvz
+        url: cluster/vbscript/gideygvz
       - title: VBScript to demonstrate the use of date and time functions
-        url: cluster/vbscript/kwidkzzak
+        url: cluster/vbscript/gidkzzak
       - title: VBScript to perform ArrayList operations
-        url: cluster/vbscript/kwidweeat
+        url: cluster/vbscript/gidweeat
       - title: VBScript to perform SortedList operation
-        url: cluster/vbscript/kwiddxmey
+        url: cluster/vbscript/giddxmey
       - title: VBScript to perform Stack operations
-        url: cluster/vbscript/kwidgdpvd
+        url: cluster/vbscript/gidgdpvd
       - title: VBScript to perform Queue operations
-        url: cluster/vbscript/kwidfaydi
+        url: cluster/vbscript/gidfaydi
       - title: VBScript to create an empty folder
-        url: cluster/vbscript/kwideauvd
+        url: cluster/vbscript/gideauvd
       - title: VBScript to create an empty text file
-        url: cluster/vbscript/kwidahmud
+        url: cluster/vbscript/gidahmud
       - title: VBScript to print the file properties
-        url: cluster/vbscript/kwideegki
+        url: cluster/vbscript/gideegki
       - title: VBScript to count the total number of files in a folder
-        url: cluster/vbscript/kwidczhwa
+        url: cluster/vbscript/gidczhwa
       - title: VBScript to count the total number of files in a folder of the same extension
-        url: cluster/vbscript/kwidzwzzd
+        url: cluster/vbscript/gidzwzzd
       - title: VBScript to read and write the data in a text file
-        url: cluster/vbscript/kwidltzze
+        url: cluster/vbscript/gidltzze
       - title: VBScript to format the text in a Word document
-        url: cluster/vbscript/kwidmvezv
+        url: cluster/vbscript/gidmvezv
       - title: VBScript to create an Excel in one folder and paste into another folder
-        url: cluster/vbscript/kwidhywgz
+        url: cluster/vbscript/gidhywgz
       - title: VBScript to read the data from an Excel sheet using ADODB object
-        url: cluster/vbscript/kwidyueyg
+        url: cluster/vbscript/gidyueyg
 
   - parent: Ranorex
     subtree: Ranorex
     url: cluster/ranorex
     children: 
       - title: How to open and close a browser using the Process class in Ranorex
-        url: cluster/ranorex/kwidwryqa
+        url: cluster/ranorex/gidwryqa
       - title: How to get a browser details using the WebDocument class in Ranorex
-        url: cluster/ranorex/kwidgvzyw
+        url: cluster/ranorex/gidgvzyw
       - title: How to select the Chrome context menu option in Ranorex
-        url: cluster/ranorex/kwidewwzv
+        url: cluster/ranorex/gidewwzv
       - title: How to compare the Excel sheets using Interop objects in Ranorex
-        url: cluster/ranorex/kwidfzznc
+        url: cluster/ranorex/gidfzznc
       - title: How to create, insert and save the Excel in Ranorex
-        url: cluster/ranorex/kwidcewwv
+        url: cluster/ranorex/gidcewwv
       - title: How to read the Excel specific row and column data in Ranorex
-        url: cluster/ranorex/kwidgyvzz
+        url: cluster/ranorex/gidgyvzz
       - title: How to format the Excel sheet in Ranorex
-        url: cluster/ranorex/kwidwwilz
+        url: cluster/ranorex/gidwwilz
 
 sidenav:
   - parent: Cluster

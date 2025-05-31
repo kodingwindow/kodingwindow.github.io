@@ -4,119 +4,119 @@ grandparent:
     url: cpp/fundamentals
     children: 
       - title: C++ Hello World program
-        url: cpp/fundamentals/kwiddvwxm
+        url: cpp/fundamentals/giddvwxm
       - title: C++ Hello World program without using a semicolon
-        url: cpp/fundamentals/kwiduzwdy
+        url: cpp/fundamentals/giduzwdy
       - title: C++ program to perform the arithmetic operations
-        url: cpp/fundamentals/kwiduagbm
+        url: cpp/fundamentals/giduagbm
       - title: C++ program to perform the boolean operations
-        url: cpp/fundamentals/kwidzmzav
+        url: cpp/fundamentals/gidzmzav
       - title: C++ program to perform the relational operations
-        url: cpp/fundamentals/kwidoeeya
+        url: cpp/fundamentals/gidoeeya
       - title: C++ program to perform the assignment operations
-        url: cpp/fundamentals/kwidexgyv
+        url: cpp/fundamentals/gidexgyv
       - title: C++ program to perform arithmetic operations by accepting inputs from a user
-        url: cpp/fundamentals/kwidzzhqg
+        url: cpp/fundamentals/gidzzhqg
       - title: C++ program to calculate the area and circumference of a circle
-        url: cpp/fundamentals/kwidnyeie
+        url: cpp/fundamentals/gidnyeie
       - title: C++ program to find the size of data types
-        url: cpp/fundamentals/kwidbodwv
+        url: cpp/fundamentals/gidbodwv
       - title: C++ program to find the range of data types
-        url: cpp/fundamentals/kwidqvvzg
+        url: cpp/fundamentals/gidqvvzg
       - title: Find the output of C++ programs
-        url: cpp/fundamentals/kwidfclfh
+        url: cpp/fundamentals/gidfclfh
 
   - parent: C++ Control Statements
     subtree: Controls
     url: cpp/controls
     children: 
       - title: C++ program to check the given number is positive or negative
-        url: cpp/controls/kwidgwhse
+        url: cpp/controls/gidgwhse
       - title: C++ program to check the equality of given numbers
-        url: cpp/controls/kwidkgzza
+        url: cpp/controls/gidkgzza
       - title: C++ program to demonstrate the use of goto statement
-        url: cpp/controls/kwidinkrg
+        url: cpp/controls/gidinkrg
       - title: C++ program to demonstrate the use of break and continue statements
-        url: cpp/controls/kwididhad
+        url: cpp/controls/gididhad
 
   - parent: C++ Loops
     subtree: Loops
     url: cpp/loops
     children: 
       - title: C++ program to print the star pyramid patterns
-        url: cpp/loops/kwidbvode
+        url: cpp/loops/gidbvode
       - title: C++ program to print the ASCII values
-        url: cpp/loops/kwidvzpzf
+        url: cpp/loops/gidvzpzf
       - title: C++ program to print the natural numbers
-        url: cpp/loops/kwidvydev
+        url: cpp/loops/gidvydev
       - title: C++ program to print the addition of N numbers
-        url: cpp/loops/kwidwaaup
+        url: cpp/loops/gidwaaup
       - title: C++ program to print the floating-point numbers
-        url: cpp/loops/kwidwangz
+        url: cpp/loops/gidwangz
       - title: C++ program to print the square of the numbers
-        url: cpp/loops/kwidvqyfg
+        url: cpp/loops/gidvqyfg
       - title: C++ program to find the factorial of a given number
-        url: cpp/loops/kwidvzgge
+        url: cpp/loops/gidvzgge
 
   - parent: C++ Strings
     subtree: Strings
     url: cpp/strings
     children: 
       - title: C++ program to swap the given strings
-        url: cpp/strings/kwidzdyvg
+        url: cpp/strings/gidzdyvg
       - title: C++ program to find the length of a given string
-        url: cpp/strings/kwidadbwe
+        url: cpp/strings/gidadbwe
       - title: C++ program to reverse a given string using loops
-        url: cpp/strings/kwidecfeo
+        url: cpp/strings/gidecfeo
       - title: C++ program to reverse a given string using predefined methods
-        url: cpp/strings/kwidyyvwd
+        url: cpp/strings/gidyyvwd
       - title: C++ program to reverse a given string using recursion
-        url: cpp/strings/kwidarayv
+        url: cpp/strings/gidarayv
       - title: C++ program to reverse a given string using stack
-        url: cpp/strings/kwidywzwa
+        url: cpp/strings/gidywzwa
       - title: C++ program to check whether a given string is a palindrome
-        url: cpp/strings/kwidyxqgg
+        url: cpp/strings/gidyxqgg
       - title: C++ program to perform the string operations
-        url: cpp/strings/kwidpzcle
+        url: cpp/strings/gidpzcle
 
   - parent: C++ Arrays
     subtree: Arrays
     url: cpp/arrays
     children: 
       - title: C++ program to print the given matrix
-        url: cpp/arrays/kwidaziwv
+        url: cpp/arrays/gidaziwv
       - title: C++ program to print the transpose of a given matrix
-        url: cpp/arrays/kwidaayzg
+        url: cpp/arrays/gidaayzg
       - title: C++ program for addition of two matrices
-        url: cpp/arrays/kwidzwdez
+        url: cpp/arrays/gidzwdez
       - title: C++ program for addition and subtraction of two matrices
-        url: cpp/arrays/kwidauaoi
+        url: cpp/arrays/gidauaoi
 
   - parent: C++ Classes
     subtree: Classes
     url: cpp/classes
     children: 
       - title: C++ program to demonstrate the use of class and object
-        url: cpp/classes/kwidutzrm
+        url: cpp/classes/gidutzrm
       - title: C++ program to demonstrate the use of constructors and destructors
-        url: cpp/classes/kwiddvyma
+        url: cpp/classes/giddvyma
       - title: C++ program to print the addition of numbers using constructor
-        url: cpp/classes/kwidtvfzm
+        url: cpp/classes/gidtvfzm
 
   - parent: C++ Functions
     subtree: Functions
     url: cpp/functions
     children: 
       - title: C++ program for addition of numbers using a function
-        url: cpp/functions/kwidtaync
+        url: cpp/functions/gidtaync
       - title: C++ program for call by value and call by reference
-        url: cpp/functions/kwidzddye
+        url: cpp/functions/gidzddye
       - title: C++ program to add the members of two different classes using the friend function
-        url: cpp/functions/kwidmeaby
+        url: cpp/functions/gidmeaby
       - title: C++ program to demonstrate the use of math library functions
-        url: cpp/functions/kwidxybzk
+        url: cpp/functions/gidxybzk
       - title: C++ program to print the current date and time
-        url: cpp/functions/kwidvzzwn
+        url: cpp/functions/gidvzzwn
 
 sidenav:
   - parent: C++ Programming

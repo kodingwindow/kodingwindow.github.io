@@ -1,7 +1,7 @@
 {%- assign i = 0 -%}
 {%- assign j = 0 -%}
 
-{%- for parent in kw.grandparent -%}
+{%- for parent in gd.grandparent -%}
 {%- assign j = j | plus:1 -%}
     {%- if page.url contains parent.url -%}
     {%- for child in parent.children -%}
@@ -18,16 +18,16 @@
             <div class="board"><div class="boardtitle">What Next?</div>
                 <a class="card" href="{{ parent.children[first].url }}">{{ parent.children[first].title }}</a>
                 <a class="card" href="{{ parent.children[second].url }}">{{ parent.children[second].title }}</a>
-                {%- if kw.grandparent[j].url != null -%}<a class="card" href="{{ kw.grandparent[j].url }}">{{ kw.grandparent[j].parent }}</a>{%- endif -%}
+                {%- if gd.grandparent[j].url != null -%}<a class="card" href="{{ gd.grandparent[j].url }}">{{ gd.grandparent[j].parent }}</a>{%- endif -%}
             </div>
             {%- elsif parent.children[first].url != null -%}
             <div class="board"><div class="boardtitle">What Next?</div>
                 <a class="card" href="{{ parent.children[first].url }}">{{ parent.children[first].title }}</a>
-                {%- if kw.grandparent[j].url != null -%}<a class="card" href="{{ kw.grandparent[j].url }}">{{ kw.grandparent[j].parent }}</a>{%- endif -%}
+                {%- if gd.grandparent[j].url != null -%}<a class="card" href="{{ gd.grandparent[j].url }}">{{ gd.grandparent[j].parent }}</a>{%- endif -%}
             </div>
-            {%- elsif kw.grandparent[j].url != null -%}
+            {%- elsif gd.grandparent[j].url != null -%}
             <div class="board"><div class="boardtitle">What Next?</div>
-                <a class="card" href="{{ kw.grandparent[j].url }}">{{ kw.grandparent[j].parent }}</a>
+                <a class="card" href="{{ gd.grandparent[j].url }}">{{ gd.grandparent[j].parent }}</a>
             </div>
             {%- else -%}
             {%- endif -%}

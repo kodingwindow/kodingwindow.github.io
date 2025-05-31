@@ -1,6 +1,6 @@
 """
 Author: Shubham Darda
-Description: The KodingWindow website can be set up and operated on localhost with the aid of this script.
+Description: The GoDarda website can be set up and operated on localhost with the aid of this script.
 """
 
 import sys
@@ -11,7 +11,7 @@ import socket
 import shutil
 
 cwd = os.getcwd() + "/"
-kw = "kodingwindow.github.io"
+gd = "godarda.github.io"
 ubuntu = False
 githubactions = False
 total, used, free = shutil.disk_usage(cwd)
@@ -48,9 +48,9 @@ def install():
             subprocess.run(command.split())
     
         if not githubactions:
-            if kw not in os.getcwd():
-                os.system("git clone https://github.com/kodingwindow/kodingwindow.github.io.git")
-                os.chdir(cwd + kw + "/")
+            if gd not in os.getcwd():
+                os.system("git clone https://github.com/godarda/godarda.github.io.git")
+                os.chdir(cwd + gd + "/")
         install_chrome()
     
     os.system("pip install --user --upgrade -r tests/requirements.txt --break-system-packages --no-warn-script-location")
@@ -63,8 +63,8 @@ def install():
 
 def start_server():
     try:
-        if kw not in os.getcwd():
-            os.chdir(cwd + kw + "/")
+        if gd not in os.getcwd():
+            os.chdir(cwd + gd + "/")
         print("---------------------------------------------")
         print("The following versions are getting used")
         print("---------------------------------------------")
@@ -105,7 +105,7 @@ def start_setup():
     if connected_to_internet():
         if freedisk >= 2:
             if full:
-                if os.path.split(os.getcwd())[-1] == kw:
+                if os.path.split(os.getcwd())[-1] == gd:
                     with open(".gitignore", "r") as ignore_file:
                         cleanup = ignore_file.readlines()
                         for data in cleanup:

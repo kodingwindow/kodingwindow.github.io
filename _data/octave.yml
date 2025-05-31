@@ -4,28 +4,28 @@ grandparent:
     url: octave/fundamentals
     children: 
       - title: Octave Arithmetic Operations
-        url: octave/fundamentals/kwidfxzpq
+        url: octave/fundamentals/gidfxzpq
       - title: Octave Logical Operations
-        url: octave/fundamentals/kwideezgn
+        url: octave/fundamentals/gideezgn
       - title: How to generate random numbers in Octave
-        url: octave/fundamentals/kwiddggad
+        url: octave/fundamentals/giddggad
       - title: Octave Exponents and Logarithms
-        url: octave/fundamentals/kwidgeiev
+        url: octave/fundamentals/gidgeiev
       - title: Octave Trigonometric Functions
-        url: octave/fundamentals/kwidazzam
+        url: octave/fundamentals/gidazzam
 
   - parent: Octave Strings
     subtree: Strings
     url: octave/strings
     children: 
       - title: Octave basic string operations
-        url: octave/strings/kwiduaulz
+        url: octave/strings/giduaulz
       - title: Octave string indexing
-        url: octave/strings/kwideceiw
+        url: octave/strings/gideceiw
       - title: Octave strings comparison
-        url: octave/strings/kwidawdqp
+        url: octave/strings/gidawdqp
       - title: Octave to check the given string is alphanumeric
-        url: octave/strings/kwidcvyzd
+        url: octave/strings/gidcvyzd
 
 sidenav: 
   - parent: GNU Octave

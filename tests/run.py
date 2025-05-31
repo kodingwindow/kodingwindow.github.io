@@ -11,17 +11,17 @@ if sys.version_info.major == 3 and sys.version_info.minor >= 4:
     try:
         print("Starting automated tests on: " + platform.platform())
         if ubuntu:
-            kw = os.getcwd() + "/"
-            data_path = kw + "_data/"
-            source = kw + "pages/"
-            destination = kw + "kwfied/"
+            gd = os.getcwd() + "/"
+            data_path = gd + "_data/"
+            source = gd + "pages/"
+            destination = gd + "gdfied/"
             browser = "chrome" # firefox
             # sudo snap remove firefox and then https://support.mozilla.org/en-US/kb/install-firefox-linux
             matched, unmatched = start_tests(browser, data_path)
             passed, failed = compile_codes(source, destination, data_path)
-            os.chdir(kw)
+            os.chdir(gd)
         elif not ubuntu:
-            data_path = "D:/kodingwindow.github.io/_data/"
+            data_path = "D:/godarda.github.io/_data/"
             browser = "msedge" # chrome
             matched, unmatched = start_tests(browser, data_path)
         else:

@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "KodingWindow"
+rootProject.name = "GoDarda"
 include(":app")
  

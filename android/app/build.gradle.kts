@@ -1,19 +1,20 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
 }
 
 android {
-    namespace = "com.kodingwindow.kodingwindow"
+    namespace = "com.godarda"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.kodingwindow.kodingwindow"
-        minSdk = 29
+        applicationId = "com.godarda"
+        minSdk = 28
         targetSdk = 35
         versionCode = 1
-        versionName = "25.6"
-        setProperty("archivesBaseName", "kodingwindow")
+        versionName = "25.5"
+
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
@@ -42,7 +43,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.androidx.foundation.android)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

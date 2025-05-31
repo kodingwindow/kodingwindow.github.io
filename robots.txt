@@ -1,1 +1,1 @@
-Sitemap: https://kodingwindow.com/sitemap.xml
+Sitemap: https://godarda.github.io/sitemap.xml

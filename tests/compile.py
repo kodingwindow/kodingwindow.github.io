@@ -1,6 +1,6 @@
 """
 Author: Shubham Darda
-Description: Most of the KodingWindow website's programs are compiled by this script.
+Description: Most of the GoDarda website's programs are compiled by this script.
 """
 
 from utilities import *

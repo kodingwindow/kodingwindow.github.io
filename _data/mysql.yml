@@ -4,51 +4,51 @@ grandparent:
     url: mysql/fundamentals
     children: 
       - title: How to setup, install, and start MySQL on Ubuntu
-        url: mysql/fundamentals/kwiddayxg
+        url: mysql/fundamentals/giddayxg
       - title: MySQL Date and Time Functions
-        url: mysql/fundamentals/kwidrgtrz
+        url: mysql/fundamentals/gidrgtrz
       - title: MySQL String Functions
-        url: mysql/fundamentals/kwidgpzwy
+        url: mysql/fundamentals/gidgpzwy
 
   - parent: MySQL Data Definition
     subtree: DDL
     url: mysql/ddl
     children: 
       - title: MySQL CREATE a DATABASE and TABLE
-        url: mysql/ddl/kwiddwgvc
+        url: mysql/ddl/giddwgvc
       - title: MySQL FOREIGN KEY
-        url: mysql/ddl/kwiddvwtv
+        url: mysql/ddl/giddvwtv
       - title: MySQL NOT NULL Constraint
-        url: mysql/ddl/kwiddvvtd
+        url: mysql/ddl/giddvvtd
       - title: MySQL ALTER TABLE (ADD, DROP, MODIFY, CHANGE, RENAME TO)
-        url: mysql/ddl/kwiddwtwf
+        url: mysql/ddl/giddwtwf
       - title: MySQL DROP a TABLE and DATABASE
-        url: mysql/ddl/kwidedvew
+        url: mysql/ddl/gidedvew
 
   - parent: MySQL Data Manipulation
     subtree: DML
     url: mysql/dml
     children: 
       - title: MySQL INSERT the VALUES into a TABLE
-        url: mysql/dml/kwidpdvnx
+        url: mysql/dml/gidpdvnx
       - title: MySQL SELECT and SELECT DISTINCT Statements
-        url: mysql/dml/kwiduidey
+        url: mysql/dml/giduidey
       - title: MySQL WHERE Clause
-        url: mysql/dml/kwidbbevd
+        url: mysql/dml/gidbbevd
       - title: MySQL UPDATE Clause
-        url: mysql/dml/kwidzzcev
+        url: mysql/dml/gidzzcev
       - title: MySQL ORDER BY Clause
-        url: mysql/dml/kwidvzkzw
+        url: mysql/dml/gidvzkzw
       - title: MySQL AND OR NOT Operators
-        url: mysql/dml/kwidpzyig
+        url: mysql/dml/gidpzyig
       - title: MySQL IN BETWEEN LIKE Operators
-        url: mysql/dml/kwidczgza
+        url: mysql/dml/gidczgza
       - title: MySQL LIMIT Clause
-        url: mysql/dml/kwidpwzaz
+        url: mysql/dml/gidpwzaz
       - title: MySQL JOINS (INNER, LEFT, RIGHT)
-        url: mysql/dml/kwidnhhen
+        url: mysql/dml/gidnhhen
       - title: MySQL DELETE Statement
-        url: mysql/dml/kwidzsgwd
+        url: mysql/dml/gidzsgwd
 
 sidenav:
   - parent: MySQL (Relational Database)

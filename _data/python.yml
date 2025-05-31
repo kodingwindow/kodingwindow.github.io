@@ -4,167 +4,167 @@ grandparent:
     url: python/fundamentals
     children: 
       - title: Python Arithmetic Operations
-        url: python/fundamentals/kwidawgvo
+        url: python/fundamentals/gidawgvo
       - title: Python Logical Operations
-        url: python/fundamentals/kwidexazw
+        url: python/fundamentals/gidexazw
       - title: Python Built-in Functions
-        url: python/fundamentals/kwidgzwzz
+        url: python/fundamentals/gidgzwzz
       - title: Python Mathematical Functions
-        url: python/fundamentals/kwidtgvee
+        url: python/fundamentals/gidtgvee
       - title: Python Trigonometric Functions
-        url: python/fundamentals/kwiddveuh
+        url: python/fundamentals/giddveuh
       - title: How to use Python help utility
-        url: python/fundamentals/kwidlvgqy
+        url: python/fundamentals/gidlvgqy
       - title: How to compile a Python program using the py_compile module
-        url: python/fundamentals/kwidgvzwx
+        url: python/fundamentals/gidgvzwx
       - title: How to view the byte code instructions using the dis module
-        url: python/fundamentals/kwidbduad
+        url: python/fundamentals/gidbduad
       - title: Python program to perform the arithmetic operations
-        url: python/fundamentals/kwidyosqg
+        url: python/fundamentals/gidyosqg
       - title: Python program to perform the relational operations
-        url: python/fundamentals/kwidetapa
+        url: python/fundamentals/gidetapa
       - title: Python program to swap the given numbers
-        url: python/fundamentals/kwidylqva
+        url: python/fundamentals/gidylqva
       - title: Python program to print the runtime arguments
-        url: python/fundamentals/kwidzidwc
+        url: python/fundamentals/gidzidwc
       - title: Python program for conversion of the number systems
-        url: python/fundamentals/kwidvaqvy
+        url: python/fundamentals/gidvaqvy
       - title: Python program to demonstrate debugging of script
-        url: python/fundamentals/kwidzsead
+        url: python/fundamentals/gidzsead
       - title: Python program to print the current date and time
-        url: python/fundamentals/kwidxdagf
+        url: python/fundamentals/gidxdagf
       - title: Python implementation of the calendar module
-        url: python/fundamentals/kwidscgzf
+        url: python/fundamentals/gidscgzf
 
   - parent: Python Control Statements
     subtree: Controls
     url: python/controls
     children: 
       - title: Python program to check the equality of given numbers
-        url: python/controls/kwidgmsmv
+        url: python/controls/gidgmsmv
       - title: Python program to check the given number is even or odd
-        url: python/controls/kwidgvewa
+        url: python/controls/gidgvewa
       - title: Python program to check whether a given character is an alphabet
-        url: python/controls/kwidwmaxe
+        url: python/controls/gidwmaxe
       - title: Python program to check whether a given year is a leap
-        url: python/controls/kwidrwkxe
+        url: python/controls/gidrwkxe
 
   - parent: Python Loops
     subtree: Loops
     url: python/loops
     children: 
       - title: Python program to print the star pyramid patterns
-        url: python/loops/kwidvfyae
+        url: python/loops/gidvfyae
       - title: Python program to print the ASCII values
-        url: python/loops/kwidwauzw
+        url: python/loops/gidwauzw
       - title: Python program to print the prime numbers
-        url: python/loops/kwidwbtvh
+        url: python/loops/gidwbtvh
       - title: Python program to find the factorial of a given number
-        url: python/loops/kwidagzvl
+        url: python/loops/gidagzvl
       - title: Python program to print the sum of all digits in a given number
-        url: python/loops/kwidalewy
+        url: python/loops/gidalewy
       - title: Python program to print the multiplication table of a given number
-        url: python/loops/kwidalmxy
+        url: python/loops/gidalmxy
       - title: Python program to check whether a given number is a palindrome
-        url: python/loops/kwidggkza
+        url: python/loops/gidggkza
       - title: Python program to print the list of all leap years
-        url: python/loops/kwidrawfa
+        url: python/loops/gidrawfa
 
   - parent: Python Strings
     subtree: Strings
     url: python/strings
     children: 
       - title: Python Basic String Operations
-        url: python/strings/kwiddduzz
+        url: python/strings/giddduzz
       - title: Python Strings Comparison
-        url: python/strings/kwidkgyxy
+        url: python/strings/gidkgyxy
       - title: Python String Slicing
-        url: python/strings/kwidkwdvv
+        url: python/strings/gidkwdvv
       - title: Python to check the given string is alphanumeric
-        url: python/strings/kwidozvev
+        url: python/strings/gidozvev
       - title: Python Strings Methods
-        url: python/strings/kwidyqzaz
+        url: python/strings/gidyqzaz
 
   - parent: Python Data Structures
     subtree: Data Structures
     url: python/ds
     children: 
       - title: Python Lists
-        url: python/ds/kwidkzaae
+        url: python/ds/gidkzaae
       - title: Python Tuples
-        url: python/ds/kwidcgaye
+        url: python/ds/gidcgaye
       - title: Python Sets
-        url: python/ds/kwidvzzvi
+        url: python/ds/gidvzzvi
       - title: Python Dictionary
-        url: python/ds/kwidvwkzg
+        url: python/ds/gidvwkzg
 
   - parent: Python Arrays
     subtree: Arrays
     url: python/arrays
     children: 
       - title: Python Arrays using Array module
-        url: python/arrays/kwidwzddw
+        url: python/arrays/gidwzddw
       - title: Python indexing and slicing on an array
-        url: python/arrays/kwiddrehr
+        url: python/arrays/giddrehr
       - title: Python NumPy Arrays
-        url: python/arrays/kwidzyigz
+        url: python/arrays/gidzyigz
       - title: Python to create a view() and copy() of NumPy arrays
-        url: python/arrays/kwiddeqlk
+        url: python/arrays/giddeqlk
       - title: Python NumPy Arrays Comparison
-        url: python/arrays/kwidevyzz     
+        url: python/arrays/gidevyzz     
       - title: Python NumPy Mathematical Functions for Arrays
-        url: python/arrays/kwidykhed
+        url: python/arrays/gidykhed
       - title: Python indexing and slicing on NumPy arrays
-        url: python/arrays/kwidzxhny
+        url: python/arrays/gidzxhny
       - title: How to create arrays using the linspace() and logspace() functions
-        url: python/arrays/kwidskedg
+        url: python/arrays/gidskedg
       - title: How to create arrays using the arange(), zeros(), and ones() functions
-        url: python/arrays/kwidvalhi
+        url: python/arrays/gidvalhi
       - title: Python NumPy Multi-dimensional Arrays
-        url: python/arrays/kwideazqm
+        url: python/arrays/gideazqm
       - title: Python NumPy Matrices
-        url: python/arrays/kwiddkizz
+        url: python/arrays/giddkizz
       - title: Python to print the transpose of a given matrix
-        url: python/arrays/kwideghdz
+        url: python/arrays/gideghdz
       - title: Python to perform arithmetic operations on two matrices
-        url: python/arrays/kwidomegf
+        url: python/arrays/gidomegf
 
   - parent: Python File Handling
     subtree: FileIO
     url: python/fileio
     children: 
       - title: Python program to count the lines, words, and characters from a given file
-        url: python/fileio/kwiddzeng
+        url: python/fileio/giddzeng
       - title: Python program to count the frequency of words in a given file
-        url: python/fileio/kwidlyeay
+        url: python/fileio/gidlyeay
 
   - parent: Python Networking
     subtree: Networking
     url: python/networking
     children: 
       - title: Python networking using the netaddr module
-        url: python/networking/kwidyslwy
+        url: python/networking/gidyslwy
       - title: Python program for two way communication using socket programming
-        url: python/networking/kwidgzlzd
+        url: python/networking/gidgzlzd
       - title: Python program for file sharing using socket programming
-        url: python/networking/kwidkyirx
+        url: python/networking/gidkyirx
 
   - parent: Python Database Connectivity
     subtree: DBC
     url: python/dbc
     children: 
       - title: How to install pymysql and pymongo on Ubuntu
-        url: python/dbc/kwidwdnax
+        url: python/dbc/gidwdnax
       - title: Python MySQL to connect, create a database, and table
-        url: python/dbc/kwidvdwzz
+        url: python/dbc/gidvdwzz
       - title: Python MySQL to insert and retrieve the records from a table
-        url: python/dbc/kwidtyalw
+        url: python/dbc/gidtyalw
       - title: Python MySQL to update the table records
-        url: python/dbc/kwidswyzn
+        url: python/dbc/gidswyzn
       - title: Python MongoDB to connect, create database, and collection
-        url: python/dbc/kwidmyyzz
+        url: python/dbc/gidmyyzz
       - title: Python MongoDB to insert and retrieve the documents from a collection
-        url: python/dbc/kwidgulma
+        url: python/dbc/gidgulma
 
 sidenav:
   - parent: Python Programming

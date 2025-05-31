@@ -4,21 +4,21 @@ grandparent:
     url: r/cli
     children: 
       - title: R Mathematical Operations and Functions
-        url: r/cli/kwidegdgz
+        url: r/cli/gidegdgz
       - title: R Date and Time Functions
-        url: r/cli/kwidexdvy
+        url: r/cli/gidexdvy
       - title: R Functions
-        url: r/cli/kwidadmvw
+        url: r/cli/gidadmvw
       - title: R Strings
-        url: r/cli/kwidgebwv
+        url: r/cli/gidgebwv
       - title: R Vectors
-        url: r/cli/kwiddlyle
+        url: r/cli/giddlyle
       - title: R Lists
-        url: r/cli/kwidarfve
+        url: r/cli/gidarfve
       - title: R Matrices
-        url: r/cli/kwidexavz
+        url: r/cli/gidexavz
       - title: R Data Frames
-        url: r/cli/kwidazeek
+        url: r/cli/gidazeek
 
 sidenav:
   - parent: R Programming

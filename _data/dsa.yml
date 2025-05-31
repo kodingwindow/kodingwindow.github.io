@@ -4,49 +4,49 @@ grandparent:
     url: dsa/fundamentals
     children: 
       - title: C++ implementation of the stack and its operations
-        url: dsa/fundamentals/kwiduqyab
+        url: dsa/fundamentals/giduqyab
 
   - parent: Searching Algorithms
     subtree: Searching
     url: dsa/searching
     children: 
       - title: C++ implementation of Binary Search
-        url: dsa/searching/kwidecgzp
+        url: dsa/searching/gidecgzp
       - title: Python implementation of Binary Search
-        url: dsa/searching/kwidwzavz
+        url: dsa/searching/gidwzavz
 
   - parent: Sorting Algorithms
     subtree: Sorting
     url: dsa/sorting
     children: 
       - title: C progarm for Bubble Sort
-        url: dsa/sorting/kwidzxlqf
+        url: dsa/sorting/gidzxlqf
       - title: C++ progarm for Bubble Sort
-        url: dsa/sorting/kwidwzsgz
+        url: dsa/sorting/gidwzsgz
       - title: C++ progarm for optimized Bubble Sort
-        url: dsa/sorting/kwidvvavg
+        url: dsa/sorting/gidvvavg
       - title: Python progarm for Bubble Sort
-        url: dsa/sorting/kwidyezyi
+        url: dsa/sorting/gidyezyi
       - title: Python progarm for Merge Sort
-        url: dsa/sorting/kwidorpaw
+        url: dsa/sorting/gidorpaw
       - title: Python progarm for Insertion Sort
-        url: dsa/sorting/kwidaekky
+        url: dsa/sorting/gidaekky
       - title: Python progarm for Quick Sort
-        url: dsa/sorting/kwidvzade
+        url: dsa/sorting/gidvzade
 
   - parent: Shortest Path Algorithms
     subtree: Trees
     url: dsa/trees
     children: 
       - title: C++ implementation of Prim's spanning tree algorithm
-        url: dsa/trees/kwidbuzge
+        url: dsa/trees/gidbuzge
 
   - parent: Applications of Data Structures
     subtree: Applications
     url: dsa/applications
     children: 
       - title: C++ program for Tic-Tac-Toe game
-        url: dsa/applications/kwidzdguw
+        url: dsa/applications/gidzdguw
 
 sidenav:
   - parent: Data Structures and Algorithms

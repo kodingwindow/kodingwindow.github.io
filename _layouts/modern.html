@@ -26,7 +26,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div id="leftsidebar" class="sidebar leftsidebar-collapse col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xl-2 col-xxl-2">
-            {%- for parent in kw.sidenav -%}
+            {%- for parent in gd.sidenav -%}
                 {%- if page.url contains parent.url -%}
                     {%- assign active_item = nil -%}{%- assign active_item = "sidebar-item-active" -%}{%- assign pu = parent.url | split: '/' -%}
                     {%- if path[1] == pu[0] and path[2] == nil -%}
@@ -80,7 +80,7 @@
             <div class="container">
                 {%- if path[2] == nil and path[1] != "about" -%}{%- include search.html -%}{%- endif -%}
                 {{ content }}
-                {%- for parent in kw.grandparent -%}
+                {%- for parent in gd.grandparent -%}
                     {%- if path[1] != "about" and path[2] == nil -%}
                         <div class="board"><div class="boardtitle">{{ parent.parent }}</div>
                             {%- for child in parent.children limit:4 -%}<a class="card" href="{{ child.url }}">{{ child.title }}</a>{%- endfor -%}
@@ -100,7 +100,6 @@
                 {%- endfor -%}
                 {%- if path[2] != nil -%}{%- include comments.html -%}{%- endif -%}
                 {%- include pagination.html -%}
-                {%- if path[1] != "about" -%}{%- include ads.html -%}{%- endif -%}
             </div>
         </main>
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-10 col-xxl-10 ms-sm-auto" style="padding: 0px;">{%- include footer.html -%}</div>

@@ -4,131 +4,131 @@ grandparent:
     url: c/fundamentals
     children: 
       - title: C Hello World program
-        url: c/fundamentals/kwiduvqaa
+        url: c/fundamentals/giduvqaa
       - title: C Hello World program without using a semicolon
-        url: c/fundamentals/kwidvfzhl
+        url: c/fundamentals/gidvfzhl
       - title: C program to perform the arithmetic operations
-        url: c/fundamentals/kwidadrfz
+        url: c/fundamentals/gidadrfz
       - title: C program to perform the boolean operations
-        url: c/fundamentals/kwidzevtw
+        url: c/fundamentals/gidzevtw
       - title: C program to perform the relational operations
-        url: c/fundamentals/kwidafefa
+        url: c/fundamentals/gidafefa
       - title: C program to perform the arithmetic operations by accepting the inputs
-        url: c/fundamentals/kwidzygvt
+        url: c/fundamentals/gidzygvt
       - title: C program to calculate the area and circumference of a circle
-        url: c/fundamentals/kwidfdlyz
+        url: c/fundamentals/gidfdlyz
       - title: C program to find the size of data types
-        url: c/fundamentals/kwidmwpsv
+        url: c/fundamentals/gidmwpsv
       - title: C program to find the range of data types
-        url: c/fundamentals/kwidvgrag
+        url: c/fundamentals/gidvgrag
       - title: Find the output of C programs
-        url: c/fundamentals/kwidwgvrq
+        url: c/fundamentals/gidwgvrq
 
   - parent: C Control Statements
     subtree: Controls
     url: c/controls
     children: 
       - title: C program to check the given number is even or odd
-        url: c/controls/kwidcheqs
+        url: c/controls/gidcheqs
       - title: C program to check the equality of given numbers
-        url: c/controls/kwiddwdgs
+        url: c/controls/giddwdgs
       - title: C program to demonstrate the use of goto statement
-        url: c/controls/kwidwagwy
+        url: c/controls/gidwagwy
       - title: C program to demonstrate the use of break and continue statements
-        url: c/controls/kwidecgzz
+        url: c/controls/gidecgzz
       - title: Find the output of C programs
-        url: c/controls/kwidebyay
+        url: c/controls/gidebyay
 
   - parent: C Loops
     subtree: Loops
     url: c/loops
     children: 
       - title: C program to print the even and odd numbers
-        url: c/loops/kwidvmakr
+        url: c/loops/gidvmakr
       - title: C program to print the star pyramid patterns
-        url: c/loops/kwidzxwzt
+        url: c/loops/gidzxwzt
       - title: C program to print the star diamond pattern
-        url: c/loops/kwiddysru
+        url: c/loops/giddysru
       - title: C program to print the alphabets diamond pattern
-        url: c/loops/kwidzsayg
+        url: c/loops/gidzsayg
       - title: C program to find the min and max of given numbers
-        url: c/loops/kwidruyaz
+        url: c/loops/gidruyaz
       - title: C program to print alphabets using the ASCII values
-        url: c/loops/kwidcdepo
+        url: c/loops/gidcdepo
       - title: C program to reverse a given number
-        url: c/loops/kwiduhwvy
+        url: c/loops/giduhwvy
       - title: C program for the addition of N natural numbers
-        url: c/loops/kwidztvdz
+        url: c/loops/gidztvdz
       - title: C program to convert a binary number to an equivalent decimal number
-        url: c/loops/kwidmwzzz
+        url: c/loops/gidmwzzz
       - title: C program to demonstrate the static and local variables
-        url: c/loops/kwiddrnhk
+        url: c/loops/giddrnhk
       - title: Find the output of C programs
-        url: c/loops/kwidwevzk
+        url: c/loops/gidwevzk
 
   - parent: C Strings
     subtree: Strings
     url: c/strings
     children: 
       - title: C program to find the length of a given string
-        url: c/strings/kwidpnkez
+        url: c/strings/gidpnkez
       - title: C program to concatenate the given strings
-        url: c/strings/kwidozdow
+        url: c/strings/gidozdow
       - title: C program to copy the given string
-        url: c/strings/kwidtwwpw
+        url: c/strings/gidtwwpw
       - title: C program to compare the given strings
-        url: c/strings/kwidgdpvh
+        url: c/strings/gidgdpvh
       - title: C program to convert lowercase to an uppercase string
-        url: c/strings/kwidvfzwd
+        url: c/strings/gidvfzwd
       - title: C program to convert uppercase to a lowercase string
-        url: c/strings/kwidopzze
+        url: c/strings/gidopzze
       - title: C program to reverse a given string
-        url: c/strings/kwidnsdqd
+        url: c/strings/gidnsdqd
       - title: C program to check whether a given string is a palindrome
-        url: c/strings/kwidnrzbz
+        url: c/strings/gidnrzbz
 
   - parent: C Arrays
     subtree: Arrays
     url: c/arrays
     children: 
       - title: C program to print the given array
-        url: c/arrays/kwidzizzy
+        url: c/arrays/gidzizzy
       - title: C program to print the length of a given array
-        url: c/arrays/kwidzzdyp
+        url: c/arrays/gidzzdyp
       - title: C program to print the sum of all numbers in a given array
-        url: c/arrays/kwidavnal
+        url: c/arrays/gidavnal
       - title: C program to find the min and max number from a given array
-        url: c/arrays/kwidmqyew
+        url: c/arrays/gidmqyew
       - title: Find the output of C programs
-        url: c/arrays/kwidaazcg
+        url: c/arrays/gidaazcg
 
   - parent: C Functions
     subtree: Functions
     url: c/functions
     children: 
       - title: C program to demonstrate the use of functions
-        url: c/functions/kwidhxgee
+        url: c/functions/gidhxgee
       - title: C menu-driven program for the arithmetic operations
-        url: c/functions/kwidvdeeg
+        url: c/functions/gidvdeeg
       - title: C program to perform the Set operations (Union and Intersection)
-        url: c/functions/kwidvbrva
+        url: c/functions/gidvbrva
       - title: C program for the Tower of Hanoi
-        url: c/functions/kwidcgdie
+        url: c/functions/gidcgdie
       - title: C program to find the factorial of a given number
-        url: c/functions/kwidbudev
+        url: c/functions/gidbudev
       - title: C program to find the factorial of a given number using recursion
-        url: c/functions/kwidhfycr
+        url: c/functions/gidhfycr
       - title: C program to print the current date and time
-        url: c/functions/kwidvzlki
+        url: c/functions/gidvzlki
 
   - parent: C Pointers
     subtree: Pointers
     url: c/pointers
     children: 
       - title: C program to find the address of variables
-        url: c/pointers/kwidvdpgg
+        url: c/pointers/gidvdpgg
       - title: C program to print the length of a given array without using sizeof
-        url: c/pointers/kwidlwgzw
+        url: c/pointers/gidlwgzw
 
 sidenav: 
   - parent: C Programming

@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header"><h5 class="modal-title" id="staticBackdropLabel"><i class="bi bi-clipboard-heart"></i> Thank You</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
-            <div class="modal-body">Dear User, <br>Thank you for visitng KodingWindow. If you are interested in technical articles, latest technologies, and our journey further, please follow us on LinkedIn.<br><br><div>Regards,<br><a href="shubhamrdarda" class="hlink">{{ site.founder }}</a><br>Founder and Architect</div></div>
+            <div class="modal-body">Dear User, <br>Thank you for visitng GoDarda. If you are interested in technical articles, latest technologies, and our journey further, please follow us on LinkedIn.<br><br><div>Regards,<br><a href="shubhamrdarda" class="hlink">{{ site.founder }}</a><br>Founder and Architect</div></div>
             <div class="modal-footer justify-content-center">
                 <a href="{{ site.data.url.linkedin }}" class="btn" title="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i> LinkedIn</a>
             </div>
@@ -20,7 +20,7 @@
         <a class="card" href="about/terms">Terms of Use</a>
         <a class="card" href="about/privacy">Privacy Policy</a>
         <a class="card" href="about/disclaimer">Disclaimer</a>
-        <a class="card" href="mailto:{{ site.email }}">Contact Us</a>
+        <a class="card" href="{{ site.data.url.linkedin }}">Message Us</a>
     </div>
     <div class="board"><div class="boardtitle"><i class="bi bi-link"></i> Social Handles</div>
         <div class="card-footer d-flex justify-content-between" style="padding: 5px 10px 5px 10px;">
@@ -61,12 +61,12 @@
                     <a href="about/disclaimer"><div><i class="bi bi-exclamation-triangle"></i> Disclaimer</div></a>
                 </div>
                 <div class="col-6 col-md-3" style="padding-bottom: 50px;">
-                    <h6>KodingWindow</h6>
+                    <h6>GoDarda</h6>
                     <a href="shubhamrdarda"><div><i class="bi bi-person-square"></i> Meet Founder</div></a>
                     <a data-bs-toggle="modal" data-bs-target="#appmodal" href="about/terms"><div><i class="navsvg bi bi-android2"></i> Android App</div></a>
                     <a href="{{ site.data.url.sponsor }}" target="_blank"><div><i class="navsvg bi bi-suit-heart"></i> Sponsor</div></a>
                     <a href="testapp"><div><i class="bi bi-box-arrow-in-right"></i> TestApp</div></a>
-                    <a href="mailto:{{ site.email }}"><div><i class="bi bi-envelope"></i> Contact Us</div></a>
+                    <a href="{{ site.data.url.linkedin }}"><div><i class="bi bi-envelope"></i> Message Us</div></a>
                 </div>
                 <div class="col-6 col-md-3" style="padding-bottom: 50px;">
                     <h6>Social Handles</h6>
@@ -82,8 +82,8 @@
     <div class="modal fade" id="appmodal" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="appmodalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header"><h5 class="modal-title" id="appmodalLabel"><i class="bi bi-android2"></i> KodingWindow Android App</h5></div>
-                <div class="modal-body">Dear User, <br>We are grateful for your interest in the KodingWindow Android app. We intend to soon make it available on the Google Play Store. Currently, you need to install apk manually. Would you like to get the app?<br>Minimum Requirement(s): Android 10</div>
+                <div class="modal-header"><h5 class="modal-title" id="appmodalLabel"><i class="bi bi-android2"></i> GoDarda Android App</h5></div>
+                <div class="modal-body">Dear User, <br>We are grateful for your interest in the GoDarda Android app. We intend to soon make it available on the Google Play Store. Currently, you need to install apk manually. Would you like to get the app?<br>Minimum Requirement(s): Android 10</div>
                 <div class="modal-footer justify-content-center">
                     <a style="cursor: pointer; border: 1px solid #e63636;" class="btn" data-bs-dismiss="modal"><i class="bi bi-cloud-slash"></i> No</a>
                     <a href="{{ site.data.url.android_app }}" style="border: 1px solid #00b050;" class="btn" onclick="$('#appmodal').modal('hide');"><i class="bi bi-cloud-arrow-down"></i> Yes</a>
@@ -120,7 +120,7 @@
 const webfooter = document.getElementById("isWebsite");
 const about_section = document.getElementById("app");
 
-if (isWebview && userAgent.includes("KodingWindow")) {
+if (isWebview && userAgent.includes("GoDarda")) {
     document.getElementById("rsidebar").style.display = "none";
     document.getElementById("isWebsite").style.display = "none";
     document.getElementById("isWebView").style.display = "block";
@@ -147,14 +147,14 @@ else if (!isWebview && webfooter.classList.contains("block_webfooter"))
 {
     document.getElementById("isWebsite").style.display = "none";
 }
-if(isWebview && userAgent.includes("KodingWindow") && about_section.classList.contains("about_home_true"))
+if(isWebview && userAgent.includes("GoDarda") && about_section.classList.contains("about_home_true"))
 {
     document.getElementById("app").style.display = "block";
     document.getElementById("navbar-brand").style.marginLeft = "0px";
     document.getElementById("lsidebar").style.display = "none";
     document.getElementById("leftsidebar").style.display = "none";
 }
-else if(isWebview && userAgent.includes("KodingWindow") && about_section.classList.contains("about_home_false"))
+else if(isWebview && userAgent.includes("GoDarda") && about_section.classList.contains("about_home_false"))
 {
     document.getElementById("navbar-brand").style.marginLeft = "0px";
     document.getElementById("lsidebar").style.display = "none";
