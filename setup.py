@@ -17,15 +17,7 @@ githubactions = False
 total, used, free = shutil.disk_usage(cwd)
 freedisk = free // (2**30)
 
-def install_chrome():
-    chrome_version = os.system("google-chrome --version > /dev/null")
-    if chrome_version != 0:
-        os.system("sudo wget https://dl-ssl.google.com/linux/linux_signing_key.pub -O /tmp/google.pub")
-        os.system("sudo gpg --no-default-keyring --keyring /etc/apt/keyrings/google-chrome.gpg --import /tmp/google.pub")
-        os.system("echo 'deb [arch=amd64 signed-by=/etc/apt/keyrings/google-chrome.gpg] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list")
-        os.system("sudo apt-get -y install google-chrome-stable")
-
-def install():
+def install_packages():
     if ubuntu:
         os.system("sudo apt-get update -y")
         os.system("sudo apt-get full-upgrade -y")
@@ -51,9 +43,9 @@ def install():
             if gd not in os.getcwd():
                 os.system("git clone https://github.com/godarda/godarda.github.io.git")
                 os.chdir(cwd + gd + "/")
-        install_chrome()
     
     os.system("pip install --user --upgrade -r tests/requirements.txt --break-system-packages --no-warn-script-location")
+    os.system("sudo gem install bundler")
     if os.system("bundle config set --local path vendor/bundle") == 0:
         os.system("bundle install")
         os.system("bundle update --bundler")
@@ -114,12 +106,12 @@ def start_setup():
                             if ubuntu:
                                 os.system("sudo rm -rf _site/")
                 if ubuntu:
-                    install()
+                    install_packages()
                     os.system("sudo apt-get clean -y")
                     os.system("sudo apt-get autoclean -y")
                     os.system("sudo apt-get autoremove -y")
                 elif not ubuntu:
-                    install()
+                    install_packages()
         else:
             print("Insufficient disk space. Required 2 GB or more for full setup.")
         start_server()
