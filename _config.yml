@@ -17,6 +17,7 @@ og: https://raw.githubusercontent.com/godarda/godarda.github.io/master/assets/im
 icon: assets/images/icon.png
 logo: assets/images/logo.png
 advertise: assets/images/advertise.png
+analytics: https://www.googletagmanager.com/gtag/js?id=G-6JTSG3QWRJ
 
 # Filename
 highlighter: rouge
